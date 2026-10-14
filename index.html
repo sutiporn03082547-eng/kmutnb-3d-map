@@ -350,7 +350,7 @@ const BLD=[
  {no:"77",kind:"terra77",name:"อาคาร 40 ปี มจพ. และโรงอาหารกลาง",en:"40th Year Building and Main Canteen",cat:"svc",lv:11,osm:true,info:["KMUTNB Guesthouse อยู่ฝั่งตะวันตกของอาคาร","ชั้น 1: ที่จอดรถยนต์และรถมอเตอร์ไซค์","ชั้น 2: ศูนย์อาหาร / โรงอาหารกลาง (นักศึกษาเรียกสั้น ๆ ว่า \"โรงอาหาร 40\")","ในอาคารมี PDB KMUTNB และศูนย์รับรองสมรรถนะบุคคลตามมาตรฐานอาชีพ (ตามป้ายใน Google Maps)","ร้าน Fermo Cafe และจุดออกกำลังกายอยู่ข้างอาคาร","ธนาคารกรุงเทพอยู่ฝั่งตะวันออกของอาคาร"],p:[[48,11],[88,27],[94,30],[74,84],[25,65]]},
  {no:"78A",name:SCI+" (อาคาร 78 โซน A)",en:"Faculty of Applied Science — Zone A",cat:"fac",lv:12,osm:true,info:["ภาควิชาเคมีอุตสาหกรรม"],p:[[91,-18],[121,-6],[118,2],[114,11],[112,15],[82,3]]},
  {no:"78B",name:SCI+" (อาคาร 78 โซน B)",en:"Faculty of Applied Science — Zone B",cat:"fac",lv:9,osm:true,info:[],p:[[133,-21],[189,2],[181,12],[175,20],[173,19],[161,29],[137,-11],[114,11],[118,2],[133,-14]]},
- {no:"79",kind:"club79",name:"อาคารสโมสรบุคลากร (ตึกสโมสร)",en:"Staff Club Building",cat:"svc",lv:2,info:["7-Eleven ชั้นใต้ดิน (เดินลงบันไดหน้าตึก)","I-Studio","ห้องพยาบาล / ศูนย์บริการสุขภาพ","ร้านกาแฟ","UStore ร้านอุปกรณ์อิเล็กทรอนิกส์","ATM และห้องน้ำอยู่รอบอาคาร"],p:[[131,0],[157,31],[137,48],[114,20],[118,17],[115,13]]},
+ {no:"79",kind:"club79",name:"อาคารสโมสรบุคลากร (ตึกสโมสร)",en:"Staff Club Building",cat:"svc",lv:2,info:["7-Eleven ชั้นใต้ดิน (เดินลงบันไดหน้าตึก)","I-Studio","ห้องพยาบาล / ศูนย์บริการสุขภาพ","ร้านกาแฟ","UStore ร้านอุปกรณ์อิเล็กทรอนิกส์","ATM และห้องน้ำอยู่รอบอาคาร"],p:[[131,0],[155.4,29.1],[135.4,46.1],[114,20],[118,17],[115,13]]},
  {no:"81",name:ENG+" (อาคาร 81)",en:"Faculty of Engineering",cat:"fac",lv:8,info:["สมาคมศิษย์เก่าวิศวกรรมศาสตร์อยู่ฝั่งตะวันออกของอาคาร","อาคารหลักของคณะวิศวกรรมศาสตร์ (9 ภาควิชา)","มีตู้ ATM ฝั่งตะวันออกของอาคาร"],p:[[-94,-6],[-53,20],[-34,33],[-12,47],[-22,62],[-60,37],[-65,45],[-109,16]]},
  {no:"82",name:ENG+" (อาคาร 82)",en:"Faculty of Engineering",cat:"fac",lv:5,info:["ภาควิชาวิศวกรรมการผลิตและหุ่นยนต์"],p:[[-139,-4],[-111,-52],[-93,-41],[-121,6]]},
  {no:"83",name:ENG+" (อาคาร 83)",en:"Faculty of Engineering",cat:"fac",lv:5,info:[],p:[[-96,-73],[-49,-42],[-58,-27],[-106,-58]]},
@@ -405,7 +405,7 @@ const ROADS=[
  ["r",[[107,223],[103,231],[101,234],[96,238],[88,242],[85,244],[82,248],[79,254]]],["r",[[141,274],[127,270],[114,266],[79,254]]],
  ["r",[[-194,-27],[-200,-33],[-210,-43],[-219,-54],[-242,-84],[-284,-141],[-286,-143],[-287,-146],[-287,-150],[-283,-154],[-256,-177],[-227,-200],[-220,-205]]],
  ["s",[[-254,-265],[-298,-235],[-256,-177]]],["r",[[-194,-27],[-182,-21],[-172,-14],[-158,-6]]],["s",[[-232,-226],[-179,-265],[-155,-283]]],
- ["r",[[143,71],[134,57],[132,54]]],["r",[[114,266],[126,229],[139,192],[146,172],[154,149],[170,107]]],["r",[[24,-13],[8,13],[7,15],[8,17],[9,19],[19,25]]],
+ ["r",[[143,71],[134,57],[132,54]]],["s",[[132,54],[136,52.5],[162.5,30.4]]],["r",[[114,266],[126,229],[139,192],[146,172],[154,149],[170,107]]],["r",[[24,-13],[8,13],[7,15],[8,17],[9,19],[19,25]]],
  ["r",[[154,149],[216,172],[264,189],[266,189],[269,188],[270,185],[275,172],[281,152],[281,150],[280,148],[275,145],[261,139],[233,131],[231,131],[229,131]]],
  ["s",[[139,79],[154,97]]],["s",[[145,73],[139,77],[139,78],[139,79]]],["r",[[-158,-6],[-106,-88]]],["s",[[-23,40],[-33,55]]],
  ["r",[[37,-6],[20,24],[19,25],[12,37],[-11,79],[-15,83],[-19,84],[-24,83],[-28,79],[-42,70],[-115,23],[-143,4],[-158,-6]]],
@@ -816,25 +816,76 @@ function buildTerra77(b){
 }
 /* อาคาร 79 (ตึกสโมสร): low block with a 7-Eleven front, stairs down to the basement shop, ATM kiosk */
 function buildClub79(b){
-  const g=new THREE.Group(),h=b.lv*FLOOR;
-  const cream=new THREE.MeshLambertMaterial({color:"#efe3cf",emissive:"#2a251d"}),pink=new THREE.MeshLambertMaterial({color:"#d98b86"});
-  const m=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(b.p),{depth:h,bevelEnabled:false}),[cream,pink]));m.castShadow=true;m.receiveShadow=true;m.userData.bid=b.id;g.add(m);picks.push(m);
-  const cap=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(b.p),{depth:0.5,bevelEnabled:false}),cream));cap.position.y=h;g.add(cap);
-  const A=[114,20],B=[137,48],dx=B[0]-A[0],dz=B[1]-A[1],L=Math.hypot(dx,dz),t=[dx/L,dz/L],n=[-dz/L,dx/L],ry=-Math.atan2(dz,dx);   // n: towards the road
+  /* from street view: low 2-storey block with a thin white roof slab overhang, recessed ground floor on white columns;
+     front (road side) left→right: ATM kiosks, 7-Eleven with the yellow "ROCKET" café box above, wide granite steps up to the
+     lobby (health room sign), open terrace with flags */
+  const g=new THREE.Group(),h=2*FLOOR,c=[b.cx,b.cz],sc=k=>b.p.map(([x,z])=>[c[0]+(x-c[0])*k,c[1]+(z-c[1])*k]);
+  const Lm=(col,o)=>new THREE.MeshLambertMaterial(Object.assign({color:col},o||{}));
+  const wall=Lm("#dcd8cf",{emissive:"#26241f"}),white=Lm("#f5f3ee",{emissive:"#2c2b28"}),dark=new THREE.MeshPhongMaterial({color:"#2b3138",specular:"#8aa0b0",shininess:40});
+  const ex=(p,d,m,y)=>{const o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(p),{depth:d,bevelEnabled:false}),m));o.position.y=y;o.castShadow=true;o.receiveShadow=true;o.userData.bid=b.id;g.add(o);picks.push(o);return o;};
+  ex(sc(0.86),FLOOR,dark,0);ex(sc(0.97),FLOOR,wall,FLOOR);ex(sc(1.0),0.4,white,FLOOR-0.2);ex(sc(1.06),0.45,white,h);ex(sc(0.9),0.9,wall,h+0.45);
+  const A=[114,20],B=[135.4,46.1],dx=B[0]-A[0],dz=B[1]-A[1],L=Math.hypot(dx,dz),t=[dx/L,dz/L],n=[-dz/L,dx/L],ry=-Math.atan2(dz,dx);
   const P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
-  const cv=document.createElement("canvas");cv.width=512;cv.height=64;const x=cv.getContext("2d");
-  [["#f58220",0,21],["#00873e",21,22],["#e31b23",43,21]].forEach(([c,y,hh])=>{x.fillStyle=c;x.fillRect(0,y,512,hh);});x.fillStyle="#fff";x.font='800 40px "Chakra Petch",sans-serif';x.textAlign="center";x.fillText("7-ELEVEn",256,48);
-  const sign=new THREE.Mesh(new THREE.BoxGeometry(12,1.2,0.3),[cream,cream,cream,cream,new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(cv),emissive:"#fff",emissiveMap:new THREE.CanvasTexture(cv),emissiveIntensity:.25}),cream]);
-  let p=P(L*0.45,0.3);sign.position.set(p[0],3.1,p[1]);sign.rotation.y=ry;g.add(sign);
-  const glassM=new THREE.MeshLambertMaterial({color:"#2c3a44"});p=P(L*0.45,0.12);const shop=new THREE.Mesh(new THREE.BoxGeometry(12,2.3,0.2),glassM);shop.position.set(p[0],1.2,p[1]);shop.rotation.y=ry;g.add(shop);
-  /* stairs down to the basement 7-Eleven (dark opening + steps) */
-  const st=new THREE.MeshLambertMaterial({color:"#cfc8bb"});
-  for(let i=0;i<6;i++){p=P(L*0.45,1.2+i*0.6);const s0=new THREE.Mesh(new THREE.BoxGeometry(6,0.25,0.6),st);s0.position.set(p[0],0.25-i*0.18,p[1]);s0.rotation.y=ry;g.add(s0);}
-  p=P(L*0.45,2.6);const hole=new THREE.Mesh(new THREE.BoxGeometry(6.4,0.05,3.8),new THREE.MeshBasicMaterial({color:"#1b1e22"}));hole.position.set(p[0],0.06,p[1]);hole.rotation.y=ry;g.add(hole);
-  [-3.3,3.3].forEach(o=>{const q=P(L*0.45+o,2.6);const r=new THREE.Mesh(new THREE.BoxGeometry(0.08,1,3.8),new THREE.MeshLambertMaterial({color:"#d6322f"}));r.position.set(q[0],0.6,q[1]);r.rotation.y=ry;g.add(r);});
-  /* ATM kiosk */
-  p=P(L*0.15,1.4);const atm=new THREE.Mesh(new THREE.BoxGeometry(1.4,2.4,1.1),new THREE.MeshLambertMaterial({color:"#2b59c3",emissive:"#0d1f4a"}));atm.position.set(p[0],1.2,p[1]);atm.rotation.y=ry;g.add(atm);
-  g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+1;scene.add(g);
+  const put=(geo,m,u,v,y,r)=>{const o=new THREE.Mesh(geo,m);const q=P(u,v);o.position.set(q[0],y,q[1]);o.rotation.y=r===undefined?ry:r;o.castShadow=true;o.receiveShadow=true;g.add(o);return o;};
+  /* white columns along the front */
+  [1,6.5,15.5,27,32.8].forEach(u=>put(new THREE.BoxGeometry(0.6,FLOOR,0.6),white,u,0.4,FLOOR/2));
+  /* ATM kiosks */
+  [2.6,4.6].forEach(u=>{put(new THREE.BoxGeometry(1.6,2.6,1.2),Lm("#2a7fd4",{emissive:"#0c2a48"}),u,1.3,1.3);put(new THREE.BoxGeometry(0.9,0.6,0.05),Lm("#eaf3fb",{emissive:"#556"}),u,1.95,1.55);});
+  /* 7-Eleven fascia + shopfront */
+  const cv=document.createElement("canvas");cv.width=512;cv.height=64;const x=cv.getContext("2d");[["#f58220",0,21],["#00873e",21,22],["#e31b23",43,21]].forEach(([cc,y,hh])=>{x.fillStyle=cc;x.fillRect(0,y,512,hh);});
+  x.fillStyle="#fff";x.fillRect(220,4,72,56);x.fillStyle="#00873e";x.font='900 44px "Chakra Petch",sans-serif';x.textAlign="center";x.fillText("7",256,48);
+  const sevT=new THREE.CanvasTexture(cv);put(new THREE.BoxGeometry(8.6,0.9,0.25),[white,white,white,white,new THREE.MeshLambertMaterial({map:sevT,emissive:"#fff",emissiveMap:sevT,emissiveIntensity:.25}),white],11,0.45,FLOOR-0.75,ry);
+  put(new THREE.BoxGeometry(8.6,FLOOR-1.3,0.12),Lm("#dfe8ee",{emissive:"#3a4248"}),11,0.9,(FLOOR-1.3)/2);
+  /* ROCKET café: yellow frame box on the upper floor */
+  const yel=Lm("#f2b51c",{emissive:"#3a2a05"});put(new THREE.BoxGeometry(9,FLOOR-0.4,2.2),dark,11,0.9,FLOOR+(FLOOR-0.4)/2+0.2);
+  [[0,FLOOR*2-0.25,9.2,0.4],[0,FLOOR+0.35,9.2,0.4]].forEach(([o,y,w,hh])=>put(new THREE.BoxGeometry(w,hh,2.4),yel,11,0.9,y));
+  [-4.5,4.5].forEach(o=>put(new THREE.BoxGeometry(0.35,FLOOR-0.3,2.4),yel,11+o,0.9,FLOOR*1.5));
+  const rc=document.createElement("canvas");rc.width=256;rc.height=48;const r=rc.getContext("2d");r.fillStyle="#1d1d1d";r.fillRect(0,0,256,48);r.fillStyle="#3fd17a";r.font='800 34px "Chakra Petch",sans-serif';r.textAlign="center";r.fillText("ROCKET",128,36);
+  put(new THREE.PlaneGeometry(4.6,0.9),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(rc),side:THREE.DoubleSide}),11,2.12,FLOOR*1.62,ry);
+  /* wide granite steps up to the lobby (raised 1.4 m), steel handrails, doors and the health-room sign */
+  const stone=Lm("#a9a49b");const N=8;for(let i=0;i<N;i++){const hh=1.4*(i+1)/N;put(new THREE.BoxGeometry(11,hh,0.5),stone,21.7,1.0+4-(i)*0.5,hh/2);}
+  put(new THREE.BoxGeometry(11.6,1.4,3.6),stone,21.7,-1.2,0.7);
+  [16.4,27].forEach(u=>{const len=Math.hypot(4,1.4);const rl=put(new THREE.BoxGeometry(0.07,0.07,len),Lm("#d6dadd"),u,2.8,2.1);rl.rotation.set(Math.atan2(1.4,4),ry,0,"YXZ");
+    [1,4.8].forEach(v=>put(new THREE.BoxGeometry(0.06,1,0.06),Lm("#d6dadd"),u,v,v<2?2.0:0.9));});
+  [19.5,23.5].forEach(u=>put(new THREE.BoxGeometry(3,2.4,0.1),dark,u,-0.4,2.6));
+  const hc=document.createElement("canvas");hc.width=256;hc.height=64;const hx=hc.getContext("2d");hx.fillStyle="#fff";hx.fillRect(0,0,256,64);hx.fillStyle="#1f9a55";hx.fillRect(8,12,40,40);hx.fillStyle="#fff";hx.fillRect(24,16,8,32);hx.fillRect(12,28,32,8);
+  hx.fillStyle="#222";hx.font='600 20px "Anuphan",sans-serif';hx.fillText("ห้องพยาบาล",60,40);put(new THREE.PlaneGeometry(2.6,0.65),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(hc)}),19.5,-0.32,4.2,ry+Math.PI);
+  /* open terrace with flags on the right */
+  put(new THREE.BoxGeometry(6,0.12,0.1),Lm("#d6dadd"),30,0.6,FLOOR+1.1);
+  ["#f2c230","#2a4fb5","#f2c230","#d6322f","#2a7fd4","#f2c230"].forEach((cc,i)=>put(new THREE.BoxGeometry(0.8,0.55,0.03),Lm(cc),27.6+i*0.95,0.62,FLOOR+0.6));
+  put(new THREE.BoxGeometry(6,1,0.1),Lm("#6b3a2a"),30,0.5,FLOOR*0.55);
+  /* concrete side lane along the canal (street view): stone tables at the entrance, orange-white posts with a rope,
+     chain-link fence on the canal edge, ends at the open ground floor of the pink tower (78B) */
+  const W0=(sd,off)=>[138+0.765*sd-0.644*off-b.dx,57-0.644*sd-0.765*off-b.dz],rr=Math.atan2(0.644,0.765);
+  const tS=Lm("#cfccc4");[6,11].forEach(sd=>{const[px,pz]=W0(sd,1.2);
+    const tb=new THREE.Mesh(new THREE.BoxGeometry(1.6,0.12,0.9),tS);tb.position.set(px,0.75,pz);tb.rotation.y=rr;tb.castShadow=true;g.add(tb);
+    const lg=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.7,0.3),tS);lg.position.set(px,0.35,pz);g.add(lg);
+    [-1,1].forEach(k=>{const bn=new THREE.Mesh(new THREE.BoxGeometry(1.6,0.1,0.35),tS);bn.position.set(px+Math.sin(rr)*0.85*k,0.45,pz+Math.cos(rr)*0.85*k);bn.rotation.y=rr;g.add(bn);});});
+  {const[px,pz]=W0(14,1.0);const sgn=new THREE.Mesh(new THREE.BoxGeometry(1.1,1.5,0.08),Lm("#f3c6cf",{emissive:"#3a2a2c"}));sgn.position.set(px,1.6,pz);sgn.rotation.y=rr+Math.PI/2;g.add(sgn);
+    const pp=new THREE.Mesh(new THREE.BoxGeometry(0.1,0.9,0.1),Lm("#555"));pp.position.set(px,0.45,pz);g.add(pp);}
+  const orng=Lm("#e8642a"),wht=Lm("#f2f2f2"),ropeM=new THREE.MeshBasicMaterial({color:"#e9e6df"});
+  for(let sd=16;sd<=38;sd+=3.2){const[px,pz]=W0(sd,2.1);[[0.35,orng],[0.65,wht],[0.95,orng]].forEach(([y,m])=>{const c=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,0.3,6),m);c.position.set(px,y,pz);g.add(c);});
+    const bs=new THREE.Mesh(new THREE.BoxGeometry(0.3,0.06,0.3),Lm("#444"));bs.position.set(px,0.05,pz);g.add(bs);}
+  {const p1=W0(16,2.1),p2=W0(38,2.1),len=Math.hypot(p2[0]-p1[0],p2[1]-p1[1]);const rp=new THREE.Mesh(new THREE.BoxGeometry(len,0.03,0.03),ropeM);rp.position.set((p1[0]+p2[0])/2,0.9,(p1[1]+p2[1])/2);rp.rotation.y=-Math.atan2(p2[1]-p1[1],p2[0]-p1[0]);g.add(rp);
+    const f1=W0(14,0.3),f2=W0(40,0.3),fl=Math.hypot(f2[0]-f1[0],f2[1]-f1[1]);const fence=new THREE.Mesh(new THREE.PlaneGeometry(fl,1.5),new THREE.MeshLambertMaterial({color:"#9aa3a0",transparent:true,opacity:0.45,side:THREE.DoubleSide,depthWrite:false}));
+    fence.position.set((f1[0]+f2[0])/2,0.75,(f1[1]+f2[1])/2);fence.rotation.y=-Math.atan2(f2[1]-f1[1],f2[0]-f1[0]);g.add(fence);
+    for(let sd=14;sd<=40;sd+=2.6){const[px,pz]=W0(sd,0.3);const fp=new THREE.Mesh(new THREE.BoxGeometry(0.06,1.6,0.06),Lm("#7d8582"));fp.position.set(px,0.8,pz);g.add(fp);}}
+  /* lane-side facade of the club: white plinth with AC units, blue-framed windows */
+  {const S0=[135.4,46.1],S1=[155.4,29.1],sx=S1[0]-S0[0],sz=S1[1]-S0[1],sl=Math.hypot(sx,sz),st=[sx/sl,sz/sl],sn=[sz/sl,-sx/sl],sr=-Math.atan2(sz,sx);   // sn points to the canal
+    const Q=(u,v)=>[S0[0]+st[0]*u+sn[0]*v,S0[1]+st[1]*u+sn[1]*v];
+    const wc=document.createElement("canvas");wc.width=256;wc.height=64;const w=wc.getContext("2d");w.fillStyle="#eeece6";w.fillRect(0,0,256,64);
+    for(let i=0;i<4;i++){w.fillStyle="#3f8fae";w.fillRect(8+i*62,10,52,40);w.fillStyle="#cfe3ea";for(let j=0;j<3;j++)w.fillRect(12+i*62+j*16,14,12,32);}
+    const wt=new THREE.CanvasTexture(wc);wt.wrapS=THREE.RepeatWrapping;wt.repeat.set(sl/14,1);
+    const fq=Q(sl/2,-0.6);const fw=new THREE.Mesh(new THREE.BoxGeometry(sl-1.5,FLOOR-0.4,0.15),[wall,wall,wall,wall,new THREE.MeshLambertMaterial({map:wt}),new THREE.MeshLambertMaterial({map:wt})]);fw.position.set(fq[0]-b.dx,0.3+(FLOOR-0.4)/2+0.6,fq[1]-b.dz);fw.rotation.y=sr+Math.PI;g.add(fw);
+    const pq=Q(sl/2,-0.1);const pl=new THREE.Mesh(new THREE.BoxGeometry(sl-1.5,0.9,1.0),white);pl.position.set(pq[0]-b.dx,0.45,pq[1]-b.dz);pl.rotation.y=sr;pl.castShadow=true;g.add(pl);
+    [4,6,13,15.2].forEach(u=>{const q=Q(u,-0.1);const ac=new THREE.Mesh(new THREE.BoxGeometry(1.2,0.8,0.5),Lm("#f4f4f2"));ac.position.set(q[0]-b.dx,1.3,q[1]-b.dz);ac.rotation.y=sr;ac.castShadow=true;g.add(ac);
+      const fan=new THREE.Mesh(new THREE.CircleGeometry(0.3,12),Lm("#555"));const fq2=Q(u,0.16);fan.position.set(fq2[0]-b.dx,1.3,fq2[1]-b.dz);fan.rotation.y=sr+Math.PI;g.add(fan);});
+    /* garden bed with the blue building sign at the lane mouth */
+    const gq=Q(1.6,1.6);const bed=new THREE.Mesh(new THREE.BoxGeometry(3,0.35,2.4),Lm("#4f8f3c"));bed.position.set(gq[0]-b.dx,0.18,gq[1]-b.dz);bed.rotation.y=sr;g.add(bed);
+    [[-0.8,0.2,"#c8352b"],[0.6,-0.3,"#3d7a32"],[0.2,0.6,"#2f6b2a"]].forEach(([a,c2,col])=>{const q=Q(1.6+a,1.6+c2);const bu=new THREE.Mesh(new THREE.IcosahedronGeometry(0.55,0),Lm(col));bu.position.set(q[0]-b.dx,0.6,q[1]-b.dz);g.add(bu);});
+    const sq=Q(2.8,2.6);const pole=new THREE.Mesh(new THREE.BoxGeometry(0.06,2.2,0.06),Lm("#9aa0a4"));pole.position.set(sq[0]-b.dx,1.1,sq[1]-b.dz);g.add(pole);
+    const bsn=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.35,0.04),Lm("#1f5fbf",{emissive:"#0a2350"}));bsn.position.set(sq[0]-b.dx,2.1,sq[1]-b.dz);bsn.rotation.y=sr;g.add(bsn);}
+  g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+1.5;scene.add(g);
 }
 /* futsal court + motorbike rows + cars inside the courtyard between 62 and 63 */
 function decorateCourt(g,b){

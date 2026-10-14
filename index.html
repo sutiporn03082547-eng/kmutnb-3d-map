@@ -776,13 +776,35 @@ function buildTerra77(b){
   /* east front (faces the road): outdoor stair under a blue canopy + fountain plaza */
   const A=[94,30],B=[74,84],dx=B[0]-A[0],dz=B[1]-A[1],Le=Math.hypot(dx,dz),t=[dx/Le,dz/Le],n=[dz/Le,-dx/Le],ry=-Math.atan2(dz,dx);   // n → outward (east)
   const Q=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
-  const stairM=L("#f2ece2"),blue=L("#3b8fd1",{emissive:"#0d2c45"});
-  for(let i=0;i<14;i++){const q=Q(Le*0.52+i*0.55,2.2);const st=new THREE.Mesh(new THREE.BoxGeometry(0.55,0.28*(i+1),2.4),stairM);st.position.set(q[0],0.14*(i+1),q[1]);st.rotation.y=ry;g.add(st);}
-  const land=Q(Le*0.52+8.2,2.2);const ld=new THREE.Mesh(new THREE.BoxGeometry(2.2,0.3,2.6),stairM);ld.position.set(land[0],4.0,land[1]);ld.rotation.y=ry;g.add(ld);
-  [-1.3,1.3].forEach(o=>{for(let i=0;i<14;i+=2){const q=Q(Le*0.52+i*0.55,2.2+o);const p=new THREE.Mesh(new THREE.BoxGeometry(0.06,1,0.06),stairM);p.position.set(q[0],0.28*(i+1)+0.5,q[1]);g.add(p);}});
-  const cq=Q(Le*0.52+4.2,2.2);const can=new THREE.Mesh(new THREE.CylinderGeometry(2.2,2.2,8.5,16,1,true,0,Math.PI),new THREE.MeshLambertMaterial({color:"#3b8fd1",side:THREE.DoubleSide,emissive:"#0d2c45"}));
-  can.rotation.set(0,ry,Math.PI/2,"YXZ");can.scale.set(1,1,0.35);can.position.set(cq[0],5.6,cq[1]);g.add(can);
-  [[0,0.9],[8.2,0.9],[0,3.5],[8.2,3.5]].forEach(([u,v])=>{const q=Q(Le*0.52+u,v);const p=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,5.6,8),L("#9fb4c4"));p.position.set(q[0],2.8,q[1]);g.add(p);});
+  /* twin outdoor staircases up to the 2nd-floor canteen (from street view): two flights rising towards a central landing,
+     salmon concrete stringers, blue curved metal canopies, sign "โรงอาหาร 40 ปี สจพ.", columns and tables underneath */
+  const sal=L("#e7a382",{emissive:"#2a160c"}),pinkW=L("#f4cdbd",{emissive:"#2c1e18"}),tread=L("#d9d2c6"),blueM=new THREE.MeshLambertMaterial({color:"#2f5f8a",side:THREE.DoubleSide,emissive:"#0b1a2a"}),steel=L("#5f87b0");
+  const U0=Le*0.55,D=3.2,Hs=FLOOR+0.3,run=7.5,W=2.2;              // landing centre along the facade, depth out from facade, rise, run, width
+  const put=(m,u,v,y,r)=>{const q=Q(u,v);m.position.set(q[0],y,q[1]);m.rotation.y=r===undefined?ry:r;m.castShadow=true;m.receiveShadow=true;g.add(m);return m;};
+  /* landing slab + parapet with the sign */
+  put(new THREE.Mesh(new THREE.BoxGeometry(5.5,0.5,D+0.4),pinkW),U0,D/2,Hs-0.25);
+  put(new THREE.Mesh(new THREE.BoxGeometry(5.5,1.1,0.25),pinkW),U0,D+0.1,Hs+0.55);
+  [-1.6,1.6].forEach(o=>put(new THREE.Mesh(new THREE.CylinderGeometry(0.25,0.3,Hs-0.5,10),L("#f6f1ea")),U0+o,D*0.75,(Hs-0.5)/2));
+  const cv=document.createElement("canvas");cv.width=512;cv.height=192;const x=cv.getContext("2d");x.fillStyle="#fbfbf8";x.fillRect(0,0,512,192);x.strokeStyle="#1f6b3a";x.lineWidth=6;x.strokeRect(4,4,504,184);
+  x.textAlign="center";x.fillStyle="#1f7a3e";x.font='800 64px "Anuphan",sans-serif';x.fillText("โรงอาหาร",200,82);x.fillStyle="#d6322f";x.fillText("40 ปี",400,82);x.fillStyle="#1f7a3e";x.font='800 70px "Anuphan",sans-serif';x.fillText("สจพ.",256,166);
+  x.fillStyle="#d6322f";x.fillRect(24,110,60,60);x.fillRect(428,110,60,60);
+  const sign=put(new THREE.Mesh(new THREE.PlaneGeometry(4.2,1.6),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(cv)})),U0,D+0.24,Hs+0.6,ry+Math.PI);sign.castShadow=false;
+  /* two flights: left one rises from u=U0-2.75-run up to the landing, right one mirrored */
+  [-1,1].forEach(sd=>{const u0=U0+sd*(2.75+run),u1=U0+sd*2.75,N=14;
+    for(let i=0;i<N;i++){const f=(i+0.5)/N,u=u0+(u1-u0)*f,y=Hs*f;put(new THREE.Mesh(new THREE.BoxGeometry(run/N+0.02,0.18,W),tread),u,D-W/2,y);}
+    const len=Math.hypot(run,Hs),ang=Math.atan2(Hs,run)*-sd;
+    [D-W-0.1,D+0.1].forEach(v=>{const st=new THREE.Mesh(new THREE.BoxGeometry(len,0.9,0.22),v>D-0.5?pinkW:sal);const q=Q((u0+u1)/2,v);st.position.set(q[0],Hs/2+0.1,q[1]);st.rotation.set(0,ry,ang,"YXZ");st.castShadow=true;g.add(st);});
+    const under=new THREE.Mesh(new THREE.BoxGeometry(len,0.35,W),sal);const q=Q((u0+u1)/2,D-W/2);under.position.set(q[0],Hs/2-0.35,q[1]);under.rotation.set(0,ry,ang,"YXZ");g.add(under);
+    /* blue canopy over the flight: curved sheet on slanted steel posts */
+    const cl=Math.hypot(run+1.5,Hs);const cq=Q((u0+u1)/2,D-W/2);
+    [-0.45,0,0.45].forEach((o,k)=>{const sh=new THREE.Mesh(new THREE.BoxGeometry(cl,0.08,(W+1.4)/3+0.05),blueM);const q=Q((u0+u1)/2,D-W/2+o*(W+1.4)/1.35);
+      sh.position.set(q[0],Hs/2+2.9+(k===1?0.25:0),q[1]);sh.rotation.set(0,ry,ang,"YXZ");sh.rotation.x=(k-1)*-0.25;sh.castShadow=true;g.add(sh);});
+    [0.15,0.55,0.9].forEach(f=>{const u=u0+(u1-u0)*f,h=Hs*f+2.6;[D-W-0.3,D+0.3].forEach(v=>put(new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,h,6),steel),u,v,h/2));});});
+  /* centre arch canopy over the landing */
+  [-1,0,1].forEach(k=>{const sh=new THREE.Mesh(new THREE.BoxGeometry(5.8,0.08,(D+1.5)/3+0.05),blueM);const q=Q(U0,D/2+k*(D+1.5)/3);sh.position.set(q[0],Hs+3.0+(k===0?0.35:0),q[1]);sh.rotation.set(k*0.3,ry,0,"YXZ");g.add(sh);});
+  [-2.8,2.8].forEach(o=>[0.1,D].forEach(v=>put(new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,3.2,6),steel),U0+o,v,Hs+1.5)));
+  /* tables under the stairs */
+  [[-1.2,1.4],[1.2,1.4]].forEach(([o,v])=>{put(new THREE.Mesh(new THREE.BoxGeometry(1.8,0.08,0.8),L("#6b4b33")),U0+o,v,0.8);put(new THREE.Mesh(new THREE.BoxGeometry(1.8,0.06,0.3),L("#6b4b33")),U0+o,v+0.7,0.5);});
   /* fountain in a hedged square */
   const fq=Q(Le*0.3,9);const hedge=L("#3f8f3a");
   const bed=new THREE.Mesh(new THREE.BoxGeometry(7,0.7,6),hedge);bed.position.set(fq[0],0.65,fq[1]);bed.rotation.y=ry;g.add(bed);

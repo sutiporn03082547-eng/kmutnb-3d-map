@@ -754,18 +754,43 @@ function buildHall21(b){
 }
 /* อาคาร 77 (40 ปี มจพ.): terracotta facade, deep horizontal balcony bands, grey louvres, blue bank fascia at street level */
 function buildTerra77(b){
+  /* from street view: peach-cream facade, a white balcony slab + parapet + window ribbon on every floor,
+     plain peach end walls, upper floors stepping back, blue bank fascia on the corner, outdoor stair with a blue canopy, fountain plaza */
   const g=new THREE.Group(),c=[b.cx,b.cz],sc=k=>b.p.map(([x,z])=>[c[0]+(x-c[0])*k,c[1]+(z-c[1])*k]);
-  const terra=new THREE.MeshLambertMaterial({color:"#d4733f"}),slabM=new THREE.MeshLambertMaterial({color:"#efe7da",emissive:"#2a2620"}),glass=new THREE.MeshPhongMaterial({color:"#5f7f93",specular:"#b9d3e2",shininess:50}),louv=new THREE.MeshLambertMaterial({color:"#9aa1a8"});
-  const ex=(p,d,m,y)=>{const o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(p),{depth:d,bevelEnabled:false}),m));o.position.y=y;o.castShadow=true;o.receiveShadow=true;o.userData.bid=b.id;g.add(o);picks.push(o);return o;};
-  /* street level: blue bank fascia + glass shopfronts */
-  ex(sc(0.97),FLOOR,glass,0);
-  const fasc=ex(sc(0.99),1.0,new THREE.MeshLambertMaterial({color:"#1f4fa8",emissive:"#0b1d40"}),FLOOR-1.0);
-  for(let i=1;i<b.lv;i++){const y=i*FLOOR;
-    ex(sc(1.03),0.45,slabM,y);                    // balcony slab sticking out
-    ex(sc(0.95),1.3,terra,y+0.45);                // solid parapet band
-    ex(sc(0.94),FLOOR-1.75,i%3===0?louv:glass,y+1.75);}
-  const h=b.lv*FLOOR;ex(sc(1.03),0.7,terra,h);
-  g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+1;scene.add(g);
+  const L=(col,o)=>new THREE.MeshLambertMaterial(Object.assign({color:col},o||{}));
+  const peach=L("#f6d3b4",{emissive:"#3a2a1c"}),cream=L("#fbf6ee",{emissive:"#2c2a26"}),glass=new THREE.MeshPhongMaterial({color:"#8aa3b3",specular:"#e3eef5",shininess:50,emissive:"#1e2a33"}),frame=L("#e9e2d6");
+  const ex=(p,d,m,y,pick=true)=>{const o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(p),{depth:d,bevelEnabled:false}),m));o.position.y=y;o.castShadow=true;o.receiveShadow=true;if(pick){o.userData.bid=b.id;picks.push(o);}g.add(o);return o;};
+  /* podium: glass + shops, bank fascia */
+  ex(sc(0.97),FLOOR,glass,0);ex(sc(0.99),1.0,L("#1f4fa8",{emissive:"#0b1d40"}),FLOOR-1.0);
+  ex(sc(1.0),0.5,cream,FLOOR);
+  for(let i=1;i<b.lv;i++){const y=i*FLOOR,k=1-Math.max(0,i-7)*0.025;           // top floors step back
+    ex(sc(1.03*k),0.35,cream,y);                                                  // balcony slab edge
+    ex(sc(1.0*k),1.05,peach,y+0.35);                                              // balcony parapet (white)
+    ex(sc(0.95*k),FLOOR-1.4,glass,y+1.4,false);                                   // window ribbon (set back)
+    ex(sc(0.955*k),0.18,frame,y+FLOOR-0.6,false);}                                // transom line
+  const h=b.lv*FLOOR,kT=1-(b.lv-8)*0.025;ex(sc(1.0*kT),1.0,peach,h);
+  /* solid peach end walls on the two short sides (the long sides carry the balconies) */
+  const P=b.p;const edges=P.map((q,i)=>[q,P[(i+1)%P.length]]).map(([a,bb])=>({a,b:bb,L:Math.hypot(bb[0]-a[0],bb[1]-a[1])}));
+  edges.filter(e=>e.L>8&&e.L<25).forEach(e=>{const mx=(e.a[0]+e.b[0])/2,mz=(e.a[1]+e.b[1])/2,r=-Math.atan2(e.b[1]-e.a[1],e.b[0]-e.a[0]);
+    const w=new THREE.Mesh(new THREE.BoxGeometry(e.L*0.7,h-FLOOR,0.8),peach);w.position.set(mx+(c[0]-mx)*0.02,FLOOR+(h-FLOOR)/2,mz+(c[1]-mz)*0.02);w.rotation.y=r;w.castShadow=true;g.add(w);});
+  /* east front (faces the road): outdoor stair under a blue canopy + fountain plaza */
+  const A=[94,30],B=[74,84],dx=B[0]-A[0],dz=B[1]-A[1],Le=Math.hypot(dx,dz),t=[dx/Le,dz/Le],n=[dz/Le,-dx/Le],ry=-Math.atan2(dz,dx);   // n → outward (east)
+  const Q=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
+  const stairM=L("#f2ece2"),blue=L("#3b8fd1",{emissive:"#0d2c45"});
+  for(let i=0;i<14;i++){const q=Q(Le*0.52+i*0.55,2.2);const st=new THREE.Mesh(new THREE.BoxGeometry(0.55,0.28*(i+1),2.4),stairM);st.position.set(q[0],0.14*(i+1),q[1]);st.rotation.y=ry;g.add(st);}
+  const land=Q(Le*0.52+8.2,2.2);const ld=new THREE.Mesh(new THREE.BoxGeometry(2.2,0.3,2.6),stairM);ld.position.set(land[0],4.0,land[1]);ld.rotation.y=ry;g.add(ld);
+  [-1.3,1.3].forEach(o=>{for(let i=0;i<14;i+=2){const q=Q(Le*0.52+i*0.55,2.2+o);const p=new THREE.Mesh(new THREE.BoxGeometry(0.06,1,0.06),stairM);p.position.set(q[0],0.28*(i+1)+0.5,q[1]);g.add(p);}});
+  const cq=Q(Le*0.52+4.2,2.2);const can=new THREE.Mesh(new THREE.CylinderGeometry(2.2,2.2,8.5,16,1,true,0,Math.PI),new THREE.MeshLambertMaterial({color:"#3b8fd1",side:THREE.DoubleSide,emissive:"#0d2c45"}));
+  can.rotation.set(0,ry,Math.PI/2,"YXZ");can.scale.set(1,1,0.35);can.position.set(cq[0],5.6,cq[1]);g.add(can);
+  [[0,0.9],[8.2,0.9],[0,3.5],[8.2,3.5]].forEach(([u,v])=>{const q=Q(Le*0.52+u,v);const p=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,5.6,8),L("#9fb4c4"));p.position.set(q[0],2.8,q[1]);g.add(p);});
+  /* fountain in a hedged square */
+  const fq=Q(Le*0.3,9);const hedge=L("#3f8f3a");
+  const bed=new THREE.Mesh(new THREE.BoxGeometry(7,0.7,6),hedge);bed.position.set(fq[0],0.65,fq[1]);bed.rotation.y=ry;g.add(bed);
+  const kerb=new THREE.Mesh(new THREE.BoxGeometry(7.4,0.35,6.4),L("#2ea84f"));kerb.position.set(fq[0],0.45,fq[1]);kerb.rotation.y=ry;g.add(kerb);
+  const bowl=new THREE.Mesh(new THREE.CylinderGeometry(1.8,1.6,0.5,24),L("#f4f1ea"));bowl.position.set(fq[0],1.2,fq[1]);g.add(bowl);
+  const wat=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.05,24),L("#8fd0ea",{emissive:"#1d4a5c"}));wat.position.set(fq[0],1.47,fq[1]);g.add(wat);
+  [[0.25,1.6,2.0],[0.9,0.25,2.8],[0.12,0.9,3.2],[0.5,0.18,3.7]].forEach(([r1,hh,y])=>{const m=new THREE.Mesh(r1>0.4?new THREE.CylinderGeometry(r1,r1*0.6,hh,16):new THREE.CylinderGeometry(r1,r1,hh,10),L("#f4f1ea"));m.position.set(fq[0],y,fq[1]);g.add(m);});
+  g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+1.5;scene.add(g);
 }
 /* อาคาร 79 (ตึกสโมสร): low block with a 7-Eleven front, stairs down to the basement shop, ATM kiosk */
 function buildClub79(b){
@@ -1708,6 +1733,12 @@ const accRing=new THREE.Mesh(new THREE.CircleGeometry(1,48),new THREE.MeshBasicM
 const topLevel=(()=>{try{return window.top===window.self;}catch(e){return false;}})();
 const inApp=/FBAN|FBAV|FB_IAB|Instagram|Line\//i.test(navigator.userAgent);
 if(topLevel&&"geolocation" in navigator)gpsBtn.hidden=false;
+/* inside the Claude viewer GPS is blocked: offer the standalone site that has GPS */
+const GPS_SITE="https://sutiporn03082547-eng.github.io/kmutnb-3d-map/";
+if(!topLevel){const a=document.createElement("a");a.id="gpsLink";a.href=GPS_SITE;a.target="_blank";a.rel="noopener";a.className="panel";a.textContent="📍 เปิดแบบใช้ GPS";
+  a.style.cssText="position:fixed;right:14px;bottom:calc(76px + env(safe-area-inset-bottom,0px));padding:10px 14px;border-radius:999px;color:#fff;background:#2b7de0;border:0;font:600 14px var(--body);text-decoration:none;z-index:15;box-shadow:0 4px 14px rgba(0,0,0,.3)";
+  if(innerWidth<=760){a.style.bottom="auto";a.style.top="calc(124px + env(safe-area-inset-top,0px))";a.style.right="10px";a.style.fontSize="13px";a.style.padding="8px 12px";}
+  document.body.appendChild(a);}
 function gpsStop(){if(gps.watch!==null)navigator.geolocation.clearWatch(gps.watch);gps.watch=null;gps.fixes=0;gpsBtn.classList.remove("on","wait");accRing.visible=false;}
 function gpsFix(pos){
   const{latitude:la,longitude:lo,accuracy:ac}=pos.coords;const x=(lo-GEO.lon0)*GEO.kx,z=-(la-GEO.lat0)*GEO.kz;

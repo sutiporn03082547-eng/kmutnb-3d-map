@@ -334,7 +334,7 @@ const BLD=[
  {no:"44",kind:"styled",sty:{slab:"#f6f3ef",glass:"#7e95a9",fin:"#d9798c"},name:FTE+" (อาคาร 44)",en:"Faculty of Technical Education",cat:"fac",lv:6,info:["อาคารปฏิบัติการและประลองรวม"],p:[[152,177],[173,185],[168,198],[178,202],[168,227],[167,230],[136,219]]},
  {no:"46",name:"คณะศิลปศาสตร์ประยุกต์ และโรงอาหารสวนปาล์ม",en:"Faculty of Applied Arts",cat:"fac",lv:4,info:["\"สวนปาล์ม\" คือที่นี่ ชั้น 2 เป็นโรงอาหารสวนปาล์ม","อยู่ติดลานเฉลิมพระเกียรติ และลานจอดรถหน้าหอสมุด"],p:[[55,151],[77,159],[62,201],[39,193]]},
  {no:"47",kind:"styled",sty:{slab:"#f5f5f2",glass:"#8db8cf",pilotis:true,fin:"#dfe3e6"},name:"สำนักวิจัยวิทยาศาสตร์และเทคโนโลยี (STRI)",en:"Science and Technology Research Institute",cat:"inst",lv:6,info:[],p:[[129,234],[156,244],[146,272],[118,262]]},
- {no:"52",kind:"styled",sty:{slab:"#efede8",glass:"#2c3540",fin:null},name:FTE+" (อาคาร 52)",en:"Faculty of Technical Education",cat:"fac",lv:6,est:true,info:["ภาควิชาคอมพิวเตอร์ศึกษา","ขอบเขตอาคารปรับตามที่นักศึกษาชี้ (ใน OSM ไม่มีอาคารนี้)","ทางทิศใต้ของอาคารมีลานจอดรถยนต์และคลองเล็กที่จอดมอเตอร์ไซค์"],p:[[88,126],[124,97],[136,92],[156,103],[148,138],[140,146],[104,146]]},
+ {no:"52",kind:"fte52",name:FTE+" (อาคาร 52)",en:"Faculty of Technical Education",cat:"fac",lv:6,est:true,info:["ภาควิชาคอมพิวเตอร์ศึกษา","ขอบเขตอาคารปรับตามที่นักศึกษาชี้ (ใน OSM ไม่มีอาคารนี้)","ทางทิศใต้ของอาคารมีลานจอดรถยนต์และคลองเล็กที่จอดมอเตอร์ไซค์"],p:[[88,126],[124,97],[136,92],[156,103],[148,138],[140,146],[104,146]]},
  {no:"62",name:CIT+" (อาคาร 62)",en:"College of Industrial Technology",cat:"fac",lv:8,osm:true,info:["สาขาวิชาเขียนแบบเครื่องกล (ชั้น 4)"],p:[[226,119],[239,83],[304,107],[291,142]]},
  {no:"63",name:CIT+" (อาคาร 63)",en:"College of Industrial Technology",cat:"fac",lv:6,osm:true,info:["สาขาวิชาเทคโนโลยีวิศวกรรมยานยนต์","ศูนย์ทดสอบมาตรฐานฝีมือแรงงาน"],p:[[181,120],[193,125],[200,107],[187,102],[200,68],[235,82],[222,116],[211,111],[204,130],[226,138],[214,170],[168,153]]},
  {no:"64",name:CIT+" (อาคาร 64)",en:"College of Industrial Technology",cat:"fac",lv:4,info:[],p:[[159,72],[175,49],[179,45],[185,42],[199,46],[199,56],[189,59],[172,82]]},
@@ -615,6 +615,7 @@ function buildBuilding(b){
   if(b.kind==="styled"){buildStyled(b);return;}
   if(b.kind==="terra77"){buildTerra77(b);return;}
   if(b.kind==="club79"){buildClub79(b);return;}
+  if(b.kind==="fte52"){buildFTE52(b);return;}
   if(b.kind==="tower22"){buildTower22(b);return;}
   if(b.kind==="lib23"){buildLib23(b);return;}
   if(b.kind==="hall21"){buildHall21(b);return;}
@@ -815,6 +816,60 @@ function buildTerra77(b){
   g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+1.5;scene.add(g);
 }
 /* อาคาร 79 (ตึกสโมสร): low block with a 7-Eleven front, stairs down to the basement shop, ATM kiosk */
+function buildFTE52(b){
+  /* from street view (south-east corner, east road): white banded block with a big thin roof overhang, teal glass stair
+     tower on the corner, stacked grey cantilever boxes, tall red-orange panels, curved metal canopy + faculty sign over the
+     entrance stairs, garden bed at the corner */
+  const g=new THREE.Group(),c=[b.cx,b.cz],sc=k=>b.p.map(([x,z])=>[c[0]+(x-c[0])*k,c[1]+(z-c[1])*k]);
+  const Lm=(col,o)=>new THREE.MeshLambertMaterial(Object.assign({color:col},o||{}));
+  const slab=Lm("#f1f0ec",{emissive:"#2a2927"}),glass=new THREE.MeshPhongMaterial({color:"#34414c",specular:"#cfe0ea",shininess:60});
+  const ex=(p,d,m,y)=>{const o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(p),{depth:d,bevelEnabled:false}),m));o.position.y=y;o.castShadow=true;o.receiveShadow=true;o.userData.bid=b.id;g.add(o);picks.push(o);return o;};
+  ex(sc(0.97),FLOOR,glass,0);
+  for(let i=1;i<b.lv;i++){const y=i*FLOOR;ex(sc(1.0),1.2,slab,y);ex(sc(0.975),FLOOR-1.2,glass,y+1.2);}
+  const h=b.lv*FLOOR;ex(sc(1.0),1.0,slab,h);
+  /* the thin roof slab that oversails the whole block */
+  ex(sc(1.09),0.45,slab,h+2.2);
+  const A=[148,138],B=[156,103],dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),t=[dx/Ln,dz/Ln],n=[-t[1],t[0]],ry=-Math.atan2(dz,dx);   // u from the SE corner northwards, n → east road
+  const P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
+  const put=(geo,m,u,v,y,r)=>{const o=new THREE.Mesh(geo,m);const q=P(u,v);o.position.set(q[0],y,q[1]);o.rotation.y=r===undefined?ry:r;o.castShadow=true;o.receiveShadow=true;g.add(o);return o;};
+  /* roof posts holding the oversailing slab */
+  [2,12,24,34].forEach(u=>put(new THREE.BoxGeometry(0.35,2.2,0.35),slab,u,0.6,h+1.1));
+  /* teal glass stair tower on the corner (wraps both faces), white floor bands */
+  const tg=new THREE.MeshPhongMaterial({color:"#6fb7b4",specular:"#ffffff",shininess:90,transparent:true,opacity:0.88});
+  put(new THREE.BoxGeometry(7,h+1.2,6.5),tg,2.2,0.9,(h+1.2)/2);
+  for(let i=1;i<=b.lv;i++)put(new THREE.BoxGeometry(7.2,0.45,6.7),slab,2.2,0.9,i*FLOOR-0.2);
+  put(new THREE.BoxGeometry(0.5,h+1.2,6.6),Lm("#8f9396"),5.9,0.9,(h+1.2)/2);
+  /* stacked grey cantilever boxes */
+  for(let i=2;i<b.lv;i++)put(new THREE.BoxGeometry(3.4,FLOOR*0.55,2.6),Lm("#a3a6a8",{emissive:"#202224"}),8.2,1.3,i*FLOOR+FLOOR*0.35);
+  /* tall red-orange panels */
+  const rc=document.createElement("canvas");rc.width=64;rc.height=256;const r=rc.getContext("2d");r.fillStyle="#e2604c";r.fillRect(0,0,64,256);r.fillStyle="rgba(120,30,20,.25)";for(let i=0;i<64;i+=8)r.fillRect(i,0,2,256);
+  const rt=new THREE.CanvasTexture(rc),redM=Lm("#ffffff",{map:rt,emissive:"#3a120c"});
+  put(new THREE.BoxGeometry(5,h-FLOOR*1.25,0.5),redM,12.5,0.35,FLOOR*1.25+(h-FLOOR*1.25)/2);
+  /* right of the entrance: red horizontal louvres on every upper floor */
+  const lc=document.createElement("canvas");lc.width=64;lc.height=64;const l=lc.getContext("2d");l.fillStyle="#f3efe9";l.fillRect(0,0,64,64);l.fillStyle="#e2604c";for(let i=0;i<64;i+=8)l.fillRect(0,i+1,64,5);
+  const lt=new THREE.CanvasTexture(lc);lt.wrapS=lt.wrapT=THREE.RepeatWrapping;lt.repeat.set(3,2);const louM=Lm("#ffffff",{map:lt,emissive:"#2a120c"});
+  for(let i=1;i<b.lv;i++)put(new THREE.BoxGeometry(10,FLOOR-1.3,0.4),louM,30,0.3,i*FLOOR+1.2+(FLOOR-1.3)/2);
+  /* entrance: teal glass lobby, sign band with the emblem and "52", big curved shell canopy above */
+  put(new THREE.BoxGeometry(12,FLOOR-0.2,0.3),new THREE.MeshPhongMaterial({color:"#3f9a9a",specular:"#ffffff",shininess:80}),19,0.25,(FLOOR-0.2)/2+0.8);
+  const sc2=document.createElement("canvas");sc2.width=1024;sc2.height=128;const x=sc2.getContext("2d");x.fillStyle="#ecebe7";x.fillRect(0,0,1024,128);
+  x.fillStyle="#b8322a";x.beginPath();x.arc(70,64,40,0,7);x.fill();x.fillStyle="#7a2a20";x.textAlign="center";
+  x.font='700 50px "Anuphan",sans-serif';x.fillText("คณะครุศาสตร์อุตสาหกรรม",480,58);x.font='600 34px "Chakra Petch",sans-serif';x.fillText("Faculty of Technical Education",480,106);
+  x.fillStyle="#555";x.font='800 64px "Chakra Petch",sans-serif';x.fillText("52",930,86);
+  const st=new THREE.CanvasTexture(sc2),sm=new THREE.MeshLambertMaterial({map:st,emissive:"#fff",emissiveMap:st,emissiveIntensity:.25});
+  put(new THREE.BoxGeometry(12.5,1.4,0.5),[slab,slab,slab,slab,sm,slab],19,0.7,FLOOR+0.4);
+  const metal=Lm("#a9adb1",{emissive:"#25282b"});
+  {const NS=16,NW=8,pos=[],idx=[];for(let i=0;i<=NS;i++)for(let j=0;j<=NW;j++){const a=i/NS,w=(j/NW-0.5)*16*(1+0.12*a),q=P(19+w,0.6+a*7.5);pos.push(q[0],FLOOR*1.35+FLOOR*1.55*a*a,q[1]);}
+    for(let i=0;i<NS;i++)for(let j=0;j<NW;j++){const k=i*(NW+1)+j;idx.push(k,k+NW+1,k+1,k+1,k+NW+1,k+NW+2);}
+    const sg=new THREE.BufferGeometry();sg.setAttribute("position",new THREE.Float32BufferAttribute(pos,3));sg.setIndex(idx);sg.computeVertexNormals();
+    const shell=new THREE.Mesh(sg,new THREE.MeshLambertMaterial({color:"#b4b8bc",emissive:"#2a2d30",side:THREE.DoubleSide}));shell.castShadow=true;shell.receiveShadow=true;g.add(shell);}
+  put(new THREE.BoxGeometry(18,0.6,7.6),slab,19,4.2,FLOOR*2.9+0.3);
+  put(new THREE.BoxGeometry(18,0.8,0.3),metal,19,8.1,FLOOR*2.85);
+  for(let k=0;k<10;k++)put(new THREE.BoxGeometry(0.25,1.8,0.25),slab,13.5+k*1.25,0.6,FLOOR*3+1.5);
+  /* garden bed with shrubs at the corner below the glass tower */
+  put(new THREE.BoxGeometry(9,0.5,4),Lm("#4d8a3a"),3.5,5,0.25);
+  [[0.5,4.2,"#2f6b2a",1.0],[3,5.5,"#3f8f3a",0.8],[5.5,4.5,"#2f6b2a",1.1],[7,5.8,"#c8352b",0.5]].forEach(([u,v,col,rr])=>{const q=P(u,v);const m=new THREE.Mesh(new THREE.IcosahedronGeometry(rr,0),Lm(col));m.position.set(q[0],0.6+rr*0.6,q[1]);m.castShadow=true;g.add(m);});
+  g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+3;scene.add(g);
+}
 function buildClub79(b){
   /* from street view: low 2-storey block with a thin white roof slab overhang, recessed ground floor on white columns;
      front (road side) left→right: ATM kiosks, 7-Eleven with the yellow "ROCKET" café box above, wide granite steps up to the

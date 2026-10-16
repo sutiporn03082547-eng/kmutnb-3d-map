@@ -24,6 +24,7 @@
   --body:"Anuphan","Noto Sans Thai",system-ui,sans-serif;
   color-scheme:dark;
 }
+[hidden]{display:none!important}
 html,body{height:100%;}
 body{background:#cdd9e2;color:var(--fg);font-family:var(--body);overflow:hidden;}
 #c{position:fixed;inset:0;display:block;width:100%;height:100%;touch-action:none;outline:none;}
@@ -65,7 +66,7 @@ body{background:#cdd9e2;color:var(--fg);font-family:var(--body);overflow:hidden;
 
 #card{top:calc(14px + env(safe-area-inset-top,0px));right:14px;width:340px;max-width:calc(100vw - 28px);padding:16px;display:flex;flex-direction:column;gap:12px;max-height:calc(100% - 28px);overflow:auto;box-sizing:border-box;}
 #card .num{font:700 13px var(--display);color:var(--c);letter-spacing:.04em;}
-#card h2{margin:2px 34px 0 0;font:600 20px/1.3 var(--display);text-wrap:balance;}
+#card h2{margin:2px 44px 0 0;font:600 20px/1.3 var(--display);text-wrap:balance;}
 #card .en{margin:4px 0 0;color:var(--muted);font-size:13px;}
 .meta{display:flex;gap:6px;flex-wrap:wrap;}
 .pill{font:500 12px var(--body);border-radius:999px;padding:3px 9px;border:1px solid var(--line);color:var(--muted);}
@@ -74,7 +75,7 @@ body{background:#cdd9e2;color:var(--fg);font-family:var(--body);overflow:hidden;
 #card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px;font-size:14px;line-height:1.55;}
 #card .src{font-size:12px;color:var(--muted);line-height:1.55;margin:0;}
 #card .src a{color:#7fb3ff;}
-.x{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--well);color:var(--fg);cursor:pointer;font-size:16px;line-height:1;}
+.x{position:sticky;top:0;align-self:flex-end;margin:-6px -6px -38px 0;z-index:3;flex:none;width:36px;height:36px;border-radius:8px;border:1px solid var(--line);background:var(--well);color:var(--fg);cursor:pointer;font-size:16px;line-height:1;}
 .edit{display:none;flex-direction:column;gap:8px;border-top:1px dashed var(--line);padding-top:10px;font-size:13px;color:var(--muted);}
 body.editing .edit{display:flex;}
 #exp{display:none;flex-direction:column;gap:8px;}
@@ -148,6 +149,8 @@ body.routing #legend{display:none;}
 @media (prefers-reduced-motion:reduce){#gpsBtn.wait svg{animation:none}}
 #toast{position:fixed;left:50%;top:calc(16px + env(safe-area-inset-top,0px));transform:translateX(-50%);max-width:min(460px,calc(100vw - 28px));padding:10px 14px;font-size:14px;line-height:1.5;z-index:25;}
 @media (max-width:760px){#gpsBtn{bottom:auto;top:calc(124px + env(safe-area-inset-top,0px));right:10px;width:44px;height:44px;}#toast{top:calc(70px + env(safe-area-inset-top,0px));}}
+#backLink{position:fixed;right:14px;bottom:calc(130px + env(safe-area-inset-bottom,0px));padding:10px 14px;border-radius:999px;color:var(--accent-ink);background:var(--accent);border:0;font:600 14px var(--body);text-decoration:none;z-index:15;box-shadow:0 4px 14px rgba(0,0,0,.3);}
+@media (max-width:760px){#backLink{bottom:auto;top:calc(172px + env(safe-area-inset-top,0px));right:10px;font-size:13px;padding:8px 12px;}body.side-open #backLink{display:none;}}
 #compass{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:52px;height:52px;border-radius:50%;display:grid;place-items:center;cursor:pointer;padding:0;}
 #compass svg{width:40px;height:40px;transition:none;}
 #legend{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;gap:14px;align-items:center;padding:8px 14px;font-size:12px;color:var(--muted);white-space:nowrap;}
@@ -168,7 +171,8 @@ body.routing #legend{display:none;}
   #side.open #list{max-height:24vh;}
   .chip{padding:4px 9px;font-size:12px;}
   .btn{padding:6px 10px;font-size:13px;}
-  #card{top:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));left:10px;right:10px;width:auto;max-width:none;max-height:46%;}
+  #card{top:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));left:10px;right:10px;width:auto;max-width:none;max-height:44%;z-index:30;padding:12px 14px;gap:9px;}
+  #card h2{font-size:18px;}
   #compass{bottom:auto;top:calc(72px + env(safe-area-inset-top,0px));right:10px;width:44px;height:44px;}
   #compass svg{width:32px;height:32px;}
   body.side-open #compass{display:none;}
@@ -201,6 +205,7 @@ body.routing #legend{display:none;}
     <button class="btn" id="night" type="button">กลางคืน</button>
     <button class="btn" id="navBtn" type="button">นำทาง</button>
     <button class="btn" id="helpBtn" type="button">วิธีใช้</button>
+    <a class="btn" href="back.html" style="text-decoration:none">ไปหลังมหาลัย →</a>
     <button class="btn" id="editBtn" type="button" hidden>โหมดเพิ่มข้อมูล</button>
   </div>
   <div id="exp">
@@ -269,6 +274,7 @@ body.routing #legend{display:none;}
 <button id="gpsBtn" class="panel" type="button" aria-label="หาตำแหน่งของฉันด้วย GPS" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8"/></svg></button>
 <div id="toast" class="panel" hidden role="status"></div>
 <div id="drawBar" class="panel" hidden><span id="dbTxt"></span><button class="btn" id="dbUndo" type="button">ย้อนจุดล่าสุด</button><button class="btn here" id="dbGps" type="button" hidden>+ ตรงที่ฉันยืน</button><button class="btn go" id="dbDone" type="button">เสร็จ</button><button class="btn" id="dbCancel" type="button">ยกเลิก</button></div>
+<a id="backLink" href="back.html">🏘 ไปหลังมหาลัย</a>
 <div id="legend" class="panel">
   <span style="--c:#59626e"><b></b>ถนนรถวิ่ง</span>
   <span style="--c:#8a8f96"><b></b>ถนนภายใน (จำกัดสิทธิ์)</span>
@@ -323,51 +329,52 @@ const CATS={
 const ENG="คณะวิศวกรรมศาสตร์",CIT="วิทยาลัยเทคโนโลยีอุตสาหกรรม",FTE="คณะครุศาสตร์อุตสาหกรรม",SCI="คณะวิทยาศาสตร์ประยุกต์";
 const COVERED=[[96,145],[95,150],[97,154],[100,158],[107,162],[114,165],[123,168],[129,169],[135,169.8],[138.5,170.3]];
 const BLD=[
- {no:"11",kind:"tggs",name:"บัณฑิตวิทยาลัยวิศวกรรมศาสตร์นานาชาติสิรินธรไทย-เยอรมัน (TGGS)",en:"Sirindhorn International Thai-German Graduate School of Engineering",cat:"fac",lv:10,info:["อาคาร 10 ชั้น ตึกแรกทางซ้ายมือเมื่อเข้าประตูหลัก","สำนักงาน Goethe-Institut อยู่ชั้น 5","มีร้านกาแฟอยู่หน้าอาคาร"],p:[[-58,255],[12,280],[4,300],[-65,275]]},
- {no:"13",name:"อาคารปฏิบัติการเทคโนโลยีเครื่องจักรกลไฟฟ้าและเครื่องจักรกลหนัก",en:"Operation Building of Electrical and Heavy Equipment Technology",cat:"fac",lv:2,est:true,info:["ชื่ออาคารเทียบจากแผนผังมหาวิทยาลัย (ใน OSM ไม่มีชื่อ)"],p:[[-84,260],[-101,255],[-102,258],[-107,257],[-110,269],[-89,275]]},
+ {no:"11",kind:"tggs",name:"บัณฑิตวิทยาลัยวิศวกรรมศาสตร์นานาชาติสิรินธรไทย-เยอรมัน (TGGS)",en:"Sirindhorn International Thai-German Graduate School of Engineering",cat:"fac",lv:10,info:["อาคาร 10 ชั้น ตึกแรกทางซ้ายมือเมื่อเข้าประตูหลัก","ชั้น 2 กองบริการการศึกษา","ชั้น 3 ศูนย์ข้อมูลหลักสูตร ห้อง 304 และงานวิชาการ ห้อง 303"],p:[[-58,255],[12,280],[4,300],[-65,275]]},
+ {no:"13",fx:{wall:"#f6cdb0",band:"#e8743b",glass:"#4a5560",lower:"#e8a27a"},name:"อาคารปฏิบัติการเทคโนโลยีเครื่องจักรกลไฟฟ้าและเครื่องจักรกลหนัก",en:"Operation Building of Electrical and Heavy Equipment Technology",cat:"fac",lv:2,est:true,info:["ชื่ออาคารเทียบจากแผนผังมหาวิทยาลัย (ใน OSM ไม่มีชื่อ)"],p:[[-84,260],[-101,255],[-102,258],[-107,257],[-110,269],[-89,275]]},
  {no:"21",kind:"hall21",name:"อาคารอเนกประสงค์ (อาคาร 21)",en:"Multipurpose Hall",cat:"inst",lv:4,info:["อาคารโถงผนังกระจกดำ ด้านหน้ามีลานศาล / ซุ้มพระรูป","ชั้นใต้ดิน: ที่จอดรถยนต์ (ทางลงอยู่ติดป้อมยาม)","มีตู้ ATM หน้าอาคาร"],p:[[12,243],[21,218],[29,215],[69,229],[72,234],[63,260],[58,263],[54,262],[34,255],[28,253],[30,249]]},
  {no:"22",kind:"tower22",name:"อาคารอเนกประสงค์ (อาคาร 22) · สำนักงานอธิการบดี",en:"Office of the President",cat:"inst",lv:11,info:["สำนักงานอธิการบดี / สำนักผู้บริหาร (ทางเข้าใต้หอนาฬิกา)","งานกิจการนักศึกษา ชั้น 10","สำนักคอมพิวเตอร์และเทคโนโลยีสารสนเทศ (ICIT) ชั้น 3","กองแผนงาน ชั้น 6","ที่ทำการไปรษณีย์ ชั้น 1"],p:[[-21,234],[-16,236],[-15,233],[12,243],[30,249],[28,253],[34,255],[29,269],[23,267],[22,271],[-23,256],[-21,251],[-27,249]]},
  {no:"23",kind:"lib23",name:"อาคารนวมินทรราชินี (สำนักหอสมุดกลาง)",en:"Navamindra Rajini Building — Central Library",cat:"svc",lv:8,info:["ห้องประชุมเบญจรัตน์","มีร้านอาหารในอาคาร","สำนักหอสมุดกลาง ชั้น 2–7"],p:[[-62,225],[34,160],[42,170],[39,180],[31,186],[25,201],[10,212],[-1,207],[-25,223],[-30,235],[-38,240],[-52,236],[-57,234]]},
- {no:"41",name:"คณะสถาปัตยกรรมและการออกแบบ",en:"Faculty of Architecture and Design",cat:"fac",lv:6,info:[],p:[[186,176],[197,175],[259,199],[254,211],[193,189],[183,181]]},
- {no:"42",name:CIT+" (อาคาร 42)",en:"College of Industrial Technology",cat:"fac",lv:3,info:["ภาควิชาโยธาและสิ่งแวดล้อม"],p:[[177,230],[186,205],[237,224],[228,249]]},
+ {no:"41",fx:{wall:"#f4f4f2",band:"#f4f4f2",curtain:"#8fb3c2",glassIn:0.99,base:"#4b4f55",accents:[{u:0.95,w:4,col:"#d9a536",from:1}],sign:{t:"คณะสถาปัตยกรรมและการออกแบบ"}},name:"คณะสถาปัตยกรรมและการออกแบบ",en:"Faculty of Architecture and Design",cat:"fac",lv:6,info:[],p:[[186,176],[197,175],[259,199],[254,211],[193,189],[183,181]]},
+ {no:"42",fx:{wall:"#f1f0ec",band:"#f4f3ef",lip:"#6b7076",glass:"#3f474e",stripes:true},name:CIT+" (อาคาร 42)",en:"College of Industrial Technology",cat:"fac",lv:3,info:["ภาควิชาโยธาและสิ่งแวดล้อม"],p:[[177,230],[186,205],[237,224],[228,249]]},
  {no:"43",kind:"styled",sty:{slab:"#f6f6f3",glass:"#6fa6b4",fin:"#3fae6a"},name:"สถาบันนวัตกรรมเทคโนโลยีไทย-ฝรั่งเศส (TFII)",en:"Thai-French Innovation Institute",cat:"inst",lv:6,info:[],p:[[179,196],[185,199],[180,212],[174,230],[168,227]]},
- {no:"44",kind:"styled",sty:{slab:"#f6f3ef",glass:"#7e95a9",fin:"#d9798c"},name:FTE+" (อาคาร 44)",en:"Faculty of Technical Education",cat:"fac",lv:6,info:["อาคารปฏิบัติการและประลองรวม"],p:[[152,177],[173,185],[168,198],[178,202],[168,227],[167,230],[136,219]]},
- {no:"46",name:"คณะศิลปศาสตร์ประยุกต์ และโรงอาหารสวนปาล์ม",en:"Faculty of Applied Arts",cat:"fac",lv:4,info:["\"สวนปาล์ม\" คือที่นี่ ชั้น 2 เป็นโรงอาหารสวนปาล์ม","อยู่ติดลานเฉลิมพระเกียรติ และลานจอดรถหน้าหอสมุด"],p:[[55,151],[77,159],[62,201],[39,193]]},
+ {no:"44",kind:"styled",sty:{slab:"#f6f3ef",glass:"#7e95a9",fin:"#d9798c"},name:FTE+" (อาคาร 44)",en:"Faculty of Technical Education",cat:"fac",lv:8,info:["ผังอาคารคณะฯ อัปเดต 20 เม.ย. 2569: ชั้น 1–8 ชั้นลอย และห้องบางส่วนที่ชั้น 9","โมเดลแสดงมวลหลัก 8 ชั้น; รูปทรงชั้น 9 และความสูงจริงยังรอยืนยัน","อาคารปฏิบัติการและประลองรวม"],p:[[152,177],[173,185],[168,198],[178,202],[168,227],[167,230],[136,219]]},
+ {no:"46",fx:{wall:"#f2f1ed",band:"#f2f1ed",glass:"#3c4650",base:"#8c9196",balc:true,accents:[{u:0.15,w:0.9,col:"#e2603f",from:1,d:0.9},{u:0.5,w:0.9,col:"#e2603f",from:1,d:0.9},{u:0.85,w:0.9,col:"#e2603f",from:1,d:0.9}]},name:"คณะศิลปศาสตร์ประยุกต์ และโรงอาหารสวนปาล์ม",en:"Faculty of Applied Arts",cat:"fac",lv:4,info:["\"สวนปาล์ม\" คือที่นี่ ชั้น 2 เป็นโรงอาหารสวนปาล์ม","อยู่ติดลานเฉลิมพระเกียรติ และลานจอดรถหน้าหอสมุด"],p:[[55,151],[77,159],[62,201],[39,193]]},
  {no:"47",kind:"styled",sty:{slab:"#f5f5f2",glass:"#8db8cf",pilotis:true,fin:"#dfe3e6"},name:"สำนักวิจัยวิทยาศาสตร์และเทคโนโลยี (STRI)",en:"Science and Technology Research Institute",cat:"inst",lv:6,info:[],p:[[129,234],[156,244],[146,272],[118,262]]},
- {no:"52",kind:"fte52",name:FTE+" (อาคาร 52)",en:"Faculty of Technical Education",cat:"fac",lv:6,est:true,info:["ภาควิชาคอมพิวเตอร์ศึกษา","ขอบเขตอาคารปรับตามที่นักศึกษาชี้ (ใน OSM ไม่มีอาคารนี้)","ทางทิศใต้ของอาคารมีลานจอดรถยนต์และคลองเล็กที่จอดมอเตอร์ไซค์"],p:[[88,126],[124,97],[136,92],[156,103],[148,138],[140,146],[104,146]]},
- {no:"62",name:CIT+" (อาคาร 62)",en:"College of Industrial Technology",cat:"fac",lv:8,osm:true,info:["สาขาวิชาเขียนแบบเครื่องกล (ชั้น 4)"],p:[[226,119],[239,83],[304,107],[291,142]]},
- {no:"63",name:CIT+" (อาคาร 63)",en:"College of Industrial Technology",cat:"fac",lv:6,osm:true,info:["สาขาวิชาเทคโนโลยีวิศวกรรมยานยนต์","ศูนย์ทดสอบมาตรฐานฝีมือแรงงาน"],p:[[181,120],[193,125],[200,107],[187,102],[200,68],[235,82],[222,116],[211,111],[204,130],[226,138],[214,170],[168,153]]},
- {no:"64",name:CIT+" (อาคาร 64)",en:"College of Industrial Technology",cat:"fac",lv:4,info:[],p:[[159,72],[175,49],[179,45],[185,42],[199,46],[199,56],[189,59],[172,82]]},
- {no:"65",name:CIT+" (อาคาร 65)",en:"College of Industrial Technology",cat:"fac",lv:11,osm:true,info:[],p:[[205,30],[231,41],[226,52],[221,50],[216,63],[209,61],[203,58],[208,46],[200,43]]},
- {no:"66",name:CIT+" (อาคาร 66)",en:"College of Industrial Technology",cat:"fac",lv:2,info:[],p:[[221,58],[239,64],[236,71],[227,67],[219,64]]},
- {no:"67",name:CIT+" (อาคาร 67)",en:"College of Industrial Technology",cat:"fac",lv:2,info:[],p:[[252,69],[270,75],[266,84],[249,78]]},
- {no:"68",name:CIT+" (อาคาร 68)",en:"College of Industrial Technology",cat:"fac",lv:2,info:[],p:[[270,75],[285,81],[282,90],[266,84]]},
- {no:"69",name:CIT+" (อาคาร 69)",en:"College of Industrial Technology",cat:"fac",lv:3,info:[],p:[[303,78],[311,80],[304,100],[297,97]]},
- {no:"72",name:"อาคารยิมเนเซียม",en:"Gymnasium",cat:"sport",lv:3,info:[],p:[[118,-64],[178,-40],[170,-21],[110,-45]]},
- {no:"73",name:"ศูนย์ทดสอบวัดความสามารถภาษาอังกฤษและพัฒนาสื่อดิจิทัล (ศทอ.)",en:"Center for English Proficiency Testing & Digital Media Development (CEM)",cat:"inst",lv:3,info:["ชื่อตามป้ายหน้าอาคารปัจจุบัน (แผนผังเดิมระบุว่าเป็นสถาบัน TGDE)","ทางเดินข้างอาคารนี้เป็นทางไปประตูหลังมหาวิทยาลัย"],p:[[50,-37],[37,-44],[26,-25],[39,-18]]},
- {no:"75",name:SCI+" (อาคาร 75)",en:"Faculty of Applied Science",cat:"fac",lv:15,osm:true,info:[],p:[[91,-18],[82,3],[68,-3],[76,-24]]},
- {no:"76",name:"สำนักพัฒนาเทคนิคศึกษา (ITED)",en:"Institute for Technology Education Development",cat:"inst",lv:4,info:[],p:[[22,75],[55,112],[43,122],[11,85]]},
- {no:"77",kind:"terra77",name:"อาคาร 40 ปี มจพ. และโรงอาหารกลาง",en:"40th Year Building and Main Canteen",cat:"svc",lv:11,osm:true,info:["KMUTNB Guesthouse อยู่ฝั่งตะวันตกของอาคาร","ชั้น 1: ที่จอดรถยนต์และรถมอเตอร์ไซค์","ชั้น 2: ศูนย์อาหาร / โรงอาหารกลาง (นักศึกษาเรียกสั้น ๆ ว่า \"โรงอาหาร 40\")","ในอาคารมี PDB KMUTNB และศูนย์รับรองสมรรถนะบุคคลตามมาตรฐานอาชีพ (ตามป้ายใน Google Maps)","ร้าน Fermo Cafe และจุดออกกำลังกายอยู่ข้างอาคาร","ธนาคารกรุงเทพอยู่ฝั่งตะวันออกของอาคาร"],p:[[48,11],[88,27],[94,30],[74,84],[25,65]]},
- {no:"78A",name:SCI+" (อาคาร 78 โซน A)",en:"Faculty of Applied Science — Zone A",cat:"fac",lv:12,osm:true,info:["ภาควิชาเคมีอุตสาหกรรม"],p:[[91,-18],[121,-6],[118,2],[114,11],[112,15],[82,3]]},
- {no:"78B",name:SCI+" (อาคาร 78 โซน B)",en:"Faculty of Applied Science — Zone B",cat:"fac",lv:9,osm:true,info:[],p:[[133,-21],[189,2],[181,12],[175,20],[173,19],[161,29],[137,-11],[114,11],[118,2],[133,-14]]},
+ {no:"52",kind:"fte52",name:FTE+" (อาคาร 52)",en:"Faculty of Technical Education",cat:"fac",lv:7,est:true,info:["ผังอาคารคณะฯ อัปเดต 20 เม.ย. 2569: ชั้นใช้งาน 1–7 และช่องเปิดกลางอาคาร","ตำแหน่งและขนาดช่องเปิดในโมเดลประมาณจากผัง ยังไม่ได้สำรวจหน้างาน","ภาควิชาคอมพิวเตอร์ศึกษา","ขอบเขตอาคารปรับตามที่นักศึกษาชี้ (ใน OSM ไม่มีอาคารนี้)","ทางทิศใต้ของอาคารมีลานจอดรถยนต์และคลองเล็กที่จอดมอเตอร์ไซค์"],p:[[88,126],[124,97],[136,92],[156,103],[148,138],[140,146],[104,146]]},
+ {no:"62",fx:{wall:"#f1f0ec",band:"#f4f3ef",lip:"#6b7076",glass:"#3f474e",stripes:true,carport:{edge:3,col:"#6f8a80",post:"#2f7a55",d:6}},name:CIT+" (อาคาร 62)",en:"College of Industrial Technology",cat:"fac",lv:8,osm:true,info:["สาขาวิชาเขียนแบบเครื่องกล (ชั้น 4)"],p:[[226,119],[239,83],[304,107],[291,142]]},
+ {no:"63",kind:"cit63",name:CIT+" (อาคาร 63)",en:"College of Industrial Technology",cat:"fac",lv:5,osm:true,info:["ทางเข้าหลักของวิทยาลัยฯ: อาคารกระจกสีดำตรงกลาง หันหน้าออกถนน","สาขาวิชาเทคโนโลยีวิศวกรรมยานยนต์","ศูนย์ทดสอบมาตรฐานฝีมือแรงงาน"],p:[[181,120],[193,125],[200,107],[187,102],[200,68],[235,82],[222,116],[211,111],[204,130],[226,138],[214,170],[168,153]]},
+ {no:"64",kind:"cit64",name:CIT+" (อาคาร 64)",en:"College of Industrial Technology",cat:"fac",lv:4,info:["หน้าอาคาร (ฝั่งถนน): ร้านขายของและถ่ายเอกสาร + เพิงหลังคาที่นั่งพัก โต๊ะม้านั่งหลากสี","ห้องน้ำอยู่ด้านข้างอาคาร ฝั่งคลอง ใกล้เชิงสะพาน"],p:[[159,72],[175,49],[179,45],[185,42],[199,46],[199,56],[189,59],[172,82]]},
+ {no:"65",fx:{wall:"#e9e8e4",band:"#d9d8d3",glass:"#2f3a40",lip:"#6b7076",stripes:true,portico:{u:0.5,col:"#bdb7ad"},num:{t:"65",bg:"#3e4a63"}},name:CIT+" (อาคาร 65)",en:"College of Industrial Technology",cat:"fac",lv:11,osm:true,info:[],p:[[205,30],[231,41],[226,52],[221,50],[216,63],[209,61],[203,58],[208,46],[200,43]]},
+ {no:"66",fx:{wall:"#f1f0ec",band:"#f4f3ef",lip:"#6b7076",glass:"#3f474e",stripes:true},name:CIT+" (อาคาร 66)",en:"College of Industrial Technology",cat:"fac",lv:2,info:[],p:[[221,58],[239,64],[236,71],[227,67],[219,64]]},
+ {no:"67",fx:{wall:"#f1f0ec",band:"#f4f3ef",lip:"#6b7076",glass:"#3f474e",stripes:true},name:CIT+" (อาคาร 67)",en:"College of Industrial Technology",cat:"fac",lv:2,info:[],p:[[252,69],[270,75],[266,84],[249,78]]},
+ {no:"68",fx:{wall:"#f1f0ec",band:"#f4f3ef",lip:"#6b7076",glass:"#3f474e",stripes:true},name:CIT+" (อาคาร 68)",en:"College of Industrial Technology",cat:"fac",lv:2,info:[],p:[[270,75],[285,81],[282,90],[266,84]]},
+ {no:"69",fx:{wall:"#f1f0ec",band:"#f4f3ef",lip:"#6b7076",glass:"#3f474e",stripes:true,num:{t:"69",bg:"#6b7076"}},name:CIT+" (อาคาร 69)",en:"College of Industrial Technology",cat:"fac",lv:3,info:[],p:[[303,78],[311,80],[304,100],[297,97]]},
+ {no:"72",fx:{wall:"#e8e7e2",band:"#dddcd6",glass:"#46525a",hip:"#9aa3aa",winX:20},name:"อาคารยิมเนเซียม",en:"Gymnasium",cat:"sport",lv:3,info:[],p:[[118,-64],[178,-40],[170,-21],[110,-45]]},
+ {no:"71",fx:{wall:"#dcd9d2",band:"#d0cdc5",glass:"#3c4449",balc:true,fins:"#e08a3c",finStep:4,hip:"#8e969b"},name:"อาคาร 71 ภาควิชาเคมีอุตสาหกรรม",en:"Building 71 — Department of Industrial Chemistry",cat:"fac",lv:4,info:["ภาควิชาเคมีอุตสาหกรรม คณะวิทยาศาสตร์ประยุกต์","ห้องปฏิบัติการเคมี และอาคารเก็บสารเคมี","อยู่ข้างลานจอดรถหลังอาคารยิมเนเซียม (72) ติดซอยวงศ์สว่าง 11","ตำแหน่งจาก Google Maps + วัดขนาดจากภาพดาวเทียม; จำนวนชั้นประมาณ 4 ชั้นจาก Street View (พ.ย. 2024) ยังไม่ยืนยัน"],p:[[96,-63],[105,-58.5],[97,-41],[87,-45.5]]},
+ {no:"73",fx:{wall:"#f1f1ef",band:"#e3e3e0",glass:"#34424b",accents:[{u:0.6,w:1.6,col:"#f0731f",over:1.5,d:1.2}],sign:{t:"ศูนย์ทดสอบวัดความสามารถภาษาอังกฤษและพัฒนาสื่อดิจิทัล (ศทอ.)"},num:{t:"73",bg:"#ffffff",fg:"#333333",u:0.2},steps:{u:0.45}},name:"ศูนย์ทดสอบวัดความสามารถภาษาอังกฤษและพัฒนาสื่อดิจิทัล (ศทอ.)",en:"Center for English Proficiency Testing & Digital Media Development (CEM)",cat:"inst",lv:3,info:["ชื่อตามป้ายหน้าอาคารปัจจุบัน (แผนผังเดิมระบุว่าเป็นสถาบัน TGDE)","ทางเดินข้างอาคารนี้เป็นทางไปประตูหลังมหาวิทยาลัย"],p:[[50,-37],[37,-44],[26,-25],[39,-18]]},
+ {no:"75",fx:{wall:"#f2c6ae",band:"#f6ddd0",glass:"#4a545c",balc:true,accents:[{u:0.55,w:3,col:"#f0731f",over:2}]},name:SCI+" (อาคาร 75)",en:"Faculty of Applied Science",cat:"fac",lv:15,osm:true,info:[],p:[[91,-18],[82,3],[68,-3],[76,-24]]},
+ {no:"76",fx:{wall:"#f2f2ef",band:"#f2f2ef",glass:"#3d464d",lip:"#a7adb2",hlouv:"#e6e6e2",hlouvN:1},name:"สำนักพัฒนาเทคนิคศึกษา (ITED)",en:"Institute for Technology Education Development",cat:"inst",lv:4,info:[],p:[[22,75],[55,112],[43,122],[11,85]]},
+ {no:"77",kind:"terra77",name:"อาคาร 40 ปี มจพ. และโรงอาหารกลาง",en:"40th Year Building and Main Canteen",cat:"svc",lv:11,osm:true,info:["ชั้น 7: สนามแบดมินตัน 4 สนาม โถงสูงใต้หลังคา ล้อมด้วยทางเดินชั้นบน (งานวิจัยปี 2568)","รูปตัดระบุช่วงชั้นบน 3.9 เมตร; แนวโถงและสนามในโมเดลเทียบผังโดยประมาณ","KMUTNB Guesthouse อยู่ฝั่งตะวันตกของอาคาร","ชั้น 1: ที่จอดรถยนต์และรถมอเตอร์ไซค์","ชั้น 2: ศูนย์อาหาร / โรงอาหารกลาง (นักศึกษาเรียกสั้น ๆ ว่า \"โรงอาหาร 40\")","ในอาคารมี PDB KMUTNB และศูนย์รับรองสมรรถนะบุคคลตามมาตรฐานอาชีพ (ตามป้ายใน Google Maps)","ร้าน Fermo Cafe และจุดออกกำลังกายอยู่ข้างอาคาร","ธนาคารกรุงเทพอยู่ฝั่งตะวันออกของอาคาร"],p:[[48,11],[88,27],[94,30],[74,84],[25,65]]},
+ {no:"78A",fx:{wall:"#a5533d",band:"#b0604a",glass:"#2f363c",canopy:{edge:4,u:0.45,w:18,th:"คณะวิทยาศาสตร์ประยุกต์",t:"FACULTY OF APPLIED SCIENCE"}},name:SCI+" (อาคาร 78 โซน A)",en:"Faculty of Applied Science — Zone A",cat:"fac",lv:12,osm:true,info:["ภาควิชาเคมีอุตสาหกรรม"],p:[[91,-18],[121,-6],[118,2],[114,11],[112,15],[82,3]]},
+ {no:"78B",fx:{wall:"#e8bfb3",band:"#f2d6cd",glass:"#4d5258",balc:true,pilotis:true,base:"#3a3f44"},name:SCI+" (อาคาร 78 โซน B)",en:"Faculty of Applied Science — Zone B",cat:"fac",lv:9,osm:true,info:[],p:[[133,-21],[189,2],[181,12],[175,20],[173,19],[161,29],[137,-11],[114,11],[118,2],[133,-14]]},
  {no:"79",kind:"club79",name:"อาคารสโมสรบุคลากร (ตึกสโมสร)",en:"Staff Club Building",cat:"svc",lv:2,info:["7-Eleven ชั้นใต้ดิน (เดินลงบันไดหน้าตึก)","I-Studio","ห้องพยาบาล / ศูนย์บริการสุขภาพ","ร้านกาแฟ","UStore ร้านอุปกรณ์อิเล็กทรอนิกส์","ATM และห้องน้ำอยู่รอบอาคาร"],p:[[131,0],[155.4,29.1],[135.4,46.1],[114,20],[118,17],[115,13]]},
- {no:"81",name:ENG+" (อาคาร 81)",en:"Faculty of Engineering",cat:"fac",lv:8,info:["สมาคมศิษย์เก่าวิศวกรรมศาสตร์อยู่ฝั่งตะวันออกของอาคาร","อาคารหลักของคณะวิศวกรรมศาสตร์ (9 ภาควิชา)","มีตู้ ATM ฝั่งตะวันออกของอาคาร"],p:[[-94,-6],[-53,20],[-34,33],[-12,47],[-22,62],[-60,37],[-65,45],[-109,16]]},
- {no:"82",name:ENG+" (อาคาร 82)",en:"Faculty of Engineering",cat:"fac",lv:5,info:["ภาควิชาวิศวกรรมการผลิตและหุ่นยนต์"],p:[[-139,-4],[-111,-52],[-93,-41],[-121,6]]},
- {no:"83",name:ENG+" (อาคาร 83)",en:"Faculty of Engineering",cat:"fac",lv:5,info:[],p:[[-96,-73],[-49,-42],[-58,-27],[-106,-58]]},
- {no:"84",name:ENG+" (อาคาร 84)",en:"Faculty of Engineering",cat:"fac",lv:4,info:[],p:[[-41,-38],[7,-6],[-3,9],[-51,-23]]},
- {no:"85",name:ENG+" (อาคาร 85)",en:"Faculty of Engineering",cat:"fac",lv:4,info:["ภาควิชาวิศวกรรมไฟฟ้าและคอมพิวเตอร์"],p:[[-53,20],[-38,-4],[-18,9],[-34,33]]},
- {no:"86",name:ENG+" (อาคาร 86)",en:"Faculty of Engineering",cat:"fac",lv:12,info:["ภาควิชาวิศวกรรมขนถ่ายวัสดุและโลจิสติกส์"],p:[[-87,-120],[-75,-113],[-92,-86],[-104,-94]]},
- {no:"88",name:ENG+" (อาคาร 88)",en:"Faculty of Engineering",cat:"fac",lv:7,info:[],p:[[-119,-133],[-92,-118],[-101,-101],[-129,-116]]},
- {no:"89",name:ENG+" (อาคาร 89)",en:"Faculty of Engineering",cat:"fac",lv:11,osm:true,info:[],p:[[-146,-75],[-126,-61],[-161,-10],[-181,-24]]},
- {no:"90",name:"โรงเรียนเตรียมวิศวกรรมศาสตร์ ไทย-เยอรมัน",en:"Thai-German Pre-Engineering School",cat:"fac",lv:6,info:["ในแผนผังมหาวิทยาลัยคืออาคาร 90, 91 และ 97"],p:[[-286,-242],[-265,-254],[-239,-217],[-259,-201]]},
- {no:"91",name:"อาคาร 91 อาคารปฏิบัติการ (โรงเรียนเตรียมวิศวกรรมศาสตร์ฯ)",en:"Building 91 — workshop building",cat:"fac",lv:4,info:["อาคารปฏิบัติการของโรงเรียนเตรียมวิศวกรรมศาสตร์ ไทย-เยอรมัน"],p:[[-276,-292],[-259,-267],[-297,-241],[-315,-266]]},
- {no:"92",name:"หอพักนักศึกษาชาย มจพ.",en:"KMUTNB Dormitory (male)",cat:"dorm",lv:8,info:["ศูนย์ที่พักเพื่อการเรียนรู้และสัมมนาการ"],p:[[-218,-225],[-194,-189],[-180,-199],[-203,-235]]},
- {no:"93",name:"หอพักนักศึกษาหญิง มจพ.",en:"KMUTNB Dormitory (female)",cat:"dorm",lv:8,info:["ศูนย์ที่พักเพื่อการเรียนรู้และสัมมนาการ"],p:[[-198,-238],[-183,-247],[-160,-211],[-174,-202]]},
- {no:"95",name:"วิทยาลัยนานาชาติ",en:"International College",cat:"fac",lv:4,info:["มี 7-Eleven อยู่ใกล้อาคาร"],p:[[-162,-155],[-169,-152],[-149,-124],[-135,-116],[-122,-138]]},
- {no:"96",name:"คณะพัฒนาธุรกิจและอุตสาหกรรม",en:"Faculty of Business and Industrial Development",cat:"fac",lv:7,info:[],p:[[-235,-264],[-200,-287],[-199,-285],[-191,-273],[-189,-272],[-224,-248]]},
- {no:"98",name:"โรงอาหารคณะพัฒนาธุรกิจและอุตสาหกรรม",en:"Canteen — Faculty of Business and Industrial Development",cat:"svc",lv:2,info:["โรงอาหารโซนหอพัก อยู่ติดคณะพัฒนาธุรกิจและอุตสาหกรรม (อาคาร 96)"],p:[[-201,-296],[-178,-304],[-170,-291],[-185,-279],[-197,-284]]},
+ {no:"81",fx:{wall:"#e2ddd2",band:"#ddd8cc",glass:"#3e464c",fins:"#d6d1c5",finStep:1.6,lip:"#cfcabf",pilotis:true,base:"#5a5f63",carport:[{edge:6,col:"#5f5a52",post:"#8d969e",d:5.5,flags:true,cars:true},{edge:4,col:"#5f5a52",post:"#8d969e",d:5.5,flags:true,cars:true}]},name:ENG+" (อาคาร 81)",en:"Faculty of Engineering",cat:"fac",lv:8,info:["ชั้น 2 สำนักงานผู้บริหารคณะวิศวกรรมศาสตร์","ชั้น 3 สำนักงานคณบดี งานบริการการศึกษา และ CIEP","ชั้น 4 ภาควิชาวิศวกรรมอุตสาหการ"],p:[[-94,-6],[-53,20],[-34,33],[-12,47],[-22,62],[-60,37],[-65,45],[-109,16]]},
+ {no:"82",fx:{wall:"#e2ddd2",band:"#ddd8cc",glass:"#3e464c",fins:"#d6d1c5",finStep:1.6,lip:"#cfcabf"},name:ENG+" (อาคาร 82)",en:"Faculty of Engineering",cat:"fac",lv:5,info:["ชั้น 2 ภาควิชาวิศวกรรมการผลิต","ชั้น 3 ศูนย์คอมพิวเตอร์คณะวิศวกรรมศาสตร์"],p:[[-139,-4],[-111,-52],[-93,-41],[-121,6]]},
+ {no:"83",fx:{wall:"#f3f3f1",band:"#f3f3f1",glass:"#3a434a",parapet:"#a8394a",lip:"#c9c9c6",num:{t:"83",bg:"#8f959b"}},name:ENG+" (อาคาร 83)",en:"Faculty of Engineering",cat:"fac",lv:5,info:["ภาควิชาวิศวกรรมเครื่องกลและการบิน-อวกาศ (MAE)","สารบบคณะระบุที่ตั้งภาควิชาที่ชั้น 3","ข่าว MAE วันที่ 14 ต.ค. 2569 ยืนยันการใช้อาคาร 83"],p:[[-96,-73],[-49,-42],[-58,-27],[-106,-58]]},
+ {no:"84",fx:{wall:"#e2ddd2",band:"#ddd8cc",glass:"#3e464c",fins:"#d6d1c5",finStep:1.1,num:{t:"84",bg:"#e2ddd2",fg:"#6b7076",u:0.5}},name:ENG+" (อาคาร 84)",en:"Faculty of Engineering",cat:"fac",lv:4,info:["ชั้น 2 ภาควิชาวิศวกรรมไฟฟ้าและคอมพิวเตอร์ (ECE)"],p:[[-41,-38],[7,-6],[-3,9],[-51,-23]]},
+ {no:"85",fx:{wall:"#e2ddd2",band:"#ddd8cc",glass:"#3e464c",fins:"#d6d1c5",finStep:1.6,lip:"#cfcabf"},name:ENG+" (อาคาร 85)",en:"Faculty of Engineering",cat:"fac",lv:4,info:["ภาควิชาวิศวกรรมไฟฟ้าและคอมพิวเตอร์"],p:[[-53,20],[-38,-4],[-18,9],[-34,33]]},
+ {no:"86",fx:{wall:"#e2ddd2",band:"#ddd8cc",glass:"#3e464c",fins:"#d6d1c5",finStep:1.6,lip:"#cfcabf"},name:ENG+" (อาคาร 86)",en:"Faculty of Engineering",cat:"fac",lv:13,info:["ชั้น 1 ภาควิชาวิศวกรรมวัสดุและเทคโนโลยีการผลิต (MPTE)","ชั้น 13 ภาควิชาวิศวกรรมเคมี (CHE)","จำนวนชั้น: อย่างน้อย 13 ชั้น ตามสารบบอาคารคณะวิศวฯ (ยังไม่ยืนยันว่ามีชั้นสูงกว่านี้หรือไม่)"],p:[[-87,-120],[-75,-113],[-92,-86],[-104,-94]]},
+ {no:"88",fx:{wall:"#e2ddd2",band:"#ddd8cc",glass:"#3e464c",fins:"#d6d1c5",finStep:1.6,lip:"#cfcabf"},name:ENG+" (อาคาร 88)",en:"Faculty of Engineering",cat:"fac",lv:7,info:["ภาควิชาวิศวกรรมขนถ่ายวัสดุและโลจิสติกส์"],p:[[-119,-133],[-92,-118],[-101,-101],[-129,-116]]},
+ {no:"89",fx:{wall:"#f3f3f1",band:"#ececea",curtain:"#7ea4b6",parapet:"#c0393b",lip:"#9ea4aa"},name:ENG+" (อาคาร 89)",en:"Faculty of Engineering",cat:"fac",lv:11,osm:true,info:["ชั้น 2 ภาควิชาวิศวกรรมโยธา","สารบบคณะระบุภาควิชาวิศวกรรมเครื่องมือวัดและอิเล็กทรอนิกส์ที่ชั้น 8"],p:[[-146,-75],[-126,-61],[-161,-10],[-181,-24]]},
+ {no:"90",fx:{wall:"#f4f4f2",band:"#f4f4f2",glass:"#3d464d",lower:"#d23a32",lip:"#c8322f"},name:"โรงเรียนเตรียมวิศวกรรมศาสตร์ ไทย-เยอรมัน",en:"Thai-German Pre-Engineering School",cat:"fac",lv:6,info:["ในแผนผังมหาวิทยาลัยคืออาคาร 90, 91 และ 97"],p:[[-286,-242],[-265,-254],[-239,-217],[-259,-201]]},
+ {no:"91",fx:{wall:"#f3f1ea",band:"#e9e4d6",glass:"#3d464d",lip:"#9b8f7c"},name:"อาคารเรียนและโรงอาหาร (อาคาร 91)",en:"Classroom and canteen building 91",cat:"fac",lv:4,info:["เอกสาร TOR ของมหาวิทยาลัยระบุชื่ออาคารเรียนและโรงอาหาร"],p:[[-276,-292],[-259,-267],[-297,-241],[-315,-266]]},
+ {no:"92",fx:{wall:"#f3eee6",band:"#ee9a80",glass:"#4a545b",balc:true},name:"หอพักนักศึกษาชาย มจพ.",en:"KMUTNB Dormitory (male)",cat:"dorm",lv:13,info:["ศูนย์ที่พักเพื่อการเรียนรู้และสันทนาการ","13 ชั้น ตามข้อมูลสำนักงานอธิการบดี (หน้าเว็บไม่ระบุวันปรับปรุง)","ชั้น 1 พื้นที่ส่วนกลาง; ชั้น 2–12 ห้องพัก; ชั้น 13 ห้องพักปรับอากาศ","ความสูงต่อชั้นและรายละเอียดภายนอกยังเป็นค่าประมาณ"],p:[[-218,-225],[-194,-189],[-180,-199],[-203,-235]]},
+ {no:"93",fx:{wall:"#f3eee6",band:"#ee9a80",glass:"#4a545b",balc:true},name:"หอพักนักศึกษาหญิง มจพ.",en:"KMUTNB Dormitory (female)",cat:"dorm",lv:13,info:["ศูนย์ที่พักเพื่อการเรียนรู้และสันทนาการ","13 ชั้น ตามข้อมูลสำนักงานอธิการบดี (หน้าเว็บไม่ระบุวันปรับปรุง)","ชั้น 1 พื้นที่ส่วนกลาง; ชั้น 2–12 ห้องพัก; ชั้น 13 ห้องพักปรับอากาศ","ความสูงต่อชั้นและรายละเอียดภายนอกยังเป็นค่าประมาณ"],p:[[-198,-238],[-183,-247],[-160,-211],[-174,-202]]},
+ {no:"95",fx:{wall:"#f2f2ef",band:"#e4e4e1",glass:"#3a454e",lip:"#7d858c"},name:"วิทยาลัยนานาชาติ",en:"International College",cat:"fac",lv:4,info:["มี 7-Eleven อยู่ใกล้อาคาร"],p:[[-162,-155],[-169,-152],[-149,-124],[-135,-116],[-122,-138]]},
+ {no:"96",fx:{wall:"#eeefee",band:"#e6e7e6",glass:"#2f363c",base:"#3f464c",fins:"#6b2a5e",finStep:4.5,lip:"#5e6469"},name:"คณะพัฒนาธุรกิจและอุตสาหกรรม",en:"Faculty of Business and Industrial Development",cat:"fac",lv:7,info:["ตึกค่อนข้างใหม่ มีลิฟต์ ห้องเรียนและห้องน้ำสะอาด","ชั้นล่างเป็นลานโล่งมีโต๊ะไม้นั่งกินข้าว/นั่งทำงาน ใกล้โรงอาหาร 98 ร้านขายของชำ และร้านปริ้น"],p:[[-235,-264],[-200,-287],[-199,-285],[-191,-273],[-189,-272],[-224,-248]]},
+ {no:"98",fx:{wall:"#f2c9b0",band:"#efeee9",glass:"#4a545b",parapet:"#d9dbd6",roof:"#7f8a76",winX:14,bandH:1.6},name:"โรงอาหารคณะพัฒนาธุรกิจและอุตสาหกรรม",en:"Canteen — Faculty of Business and Industrial Development",cat:"svc",lv:3,info:["ชั้น 1: โรงอาหารคณะพัฒนาธุรกิจและอุตสาหกรรม","ชั้น 2: สนามแบดมินตัน (โรงยิมในร่ม หลังคาสูง พื้นไม้) มีโต๊ะปิงปองด้านข้าง","หลังคาเหล็กแบน สีเทาเขียว","โรงอาหารโซนหอพัก อยู่ติดคณะพัฒนาธุรกิจและอุตสาหกรรม (อาคาร 96)"],p:[[-201,-296],[-178,-304],[-170,-291],[-185,-279],[-197,-284]]},
  {no:"ลาน",id:"court62",flat:true,name:"สนามฟุตซอลและลานจอดรถ (ระหว่างอาคาร 62–63)",en:"Futsal court & parking — College of Industrial Technology",cat:"sport",lv:0,info:["ลานกลางที่ล้อมด้วยอาคาร 62 และ 63","มีสนามฟุตซอล","จอดได้ทั้งรถมอเตอร์ไซค์และรถยนต์"],p:[[234,138],[275,151],[263,183],[222,169]]},
- {no:"P",id:"lot72",flat:true,kind:"lot",name:"ลานจอดรถหลังอาคารยิมเนเซียม (72)",en:"Parking lot behind the Gymnasium",cat:"other",lv:0,est:true,info:["ลานจอดรถด้านหลังอาคาร 72","ขอบเขตลานเป็นค่าประมาณ ช่วยยืนยันได้"],p:[[88,-50],[103,-66],[113,-55],[109,-30],[93,-25],[80,-38]]},
+ {no:"P",id:"lot72",flat:true,kind:"lot",name:"ลานจอดรถหลังอาคารยิมเนเซียม (72)",en:"Parking lot behind the Gymnasium",cat:"other",lv:0,est:true,info:["ลานจอดรถด้านหลังอาคาร 72 ติดอาคาร 71","ขอบเขตลานเป็นค่าประมาณ ช่วยยืนยันได้"],p:[[106,-57],[113,-55],[109,-30],[93,-25],[80,-38],[86,-44],[97,-39.5]]},
  {no:"P",id:"lotLib",flat:true,kind:"roadside",perp:true,name:"ที่จอดรถยนต์ริมถนนหน้าหอสมุด (ฝั่งอาคาร 46)",en:"Roadside car parking by the Central Library",cat:"other",lv:0,info:["ออกจากหอสมุดหันไปทางป้อมยาม ที่จอดอยู่ฝั่งซ้าย (ฝั่งอาคาร 46 / ศูนย์อาหารสวนปาล์ม)","จอดแบบตั้งฉากหันหน้าเข้าหาอาคาร มีต้นไม้ในกระบะคั่น","เข้าประตูป้อมยามแล้วเลี้ยวซ้ายมาทางหอสมุด"],p:[[40.2,195.9],[67.4,205.3],[66.2,209.4],[38.9,200.0]],line:[[39.5,197.7],[66.9,207.3]]},
  {no:"P",id:"bikeLib",flat:true,kind:"bikes",name:"ที่จอดมอเตอร์ไซค์ ริมคลองข้างหอสมุด",en:"Motorcycle parking along the canal by the Central Library",cat:"other",lv:0,ang:Math.atan2(65,-96),info:["แนวยาวระหว่างอาคารนวมินทรราชินี (หอสมุด) กับคลองบางเขนใหม่","จอดมอเตอร์ไซค์ได้ตลอดแนวตึก"],p:[[18.8,168.5],[-59,221.2],[-61.5,217.4],[16.2,164.8]]},
  {no:"P",id:"bikeStub",flat:true,kind:"bikes",name:"ที่จอดมอเตอร์ไซค์ ปลายถนนหลังอาคาร 22",en:"Motorcycle parking at the road end behind building 22",cat:"other",lv:0,ang:Math.atan2(-10,-27),info:["ลานจอดมอเตอร์ไซค์รอบปลายถนนด้านตะวันตกของอาคาร 22"],p:[[-50,242],[-72,240],[-78,252],[-58,258]]},
@@ -381,10 +388,10 @@ const BLD=[
  {no:"P",id:"lotDorm",flat:true,kind:"lot",ang:Math.atan2(16,12),name:"ลานจอดรถยนต์ระหว่างสนามกีฬากับหอพัก",en:"Car park between the stadium and the dormitories",cat:"other",lv:0,info:["ลานจอดรถยนต์ติดถนนข้างสนามฟุตบอล ใกล้หอพักนักศึกษา","ถัดไปทางตะวันออกมี 7-Eleven และที่นั่งพัก"],p:[[-204.8,-178.3],[-191.5,-184.2],[-179,-174.2],[-181.5,-162.5],[-186.5,-157.5],[-199.8,-170.8]]},
  {no:"7-11",id:"seven",kind:"store",name:"7-Eleven (โซนหอพัก)",en:"7-Eleven, dormitory zone",cat:"svc",lv:1,info:["ร้านสะดวกซื้อข้างลานจอดรถ ใกล้หอพักนักศึกษา","ทิศใต้ของร้านมีที่นั่งพัก"],p:[[-176.5,-174.2],[-164.8,-173.3],[-161.5,-169.2],[-165.7,-163.3],[-174,-165.8]]},
  {no:"พัก",id:"rest5",flat:true,kind:"rest",name:"ที่นั่งพัก (ข้าง 7-Eleven โซนหอพัก)",en:"Seating area by the dormitory 7-Eleven",cat:"other",lv:0,info:["ที่นั่งพักข้าง 7-Eleven ใกล้หอพักและสนามกีฬา"],p:[[-174,-162],[-164,-160.5],[-167.3,-145.8],[-180.7,-147.5],[-179,-152.5]]},
- {no:"97",name:"อาคาร 97 (โรงเรียนเตรียมวิศวกรรมศาสตร์ฯ)",en:"Building 97",cat:"fac",lv:4,est:true,info:["ตำแหน่งตามป้าย Google Maps","ขอบเขตอาคารเป็นค่าประมาณ"],p:[[-246,-306],[-232,-312],[-224,-296],[-238,-290]]},
- {no:"สปอ",id:"ipc",name:"สำนักประสานงานชุดโครงการอุตสาหกรรมฯ",en:"Industrial project coordination office",cat:"inst",lv:4,est:true,info:["ชื่อตามป้าย Google Maps","มีสถานีชาร์จรถยนต์ไฟฟ้าอยู่หน้าอาคาร","อยู่ทางทิศใต้ของอาคาร 47 (STRI)"],p:[[113.4,275.9],[150.8,282.5],[146.6,306.1],[109.2,299.5]]},
- {no:"TP",id:"u1",name:"KMUTNB Techno Park",en:"KMUTNB Techno Park",cat:"inst",lv:10,osm:true,info:["อุทยานเทคโนโลยีของมหาวิทยาลัย (ชื่อตามป้าย Google Maps)"],p:[[-146,-277],[-169,-261],[-145,-228],[-122,-245]]},
- {no:"?",id:"u2",name:"อาคารโซนหอพัก (ยังไม่ทราบชื่อ)",en:"Building in the dormitory zone",cat:"dorm",lv:3,info:["Google Maps ปักป้าย \"หอพักนักศึกษาชาย\" ไว้ข้างอาคารนี้","ตามแผนผังมหาวิทยาลัย อาจเป็นอาคาร 99 (เก็บเอกสาร) ช่วยยืนยันได้"],p:[[-161,-241],[-171,-234],[-158,-214],[-147,-221]]}
+ {no:"97",fx:{wall:"#f3f1ea",band:"#e9e4d6",glass:"#3d464d",lip:"#9b8f7c"},name:"อาคารปฏิบัติการฝึกฝีมือพื้นฐาน (อาคาร 97)",en:"Building 97",cat:"fac",lv:5,est:true,info:["เอกสาร TOR งานบำรุงรักษาเครื่องปรับอากาศของมหาวิทยาลัยระบุอาคาร คสล. 5 ชั้น","ตำแหน่งตามป้าย Google Maps","ขอบเขตอาคารเป็นค่าประมาณ"],p:[[-246,-306],[-232,-312],[-224,-296],[-238,-290]]},
+ {no:"สปอ",fx:{wall:"#f2f2ef",band:"#e4e4e1",glass:"#3a454e",lip:"#7d858c"},id:"ipc",name:"สำนักประสานงานชุดโครงการอุตสาหกรรมฯ",en:"Industrial project coordination office",cat:"inst",lv:4,est:true,info:["ชื่อตามป้าย Google Maps","มีสถานีชาร์จรถยนต์ไฟฟ้าอยู่หน้าอาคาร","อยู่ทางทิศใต้ของอาคาร 47 (STRI)"],p:[[113.4,275.9],[150.8,282.5],[146.6,306.1],[109.2,299.5]]},
+ {no:"99",fx:{wall:"#ecebe8",band:"#f1f0ed",glass:"#2f3b44",lip:"#8e3a2e",winX:4},id:"u1",name:"KMUTNB Techno Park (อาคาร 99)",en:"KMUTNB Techno Park",cat:"inst",lv:10,osm:true,info:["อุทยานเทคโนโลยีของมหาวิทยาลัย (ชื่อตามป้าย Google Maps)"],p:[[-146,-277],[-169,-261],[-145,-228],[-122,-245]]},
+ {no:"?",fx:{wall:"#f1ece2",band:"#f7f4ee",glass:"#4a545b",balc:true},id:"u2",name:"อาคารโซนหอพัก (ยังไม่ทราบชื่อ)",en:"Building in the dormitory zone",cat:"dorm",lv:3,info:["Google Maps ปักป้าย \"หอพักนักศึกษาชาย\" ไว้ข้างอาคารนี้","ตามแผนผังมหาวิทยาลัย อาจเป็นอาคาร 99 (เก็บเอกสาร) ช่วยยืนยันได้"],p:[[-161,-241],[-171,-234],[-158,-214],[-147,-221]]}
 ];
 const STADIUM={no:"94",name:"สนามกีฬา (อาคารปฏิบัติการด้านวิทยาศาสตร์การกีฬา)",en:"Stadium",cat:"sport",lv:1,info:["สนามฟุตบอลลอยฟ้าพร้อมลู่วิ่ง อยู่ชั้นบนของอาคาร","ชั้นล่างใต้สนามเป็นที่จอดรถยนต์","มีจุดออกกำลังกายด้านตะวันออก"],
  outer:[[-282,-143],[-272,-127],[-241,-84],[-218,-55],[-214,-49],[-207,-47],[-192,-54],[-186,-57],[-162,-76],[-146,-94],[-144,-98],[-147,-103],[-150,-106],[-203,-178],[-216,-193],[-223,-194],[-231,-189],[-242,-183],[-252,-176],[-262,-168],[-273,-158],[-280,-150],[-282,-148]],
@@ -444,19 +451,19 @@ const AMS={
   spot:{th:"จุดอื่น ๆ",g:"★",c:"#8b5cf6"}
 };
 const POI=[
- ["gate",13,316,"ประตูทางเข้า-ออก ด้านหน้ามหาวิทยาลัย (ถ.ประชาราษฎร์ สาย 1)","ประตูหน้ามหาลัย"],["gate",79,254,"ประตูป้อมยาม"],["park",71,253,"ทางลงที่จอดรถยนต์ใต้ดิน อาคารอเนกประสงค์"],["gate",35,-48,"ประตูหลังมหาวิทยาลัย (ทางเดินข้างอาคาร 73)","ประตูหลังมหาลัย"],["spot",38,266,"ศาล / ซุ้มพระรูป หน้าอาคาร 21-22 (ข้างสำนักงานอธิการบดี)","ศาล"],["bus",-84,299,"ป้ายรถเมล์ หน้ามหาวิทยาลัย (มีหลังคาบังแดด)","ป้ายรถเมล์"],["bus",-55,307,"ป้ายรถเมล์ หน้ามหาวิทยาลัย (ใกล้สะพานลอย)","ป้ายรถเมล์"],["bus",-118,289,"จุดรอรถสองแถว และรถตู้","รถตู้/2แถว"],["spot",-38,318,"สะพานลอยข้าม ถ.ประชาราษฎร์ สาย 1","สะพานลอย"],["bus",22,291,"จุดรับ-ส่งนักศึกษา (หน้าอาคาร TGGS)","รับ-ส่ง"],["park",-46,-42,"โรงจอดมอเตอร์ไซค์มีหลังคา + จุดชาร์จ (ริมถนนฝั่งตะวันตก)","ที่จอดมอไซ"],["spot",112,70,"ที่นั่งพักใต้ร่มไม้ (โต๊ะหิน)","พัก"],["spot",83,83,"เวที (หลังคาสีฟ้า)","เวที"],["spot",169,172,"ที่นั่งพัก","พัก"],["park",44,176,"ที่จอดมอเตอร์ไซค์ ข้างอาคาร 46 (ฝั่งคลอง)","P"],["park",38,186,"ที่จอดมอเตอร์ไซค์ ข้างทางลงที่จอดรถใต้ดิน อาคารนวมินทรราชินี (23)","P"],
+ ["gate",13,316,"ประตูทางเข้า-ออก ด้านหน้ามหาวิทยาลัย (ถ.ประชาราษฎร์ สาย 1)","ประตูหน้ามหาลัย"],["gate",79,254,"ประตูป้อมยาม"],["park",71,253,"ทางลงที่จอดรถยนต์ใต้ดิน อาคารอเนกประสงค์"],["gate",35,-48,"ประตูหลังมหาวิทยาลัย (ทางเดินข้างอาคาร 73)","ประตูหลังมหาลัย"],["spot",38,266,"ศาล / ซุ้มพระรูป หน้าอาคาร 21-22 (ข้างสำนักงานอธิการบดี)","ศาล"],["bus",-84,299,"ป้ายรถเมล์ หน้ามหาวิทยาลัย (มีหลังคาบังแดด)","ป้ายรถเมล์","32, 33, 64, 90, 97, 117, 175, 203, 1010"],["bus",-55,307,"ป้ายรถเมล์ หน้ามหาวิทยาลัย (ใกล้สะพานลอย)","ป้ายรถเมล์","32, 33, 64, 90, 97, 117, 175, 203, 1010"],["bus",-14,332,"ป้ายรถเมล์ ฝั่งตรงข้ามมหาวิทยาลัย","ป้ายรถเมล์","1010 (ตาม OpenStreetMap) · สายอื่นที่วิ่งผ่านหน้ามหาลัยน่าจะจอดฝั่งนี้ด้วย"],["bus",-118,289,"จุดรอรถสองแถว และรถตู้","รถตู้/2แถว"],["spot",-38,318,"สะพานลอยข้าม ถ.ประชาราษฎร์ สาย 1","สะพานลอย"],["bus",22,291,"จุดรับ-ส่งนักศึกษา (หน้าอาคาร TGGS)","รับ-ส่ง"],["park",-46,-42,"โรงจอดมอเตอร์ไซค์มีหลังคา + จุดชาร์จ (ริมถนนฝั่งตะวันตก)","ที่จอดมอไซ"],["spot",112,70,"ที่นั่งพักใต้ร่มไม้ (โต๊ะหิน)","พัก"],["spot",83,83,"เวที (หลังคาสีฟ้า)","เวที"],["spot",169,172,"ที่นั่งพัก","พัก"],["park",44,176,"ที่จอดมอเตอร์ไซค์ ข้างอาคาร 46 (ฝั่งคลอง)","P"],["park",38,186,"ที่จอดมอเตอร์ไซค์ ข้างทางลงที่จอดรถใต้ดิน อาคารนวมินทรราชินี (23)","P"],
  ["atm",-177,-196,""],["atm",117,20,""],["atm",-56,31,""],["atm",54,262,""],
  ["shop",125,30,"7-Eleven"],["shop",-169,-169,"7-Eleven โซนหอพัก"],["park",-191,-171,"ลานจอดรถยนต์ข้างสนามกีฬา"],["bank",92,26,"ธนาคารกรุงเทพ"],
  ["food",58,175,"โรงอาหารสวนปาล์ม (อาคาร 46 ชั้น 2)"],["food",65,50,"โรงอาหารกลาง"],["food",-184,-292,"โรงอาหารคณะพัฒนาธุรกิจและอุตสาหกรรม"],
- ["cafe",9,291,""],["cafe",60,17,"Fermo Cafe"],["health",140,24,"ห้องพยาบาล อาคาร 79 ชั้น 2"],["wc",154,71,""],
+ ["cafe",9,291,""],["cafe",60,17,"Fermo Cafe"],["health",140,24,"ห้องพยาบาล อาคาร 79 ชั้น 2"],["wc",159.4,66.2,"ห้องน้ำ ข้างอาคาร 64 (ฝั่งคลอง)"],
  ["gym",69,31,""],["gym",-232,-118,""],
  ["cafe",-177,-165,"Tea North Station"],["cafe",93,126.5,"ร้านกาแฟ (ข้างหน่วยงานอาคารสถานที่)"],
  ["food",-20,212,"ร้านอาหาร (อาคารนวมินทรราชินี)"],
  ["ev",10.5,-6.8,"สถานีชาร์จรถยนต์ไฟฟ้า (ข้างอาคาร 84)"],["ev",124.5,286.3,"สถานีชาร์จรถยนต์ไฟฟ้า"],
- ["copy",86.7,156.9,"Happy Copy Center"],["copy",160.5,82.5,"ร้านถ่ายเอกสาร อาหารว่าง"],
+ ["copy",86.7,156.9,"Happy Copy Center"],["copy",160.4,76.4,"ร้านขายของ / ถ่ายเอกสาร หน้าอาคาร 64"],
  ["spot",34.5,35.8,"KMUTNB Guesthouse"],["spot",11,79,"บ่อเต่าน้ำพุเขียว"],
  ["spot",83.5,128,"อาคาร 12 หน่วยงานอาคารสถานที่และยานพาหนะ"],["spot",-78,-136,"Suan Palm Residency (KMUTNB)"],
- ["park",53,202,"ที่จอดรถยนต์ริมถนนหน้าหอสมุด (ฝั่งอาคาร 46)"],["park",-20,193,"ที่จอดมอเตอร์ไซค์ริมคลองข้างหอสมุด"],["park",-64,249,"ที่จอดมอเตอร์ไซค์ปลายถนนหลังอาคาร 22"],["park",-212,-118,"ที่จอดรถยนต์ใต้สนามฟุตบอล"],["park",96,-42,"ลานจอดรถหลังอาคารยิมเนเซียม"],["park",44,40,"ที่จอดรถชั้น 1 อาคาร 40 ปี"],["park",258,166,"ลานจอดมอเตอร์ไซค์และรถยนต์ (ระหว่างอาคาร 62–63)"],["park",113,161,""],["park",81,221,""],["park",17,9,""],["park",-179,-104,""]
+ ["park",53,202,"ที่จอดรถยนต์ริมถนนหน้าหอสมุด (ฝั่งอาคาร 46)"],["park",-20,193,"ที่จอดมอเตอร์ไซค์ริมคลองข้างหอสมุด"],["park",-64,249,"ที่จอดมอเตอร์ไซค์ปลายถนนหลังอาคาร 22"],["park",-212,-118,"ที่จอดรถยนต์ใต้สนามฟุตบอล"],["park",104,-37,"ลานจอดรถหลังอาคารยิมเนเซียม"],["park",44,40,"ที่จอดรถชั้น 1 อาคาร 40 ปี"],["park",258,166,"ลานจอดมอเตอร์ไซค์และรถยนต์ (ระหว่างอาคาร 62–63)"],["park",113,161,""],["park",81,221,""],["park",17,9,""],["park",-179,-104,""]
 ];
 
 /* ================= per-viewer edits ================= */
@@ -616,6 +623,9 @@ function buildBuilding(b){
   if(b.kind==="terra77"){buildTerra77(b);return;}
   if(b.kind==="club79"){buildClub79(b);return;}
   if(b.kind==="fte52"){buildFTE52(b);return;}
+  if(b.kind==="cit63"){buildCIT63(b);return;}
+  if(b.kind==="cit64"){buildCIT64(b);return;}
+  if(b.fx){buildFacade(b);return;}
   if(b.kind==="tower22"){buildTower22(b);return;}
   if(b.kind==="lib23"){buildLib23(b);return;}
   if(b.kind==="hall21"){buildHall21(b);return;}
@@ -774,6 +784,38 @@ function buildTerra77(b){
   const P=b.p;const edges=P.map((q,i)=>[q,P[(i+1)%P.length]]).map(([a,bb])=>({a,b:bb,L:Math.hypot(bb[0]-a[0],bb[1]-a[1])}));
   edges.filter(e=>e.L>8&&e.L<25).forEach(e=>{const mx=(e.a[0]+e.b[0])/2,mz=(e.a[1]+e.b[1])/2,r=-Math.atan2(e.b[1]-e.a[1],e.b[0]-e.a[0]);
     const w=new THREE.Mesh(new THREE.BoxGeometry(e.L*0.7,h-FLOOR,0.8),peach);w.position.set(mx+(c[0]-mx)*0.02,FLOOR+(h-FLOOR)/2,mz+(c[1]-mz)*0.02);w.rotation.y=r;w.castShadow=true;g.add(w);});
+  /* back / side faces (owner's street-view shot): deep peach balconies carried on white diagonal brackets, white ground floor
+     with roller shutters under an orange band; a small drainage ditch with an arched footbridge, globe lamp and bins in front of the south face */
+  {const white=L("#f4f2ee",{emissive:"#2a2826"}),orange=L("#e8834e",{emissive:"#2a1408"}),shut=L("#d9dad6");
+    edges.filter(e=>e.L>40&&!(Math.abs(e.a[0]-94)<1&&Math.abs(e.a[1]-30)<1)).forEach(e=>{const dx=e.b[0]-e.a[0],dz=e.b[1]-e.a[1],t=[dx/e.L,dz/e.L];let n=[-t[1],t[0]];
+      const mx=(e.a[0]+e.b[0])/2,mz=(e.a[1]+e.b[1])/2;if((c[0]-mx)*n[0]+(c[1]-mz)*n[1]>0)n=[-n[0],-n[1]];const r=-Math.atan2(dz,dx),P2=(u,v)=>[e.a[0]+t[0]*u+n[0]*v,e.a[1]+t[1]*u+n[1]*v];
+      const pz=(m,u,v,y,rx)=>{const q=P2(u,v);m.position.set(q[0],y,q[1]);m.rotation.set(rx||0,r,0,"YXZ");m.castShadow=true;g.add(m);return m;};
+      /* ground floor: white wall, roller shutters, orange band */
+      pz(new THREE.Mesh(new THREE.BoxGeometry(e.L-1,FLOOR-0.4,0.3),white),e.L/2,0.1,(FLOOR-0.4)/2);
+      for(let u=3;u<e.L-3;u+=5.5)pz(new THREE.Mesh(new THREE.BoxGeometry(3.2,2.4,0.12),shut),u,0.28,1.3);
+      pz(new THREE.Mesh(new THREE.BoxGeometry(e.L,0.7,1.6),orange),e.L/2,0.6,FLOOR+0.1);
+      /* brackets under every balcony */
+      for(let i=2;i<b.lv-1;i++)for(let u=2.5;u<e.L-2;u+=4.2){const br=pz(new THREE.Mesh(new THREE.BoxGeometry(0.22,1.5,0.22),white),u,0.9,i*FLOOR-0.55,0.75);}
+      /* deeper balcony soffit */
+      for(let i=2;i<b.lv-1;i++)pz(new THREE.Mesh(new THREE.BoxGeometry(e.L-1,0.3,1.8),L("#f3c9a8")),e.L/2,0.8,i*FLOOR+0.1);
+      /* west face (owner's sketch + street view): a 3 m drainage canal runs the length of the face between the hedge walk and the road,
+         one footbridge with pipe rails in the middle, stone tables + benches on the road side, globe lamps, a no-smoking sign */
+      if(Math.abs(e.a[0]-25)<1&&Math.abs(e.a[1]-65)<1){const u0=2,u1=e.L-3,cl=u1-u0,cu=(u0+u1)/2,cv=5.2;
+        const dq=P2(cu,cv);const water=new THREE.Mesh(new THREE.BoxGeometry(cl,0.1,2.8),L("#5f7f6e",{emissive:"#0e1a14"}));water.position.set(dq[0],0.05,dq[1]);water.rotation.y=r;g.add(water);
+        [-1,1].forEach(sd=>{const wq=P2(cu,cv+sd*1.55);const w=new THREE.Mesh(new THREE.BoxGeometry(cl,0.75,0.3),L("#cfccc5"));w.position.set(wq[0],0.38,wq[1]);w.rotation.y=r;g.add(w);});
+        {const hq=P2(cu,2.6);const hd=new THREE.Mesh(new THREE.BoxGeometry(cl,0.9,1.0),L("#3f8a3a"));hd.position.set(hq[0],0.75,hq[1]);hd.rotation.y=r;g.add(hd);}
+        /* footbridge */
+        const bu=e.L*0.55,bq=P2(bu,cv);const deck=new THREE.Mesh(new THREE.BoxGeometry(1.8,0.25,5.2),L("#b9b4aa"));deck.position.set(bq[0],0.75,bq[1]);deck.rotation.set(0,r,0,"YXZ");g.add(deck);
+        [-0.9,0.9].forEach(o=>{const rq=P2(bu+o,cv);const rl=new THREE.Mesh(new THREE.BoxGeometry(0.06,0.06,5.2),L("#c9cdd1"));rl.position.set(rq[0],1.75,rq[1]);rl.rotation.y=r;g.add(rl);
+          [-2.4,0,2.4].forEach(v=>{const pq=P2(bu+o,cv+v);const p=new THREE.Mesh(new THREE.BoxGeometry(0.06,1.0,0.06),L("#c9cdd1"));p.position.set(pq[0],1.25,pq[1]);g.add(p);});});
+        /* stone table sets on the road side + pipe railing */
+        for(let u=u0+3;u<u1-2;u+=6.5){if(Math.abs(u-bu)<3)continue;const tq=P2(u,8.4);const tb=new THREE.Mesh(new THREE.BoxGeometry(2.2,0.14,1),L("#cfccc5"));tb.position.set(tq[0],1.05,tq[1]);tb.rotation.y=r;g.add(tb);
+          [-0.85,0.85].forEach(v=>{const q=P2(u,8.4+v);const bn=new THREE.Mesh(new THREE.BoxGeometry(2.2,0.12,0.4),L("#bdb8ae"));bn.position.set(q[0],0.75,q[1]);bn.rotation.y=r;g.add(bn);});}
+        {const rq=P2(cu,7.0);const rl=new THREE.Mesh(new THREE.BoxGeometry(cl,0.06,0.06),L("#c9cdd1"));rl.position.set(rq[0],1.3,rq[1]);rl.rotation.y=r;g.add(rl);}
+        [e.L*0.12,e.L*0.45,e.L*0.8].forEach(u=>{const lq=P2(u,9.6);const lp=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.1,4,6),L("#c9cdd1"));lp.position.set(lq[0],2,lq[1]);g.add(lp);const gl=new THREE.Mesh(new THREE.SphereGeometry(0.32,10,8),L("#f6f4ee",{emissive:"#6a6656"}));gl.position.set(lq[0],4.2,lq[1]);g.add(gl);});
+        {const sc=document.createElement("canvas");sc.width=128;sc.height=160;const x=sc.getContext("2d");x.fillStyle="#1f2f6a";x.fillRect(0,0,128,160);x.fillStyle="#fff";x.fillRect(8,40,112,110);x.strokeStyle="#d6322f";x.lineWidth=8;x.beginPath();x.arc(40,95,24,0,7);x.stroke();x.beginPath();x.moveTo(23,78);x.lineTo(57,112);x.stroke();x.fillStyle="#1f2f6a";x.font='700 22px "Anuphan",sans-serif';x.fillText("เขต",72,90);x.fillText("ปลอด",70,118);
+          const q=P2(e.L*0.5,6.9);const sg=new THREE.Mesh(new THREE.PlaneGeometry(0.9,1.1),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc),side:THREE.DoubleSide}));sg.position.set(q[0],1.7,q[1]);sg.rotation.y=r;g.add(sg);}
+        ["#c8322f","#1f3f8f","#e8c21b"].forEach((cc,k)=>{const q=P2(e.L*0.9+k*0.7,9);const bn=new THREE.Mesh(new THREE.BoxGeometry(0.6,1,0.6),L(cc));bn.position.set(q[0],0.5,q[1]);g.add(bn);});}});}
   /* east front (faces the road): outdoor stair under a blue canopy + fountain plaza */
   const A=[94,30],B=[74,84],dx=B[0]-A[0],dz=B[1]-A[1],Le=Math.hypot(dx,dz),t=[dx/Le,dz/Le],n=[dz/Le,-dx/Le],ry=-Math.atan2(dz,dx);   // n → outward (east)
   const Q=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
@@ -816,6 +858,180 @@ function buildTerra77(b){
   g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+1.5;scene.add(g);
 }
 /* อาคาร 79 (ตึกสโมสร): low block with a 7-Eleven front, stairs down to the basement shop, ATM kiosk */
+const ZONE64=[[[158.6, 71.7], [175.2, 84.5], [168.5, 93.2], [151.9, 80.4]], [[159.3, 71.6], [164.4, 64.2], [159.5, 60.8], [154.4, 68.2]]];
+/* generic facade builder driven by per-building observations from street view (b.fx) */
+function buildFacade(b){
+  const F=b.fx,g=new THREE.Group(),c=[b.cx,b.cz],sc=k=>b.p.map(([x,z])=>[c[0]+(x-c[0])*k,c[1]+(z-c[1])*k]);
+  const Lm=(col,o)=>new THREE.MeshLambertMaterial(Object.assign({color:col},o||{}));
+  const wall=Lm(F.wall||"#eeede9",{emissive:"#262523"}),band=Lm(F.band||F.wall||"#eeede9",{emissive:"#1e1d1b"}),glass=new THREE.MeshPhongMaterial({color:F.glass||"#3d474f",specular:"#b8c8d2",shininess:45});
+  const ex=(p,d,m,y)=>{const o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(p),{depth:d,bevelEnabled:false}),m));o.position.y=y;o.castShadow=true;o.receiveShadow=true;o.userData.bid=b.id;g.add(o);picks.push(o);return o;};
+  const lv=b.lv,h=lv*FLOOR,bh=F.bandH||1.1;
+  /* window texture: wall-coloured piers with framed glass panes, repeating every ~3 m (or mullioned curtain glass) */
+  const winTex=(wallCol,glassCol,curtain)=>{const H=96,bp=Math.round(H*bh/FLOOR),cv=document.createElement("canvas");cv.width=96;cv.height=H;const x=cv.getContext("2d");
+    x.fillStyle=F.band||wallCol;x.fillRect(0,0,96,bp);const y0=bp,hh=H-bp;x.fillStyle=curtain?glassCol:wallCol;x.fillRect(0,y0,96,hh);
+    if(curtain){x.fillStyle="rgba(255,255,255,.18)";x.fillRect(0,y0,96,hh*0.3);x.fillStyle="#e8ecee";x.fillRect(0,y0,3,hh);x.fillRect(47,y0,2,hh);x.fillRect(0,y0+hh*0.65,96,2);}
+    else{const wx=F.winX||8;x.fillStyle="#d9dcdd";x.fillRect(wx,y0+5,96-2*wx,hh-10);x.fillStyle=glassCol;x.fillRect(wx+2,y0+7,96-2*wx-4,hh-14);x.fillStyle="rgba(255,255,255,.16)";x.fillRect(wx+2,y0+7,96-2*wx-4,(hh-14)*0.25);x.fillStyle="#d9dcdd";x.fillRect(47,y0+7,2,hh-14);}
+    x.fillStyle="rgba(0,0,0,.18)";x.fillRect(0,bp-2,96,2);
+    const t=new THREE.CanvasTexture(cv);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(1/3,1/FLOOR);return t;};
+  const winM=new THREE.MeshLambertMaterial({map:winTex(F.wall||"#eeede9",F.glass||"#55656f",false),emissive:"#151515"});
+  const curM=new THREE.MeshLambertMaterial({map:winTex("#fff",F.curtain||"#7ea4b6",true),emissive:"#101418"});
+  /* edges with outward normals */
+  const E=b.p.map(([x,z],i)=>{const[x2,z2]=b.p[(i+1)%b.p.length],L=Math.hypot(x2-x,z2-z),t=[(x2-x)/L,(z2-z)/L];let n=[-t[1],t[0]];if(inPoly(x+t[0]*L/2+n[0]*0.6,z+t[1]*L/2+n[1]*0.6,b.p))n=[-n[0],-n[1]];return{a:[x,z],L,t,n,r:-Math.atan2(t[1],t[0])};});
+  /* boxes with a single material are batched into InstancedMeshes (keeps the page light) */
+  const BATCH=new Map(),UB=new THREE.BoxGeometry(1,1,1);
+  const put=(e,geo,m,u,v,y,extra)=>{const o=new THREE.Mesh(geo,m);o.position.set(e.a[0]+e.t[0]*u+e.n[0]*v,y,e.a[1]+e.t[1]*u+e.n[1]*v);o.rotation.y=e.r;if(extra)extra(o);
+    if(geo.type==="BoxGeometry"&&!Array.isArray(m)){const p=geo.parameters;o.scale.set(p.width,p.height,p.depth);o.updateMatrix();if(!BATCH.has(m))BATCH.set(m,[]);BATCH.get(m).push(o.matrix.clone());return o;}
+    o.castShadow=true;g.add(o);return o;};
+  const flush=()=>BATCH.forEach((list,m)=>{const im=new THREE.InstancedMesh(UB,m,list.length);list.forEach((mx,i)=>im.setMatrixAt(i,mx));im.castShadow=true;im.receiveShadow=true;im.frustumCulled=false;g.add(im);});
+  const main=F.edge!=null?E[F.edge]:E.reduce((a,e)=>e.L>a.L?e:a,E[0]);
+  /* ground floor */
+  if(F.pilotis){ex(sc(0.84),FLOOR,Lm(F.base||"#2f3438"),0);
+    E.forEach(e=>{for(let u=1;u<e.L-0.5;u+=6){put(e,new THREE.BoxGeometry(0.6,FLOOR,0.6),wall,u,-0.5,FLOOR/2);}});}
+  else{ex(sc(0.99),FLOOR-bh,F.base?Lm(F.base):winM,0);ex(sc(1.0),bh,band,FLOOR-bh);if(F.lower)ex(sc(0.985),1.2,Lm(F.lower),0);}
+  if(lv>1)ex(sc(1.0),h-FLOOR,F.curtain?curM:winM,FLOOR);
+  if(F.lip||F.balc){const lm=F.lip?Lm(F.lip):band,k=F.balc?1.05:1.035,d=F.balc?0.25:0.15;for(let i=1;i<lv;i++){const o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(sc(k),[sc(0.99).slice().reverse()]),{depth:d,bevelEnabled:false}),lm));o.position.y=F.balc?i*FLOOR-0.05:i*FLOOR+FLOOR-bh-0.15;o.castShadow=true;g.add(o);}}
+  /* roof + parapet */
+  {const pm=Lm(F.parapet||F.band||F.wall||"#e6e5e1",{emissive:"#1c1c1a"}),o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(sc(1.0),[sc(0.96).slice().reverse()]),{depth:0.9,bevelEnabled:false}),pm));o.position.y=h;o.castShadow=true;g.add(o);}
+  ex(sc(0.97),0.12,Lm(F.roof||"#c9cac6"),h);
+  if(F.hip){const rm=Lm(F.hip,{emissive:"#1a1a1a"});[[1.06,0.3],[0.85,1],[0.62,1],[0.38,0.9]].forEach(([k,d],i)=>ex(sc(k),d,rm,h+0.9+i*0.95));}
+  /* vertical fins / horizontal louvres on long edges */
+  if(F.fins){const fm=Lm(F.fins);E.forEach(e=>{if(e.L<10)return;for(let u=1;u<e.L-0.5;u+=F.finStep||1.4)put(e,new THREE.BoxGeometry(0.18,h-FLOOR-0.6,0.6),fm,u,0.3,FLOOR+(h-FLOOR)/2-0.3);});}
+  if(F.hlouv){const lm=Lm(F.hlouv);E.forEach(e=>{if(e.L<8)return;for(let i=1;i<lv;i++)for(let k=0;k<(F.hlouvN||2);k++)put(e,new THREE.BoxGeometry(e.L-0.6,0.08,0.7),lm,e.L/2,0.35,i*FLOOR+0.7+k*0.7,o=>o.rotation.set(0.35,e.r,0,"YXZ"));});}
+  /* red + white diagonal stripes (KMUTNB CIT scheme) */
+  if(F.stripes){const red=Lm("#d6322f"),wS=Lm("#ffffff");E.forEach(e=>{if(e.L<14)return;[0.3,0.78].forEach(f=>{for(let k=1;k<=lv;k++)[[0,red],[0.55,wS]].forEach(([o,m])=>put(e,new THREE.BoxGeometry(0.42,bh+0.1,0.08),m,e.L*f+o,0.06,k*FLOOR-bh/2,s=>s.rotation.set(0,e.r,-0.55,"YXZ")));});});}
+  /* vertical accent strips */
+  (F.accents||[]).forEach(a=>{const e=E[a.edge!=null?a.edge:E.indexOf(main)];const y0=(a.from||0)*FLOOR,hh=h+(a.over||0)-y0;put(e,new THREE.BoxGeometry(a.w||3,hh,a.d||0.6),Lm(a.col,{emissive:"#1a0d05"}),e.L*(a.u!=null?a.u:0.5),(a.d||0.6)/2,y0+hh/2);});
+  /* number pylon / sign band */
+  const tex=(w,hh,bg,fg,txt,font)=>{const cv=document.createElement("canvas");cv.width=w;cv.height=hh;const x=cv.getContext("2d");x.fillStyle=bg;x.fillRect(0,0,w,hh);x.fillStyle=fg;x.textAlign="center";x.font=font;x.fillText(txt,w/2,hh*0.72);return new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(cv),emissive:"#fff",emissiveMap:new THREE.CanvasTexture(cv),emissiveIntensity:.2});};
+  if(F.num){const e=F.numEdge!=null?E[F.numEdge]:main;const bg=F.num.bg||"#8f9499",tm=tex(128,128,bg,F.num.fg||"#ffffff",F.num.t||b.no,'800 72px "Chakra Petch",sans-serif'),pm=Lm(bg);
+    put(e,new THREE.BoxGeometry(2.6,h+1.5,1.6),[pm,pm,pm,pm,tm,pm],e.L*(F.num.u!=null?F.num.u:0.08),0.8,(h+1.5)/2);}
+  if(F.sign){const e=F.signEdge!=null?E[F.signEdge]:main;const sm=tex(1024,96,F.sign.bg||"#f2f2ef",F.sign.fg||"#333",F.sign.t,'700 44px "Anuphan",sans-serif');const w=Math.min(e.L*0.7,16);
+    put(e,new THREE.BoxGeometry(w,1.1,0.3),[band,band,band,band,sm,band],e.L*(F.sign.u!=null?F.sign.u:0.5),0.3,FLOOR-0.55);}
+  /* deep entrance canopy with the faculty name in Thai + English over a glazed lobby */
+  if(F.canopy){const e=E[F.canopy.edge],u0=e.L*(F.canopy.u||0.5),w=F.canopy.w||16,cm=Lm(F.wall||"#9c4a36");
+    const cv=document.createElement("canvas");cv.width=1024;cv.height=192;const x=cv.getContext("2d");x.fillStyle=F.canopy.bg||"#8c3f2e";x.fillRect(0,0,1024,192);x.fillStyle=F.canopy.fg||"#efe6da";x.textAlign="center";
+    x.font='700 64px "Anuphan",sans-serif';x.fillText(F.canopy.th||"",512,78);x.font='700 54px "Chakra Petch",sans-serif';x.fillText(F.canopy.t||"",512,160);
+    const tm=new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(cv)});
+    put(e,new THREE.BoxGeometry(w,2.6,5),[cm,cm,cm,cm,tm,cm],u0,2.5,FLOOR*1.25);
+    put(e,new THREE.BoxGeometry(w-1,FLOOR-0.4,0.25),new THREE.MeshPhongMaterial({color:"#2e3a40",specular:"#ffffff",shininess:70}),u0,0.2,(FLOOR-0.4)/2+0.6);
+    [-w/2+1,w/2-1].forEach(o=>put(e,new THREE.BoxGeometry(1,FLOOR*1.25,1),cm,u0+o,4.4,FLOOR*0.62));
+    const st=Lm("#bdb9b1");for(let i=0;i<6;i++)put(e,new THREE.BoxGeometry(w-1-i*0.2,1.2-i*0.2,0.6),st,u0,0.5+i*0.6+5,(1.2-i*0.2)/2);
+    [u0-3,u0+3].forEach(u=>put(e,new THREE.BoxGeometry(0.06,0.06,3.6),Lm("#d6dadd"),u,7,1.4,o=>o.rotation.set(-0.3,e.r,0,"YXZ")));}
+  /* entrance steps */
+  if(F.steps){const e=F.stepsEdge!=null?E[F.stepsEdge]:main,st=Lm("#bdb9b1");for(let i=0;i<4;i++)put(e,new THREE.BoxGeometry(7-i*0.3,1.0-i*0.25,0.6),st,e.L*(F.steps.u||0.5),0.3+i*0.6,(1.0-i*0.25)/2);}
+  /* carport / covered walk along an edge */
+  [].concat(F.carport||[]).forEach(C=>{const e=E[C.edge],cm=Lm(C.col||"#5d6b66"),pm=Lm(C.post||"#2f7a55"),D=C.d||5;
+    put(e,new THREE.BoxGeometry(e.L-2,0.12,D),cm,e.L/2,D/2+0.3,3.4,o=>o.rotation.set(-0.06,e.r,0,"YXZ"));for(let u=1.5;u<e.L-1;u+=4.5)put(e,new THREE.CylinderGeometry(0.09,0.09,3.3,8),pm,u,D+0.1,1.65);
+    /* white pennant flags hanging from the carport edge + cars parked nose-in underneath */
+    if(C.flags)for(let u=2;u<e.L-2;u+=2.2)put(e,new THREE.ConeGeometry(0.28,0.5,3),Lm("#f4f4f2"),u,D+0.25,3.0,o=>o.rotation.set(Math.PI,e.r,0,"YXZ"));
+    if(C.cars){const cc=["#e9e9e9","#9aa3ad","#2b2f36","#c7c2b4","#b23a3a"];for(let u=2.5,k=0;u<e.L-2;u+=2.7,k++){if((k*7)%5===0)continue;put(e,new THREE.BoxGeometry(1.75,0.85,4.3),Lm(cc[k%cc.length]),u,D/2+0.3,0.75);put(e,new THREE.BoxGeometry(1.55,0.6,2.2),Lm("#2c3540"),u,D/2+0.1,1.45);}}});
+  /* steel pergola + slat screens */
+  if(F.pergola){const pm=Lm(F.pergola);const e=main;for(let u=1;u<e.L-1;u+=0.8)put(e,new THREE.BoxGeometry(0.12,0.12,3),pm,u,1.5,h+1.6);put(e,new THREE.BoxGeometry(e.L-1,0.2,0.2),pm,e.L/2,3,h+1.5);}
+  if(F.slats){const sm2=Lm(F.slats);E.forEach(e=>{if(e.L<10)return;for(let u=0.6;u<e.L-0.4;u+=0.45)put(e,new THREE.BoxGeometry(0.1,FLOOR-0.6,0.15),sm2,u,0.25,(FLOOR-0.6)/2+0.3);});}
+  /* round entrance columns + portico */
+  if(F.portico){const e=main,u0=e.L*(F.portico.u||0.5),pm=Lm(F.portico.col||"#c9c3b8");[-3.5,3.5].forEach(o=>put(e,new THREE.CylinderGeometry(0.75,0.75,FLOOR*2,18),pm,u0+o,4,FLOOR));put(e,new THREE.BoxGeometry(9.5,1.0,5),Lm("#dcd8cf"),u0,2.5,FLOOR*2+0.5);}
+  flush();g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+(F.hip?4.5:1.6);scene.add(g);
+}
+function buildCIT64(b){
+  /* from street view: 4-storey white block with grey sunshade lips and a low grey hip roof; in front (road side) a one-storey
+     shop / photocopy annex with beige shutters, then an open metal-roofed seating shelter with colourful tables, banners,
+     recycling bins and a small guard booth; toilets on the canal side */
+  const g=new THREE.Group(),c=[b.cx,b.cz],sc=k=>b.p.map(([x,z])=>[c[0]+(x-c[0])*k,c[1]+(z-c[1])*k]);
+  const Lm=(col,o)=>new THREE.MeshLambertMaterial(Object.assign({color:col},o||{}));
+  const white=Lm("#eeeeec",{emissive:"#2a2a29"}),grey=Lm("#8f9396",{emissive:"#1c1e20"}),dark=new THREE.MeshPhongMaterial({color:"#4a5258",specular:"#b8c8d2",shininess:40}),roofM=Lm("#c3c6c9",{emissive:"#202224"});
+  const ex=(p,d,m,y)=>{const o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(p),{depth:d,bevelEnabled:false}),m));o.position.y=y;o.castShadow=true;o.receiveShadow=true;o.userData.bid=b.id;g.add(o);picks.push(o);return o;};
+  for(let i=0;i<b.lv;i++){const y=i*FLOOR;ex(sc(0.96),FLOOR-1.3,dark,y);ex(sc(1.0),1.3,white,y+FLOOR-1.3);ex(sc(1.035),0.15,grey,y+FLOOR-1.45);}
+  const h=b.lv*FLOOR;ex(sc(1.07),0.35,white,h);[[0.92,1.0],[0.74,1.0],[0.52,1.0],[0.3,0.8]].forEach(([k,d],i)=>ex(sc(k),d,roofM,h+0.35+i*1.0));
+  const A=[159,72],B=[172,82],L=Math.hypot(B[0]-A[0],B[1]-A[1]),t=[(B[0]-A[0])/L,(B[1]-A[1])/L],n=[-t[1],t[0]],ry=-Math.atan2(t[1],t[0]);   // n → road
+  const P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
+  const put=(geo,m,u,v,y,rr)=>{const o=new THREE.Mesh(geo,m);const q=P(u,v);o.position.set(q[0],y,q[1]);o.rotation.y=rr===undefined?ry:rr;o.castShadow=true;o.receiveShadow=true;g.add(o);return o;};
+  /* shop + photocopy annex */
+  const shc=document.createElement("canvas");shc.width=128;shc.height=64;const sx=shc.getContext("2d");sx.fillStyle="#d8ccb4";sx.fillRect(0,0,128,64);sx.fillStyle="rgba(90,70,40,.35)";for(let i=0;i<64;i+=4)sx.fillRect(0,i,128,1.5);for(let i=0;i<128;i+=32)sx.fillRect(i,0,2,64);
+  const shT=new THREE.CanvasTexture(shc),shM=Lm("#ffffff",{map:shT});
+  put(new THREE.BoxGeometry(7.5,1.0,5),Lm("#4a4d52"),3.8,2.6,0.5);
+  put(new THREE.BoxGeometry(7.5,1.9,4.8),[shM,shM,shM,shM,shM,shM],3.8,2.6,1.95);
+  put(new THREE.BoxGeometry(8.4,0.9,5.8),Lm("#5d6268",{emissive:"#16181a"}),3.8,2.9,3.35);
+  const sg=document.createElement("canvas");sg.width=256;sg.height=48;const k=sg.getContext("2d");k.fillStyle="#e2531f";k.fillRect(0,0,256,48);k.fillStyle="#fff";k.font='700 26px "Anuphan",sans-serif';k.textAlign="center";k.fillText("ถ่ายเอกสาร · ของใช้",128,34);
+  put(new THREE.PlaneGeometry(3.2,0.6),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sg),side:THREE.DoubleSide}),5,5.84,2.95);
+  /* open seating shelter: posts, dark metal roof sloping to the road, colourful bench-tables, banners, bins */
+  const postM=Lm("#3e4347"),roofS=Lm("#5b6a66",{emissive:"#141a18"});
+  for(let u=9;u<=20.1;u+=3.7)[1.2,10.2].forEach(v=>put(new THREE.CylinderGeometry(0.12,0.12,3.6,8),postM,u,v,1.8));
+  {const o=put(new THREE.BoxGeometry(12.6,0.12,10.4),roofS,14.5,5.7,3.85);o.rotation.set(-0.07,ry,0,"YXZ");}
+  put(new THREE.BoxGeometry(12.6,0.35,0.15),postM,14.5,10.9,3.45);
+  const ban=(u,w,bg,fg,txt)=>{const cv=document.createElement("canvas");cv.width=512;cv.height=128;const q=cv.getContext("2d");q.fillStyle=bg;q.fillRect(0,0,512,128);q.fillStyle=fg;q.fillRect(0,96,512,32);q.fillStyle=fg;q.font='700 40px "Anuphan",sans-serif';q.textAlign="center";q.fillText(txt,256,62);
+    put(new THREE.PlaneGeometry(w,1.6),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(cv),side:THREE.DoubleSide}),u,10.95,2.5);};
+  ban(11.6,5.8,"#f4f6fb","#2d4fa8","KMUTNB · CIT");ban(17.4,5.6,"#d9473b","#ffffff","ขอแสดงความยินดี");
+  const cols=["#f2c230","#2a7fd4","#d6322f","#f2c230","#2a9d5c"];
+  for(let r=0;r<3;r++)for(let q=0;q<3;q++){const u=10.6+q*3.6,v=3+r*2.6,cc=cols[(r*3+q)%cols.length];
+    put(new THREE.BoxGeometry(2.6,0.1,0.8),Lm(cc),u,v,0.8);put(new THREE.BoxGeometry(2.6,0.08,0.3),Lm(cc),u,v-0.7,0.48);put(new THREE.BoxGeometry(2.6,0.08,0.3),Lm(cc),u,v+0.7,0.48);
+    put(new THREE.BoxGeometry(0.15,0.75,0.6),Lm("#55595e"),u-1.1,v,0.4);put(new THREE.BoxGeometry(0.15,0.75,0.6),Lm("#55595e"),u+1.1,v,0.4);}
+  ["#1f6fd1","#2a9d5c","#d6322f","#f2c230"].forEach((cc,i)=>put(new THREE.BoxGeometry(0.7,1.0,0.7),Lm(cc),19.2,2+i*0.8,0.5));
+  /* bike rack + small white guard booth at the end */
+  for(let i=0;i<4;i++)put(new THREE.BoxGeometry(0.06,0.9,1.6),Lm("#9a8a7a"),9.5+i*0.9,12,0.45);
+  put(new THREE.BoxGeometry(2.4,2.6,2.4),Lm("#f1f1ee",{emissive:"#262626"}),22,6.5,1.3);put(new THREE.BoxGeometry(2.9,0.25,2.9),Lm("#d9d9d6"),22,6.5,2.72);
+  /* toilets on the canal side */
+  const A2=[159,72],C=[175,49],L2=Math.hypot(C[0]-A2[0],C[1]-A2[1]),t2=[(C[0]-A2[0])/L2,(C[1]-A2[1])/L2],n2=[t2[1],-t2[0]],r2=-Math.atan2(t2[1],t2[0]);
+  const Q=(u,v)=>[A2[0]+t2[0]*u+n2[0]*v,A2[1]+t2[1]*u+n2[1]*v];
+  {const q=Q(5,3);const wc=new THREE.Mesh(new THREE.BoxGeometry(8,3.2,4.2),Lm("#d9dbdc",{emissive:"#1e2021"}));wc.position.set(q[0],1.6,q[1]);wc.rotation.y=r2;wc.castShadow=true;g.add(wc);
+    const rf=new THREE.Mesh(new THREE.BoxGeometry(8.8,0.25,5),Lm("#5a5f64"));rf.position.set(q[0],3.3,q[1]);rf.rotation.y=r2;g.add(rf);
+    for(let i=0;i<4;i++){const w=Q(2.2+i*1.9,5.12);const wn=new THREE.Mesh(new THREE.BoxGeometry(1.3,0.6,0.08),Lm("#2c3237"));wn.position.set(w[0],2.5,w[1]);wn.rotation.y=r2;g.add(wn);}
+    const d=Q(1.2,5.12);const dr=new THREE.Mesh(new THREE.BoxGeometry(1.1,2.2,0.08),Lm("#6b4a35"));dr.position.set(d[0],1.1,d[1]);dr.rotation.y=r2;g.add(dr);}
+  g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=h+4.5;scene.add(g);
+}
+function buildCIT63(b){
+  /* from street view: white floor bands with grey sunshade lips, red/white diagonal stripe accents, "63" on the ground floor;
+     the new black glass entrance tower fills the notch facing the road (sign, slanted louvres, steps, hedges, brick sign) */
+  const g=new THREE.Group(),c=[b.cx,b.cz],sc=k=>b.p.map(([x,z])=>[c[0]+(x-c[0])*k,c[1]+(z-c[1])*k]);
+  const Lm=(col,o)=>new THREE.MeshLambertMaterial(Object.assign({color:col},o||{}));
+  const white=Lm("#efeeea",{emissive:"#2a2927"}),grey=Lm("#8e9296",{emissive:"#1c1e20"}),dark=new THREE.MeshPhongMaterial({color:"#3a4148",specular:"#9fb3c0",shininess:40});
+  const ex=(p,d,m,y)=>{const o=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(p),{depth:d,bevelEnabled:false}),m));o.position.y=y;o.castShadow=true;o.receiveShadow=true;o.userData.bid=b.id;g.add(o);picks.push(o);return o;};
+  for(let i=0;i<b.lv;i++){const y=i*FLOOR;ex(sc(0.965),FLOOR-1.1,dark,y);ex(sc(1.0),1.1,white,y+FLOOR-1.1);ex(sc(1.025),0.16,grey,y+FLOOR-1.25);}
+  const h=b.lv*FLOOR;ex(sc(0.99),0.7,Lm("#d9d8d3"),h);
+  /* red + white diagonal stripes on the floor bands */
+  const red=Lm("#d6322f"),wS=Lm("#ffffff");
+  b.p.forEach(([x,z],i)=>{const[x2,z2]=b.p[(i+1)%b.p.length],L=Math.hypot(x2-x,z2-z);if(L<14)return;const r=-Math.atan2(z2-z,x2-x),tx=(x2-x)/L,tz=(z2-z)/L;let nx=-tz,nz=tx;if(inPoly(x+tx*L/2+nx,z+tz*L/2+nz,b.p)){nx=-nx;nz=-nz;}
+    [0.3,0.78].forEach(f=>{for(let k=0;k<b.lv;k++){[[0,red],[0.55,wS]].forEach(([o,m])=>{const s1=new THREE.Mesh(new THREE.BoxGeometry(0.42,1.25,0.08),m);s1.position.set(x+tx*(L*f+o)+nx*0.06,k*FLOOR+FLOOR-0.55,z+tz*(L*f+o)+nz*0.06);s1.rotation.set(0,r,-0.55,"YXZ");g.add(s1);});}});});
+  /* ---- black glass entrance tower in the notch ---- */
+  const A=[185.5,100.5],B=[179,121.5],dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),t=[dx/Ln,dz/Ln],n=[-t[1],t[0]],ry=-Math.atan2(dz,dx);   // n → road (west)
+  const P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
+  const put=(geo,m,u,v,y,rr)=>{const o=new THREE.Mesh(geo,m);const q=P(u,v);o.position.set(q[0],y,q[1]);o.rotation.y=rr===undefined?ry:rr;o.castShadow=true;o.receiveShadow=true;g.add(o);return o;};
+  const blk=Lm("#26292d",{emissive:"#0d0e10"}),TH=h+FLOOR*0.8;
+  const tw=ex([[185.5,100.5],[200,107],[193,125],[179,121.5]],TH,blk,0);
+  /* window grid: green-tinted glass in black frames */
+  const wc=document.createElement("canvas");wc.width=256;wc.height=256;const w=wc.getContext("2d");w.fillStyle="#26292d";w.fillRect(0,0,256,256);
+  for(let r0=0;r0<4;r0++)for(let c0=0;c0<4;c0++){const X=8+c0*62,Y=10+r0*62;w.fillStyle="#cfd4d2";w.fillRect(X,Y,54,48);w.fillStyle="#5f9c8f";w.fillRect(X+3,Y+3,23,42);w.fillRect(X+28,Y+3,23,42);w.fillStyle="rgba(255,255,255,.25)";w.fillRect(X+3,Y+3,23,8);}
+  const wt=new THREE.CanvasTexture(wc);wt.wrapS=wt.wrapT=THREE.RepeatWrapping;wt.repeat.set(1,b.lv/4*1.2);
+  const winM=new THREE.MeshLambertMaterial({map:wt,emissive:"#fff",emissiveMap:wt,emissiveIntensity:.08});
+  put(new THREE.BoxGeometry(9,TH-FLOOR*1.6,0.3),[blk,blk,blk,blk,winM,blk],Ln/2,0.2,FLOOR*1.6+(TH-FLOOR*1.6)/2);
+  [Ln/2-7.6,Ln/2+7.6].forEach(u=>put(new THREE.BoxGeometry(4,h-FLOOR,0.25),[blk,blk,blk,blk,winM,blk],u,-0.2,FLOOR+(h-FLOOR)/2));
+  /* slanted sunshade louvres sticking out at each floor on both sides */
+  const lou=Lm("#3b3f44");for(let i=1;i<=b.lv;i++)[Ln/2-6.8,Ln/2+6.8].forEach(u=>{const o=put(new THREE.BoxGeometry(4.6,0.12,2.4),lou,u,1.2,i*FLOOR+0.2);o.rotation.set(0.42,ry,0,"YXZ");});
+  for(let i=2;i<=b.lv;i++){const o=put(new THREE.BoxGeometry(10,0.12,1.6),lou,Ln/2,1.0,i*FLOOR+0.3);o.rotation.set(0.3,ry,0,"YXZ");}
+  /* name sign band */
+  const sc2=document.createElement("canvas");sc2.width=1024;sc2.height=160;const x=sc2.getContext("2d");x.fillStyle="#2c2f33";x.fillRect(0,0,1024,160);x.fillStyle="#e9e3cf";x.textAlign="center";
+  x.font='700 54px "Anuphan",sans-serif';x.fillText("วิทยาลัยเทคโนโลยีอุตสาหกรรม",512,66);x.font='600 34px "Chakra Petch",sans-serif';x.fillText("COLLEGE OF INDUSTRIAL TECHNOLOGY",512,118);
+  const st=new THREE.CanvasTexture(sc2),sm=new THREE.MeshLambertMaterial({map:st,emissive:"#fff",emissiveMap:st,emissiveIntensity:.3});
+  put(new THREE.BoxGeometry(10.5,1.7,0.6),[blk,blk,blk,blk,sm,blk],Ln/2,1.4,FLOOR*1.55);
+  put(new THREE.BoxGeometry(11,0.25,2.4),blk,Ln/2,1.6,FLOOR*1.1);
+  /* ground floor: glass doors with frames, emblems, steps, hedges */
+  put(new THREE.BoxGeometry(5,FLOOR-0.5,0.2),new THREE.MeshPhongMaterial({color:"#55807a",specular:"#ffffff",shininess:80}),Ln/2,0.4,(FLOOR-0.5)/2+0.6);
+  [Ln/2-2.6,Ln/2-1.2,Ln/2,Ln/2+1.2,Ln/2+2.6].forEach(u=>put(new THREE.BoxGeometry(0.15,FLOOR-0.4,0.3),Lm("#cfd2d4"),u,0.5,(FLOOR-0.4)/2+0.6));
+  [[Ln/2-4,"#f2dede","#c43a3a"],[Ln/2+4,"#f4f4f4","#2a2a2a"]].forEach(([u,bg,fg])=>{const e=document.createElement("canvas");e.width=e.height=64;const q=e.getContext("2d");q.fillStyle=bg;q.beginPath();q.arc(32,32,30,0,7);q.fill();q.strokeStyle=fg;q.lineWidth=5;q.beginPath();q.arc(32,32,18,0,7);q.stroke();
+    put(new THREE.CircleGeometry(0.6,20),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(e)}),u,0.45,2.6,ry+Math.PI);});
+  const stone=Lm("#b9b6ae");for(let i=0;i<4;i++)put(new THREE.BoxGeometry(6.5-i*0.4,0.6-i*0.15,0.7),stone,Ln/2,0.9+i*0.6,(0.6-i*0.15)/2);
+  const hedge=Lm("#3f8a3a");[Ln/2-5.6,Ln/2+5.6].forEach(u=>{put(new THREE.BoxGeometry(4.2,0.6,2),Lm("#d8d5ce"),u,1.6,0.3);put(new THREE.BoxGeometry(4,1.1,1.8),hedge,u,1.6,1.15);});
+  /* "63" on the ground-floor band of the left wing, brick sign on the lawn */
+  const s63=document.createElement("canvas");s63.width=128;s63.height=64;const y6=s63.getContext("2d");y6.fillStyle="#f0efeb";y6.fillRect(0,0,128,64);y6.fillStyle="#2f5fbf";y6.font='800 48px "Chakra Petch",sans-serif';y6.textAlign="center";y6.fillText("63",64,50);
+  const W0=[187,102],W1=[200,68],wl=Math.hypot(W1[0]-W0[0],W1[1]-W0[1]),wt2=[(W1[0]-W0[0])/wl,(W1[1]-W0[1])/wl],wn=[-wt2[1],wt2[0]],wr=-Math.atan2(W1[1]-W0[1],W1[0]-W0[0]);
+  const WP=(u,v)=>[W0[0]+wt2[0]*u+wn[0]*v,W0[1]+wt2[1]*u+wn[1]*v];
+  {const q=WP(3,0.15);const m=new THREE.Mesh(new THREE.PlaneGeometry(2,1),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(s63),side:THREE.DoubleSide}));m.position.set(q[0],FLOOR-0.55,q[1]);m.rotation.y=wr;g.add(m);}
+  {const bc=document.createElement("canvas");bc.width=512;bc.height=128;const k=bc.getContext("2d");k.fillStyle="#a8553f";k.fillRect(0,0,512,128);k.fillStyle="#f1e2cf";k.textAlign="center";k.font='700 40px "Anuphan",sans-serif';k.fillText("วิทยาลัยเทคโนโลยีอุตสาหกรรม",256,56);k.font='600 24px "Chakra Petch",sans-serif';k.fillText("COLLEGE OF INDUSTRIAL TECHNOLOGY",256,98);
+    const bm=new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(bc)}),br=Lm("#a8553f");const q=WP(8,5.5);
+    const sg=new THREE.Mesh(new THREE.BoxGeometry(7,1.8,0.6),[br,br,br,br,bm,bm]);sg.position.set(q[0],1.2,q[1]);sg.rotation.y=wr;sg.castShadow=true;g.add(sg);
+    const q2=WP(8,4.4);const hd=new THREE.Mesh(new THREE.BoxGeometry(9,0.8,1.2),hedge);hd.position.set(q2[0],0.4,q2[1]);hd.rotation.y=wr;g.add(hd);
+    const lw=WP(8,5.5);const lawn=new THREE.Mesh(new THREE.BoxGeometry(12,0.15,5),Lm("#5f9e45"));lawn.position.set(lw[0],0.08,lw[1]);lawn.rotation.y=wr;lawn.receiveShadow=true;g.add(lawn);}
+  g.position.set(b.dx,0.3,b.dz);b.group=g;b.top=TH+1;scene.add(g);
+}
 function buildFTE52(b){
   /* from street view (south-east corner, east road): white banded block with a big thin roof overhang, teal glass stair
      tower on the corner, stacked grey cantilever boxes, tall red-orange panels, curved metal canopy + faculty sign over the
@@ -956,6 +1172,14 @@ function decorateCourt(g,b){
   [-1,1].forEach(s=>lines.push([F(s*hl,-3.5),F(s*(hl-4),-2),F(s*(hl-4),2),F(s*hl,3.5)]));
   const lm=new THREE.Mesh(stripGeom(lines,0.18),new THREE.MeshBasicMaterial({color:"#f4f4f0"}));lm.position.y=0.16;g.add(lm);
   [-1,1].forEach(s=>{const p=F(s*hl,0);const goal=new THREE.Mesh(new THREE.BoxGeometry(0.25,1.6,3),new THREE.MeshLambertMaterial({color:"#ffffff"}));goal.position.set(p[0],0.9,p[1]);goal.rotation.y=-ang;goal.castShadow=true;g.add(goal);});
+  /* green chain-link cage around the court, green lamp masts at the corners, blue-painted kerb (street view) */
+  {const fm=new THREE.MeshLambertMaterial({color:"#2f8a4a",transparent:true,opacity:0.35,side:THREE.DoubleSide,depthWrite:false}),pm=new THREE.MeshLambertMaterial({color:"#2a7a42"}),FH=4.5,ex=1.2;
+    [[[-hl-ex,-hw-ex],[hl+ex,-hw-ex]],[[hl+ex,-hw-ex],[hl+ex,hw+ex]],[[hl+ex,hw+ex],[-hl-ex,hw+ex]],[[-hl-ex,hw+ex],[-hl-ex,-hw-ex]]].forEach(([a,b])=>{const p1=F(...a),p2=F(...b),Ln=Math.hypot(p2[0]-p1[0],p2[1]-p1[1]),r=-Math.atan2(p2[1]-p1[1],p2[0]-p1[0]);
+      const f=new THREE.Mesh(new THREE.PlaneGeometry(Ln,FH),fm);f.position.set((p1[0]+p2[0])/2,FH/2+0.1,(p1[1]+p2[1])/2);f.rotation.y=r;g.add(f);
+      const kb=new THREE.Mesh(new THREE.BoxGeometry(Ln,0.35,0.3),new THREE.MeshLambertMaterial({color:"#2f7fb3"}));kb.position.set(f.position.x,0.2,f.position.z);kb.rotation.y=r;g.add(kb);
+      for(let u=0;u<=Ln;u+=3){const q=[p1[0]+(p2[0]-p1[0])*u/Ln,p1[1]+(p2[1]-p1[1])*u/Ln];const po=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.05,FH,5),pm);po.position.set(q[0],FH/2,q[1]);g.add(po);}});
+    [[-1,-1],[1,-1],[1,1],[-1,1]].forEach(([a,b])=>{const q=F(a*(hl+ex),b*(hw+ex));const m=new THREE.Mesh(new THREE.CylinderGeometry(0.12,0.16,9,6),pm);m.position.set(q[0],4.5,q[1]);g.add(m);
+      const h=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.5,0.3),new THREE.MeshLambertMaterial({color:"#e8e8e2",emissive:"#555"}));h.position.set(q[0],9.1,q[1]);h.rotation.y=-ang;g.add(h);});}
   /* motorbikes */
   const spots=[];for(let v=-13;v<=13;v+=2.6){if(Math.abs(v)<1.4)continue;for(let u=3;u<=15;u+=1)spots.push([u,v]);}
   const bike=new THREE.InstancedMesh(new THREE.BoxGeometry(0.6,1,1.8),new THREE.MeshLambertMaterial({color:"#ffffff"}),spots.length);
@@ -1538,7 +1762,8 @@ for(let i=treeSpots.length-1;i>=0;i--)if(inPoly(treeSpots[i][0],treeSpots[i][1],
   /* 2 · covered walkway: green posts, metal roof, stainless rail */
   walk([[39,195],[123,223]],2.6);
   /* covered walkway (solar roof): only along the plaza side of the east road */
-  walk(offsetLine([[126,229],[139,192],[146,172],[154,149],[160,133]],-5.5),2.8,{cover:true});
+  walk(offsetLine([[126,229],[139,192],[146,172]],-5.5),2.8,{cover:true});
+  walk(offsetLine([[139,192],[146,172],[154,149],[160,133]],-5.5).slice(1),2.8);   /* in front of 52: open walkway, no solar roof (owner 14 Oct) */
   walk([[150,150],[165,108],[139,74],[118,45],[94,21],[41,1],[15,-12],[-104,-82],[-135,-100],[-145,-105],[-220,-198]],2.6);
   /* 6 · covered walkway with long benches along the canal + orange steel stair by the giraffe shrine */
   walk([[78,130],[59,111],[96,87],[91,79],[121,50]],2.6);
@@ -1614,6 +1839,236 @@ for(let i=treeSpots.length-1;i>=0;i--)if(inPoly(treeSpots[i][0],treeSpots[i][1],
   for(let f=0.06;f<1;f+=0.14)treeSpots.push([91.5-17*f,163.5+43*f]);                     // row along the plaza's west edge
   scene.add(G);
 })();
+/* ================= street details seen along the campus roads in street view (2013 + Sep 2026):
+   tall street lamps, cars parked along the kerb, covered walkways over the sidewalks in the engineering / science zone,
+   coloured bins, orange-white bollards at the junctions ================= */
+(function(){
+  const G=new THREE.Group();G.name="streetDetails";
+  const L=(c,o)=>new THREE.MeshLambertMaterial(Object.assign({color:c},o||{}));
+  const blocked=(x,z)=>BLD.some(b=>b.p&&inPoly(x,z,b.p))||inPoly(x,z,CANAL);
+  const H=(x,z)=>{const v=Math.sin(x*12.9898+z*78.233)*43758.5453;return v-Math.floor(v);};
+  /* distance to the nearest OTHER road segment (to keep things out of junctions) */
+  const otherRoadD=(x,z,self)=>{let best=1e9;for(const r of ROADS){if(r===self||r[0]==="f"||!Array.isArray(r[1]))continue;const pts=r[1],hw=r[0]==="r"?3.6:2.6;for(let i=0;i<pts.length-1;i++){const[x1,z1]=pts[i],[x2,z2]=pts[i+1];const dx=x2-x1,dz=z2-z1,L2=dx*dx+dz*dz||1;let u=((x-x1)*dx+(z-z1)*dz)/L2;u=Math.max(0,Math.min(1,u));best=Math.min(best,Math.hypot(x1+dx*u-x,z1+dz*u-z)-hw);}}return best;};
+  const along=(pts,step,fn)=>{for(let i=0;i<pts.length-1;i++){const[x1,z1]=pts[i],[x2,z2]=pts[i+1],dx=x2-x1,dz=z2-z1,Ln=Math.hypot(dx,dz);if(Ln<1)continue;const t=[dx/Ln,dz/Ln],n=[-t[1],t[0]];for(let u=step/2;u<Ln;u+=step)fn(x1+t[0]*u,z1+t[1]*u,t,n,-Math.atan2(dz,dx));}};
+  const lamps=[],cars=[],covers=[],posts=[],bins=[],bollards=[];
+  ROADS.forEach(r=>{const[t,pts]=r;if(t==="f"||!Array.isArray(pts))return;const hw=t==="r"?3.6:2.6;let k=0;
+    /* street lamps on the sidewalk, alternating sides */
+    along(pts,24,(x,z,tt,n,ry)=>{const sd=(k++)%2?1:-1,px=x+n[0]*sd*(hw+3.3),pz=z+n[1]*sd*(hw+3.3);if(blocked(px,pz)||otherRoadD(px,pz,r)<0.8)return;lamps.push({x:px,z:pz,nx:-n[0]*sd,nz:-n[1]*sd});
+      if((k%3)===0)bins.push({x:px+tt[0]*1.2,z:pz+tt[1]*1.2,r:ry});});
+    /* cars parked along the kerb (main campus roads only) */
+    if(t==="r")along(pts,5.6,(x,z,tt,n,ry)=>{const sd=1,px=x+n[0]*sd*(hw-1.2),pz=z+n[1]*sd*(hw-1.2);if(H(px,pz)>0.42)return;if(blocked(px,pz)||otherRoadD(px,pz,r)<6)return;if(BLD.some(B=>B.fx&&B.fx.carport&&B.p.some(([bx,bz])=>Math.hypot(bx-px,bz-pz)<60)&&inPoly(x+n[0]*(hw+7),z+n[1]*(hw+7),B.p.map(([bx,bz])=>[B.cx+(bx-B.cx)*1.35,B.cz+(bz-B.cz)*1.35]))))return;if(blocked(x+n[0]*(hw+4),z+n[1]*(hw+4))&&false)return;cars.push({x:px,z:pz,r:ry,c:Math.floor(H(pz,px)*6)});});
+    /* covered walkway over one sidewalk in the engineering / science zone */
+    if(t==="r"&&pts.every(([x,z])=>x<125&&z<60)){const side=(()=>{let a=0,b2=0;along(pts,6,(x,z,tt,n)=>{if(BLD.some(B=>B.p&&inPoly(x+n[0]*12,z+n[1]*12,B.p)))a++;if(BLD.some(B=>B.p&&inPoly(x-n[0]*12,z-n[1]*12,B.p)))b2++;});return a>=b2?1:-1;})();
+      let j=0;along(pts,1,(x,z,tt,n,ry)=>{const px=x+n[0]*side*5,pz=z+n[1]*side*5;if(blocked(px,pz)||otherRoadD(px,pz,r)<0.5)return;covers.push({x:px,z:pz,r:ry});if((j++)%4===0)[-1.4,1.4].forEach(o=>posts.push({x:px+n[0]*side*o,z:pz+n[1]*side*o}));});}
+    /* orange-white bollards where a road meets another one */
+    [pts[0],pts[pts.length-1]].forEach(([x,z],e)=>{const nb=pts[e?pts.length-2:1];const dx=nb[0]-x,dz=nb[1]-z,Ln=Math.hypot(dx,dz)||1,n=[-dz/Ln,dx/Ln];if(otherRoadD(x,z,r)>1.5)return;
+      [-1,1].forEach(sd=>{for(let q=0;q<3;q++){const px=x+dx/Ln*(hw+2+q*1.2)+n[0]*sd*(hw-0.4),pz=z+dz/Ln*(hw+2+q*1.2)+n[1]*sd*(hw-0.4);if(!blocked(px,pz))bollards.push({x:px,z:pz});}});});});
+  const box=new THREE.BoxGeometry(1,1,1),o=new THREE.Object3D(),col=new THREE.Color();
+  const inst=(geo,mat,list,set,cf)=>{if(!list.length)return;const m=new THREE.InstancedMesh(geo,mat,list.length);m.frustumCulled=false;list.forEach((it,i)=>{o.position.set(0,0,0);o.rotation.set(0,0,0);o.scale.set(1,1,1);set(it,i);o.updateMatrix();m.setMatrixAt(i,o.matrix);if(cf){col.set(cf(it,i));m.setColorAt(i,col);}});m.castShadow=true;m.receiveShadow=true;G.add(m);};
+  /* lamps: grey pole, short arm toward the road, flat lamp head */
+  /* lamps: short dark pole with a white globe on top (street view, engineering + science zones) */
+  inst(new THREE.CylinderGeometry(0.07,0.1,4,6),L("#3a3f44"),lamps,l=>{o.position.set(l.x,2.3,l.z);});
+  inst(new THREE.SphereGeometry(0.32,10,8),L("#f6f4ee",{emissive:"#6a6656"}),lamps,l=>{o.position.set(l.x,4.55,l.z);});
+  /* parked cars */
+  const pal=["#e9e9e9","#2b2f36","#9aa3ad","#c7c2b4","#b23a3a","#3a5fb2"];
+  pal.forEach((pc,k)=>inst(box,L(pc),cars.filter(c=>c.c%pal.length===k),c=>{o.position.set(c.x,0.95,c.z);o.rotation.y=c.r;o.scale.set(4.3,0.85,1.75);}));
+  inst(box,L("#ffffff"),cars,c=>{o.position.set(c.x,1.65,c.z);o.rotation.y=c.r;o.scale.set(2.2,0.6,1.55);},c=>"#2c3540");
+  /* covered walkways: dark corrugated roof on slim posts */
+  inst(box,L("#4f5559",{emissive:"#111"}),covers,c=>{o.position.set(c.x,3.3,c.z);o.rotation.y=c.r;o.scale.set(1.06,0.1,3.4);});
+  inst(new THREE.CylinderGeometry(0.07,0.07,2.9,6),L("#6d767d"),posts,p=>{o.position.set(p.x,1.9,p.z);});
+  /* bins (yellow / green / blue) */
+  const bc=["#e8c21b","#2a8a4a","#1f5fbf"];
+  inst(box,L("#ffffff"),bins.flatMap(b=>[0,1,2].map(i=>({x:b.x+Math.cos(b.r)*i*0.7,z:b.z-Math.sin(b.r)*i*0.7,i}))),b=>{o.position.set(b.x,0.95,b.z);o.scale.set(0.55,0.9,0.55);},b=>bc[b.i]);
+  /* bollards */
+  inst(new THREE.CylinderGeometry(0.1,0.12,0.9,8),L("#e8642a"),bollards,b=>{o.position.set(b.x,0.95,b.z);});
+  inst(new THREE.CylinderGeometry(0.105,0.105,0.18,8),L("#f4f4f4"),bollards,b=>{o.position.set(b.x,1.1,b.z);});
+  /* row of slim palms in hedge planters along the north side of อาคาร 77 (Krungthai bank / student centre side) */
+  {const A=[48,11],B=[88,27],Ln=Math.hypot(B[0]-A[0],B[1]-A[1]),t=[(B[0]-A[0])/Ln,(B[1]-A[1])/Ln],n=[0.37,-0.93],palms=[],hed=[];
+    for(let u=3;u<Ln-2;u+=5){const p=[A[0]+t[0]*u+n[0]*3.2,A[1]+t[1]*u+n[1]*3.2];palms.push({x:p[0],z:p[1],h:6+H(p[0],p[1])*2});}
+    hed.push({x:A[0]+t[0]*Ln/2+n[0]*3.2,z:A[1]+t[1]*Ln/2+n[1]*3.2,r:-Math.atan2(t[1],t[0]),w:Ln-3});
+    inst(new THREE.CylinderGeometry(0.15,0.22,1,6),L("#8c7a62"),palms,p=>{o.position.set(p.x,p.h/2+0.5,p.z);o.scale.set(1,p.h,1);});
+    const fronds=[];palms.forEach(p=>{for(let k=0;k<7;k++)fronds.push({x:p.x,z:p.z,y:p.h+0.5,a:k/7*Math.PI*2});});
+    inst(box,L("#3f8f3a"),fronds,f=>{o.position.set(f.x+Math.cos(f.a)*1.1,f.y-0.2,f.z+Math.sin(f.a)*1.1);o.rotation.set(0,-f.a,-0.45);o.scale.set(2.4,0.08,0.5);});
+    inst(box,L("#3d7f39"),hed,h=>{o.position.set(h.x,0.85,h.z);o.rotation.y=h.r;o.scale.set(h.w,0.9,1.4);});
+    inst(box,L("#c9c3b8"),hed,h=>{o.position.set(h.x,0.5,h.z);o.rotation.y=h.r;o.scale.set(h.w+0.2,0.45,1.6);});
+    const sc=document.createElement("canvas");sc.width=512;sc.height=64;const sx=sc.getContext("2d");sx.fillStyle="#3b3f45";sx.fillRect(0,0,512,64);sx.fillStyle="#fff";sx.font='700 40px "Chakra Petch",sans-serif';sx.textAlign="center";sx.fillText("STUDENT CENTER",256,46);
+    const C=[94,30],D=[74,84],cl=Math.hypot(D[0]-C[0],D[1]-C[1]),ct=[(D[0]-C[0])/cl,(D[1]-C[1])/cl],cn=[ct[1],-ct[0]];
+    const sg=new THREE.Mesh(new THREE.PlaneGeometry(7,0.9),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc),side:THREE.DoubleSide}));sg.position.set(C[0]+ct[0]*cl*0.25+cn[0]*0.6,3.6,C[1]+ct[1]*cl*0.25+cn[1]*0.6);sg.rotation.y=-Math.atan2(ct[1],ct[0])+Math.PI;G.add(sg);}
+  /* dorm zone (owner's ride video): road between อาคาร 90 (prep school) and หอพักชาย 92 */
+  {const A=[-220,-205],B=[-232,-226],dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),t=[dx/Ln,dz/Ln],n=[-t[1],t[0]],ry=-Math.atan2(dz,dx);   // n → east (dorm 92 side)
+    const P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
+    /* west (90) side: black steel railing with red-brown bars on a white plinth, a sliding gate and a hedge strip */
+    const rail=[],bars=[],hedge=[];for(let u=1;u<Ln+6;u+=0.5){const p=P(u,-4.6);bars.push({x:p[0],z:p[1],c:(Math.floor(u*2)%3===0)});}
+    inst(box,L("#2a2b2d"),bars.filter(b=>!b.c),b=>{o.position.set(b.x,1.4,b.z);o.rotation.y=ry;o.scale.set(0.05,2.0,0.05);});
+    inst(box,L("#8a2e26"),bars.filter(b=>b.c),b=>{o.position.set(b.x,1.4,b.z);o.rotation.y=ry;o.scale.set(0.06,2.0,0.06);});
+    {const p=P((Ln+6)/2,-4.6);[2.3,0.6].forEach(y=>{const r=new THREE.Mesh(new THREE.BoxGeometry(Ln+6,0.08,0.08),L("#2a2b2d"));r.position.set(p[0],y,p[1]);r.rotation.y=ry;G.add(r);});
+      const pl=new THREE.Mesh(new THREE.BoxGeometry(Ln+6,0.5,0.35),L("#f1f0ec"));pl.position.set(p[0],0.45,p[1]);pl.rotation.y=ry;G.add(pl);
+      const hd=new THREE.Mesh(new THREE.BoxGeometry(Ln+6,0.45,0.9),L("#3f7f3a"));const hp=P((Ln+6)/2,-3.8);hd.position.set(hp[0],0.45,hp[1]);hd.rotation.y=ry;G.add(hd);}
+    for(let u=1;u<Ln+6;u+=5){const p=P(u,-4.6);const po=new THREE.Mesh(new THREE.BoxGeometry(0.25,2.6,0.25),L("#1d1e20"));po.position.set(p[0],1.5,p[1]);G.add(po);}
+    {const p=P(Ln*0.35,-4.4);const gt=new THREE.Mesh(new THREE.BoxGeometry(5,2.2,0.12),L("#3a2a26"));gt.position.set(p[0],1.3,p[1]);gt.rotation.y=ry;G.add(gt);
+      const sg=new THREE.Mesh(new THREE.BoxGeometry(1.6,0.6,0.05),L("#2f6fd0"));const sp=P(Ln*0.35-2,-4.3);sg.position.set(sp[0],1.6,sp[1]);sg.rotation.y=ry;G.add(sg);}
+    /* east (92) side: white wall with chain-link fence on top, black lanterns, red notice board */
+    {const p=P((Ln+6)/2,4.6),ww=new THREE.Mesh(new THREE.BoxGeometry(Ln+6,2.4,0.35),L("#f4f4f2",{emissive:"#202020"}));ww.position.set(p[0],1.5,p[1]);ww.rotation.y=ry;ww.castShadow=true;G.add(ww);
+      const ch=new THREE.Mesh(new THREE.PlaneGeometry(Ln+6,1.6),new THREE.MeshLambertMaterial({color:"#9aa3a0",transparent:true,opacity:0.4,side:THREE.DoubleSide,depthWrite:false}));ch.position.set(p[0],3.5,p[1]);ch.rotation.y=ry;G.add(ch);
+      for(let u=0;u<Ln+6;u+=2.5){const q=P(u,4.6);const fp=new THREE.Mesh(new THREE.CylinderGeometry(0.04,0.04,1.7,5),L("#8d949b"));fp.position.set(q[0],3.5,q[1]);G.add(fp);}
+      for(let u=3;u<Ln+6;u+=6){const q=P(u,4.6);const ln=new THREE.Mesh(new THREE.BoxGeometry(0.25,0.4,0.25),L("#1c1c1e",{emissive:"#3a3020"}));ln.position.set(q[0],2.95,q[1]);G.add(ln);}
+      const rb=new THREE.Mesh(new THREE.BoxGeometry(1.4,0.5,0.05),L("#c8322f"));const rq=P(Ln*0.3,4.4);rb.position.set(rq[0],1.9,rq[1]);rb.rotation.y=ry;G.add(rb);}
+    /* yellow-black striped column at the corner (stadium overhang) + zebra crossing across the junction */
+    {const q=P(-1.5,-5.5);const c=new THREE.Mesh(new THREE.CylinderGeometry(0.6,0.6,7.2,16),new THREE.MeshLambertMaterial({map:(()=>{const cv=document.createElement("canvas");cv.width=16;cv.height=64;const x=cv.getContext("2d");for(let i=0;i<8;i++){x.fillStyle=i%2?"#1c1c1c":"#f2c218";x.fillRect(0,i*8,16,8);}return new THREE.CanvasTexture(cv);})()}));c.position.set(q[0],3.6,q[1]);G.add(c);}
+    for(let v=-3;v<=3;v+=1){const q=P(-2,v);const zb=new THREE.Mesh(new THREE.BoxGeometry(3,0.03,0.5),L("#f4f4f4",{emissive:"#333"}));zb.position.set(q[0]-t[0]*2,0.41,q[1]-t[1]*2);zb.rotation.y=ry+Math.PI/2;G.add(zb);}
+    /* cones */
+    [[Ln-2,2.5]].forEach(([u,v])=>{const q=P(u,v);const cn=new THREE.Mesh(new THREE.ConeGeometry(0.25,0.75,10),L("#e8642a"));cn.position.set(q[0],0.75,q[1]);G.add(cn);});}
+  /* อาคาร 96 (owner's video): long flat white steel canopy with a translucent roof wrapping the corner by the 3-way junction,
+     wide granite steps along the glazed ground floor; along the road east of it: blue standing "P" parking signs and young trees on braces */
+  {const runs=[[[-224,-248],[-191,-271],[0.566,0.825]],[[-224,-248],[-233,-261],[-0.824,0.567]]];
+    const roofM=new THREE.MeshLambertMaterial({color:"#e9eef2",transparent:true,opacity:0.85,side:THREE.DoubleSide}),postM=L("#eef0f1"),stepM=L("#cfccc5");
+    runs.forEach(([A,B,nn])=>{const dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),r=-Math.atan2(dz,dx),P=(u,v)=>[A[0]+dx/Ln*u+nn[0]*v,A[1]+dz/Ln*u+nn[1]*v];
+      const c=P(Ln/2,2.6);const rf=new THREE.Mesh(new THREE.BoxGeometry(Ln+3,0.12,4.2),roofM);rf.position.set(c[0],3.6,c[1]);rf.rotation.y=r;G.add(rf);
+      for(let u=-1;u<=Ln+1;u+=4.2){const q=P(u,4.4);const po=new THREE.Mesh(new THREE.CylinderGeometry(0.09,0.09,3.3,8),postM);po.position.set(q[0],1.95,q[1]);G.add(po);}
+      const ed=new THREE.Mesh(new THREE.BoxGeometry(Ln+3,0.3,0.15),postM);const eq=P(Ln/2,4.6);ed.position.set(eq[0],3.55,eq[1]);ed.rotation.y=r;G.add(ed);
+      for(let k=0;k<4;k++){const q=P(Ln/2,0.6+k*0.55);const st=new THREE.Mesh(new THREE.BoxGeometry(Ln-1,0.9-k*0.2,0.55),stepM);st.position.set(q[0],0.3+(0.9-k*0.2)/2,q[1]);st.rotation.y=r;G.add(st);}});
+    /* "96" at the top of the corner */
+    {const cv=document.createElement("canvas");cv.width=128;cv.height=96;const x=cv.getContext("2d");x.fillStyle="#f3f3f1";x.fillRect(0,0,128,96);x.fillStyle="#7d858c";x.font='800 76px "Chakra Petch",sans-serif';x.textAlign="center";x.fillText("96",64,78);
+      const m=new THREE.Mesh(new THREE.PlaneGeometry(2.6,2),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(cv)}));m.position.set(-224.8,7*FLOOR-1.5,-249.2);m.rotation.y=-Math.atan2(-0.825,-0.566)+Math.PI/2;G.add(m);}
+    /* corner glass bay with purple frames (floors 2-6) + dark grey band over the ground floor + wooden picnic tables inside */
+    {const C=[-224,-248],t=[0.82,-0.57],n=[0.57,0.82],ry=-Math.atan2(t[1],t[0]),P=(u,v)=>[C[0]+t[0]*u+n[0]*v,C[1]+t[1]*u+n[1]*v],pur=L("#6b2a5e");
+      const bq=P(6,0.5);const bay=new THREE.Mesh(new THREE.BoxGeometry(9,FLOOR*4.6,1.4),new THREE.MeshPhongMaterial({color:"#3d6f9a",specular:"#e0f0ff",shininess:90}));bay.position.set(bq[0],FLOOR*3.6,bq[1]);bay.rotation.y=ry;bay.castShadow=true;G.add(bay);
+      [[0,FLOOR*1.3],[0,FLOOR*5.9]].forEach(([o,y])=>{const f=new THREE.Mesh(new THREE.BoxGeometry(9.4,0.35,1.6),pur);f.position.set(bq[0],y,bq[1]);f.rotation.y=ry;G.add(f);});
+      [-4.6,4.6].forEach(o=>{const q=P(6+o,0.5);const f=new THREE.Mesh(new THREE.BoxGeometry(0.35,FLOOR*4.6,1.6),pur);f.position.set(q[0],FLOOR*3.6,q[1]);f.rotation.y=ry;G.add(f);});
+      for(let k=1;k<5;k++){const q=P(6,1.22);const f=new THREE.Mesh(new THREE.BoxGeometry(9,0.08,0.06),L("#e8ecef"));f.position.set(q[0],FLOOR*1.3+k*FLOOR*0.92,q[1]);f.rotation.y=ry;G.add(f);}
+      for(let k=-3;k<=3;k++){const q=P(6+k*1.3,1.22);const f=new THREE.Mesh(new THREE.BoxGeometry(0.06,FLOOR*4.6,0.06),L("#e8ecef"));f.position.set(q[0],FLOOR*3.6,q[1]);f.rotation.y=ry;G.add(f);}
+      const gb=P(14,0.3);const band=new THREE.Mesh(new THREE.BoxGeometry(30,0.9,0.5),L("#4a5056"));band.position.set(gb[0],FLOOR-0.2,gb[1]);band.rotation.y=ry;G.add(band);
+      for(let k=0;k<6;k++){const q=P(10+k*3.2,-5);const tb=new THREE.Mesh(new THREE.BoxGeometry(2.4,0.1,0.9),L("#8a4a2a"));tb.position.set(q[0],1.05,q[1]);tb.rotation.y=ry;G.add(tb);
+        [-0.75,0.75].forEach(v=>{const bq2=P(10+k*3.2,-5+v);const bn=new THREE.Mesh(new THREE.BoxGeometry(2.4,0.08,0.3),L("#8a4a2a"));bn.position.set(bq2[0],0.75,bq2[1]);bn.rotation.y=ry;G.add(bn);});}}
+    /* blue P signs + braced young trees along the road beside 96 / dorm fence */
+    const R0=[-232,-226],R1=[-179,-265],rl=Math.hypot(R1[0]-R0[0],R1[1]-R0[1]),rt=[(R1[0]-R0[0])/rl,(R1[1]-R0[1])/rl],rn=[-rt[1],rt[0]];
+    const pc=document.createElement("canvas");pc.width=64;pc.height=96;const px=pc.getContext("2d");px.fillStyle="#2b3a8f";px.beginPath();px.arc(32,48,30,0,7);px.fill();px.fillStyle="#fff";px.font='800 34px "Chakra Petch",sans-serif';px.textAlign="center";px.fillText("P",32,52);px.font='600 11px "Anuphan",sans-serif';px.fillText("จอดรถยนต์",32,70);
+    const pm=new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(pc),transparent:true,side:THREE.DoubleSide});
+    for(let u=10;u<rl-4;u+=7){const side=1,q=[R0[0]+rt[0]*u+rn[0]*side*2.4,R0[1]+rt[1]*u+rn[1]*side*2.4];if(BLD.some(b=>b.p&&inPoly(q[0],q[1],b.p)))continue;
+      const sg=new THREE.Mesh(new THREE.PlaneGeometry(0.7,1.05),pm);sg.position.set(q[0],0.85,q[1]);sg.rotation.y=-Math.atan2(rt[1],rt[0]);G.add(sg);
+      const tq=[R0[0]+rt[0]*(u+3)+rn[0]*side*4.2,R0[1]+rt[1]*(u+3)+rn[1]*side*4.2];if(!BLD.some(b=>b.p&&inPoly(tq[0],tq[1],b.p)))treeSpots.push(tq);
+      /* 96 side: dark square tree planters + white garden benches on the wide sidewalk */
+      const pq=[R0[0]+rt[0]*(u+2)-rn[0]*5.2,R0[1]+rt[1]*(u+2)-rn[1]*5.2];if(u>14&&!BLD.some(b=>b.p&&inPoly(pq[0],pq[1],b.p))){const pl=new THREE.Mesh(new THREE.BoxGeometry(3.4,0.7,3.4),L("#3a3436"));pl.position.set(pq[0],0.7,pq[1]);pl.rotation.y=-Math.atan2(rt[1],rt[0]);G.add(pl);treeSpots.push(pq);
+        if((u|0)%2){const bq=[pq[0]-rn[0]*3,pq[1]-rn[1]*3];const bn=new THREE.Mesh(new THREE.BoxGeometry(1.6,0.8,0.6),L("#f4f4f2"));bn.position.set(bq[0],0.75,bq[1]);bn.rotation.y=-Math.atan2(rt[1],rt[0]);G.add(bn);}}}}
+  /* KMUTNB Techno Park (อาคาร 99): angular beige stone pier at the corner with the KMUTNB / TECHNO PARK sign, timber-lined
+     entrance, "99" plate, very wide steps along the front and the green leaf sculpture by the road */
+  {const A=[-146,-277],B=[-169,-261],dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),t=[dx/Ln,dz/Ln];let n=[-t[1],t[0]];if(inPoly(A[0]+t[0]*Ln/2+n[0]*2,A[1]+t[1]*Ln/2+n[1]*2,BLD.find(b=>b.id==="u1").p))n=[-n[0],-n[1]];
+    const ry=-Math.atan2(dz,dx),P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v],stone=L("#ecebe8",{emissive:"#252320"});
+    /* full-height dark glass wedge on the corner + a tall faceted white pier tapering upward (photo) */
+    {const TH=10*FLOOR+0.9,wq=[B,P(Ln-9,0.3),[B[0]+n[0]*0+(-t[0])*0-(-n[0])*0,B[1]]];const C2=[B[0]-n[0]*7,B[1]-n[1]*7];
+      const wedge=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape([[B[0]+n[0]*0.4,B[1]+n[1]*0.4],[P(Ln-9,0.4)[0],P(Ln-9,0.4)[1]],[C2[0],C2[1]]]),{depth:TH,bevelEnabled:false}),new THREE.MeshPhongMaterial({color:"#1f2a33",specular:"#9fb6c6",shininess:90})));wedge.position.y=0.3;wedge.castShadow=true;G.add(wedge);
+      const pq=P(Ln*0.62,1.2);const tp=new THREE.Mesh(new THREE.CylinderGeometry(0.6,6.5,TH,4,1),stone);tp.position.set(pq[0],TH/2+0.3,pq[1]);tp.rotation.y=ry+Math.PI/4;tp.scale.set(1,1,0.45);tp.castShadow=true;G.add(tp);}
+    const pc=P(Ln*0.62,0.8);const pier=new THREE.Mesh(new THREE.BoxGeometry(9,FLOOR*2.6,3.2),stone);pier.position.set(pc[0],FLOOR*1.6,pc[1]);pier.rotation.set(0,ry,0.06,"YXZ");pier.castShadow=true;G.add(pier);
+    const sc=document.createElement("canvas");sc.width=512;sc.height=256;const x=sc.getContext("2d");x.fillStyle="#d9d2c4";x.fillRect(0,0,512,256);
+    x.textAlign="center";x.font='800 64px "Chakra Petch",sans-serif';x.fillStyle="#c8322f";x.fillText("KMUTNB",256,80);x.font='600 34px "Anuphan",sans-serif';x.fillStyle="#c8322f";x.fillText("อุทยานเทคโนโลยี",256,140);x.font='700 46px "Chakra Petch",sans-serif';x.fillText("TECHNO PARK",256,196);
+    const sg=new THREE.Mesh(new THREE.PlaneGeometry(6,3),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc)}));const sp=P(Ln*0.62,2.6);sg.position.set(sp[0],FLOOR*2.2,sp[1]);sg.rotation.y=ry+(n[1]*Math.cos(ry)>0?Math.PI:0);G.add(sg);
+    const en=new THREE.Mesh(new THREE.BoxGeometry(4,FLOOR*1.1,0.3),L("#b45a2e"));const ep=P(Ln*0.62,2.6);en.position.set(ep[0],FLOOR*0.6+0.6,ep[1]);en.rotation.y=ry;G.add(en);
+    const nc=document.createElement("canvas");nc.width=128;nc.height=96;const nx=nc.getContext("2d");nx.fillStyle="#d9d2c4";nx.fillRect(0,0,128,96);nx.fillStyle="#c8322f";nx.font='800 60px "Chakra Petch",sans-serif';nx.textAlign="center";nx.fillText("99",64,66);
+    const nm=new THREE.Mesh(new THREE.PlaneGeometry(1.6,1.2),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(nc)}));const np=P(Ln*0.62+3.6,2.62);nm.position.set(np[0],FLOOR*0.8,np[1]);nm.rotation.y=sg.rotation.y;G.add(nm);
+    for(let k=0;k<6;k++){const q=P(Ln/2,3+k*0.6);const st=new THREE.Mesh(new THREE.BoxGeometry(Ln+4,1.3-k*0.2,0.6),L("#cfccc5"));st.position.set(q[0],0.3+(1.3-k*0.2)/2,q[1]);st.rotation.y=ry;G.add(st);}
+    /* leaf sculpture */
+    const lq=P(Ln*0.2,8);[[-1,"#2f9a4a"],[1,"#c8322f"]].forEach(([sd,c])=>{const lf=new THREE.Mesh(new THREE.TorusGeometry(1.4,0.18,8,24,Math.PI*1.3),L(c));lf.position.set(lq[0],2.6,lq[1]);lf.rotation.set(0,ry+sd*0.4,sd*0.6);G.add(lf);});
+    const bs=new THREE.Mesh(new THREE.CylinderGeometry(1.2,1.4,0.6,16),L("#cfccc5"));bs.position.set(lq[0],0.6,lq[1]);G.add(bs);}
+  /* behind โรงอาหาร 98 (owner's sketch + video): REFUSE STATION recycling shed and motorbike parking under green steel canopies
+     along the concrete-block boundary wall (blue pipe on the wall, white bay lines, yellow lane lines), plus a narrow bike strip between 96 and 98 */
+  {const bikesAlong=(A,B,side,depth,canopy)=>{const dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),t=[dx/Ln,dz/Ln],n=[-t[1]*side,t[0]*side],ry=-Math.atan2(dz,dx),P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
+      const bk=[],ln=[];for(let u=1;u<Ln-0.6;u+=1.0){const p=P(u,1.4);if(H(p[0],p[1])<0.82)bk.push({x:p[0],z:p[1],c:Math.floor(H(p[1],p[0])*6)});const q=P(u-0.5,1.6);ln.push({x:q[0],z:q[1]});}
+      const pal=["#c8322f","#1f1f1f","#f2f2f2","#e3b21a","#7d858c","#2b6cd8"];
+      pal.forEach((pc,k)=>inst(box,L(pc),bk.filter(b=>b.c===k),b=>{o.position.set(b.x,0.75,b.z);o.rotation.y=ry+Math.PI/2;o.scale.set(0.42,0.6,1.75);}));
+      inst(box,L("#1b1b1b"),bk,b=>{o.position.set(b.x,1.12,b.z);o.rotation.y=ry+Math.PI/2;o.scale.set(0.34,0.14,0.7);});
+      inst(box,L("#f2f2f2"),ln,b=>{o.position.set(b.x,0.33,b.z);o.rotation.y=ry+Math.PI/2;o.scale.set(0.06,0.02,2.4);});
+      if(canopy){const g=L("#2f9a4a"),rfM=L("#9aa3a6",{emissive:"#1a1a1a"});const c=P(Ln/2,depth/2);const rf=new THREE.Mesh(new THREE.BoxGeometry(Ln,0.1,depth),rfM);rf.position.set(c[0],3.3,c[1]);rf.rotation.set(0.06*side,ry,0,"YXZ");rf.castShadow=true;G.add(rf);
+        const ed=new THREE.Mesh(new THREE.BoxGeometry(Ln,0.25,0.12),g);const eq=P(Ln/2,depth);ed.position.set(eq[0],3.15,eq[1]);ed.rotation.y=ry;G.add(ed);
+        for(let u=0;u<=Ln;u+=4.5){const p=P(u,0.4);const po=new THREE.Mesh(new THREE.BoxGeometry(0.18,3.3,0.18),g);po.position.set(p[0],1.95,p[1]);G.add(po);const ar=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.12,depth),g);const aq=P(u,depth/2);ar.position.set(aq[0],3.2,aq[1]);ar.rotation.y=ry;G.add(ar);}}
+      /* blue pipe on the wall */
+      const pp=P(Ln/2,0.05);const pi=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,Ln,6),L("#2a6fd0"));pi.position.set(pp[0],0.9,pp[1]);pi.rotation.set(0,ry,Math.PI/2,"YXZ");G.add(pi);};
+    /* bays along the boundary wall: wall line, bikes on the inner side */
+    bikesAlong([-182.8,-303.5],[-167.8,-308.8],1,5,true);bikesAlong([-167.8,-308.8],[-151.9,-291.1],1,5,true);
+    /* narrow strip between 96 and 98 */
+    bikesAlong([-193.2,-281.5],[-180.6,-266.4],1,3,true);
+    /* yellow lane lines on the open lot */
+    const yl=[];for(let k=0;k<6;k++){const u=0.2+k*0.13;yl.push({x:-171.6+(-157.9+171.6)*u,z:-302.5+(-287+302.5)*u});}
+    inst(box,L("#e8a21a"),yl,y=>{o.position.set(y.x,0.33,y.z);o.rotation.y=-Math.atan2(-302.5+308.8,-171.6+167.8);o.scale.set(3,0.02,0.18);});
+    /* REFUSE STATION: tall grey metal shed with an angled perforated front, open bay, green trim, UP PARK recycling sign */
+    const R=[[-181.3,-298.5],[-171.9,-302.3],[-159.4,-286.7],[-165.4,-282.6]];
+    const shell=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(R),{depth:7,bevelEnabled:false}),L("#a7adb2",{emissive:"#1d2022"})));shell.position.y=0.3;shell.castShadow=true;G.add(shell);
+    const F0=R[3],F1=R[2],fdx=F1[0]-F0[0],fdz=F1[1]-F0[1],fl=Math.hypot(fdx,fdz),ft=[fdx/fl,fdz/fl],fn=[ft[1],-ft[0]],fr=-Math.atan2(fdz,fdx);   // front faces the road (south-east)
+    const FP=(u,v)=>[F0[0]+ft[0]*u+fn[0]*v,F0[1]+ft[1]*u+fn[1]*v];
+    {const q=FP(fl/2,0.05);const bay=new THREE.Mesh(new THREE.PlaneGeometry(fl*0.7,5.2),new THREE.MeshBasicMaterial({color:"#2a2d30",side:THREE.DoubleSide}));bay.position.set(q[0],2.9,q[1]);bay.rotation.y=fr;G.add(bay);}
+    {const pc=document.createElement("canvas");pc.width=64;pc.height=256;const x=pc.getContext("2d");x.fillStyle="#c9ced2";x.fillRect(0,0,64,256);x.fillStyle="#7d858c";for(let i=0;i<6;i++){x.beginPath();x.arc(32,24+i*40,10,0,7);x.fill();}
+      const pier=new THREE.Mesh(new THREE.BoxGeometry(2.2,8.4,1.2),[L("#c9ced2"),L("#c9ced2"),L("#c9ced2"),L("#c9ced2"),new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(pc)}),L("#c9ced2")]);const q=FP(0.6,0.7);pier.position.set(q[0],4.4,q[1]);pier.rotation.set(0,fr,-0.12,"YXZ");G.add(pier);}
+    {const sc=document.createElement("canvas");sc.width=512;sc.height=64;const x=sc.getContext("2d");x.fillStyle="#9aa1a6";x.fillRect(0,0,512,64);x.fillStyle="#fff";x.font='700 40px "Chakra Petch",sans-serif';x.textAlign="center";x.fillText("REFUSE STATION",256,46);
+      const sg=new THREE.Mesh(new THREE.PlaneGeometry(fl*0.7,0.9),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc),side:THREE.DoubleSide}));const q=FP(fl/2,0.08);sg.position.set(q[0],6.3,q[1]);sg.rotation.y=fr;G.add(sg);
+      const gs=new THREE.Mesh(new THREE.BoxGeometry(0.15,3,0.1),L("#2f9a4a"));const gq=FP(fl-1,0.1);gs.position.set(gq[0],2,gq[1]);gs.rotation.y=fr;G.add(gs);}
+    {const uc=document.createElement("canvas");uc.width=256;uc.height=128;const x=uc.getContext("2d");x.fillStyle="#5f6a73";x.fillRect(0,0,256,128);x.fillStyle="#fff";x.font='700 44px "Chakra Petch",sans-serif';x.fillText("UP",130,58);x.fillText("PARK",130,104);x.strokeStyle="#fff";x.lineWidth=8;x.beginPath();x.arc(62,64,34,0.3,5.6);x.stroke();
+      const us=new THREE.Mesh(new THREE.BoxGeometry(3.2,1.6,0.3),[L("#5f6a73"),L("#5f6a73"),L("#5f6a73"),L("#5f6a73"),new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(uc)}),L("#5f6a73")]);const q=FP(fl+2.5,2);us.position.set(q[0],1.1,q[1]);us.rotation.y=fr;G.add(us);}
+    /* coloured bins + picnic tables by the shed */
+    const bq=FP(-1.5,3);["#2b6cd8","#2b6cd8","#e8c21b","#c8322f"].forEach((c,k)=>{const b=new THREE.Mesh(new THREE.BoxGeometry(0.6,1,0.6),L(c));b.position.set(bq[0]-ft[0]*k*0.7,0.8,bq[1]-ft[1]*k*0.7);G.add(b);});
+    const tq=FP(-4,6);const tb=new THREE.Mesh(new THREE.BoxGeometry(2,0.1,0.9),L("#6b6f73"));tb.position.set(tq[0],1.05,tq[1]);tb.rotation.y=fr;G.add(tb);}
+  /* อาคาร 81 south front (street view 2013): raised podium reached by a straight stair, tall pylon with "81" and the faculty name,
+     two thatched-roof salas to the west, white faculty monument to the east, and a driveway ramp with a white parapet + blue pipe rail */
+  {const b81=BLD.find(b=>b.no==="81"),A=[-22,62],B=[-60,37],dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),t=[dx/Ln,dz/Ln];let n=[-t[1],t[0]];
+    const mid=[(A[0]+B[0])/2,(A[1]+B[1])/2];if(inPoly(mid[0]+n[0]*2,mid[1]+n[1]*2,b81.p))n=[-n[0],-n[1]];const ry=-Math.atan2(dz,dx),P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v];
+    const pz=(geo,m,u,v,y,rx)=>{const o2=new THREE.Mesh(geo,m);const q=P(u,v);o2.position.set(q[0],y,q[1]);o2.rotation.set(rx||0,ry,0,"YXZ");o2.castShadow=true;G.add(o2);return o2;};
+    const wht=L("#f1f0ec",{emissive:"#222"}),beige=L("#e2ddd2",{emissive:"#222"}),blue=L("#2a63b8");
+    /* stair to the podium (+1.8 m) */
+    for(let k=0;k<9;k++)pz(new THREE.BoxGeometry(4.2,0.2*(k+1),0.4),L("#d9d6cf"),Ln*0.5,4.6-k*0.4,0.1*(k+1));
+    [-2.2,2.2].forEach(o=>pz(new THREE.BoxGeometry(0.3,1.1,3.8),wht,Ln*0.5+o,2.8,1.3,0.45));
+    /* pylon tower */
+    const pc=document.createElement("canvas");pc.width=128;pc.height=512;const px=pc.getContext("2d");px.fillStyle="#e9e7e1";px.fillRect(0,0,128,512);px.fillStyle="#6b8ab8";px.font='800 72px "Chakra Petch",sans-serif';px.textAlign="center";px.fillText("81",64,300);
+    px.font='700 22px "Anuphan",sans-serif';px.fillText("คณะวิศวกรรมศาสตร์",64,380);px.fillStyle="#cfd2d4";for(let k=0;k<4;k++)px.fillRect(10,30+k*60,108,30);
+    const pm=new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(pc)});pz(new THREE.BoxGeometry(7,8*FLOOR+3,4),[wht,wht,wht,wht,pm,wht],Ln*0.5,0.5,(8*FLOOR+3)/2);
+    /* thatched salas */
+    [Ln*0.18,Ln*0.3].forEach(u=>{const q=P(u,6);const roof=new THREE.Mesh(new THREE.ConeGeometry(4.2,2.2,4),L("#8a6a42"));roof.position.set(q[0],3.6,q[1]);roof.rotation.y=ry+Math.PI/4;roof.scale.set(1.4,1,0.9);roof.castShadow=true;G.add(roof);
+      [[-2,-1.4],[2,-1.4],[-2,1.4],[2,1.4]].forEach(([a,b2])=>{const pq=P(u+a,6+b2);const po=new THREE.Mesh(new THREE.CylinderGeometry(0.1,0.1,2.6,6),L("#6b4a2c"));po.position.set(pq[0],1.6,pq[1]);G.add(po);});
+      const tb=new THREE.Mesh(new THREE.BoxGeometry(2.6,0.12,1.1),L("#8a5a32"));tb.position.set(q[0],1.0,q[1]);tb.rotation.y=ry;G.add(tb);});
+    /* white parapet + blue pipe rail along the sala garden and the ramp */
+    pz(new THREE.BoxGeometry(Ln*0.36,0.9,0.25),wht,Ln*0.2,9.2,0.75);pz(new THREE.BoxGeometry(Ln*0.36,0.12,0.12),blue,Ln*0.2,9.2,1.4);
+    /* monument */
+    const mc=document.createElement("canvas");mc.width=512;mc.height=128;const mx=mc.getContext("2d");mx.fillStyle="#f4f3ef";mx.fillRect(0,0,512,128);mx.fillStyle="#d8641e";mx.font='700 44px "Anuphan",sans-serif';mx.textAlign="center";mx.fillText("คณะวิศวกรรมศาสตร์",256,58);mx.font='600 28px "Chakra Petch",sans-serif';mx.fillText("FACULTY OF ENGINEERING",256,104);
+    pz(new THREE.BoxGeometry(5,1.3,0.7),[wht,wht,wht,wht,new THREE.MeshLambertMaterial({map:new THREE.CanvasTexture(mc)}),wht],Ln*0.72,6.5,1.0);
+    /* ramp beside the east end: rises 1.8 m over 14 m, white parapets + blue rails */
+    const rl=14,rh=1.8,ang=Math.atan2(rh,rl),ru=Ln*0.88;
+    {const q=P(ru,3.5+rl/2);const r=new THREE.Mesh(new THREE.BoxGeometry(5,0.3,Math.hypot(rl,rh)),L("#b9b7b1"));r.position.set(q[0],0.3+rh/2,q[1]);r.rotation.set(ang,ry,0,"YXZ");G.add(r);
+      [-2.6,2.6].forEach(o=>{const wq=P(ru+o,3.5+rl/2);const w=new THREE.Mesh(new THREE.BoxGeometry(0.25,0.9,Math.hypot(rl,rh)),wht);w.position.set(wq[0],0.9+rh/2,wq[1]);w.rotation.set(ang,ry,0,"YXZ");G.add(w);
+        const rr=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.12,Math.hypot(rl,rh)),blue);rr.position.set(wq[0],1.5+rh/2,wq[1]);rr.rotation.set(ang,ry,0,"YXZ");G.add(rr);});}}
+  /* car park island west of อาคาร 77 (owner's sketch, purple): cars parked along the island strip */
+  {const A=[26,-4],B=[17.5,12],dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),t=[dx/Ln,dz/Ln],n=[-t[1],t[0]],ry=-Math.atan2(dz,dx),cs=[];
+    for(let u=2.4;u<Ln-2;u+=4.8)[0].forEach(v=>{const x=A[0]+t[0]*u+n[0]*v,z=A[1]+t[1]*u+n[1]*v;if(H(x,z)<0.85)cs.push({x,z,c:Math.floor(H(z,x)*5)});});
+    const pal=["#e9e9e9","#2b2f36","#9aa3ad","#c7c2b4","#b23a3a"];
+    pal.forEach((pc,k)=>inst(box,L(pc),cs.filter(c=>c.c===k),c=>{o.position.set(c.x,0.95,c.z);o.rotation.y=ry;o.scale.set(4.2,0.85,1.7);}));
+    inst(box,L("#2c3540"),cs,c=>{o.position.set(c.x,1.6,c.z);o.rotation.y=ry;o.scale.set(2.1,0.6,1.5);});}
+  /* campus boundary: 2.2 m concrete-block wall with a darker cap (south road / engineering side in street view),
+     left open at the gates and along the main-road frontage which has its own railing */
+  {const gates=POI.filter(p=>p[0]==="gate").map(p=>[p[1],p[2]]),wl=[];
+    for(let i=0;i<BOUNDARY.length;i++){const[x1,z1]=BOUNDARY[i],[x2,z2]=BOUNDARY[(i+1)%BOUNDARY.length],dx=x2-x1,dz=z2-z1,Ln=Math.hypot(dx,dz);if(Ln<0.5)continue;
+      for(let u=0;u<Ln;u+=4){const w=Math.min(4,Ln-u),x=x1+dx*(u+w/2)/Ln,z=z1+dz*(u+w/2)/Ln;if(gates.some(([gx,gz])=>Math.hypot(gx-x,gz-z)<16))continue;
+        if(MAINROAD.some(pts=>pts.some(([mx,mz],j)=>{if(j===0)return false;const[ax,az]=pts[j-1],ex=mx-ax,ez=mz-az,L2=ex*ex+ez*ez||1;let t=((x-ax)*ex+(z-az)*ez)/L2;t=Math.max(0,Math.min(1,t));return Math.hypot(ax+ex*t-x,az+ez*t-z)<16;})))continue;
+        if(BLD.some(b=>b.p&&inPoly(x,z,b.p)))continue;wl.push({x,z,r:-Math.atan2(dz,dx),w});}}
+    const wt=(()=>{const c=document.createElement("canvas");c.width=64;c.height=32;const x=c.getContext("2d");x.fillStyle="#cfcdc6";x.fillRect(0,0,64,32);x.strokeStyle="rgba(80,80,80,.35)";x.lineWidth=1;
+      for(let r=0;r<4;r++){x.beginPath();x.moveTo(0,r*8);x.lineTo(64,r*8);x.stroke();for(let k=0;k<5;k++){const xx=k*16+(r%2)*8;x.beginPath();x.moveTo(xx,r*8);x.lineTo(xx,r*8+8);x.stroke();}}
+      const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(1,1);return t;})();
+    inst(box,new THREE.MeshLambertMaterial({map:wt}),wl,w=>{o.position.set(w.x,1.4,w.z);o.rotation.y=w.r;o.scale.set(w.w+0.05,2.2,0.22);});
+    inst(box,L("#9a9890"),wl,w=>{o.position.set(w.x,2.55,w.z);o.rotation.y=w.r;o.scale.set(w.w+0.05,0.12,0.32);});}
+  /* stadium grandstand on the east side: tiered concrete seats under a curved steel-lattice roof with a red name band */
+  {const A=[-150,-106],B=[-203,-178],dx=B[0]-A[0],dz=B[1]-A[1],Ln=Math.hypot(dx,dz),t=[dx/Ln,dz/Ln];let n=[-t[1],t[0]];const mid=[(A[0]+B[0])/2,(A[1]+B[1])/2];if(!inPoly(mid[0]+n[0]*5,mid[1]+n[1]*5,STADIUM.outer))n=[-n[0],-n[1]];
+    const ry=-Math.atan2(dz,dx),DECK=7.2,P=(u,v)=>[A[0]+t[0]*u+n[0]*v,A[1]+t[1]*u+n[1]*v],u0=Ln*0.12,u1=Ln*0.88,len=u1-u0,um=(u0+u1)/2;
+    const conc=L("#c9c8c3",{emissive:"#1b1b1a"}),tiers=[];for(let k=0;k<7;k++){tiers.push({v:2+k*1.1,h:0.45*(7-k)});}
+    inst(box,conc,tiers,T=>{const p=P(um,T.v);o.position.set(p[0],DECK+2.6+T.h/2,p[1]);o.rotation.y=ry;o.scale.set(len,T.h,1.1);});
+    const ribs=[],rail=[];for(let u=u0;u<=u1+0.1;u+=6)for(let k=0;k<12;k++){const a0=k/12,a1=(k+1)/12,f=a=>[1+a*13,DECK+9.5+Math.sin(a*Math.PI*0.85)*3.2-a*2.5];const[v0,y0]=f(a0),[v1,y1]=f(a1);const p0=P(u,v0),p1=P(u,v1);ribs.push({p0,p1,y0,y1});}
+    const rm=L("#e6e8ea");ribs.forEach(R=>{const m=new THREE.Mesh(new THREE.CylinderGeometry(0.12,0.12,1,6),rm);const mx=(R.p0[0]+R.p1[0])/2,mz=(R.p0[1]+R.p1[1])/2,my=(R.y0+R.y1)/2;const d=new THREE.Vector3(R.p1[0]-R.p0[0],R.y1-R.y0,R.p1[1]-R.p0[1]);m.scale.y=d.length();m.position.set(mx,my,mz);m.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),d.normalize());G.add(m);});
+    /* translucent roof skin */
+    const NS=12,NU=8,pos=[],idx=[];for(let i=0;i<=NS;i++)for(let j=0;j<=NU;j++){const a=i/NS,u=u0+(u1-u0)*j/NU,v=1+a*13,y=DECK+9.5+Math.sin(a*Math.PI*0.85)*3.2-a*2.5,p=P(u,v);pos.push(p[0],y+0.15,p[1]);}
+    for(let i=0;i<NS;i++)for(let j=0;j<NU;j++){const k=i*(NU+1)+j;idx.push(k,k+NU+1,k+1,k+1,k+NU+1,k+NU+2);}
+    const sg=new THREE.BufferGeometry();sg.setAttribute("position",new THREE.Float32BufferAttribute(pos,3));sg.setIndex(idx);sg.computeVertexNormals();
+    G.add(new THREE.Mesh(sg,new THREE.MeshLambertMaterial({color:"#dfe7ec",transparent:true,opacity:0.55,side:THREE.DoubleSide,depthWrite:false})));
+    /* back columns + red band facing the road */
+    for(let u=u0;u<=u1+0.1;u+=6){const p=P(u,0.6);const c=new THREE.Mesh(new THREE.BoxGeometry(0.6,9.5,0.6),conc);c.position.set(p[0],DECK+4.75-2,p[1]);c.rotation.y=ry;G.add(c);}
+    const bc=document.createElement("canvas");bc.width=1024;bc.height=64;const bx=bc.getContext("2d");bx.fillStyle="#c8323a";bx.fillRect(0,0,1024,64);bx.fillStyle="#fff";bx.font='700 38px "Anuphan",sans-serif';bx.textAlign="center";bx.fillText("สนามกีฬา มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ",512,46);
+    const band=new THREE.Mesh(new THREE.PlaneGeometry(len*0.8,1.6),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(bc),side:THREE.DoubleSide}));const bp=P(um,0.2);band.position.set(bp[0],DECK+8.6,bp[1]);band.rotation.y=ry;G.add(band);}
+  scene.add(G);
+})();
+for(let i=treeSpots.length-1;i>=0;i--){const[x,z]=treeSpots[i];if(ZONE64.some(p=>inPoly(x,z,p)))treeSpots.splice(i,1);}
 (function(){
   const crown=new THREE.IcosahedronGeometry(3.2,0),trunk=new THREE.CylinderGeometry(0.35,0.5,3,5);
   const cm=new THREE.MeshLambertMaterial({color:"#4f9a52"}),tm=new THREE.MeshLambertMaterial({color:"#6b5139"});
@@ -1637,7 +2092,14 @@ ALL.forEach(b=>{
   el.innerHTML='<span class="no"></span><span class="nm"></span>';el.querySelector(".no").textContent=b.no;el.querySelector(".nm").textContent=short(b);
   el.addEventListener("click",e=>{e.stopPropagation();select(b.id,true);});labelsEl.appendChild(el);b.tag=el;
 });
-const pins=POI.map(([t,x,z,n,g])=>{const el=document.createElement("div");el.className="pin";el.style.setProperty("--c",AMS[t].c);el.textContent=g||AMS[t].g;el.title=n||AMS[t].th;labelsEl.appendChild(el);return{el,t,pos:new THREE.Vector3(x,4,z)};});
+const pins=POI.map(([t,x,z,n,g,r])=>{const el=document.createElement("div");el.className="pin";el.style.setProperty("--c",AMS[t].c);el.textContent=g||AMS[t].g;el.title=n||AMS[t].th;labelsEl.appendChild(el);
+  if(r){el.style.cursor="pointer";el.addEventListener("click",e=>{e.stopPropagation();showBusCard(n,r);});}return{el,t,pos:new THREE.Vector3(x,4,z)};});
+function showBusCard(n,r){select(null);const card=document.getElementById("card");card.style.setProperty("--c",AMS.bus.c);
+  document.getElementById("cNum").textContent="ป้ายรถเมล์";document.getElementById("cName").textContent=n;document.getElementById("cEn").textContent="Bus stop";
+  const meta=document.getElementById("cMeta");meta.innerHTML='<span class="pill cat">ป้ายรถเมล์</span>';
+  const ul=document.getElementById("cInfo");ul.innerHTML="";["สายที่ผ่าน: "+r,"ตัวเลขในวงเล็บคือเลขสายระบบใหม่ (ถ้ามี) · ควรเช็กกับป้ายจริงหรือแอป ViaBus"].forEach(t=>{const li=document.createElement("li");li.textContent=t;ul.appendChild(li);});
+  document.getElementById("cSrc").innerHTML='สายรถเมล์: <a href="https://cem.tggs.kmutnb.ac.th/contact/" target="_blank" rel="noopener">หน้าการเดินทางของ TGGS</a> และ <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>';
+  card.querySelector(".navbtns").hidden=true;card.hidden=false;if(innerWidth<=760&&typeof setSide==="function")setSide(false);}
 
 /* ================= UI ================= */
 const catOn=Object.fromEntries(Object.keys(CATS).map(k=>[k,true]));
@@ -1663,7 +2125,7 @@ function refresh(){
 
 /* card */
 const card=document.getElementById("card");let selId=null;
-function select(id,fly){
+function select(id,fly){const _nb=document.querySelector("#card .navbtns");if(_nb)_nb.hidden=false;if(id&&innerWidth<=760&&typeof setSide==="function")setSide(false);
   ALL.forEach(b=>b.tag.classList.remove("sel"));selId=id;
   if(!id){card.hidden=true;halo.visible=false;return;}
   const b=ALL.find(x=>x.id===id),c=CATS[b.cat].c;card.style.setProperty("--c",c);

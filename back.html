@@ -225,7 +225,7 @@ controls.minDistance=40;controls.maxDistance=2000;controls.screenSpacePanning=fa
 controls.mouseButtons={LEFT:THREE.MOUSE.PAN,MIDDLE:THREE.MOUSE.DOLLY,RIGHT:THREE.MOUSE.ROTATE};
 controls.touches={ONE:THREE.TOUCH.PAN,TWO:THREE.TOUCH.DOLLY_ROTATE};
 controls.panSpeed=1.2;
-controls.addEventListener("change",()=>{const t=controls.target;const cx=Math.max(-400,Math.min(900,t.x)),cz=Math.max(-880,Math.min(1100,t.z));if(cx!==t.x||cz!==t.z){camera.position.x+=cx-t.x;camera.position.z+=cz-t.z;t.x=cx;t.z=cz;}t.y=0;});
+controls.addEventListener("change",()=>{const t=controls.target;const cx=Math.max(-400,Math.min(900,t.x)),cz=Math.max(-880,Math.min(1100,t.z));if(cx!==t.x||cz!==t.z){camera.position.x+=cx-t.x;camera.position.z+=cz-t.z;t.x=cx;t.z=cz;}if(!window.__photoCloseView)t.y=0;});
 
 const hemi=new THREE.HemisphereLight("#ffffff","#7d7465",0.72);scene.add(hemi);
 const sun=new THREE.DirectionalLight("#fff3df",0.95);sun.position.set(-160,520,120);sun.target.position.set(140,0,-330);scene.add(sun.target);sun.castShadow=true;
@@ -427,7 +427,7 @@ BLD.forEach(b=>{
     quad(G.flat,a1,a2,a3,a4,null,shop,b.i);quad(G.flat,a2,a1,a4,a3,null,shop,b.i);
     const ac=b.t==="th"?["#7fa7c9","#a9b0b6","#c98a5b"][b.i%3]:b.t==="mart"?"#2f9a5d":b.t==="bar"?"#7d4fb3":AWN[(b.col+b.i)%AWN.length];
     const o1=[fxp-sx+fx*1.5,2.8,fzp-sz+fz*1.5],o2=[fxp+sx+fx*1.5,2.8,fzp+sz+fz*1.5],i2=[fxp+sx,3.4,fzp+sz],i1=[fxp-sx,3.4,fzp-sz];
-    quad(G.flat,o1,o2,i2,i1,null,ac,b.i);quad(G.flat,o2,o1,i1,i2,null,ac,b.i);
+    if(!D.P.some(p=>p.b===b.i&&/Subscribe Rama7|^MOON RAMA7|^Bestbar bangkok|^Seekr Coffee/i.test(p.n))){quad(G.flat,o1,o2,i2,i1,null,ac,b.i);quad(G.flat,o2,o1,i1,i2,null,ac,b.i);}
   }
   if(b.poi>=0)SIGNS.push(b);
 });
@@ -446,7 +446,7 @@ const OSMB=D.osmd.map(([n,lv,p])=>{const m=rotX(new THREE.Mesh(new THREE.Extrude
   m.castShadow=true;m.receiveShadow=true;scene.add(m);return{n,m};});
 
 /* ---- name boards on the POI buildings ---- */
-function makeSigns(){SIGNS.forEach(b=>{const p=D.P[b.poi];if(!p)return;const cat=CATS[p.c];
+function makeSigns(){SIGNS.forEach(b=>{if(window.__customStorefronts?.has(b.i))return;const p=D.P[b.poi];if(!p)return;const cat=CATS[p.c];
   const big=b.t==="dm",W=big?Math.min(b.w*0.8,12):Math.min(b.w-0.5,6),Hh=big?1.9:1.1;
   const cv=document.createElement("canvas");cv.width=512;cv.height=Math.round(512*Hh/W);const x=cv.getContext("2d");
   x.fillStyle=b.t==="bar"?"#17121f":big?"#ffffff":cat.c;x.fillRect(0,0,cv.width,cv.height);
@@ -457,12 +457,12 @@ function makeSigns(){SIGNS.forEach(b=>{const p=D.P[b.poi];if(!p)return;const cat
   const t=new THREE.CanvasTexture(cv);t.anisotropy=4;
   const m=new THREE.Mesh(new THREE.PlaneGeometry(W,Hh),new THREE.MeshBasicMaterial({map:t,side:THREE.DoubleSide}));
   const y=big?b.fl*3.1-1.3:3.75+(b.t==="bar"?0.6:0);
-  m.position.set(b.x+b.fx*(b.d/2+0.12),y,b.z+b.fz*(b.d/2+0.12));m.rotation.y=Math.atan2(b.fx,b.fz);scene.add(m);});}
+  m.userData.shopModel=b.i;m.position.set(b.x+b.fx*(b.d/2+0.12),y,b.z+b.fz*(b.d/2+0.12));m.rotation.y=Math.atan2(b.fx,b.fz);scene.add(m);});}
 (document.fonts&&document.fonts.load?document.fonts.load("600 40px Anuphan").catch(()=>{}):Promise.resolve()).then(makeSigns);
 
 /* ---- trees ---- */
 (function(){const T=D.T,n=T.length;const trunk=new THREE.InstancedMesh(new THREE.CylinderGeometry(0.22,0.32,2.6,6),new THREE.MeshLambertMaterial({color:"#7a6248"}),n);
-  const crown=new THREE.InstancedMesh(new THREE.IcosahedronGeometry(2.4,0),new THREE.MeshLambertMaterial({color:"#ffffff",flatShading:true}),n);
+  const crown=new THREE.InstancedMesh(new THREE.IcosahedronGeometry(2.4,0),new THREE.MeshLambertMaterial({color:"#ffffff"}),n);
   const o=new THREE.Object3D(),c=new THREE.Color();
   T.forEach(([x,z,s],i)=>{o.position.set(x,1.3*s,z);o.scale.set(s,s,s);o.rotation.set(0,i,0);o.updateMatrix();trunk.setMatrixAt(i,o.matrix);
     o.position.set(x,(2.6+1.6)*s,z);o.scale.set(s*1.1,s*0.95,s*1.1);o.updateMatrix();crown.setMatrixAt(i,o.matrix);
@@ -621,6 +621,11 @@ let lastStatus=0;
 function frame(now){
   if(fly){const k=Math.min(1,(now-fly.t0)/fly.dur),e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;controls.target.lerpVectors(fly.fT,fly.tT,e);camera.position.lerpVectors(fly.fP,fly.tP,e);if(k>=1)fly=null;}
   controls.update();halo.material.opacity=0.55+0.35*Math.sin(now/280);
+  {/* near plane follows zoom: close-ups keep 0.5 m, zoomed-out views regain depth precision so stacked ground layers don't flicker */
+    const cd=camera.position.distanceTo(controls.target),nn=Math.min(Math.max(cd*0.04,0.5),60);
+    if(Math.abs(camera.near-nn)>nn*0.02){camera.near=nn;camera.updateProjectionMatrix();}
+    if(window.__surfaceLOD)window.__surfaceLOD(cd);
+    if(M.line)M.line.visible=cd<450;}
   renderer.render(scene,camera);
   if(now-lastStatus>60000){lastStatus=now;refresh();}
   const dist=camera.position.distanceTo(controls.target);
@@ -646,5 +651,496 @@ function r(){document.body.classList.toggle('hide-map-labels',!v);b.textContent=
 b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-labels-visible',String(v));}catch(e){}r();});document.body.append(b);r();})();
 </script>
 
+<script id="street-identity">
+/* Road-side identity pass. Geometry follows supplied model footprints.
+   Brand fascia and recorded Street View cues are distinct from surveyed dimensions. */
+(function recognizableSurroundings(){
+  const group=new THREE.Group();group.name='recognizable-street-frontages';scene.add(group);
+  const custom=new Set(),batches=new Map(),unit=new THREE.BoxGeometry(1,1,1),o=new THREE.Object3D(),materials=new Map();
+  const material=(c,glass=false)=>{const k=c+glass;if(!materials.has(k))materials.set(k,glass?new THREE.MeshPhongMaterial({color:c,shininess:48,specular:'#c4d3d3'}):new THREE.MeshLambertMaterial({color:c}));return materials.get(k);};
+  const records=[],textDraws=[];
+  function builder(b){
+    const ux=Math.cos(b.a),uz=Math.sin(b.a),s=-b.sd,nx=-uz*s,nz=ux*s;
+    const point=(u,v,y)=>new THREE.Vector3(b.x+ux*u+nx*(b.d/2+v),y,b.z+uz*u+nz*(b.d/2+v));
+    function box(w,h,d,c,u,v,y){const m=typeof c==='string'?material(c):c,p=point(u,v,y);o.position.copy(p);o.rotation.set(0,-b.a,0);o.scale.set(w,h,d);o.updateMatrix();if(!batches.has(m))batches.set(m,[]);batches.get(m).push(o.matrix.clone());}
+    function label(text,w,h,u,v,y,bg,fg,kind){
+      const c=document.createElement('canvas');c.width=1024;c.height=Math.max(128,Math.round(1024*h/w));const x=c.getContext('2d'),t=new THREE.CanvasTexture(c);t.anisotropy=4;
+      const draw=()=>{
+        x.fillStyle=bg;x.fillRect(0,0,c.width,c.height);
+        if(kind==='seven'){
+          const colors=['#ed7c2c','#149a65','#d83431'];colors.forEach((color,i)=>{x.fillStyle=color;x.fillRect(0,10+i*18,c.width,14);});
+          x.fillStyle='#faf9ed';x.fillRect(350,0,324,c.height);x.textAlign='center';x.textBaseline='middle';x.fillStyle='#dc3b30';x.font=`900 ${c.height*.7}px Arial`;x.fillText('7',512,c.height*.44);x.fillStyle='#147d54';x.font=`800 ${c.height*.15}px Arial`;x.fillText('ELEVEN',512,c.height*.83);
+        }else{
+          x.fillStyle=fg;x.textAlign='center';x.textBaseline='middle';let size=Math.min(c.height*.57,120);x.font=`700 ${size}px Anuphan,sans-serif`;while(x.measureText(text).width>960&&size>16){size-=2;x.font=`700 ${size}px Anuphan,sans-serif`;}x.fillText(text,512,c.height*.5);
+          if(kind==='mixue'){x.fillStyle='#fff';x.fillRect(20,c.height-10,984,3);}
+        }t.needsUpdate=true;
+      };draw();textDraws.push(draw);
+      const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshLambertMaterial({map:t,side:THREE.DoubleSide}));mesh.position.copy(point(u,v,y));mesh.rotation.y=Math.atan2(nx,nz);mesh.name='individual-shop-fascia';mesh.userData.poi=b.poi;group.add(mesh);
+    }
+    return {box,label,point,normal:[nx,nz],ux,uz};
+  }
+  const shopsByBuilding=new Map();
+  D.P.forEach((p,i)=>{if(p.b==null||!['food','cafe','mart','bar','laundry','copy','pharmacy','svc'].includes(p.c))return;if(!shopsByBuilding.has(p.b))shopsByBuilding.set(p.b,[]);shopsByBuilding.get(p.b).push({p,i});});
+  shopsByBuilding.forEach((shops,bi)=>{
+    const b=BLD[bi];if(!b||b.w<2.2||shops.some(({p})=>/Subscribe Rama7|^MOON RAMA7|^Bestbar bangkok|^Seekr Coffee/i.test(p.n)))return;custom.add(bi);const a=builder(b),max=Math.min(shops.length,4),bay=b.w/max;
+    shops.slice(0,max).forEach(({p,i},index)=>{
+      const u=(index+.5)*bay-b.w/2,W=bay-.18,n=p.n,notes=(p.note||[]).join(' '),seven=/7-Eleven/i.test(n),mixue=/MIXUE/i.test(n),phone=/ตู้โทรศัพท์แดง/.test(n),wood=/ป้ายไม้|โต๊ะไม้/.test(notes),blue=/สีฟ้า|น้ำเงิน/.test(notes),black=/ผนังดำ/.test(n+notes),panda=/แพนด้า/.test(n);
+      const kind=seven?'seven':mixue?'mixue':'local',bg=seven?'#f9f7eb':mixue?'#c52a32':black?'#242e30':wood?'#8c6543':blue?'#4e829d':panda?'#ba7047':p.c==='bar'?'#272b2e':'#e8e3d5',fg=mixue||black||wood||blue||p.c==='bar'?'#f1eee1':'#293536';
+      const y0=/Rooftop/i.test(n)?Math.max(0,b.fl*3.1-3.1):0;
+      const fascia=seven?1.0:mixue?1.05:.85,signY=y0+3.1;
+      // A real ground-floor frontage has a recess, separate jambs and doors,
+      // rather than a category-colored rectangle across the entire building.
+      a.box(W,2.7,.10,black?'#20292a':'#d7d7cf',u,.10,y0+1.4);
+      a.box(W-.22,2.45,.065,material('#537477',true),u,.19,y0+1.38);
+      const frames=seven?'#bcc8c7':mixue?'#b82a32':wood?'#68503c':'#bcc4bf';
+      for(const s of [-.48,-.16,.16,.48])a.box(.065,2.6,.12,frames,u+W*s,.25,y0+1.4);
+      a.box(W,.09,.12,frames,u,.25,y0+.18);a.box(W,.08,.12,frames,u,.25,y0+2.65);
+      a.box(.055,.47,.06,'#c1c8c4',u+W*.16-.12,.32,y0+1.25);
+      a.box(W,fascia,.35,bg,u,.18,signY);
+      if(!/Subscribe Rama7|^MOON RAMA7|^Bestbar bangkok|^Seekr Coffee/i.test(n))a.label(seven?'7-ELEVEN':mixue?'MIXUE  蜜雪冰城':n.replace(/\s*\(.*\)$/,''),W*.96,fascia*.86,u,.365,signY,bg,fg,kind);
+      // Shallow three-dimensional awnings retain observed blue/striped/red cues.
+      let awning=seven?'#f0f0e7':mixue?'#c52a32':/กันสาดแดง/.test(notes)?'#a9493d':/ผ้าใบเขียว/.test(notes)?'#4d7560':/หลังคาฟ้า/.test(n+notes)?'#51899d':blue?'#466e91':wood?'#6d675a':'#8f9991';
+      a.box(W+.12,.13,.85,awning,u,.54,y0+2.86);
+      a.box(W,.22,.07,awning,u,.98,y0+2.72);
+      if(/ลายเขียว-ส้ม/.test(notes))for(let j=0;j<Math.ceil(W/.42);j++)a.box(.22,.025,.80,j%2?'#a96335':'#527456',u-W/2+j*.42,.54,y0+2.94);
+      if(p.c==='food'&&W>3){a.box(Math.min(1.7,W*.45),.9,.55,'#b3b9b3',u-W*.22,.48,y0+.48);a.box(Math.min(1.8,W*.48),.06,.63,'#5b6866',u-W*.22,.48,y0+.98);}
+      if(phone){
+        const q=u+W*.28; a.box(.68,1.95,.67,'#9f302a',q,.85,.98);a.box(.54,1.3,.03,material('#668986',true),q,1.20,1.09);
+        for(const dx of [-.26,0,.26])a.box(.035,1.4,.05,'#b94132',q+dx,1.24,1.09);
+        for(let k=0;k<5;k++)a.box(.56,.035,.05,'#b94132',q,1.24,.45+k*.27);
+        a.box(.78,.13,.78,'#af382d',q,.85,1.99);a.label('TELEPHONE',.62,.14,q,1.255,1.84,'#e2d7bb','#7d2d29');
+      }
+      if(panda)a.label('●  ●',.85,.7,u,.40,signY,'#e8ded0','#1f292a');
+      records.push({poi:i,building:bi,name:n,profile:kind,source:mixue?'https://www.wongnai.com/restaurants/2699031oZ-mixue-kmutnb':i>=570&&i<=589?'supplied Street View notes 2024–2025':'supplied mapped business / brand treatment',dimensions:'approximate; order of shared frontage bays illustrative'});
+    });
+    if(b.fl===1)a.box(b.w,.16,b.d,material('#a1a69e'),0,-b.d/2,b.fl*3.1+.04);
+  });
+  window.__customStorefronts=custom;
+  // Remove the earlier generic ground-level awning/storefront triangles only;
+  // upper floors, footprint, shop selection and roof silhouettes are preserved.
+  scene.children.filter(m=>m.isMesh&&m.userData.own&&m.material===flatMat).forEach(mesh=>{
+    const old=mesh.geometry,positions=old.attributes.position,owners=mesh.userData.own,keep=[],newOwners=[];
+    for(let triangle=0;triangle<owners.length;triangle++){
+      const index=triangle*3,maxY=Math.max(...[0,1,2].map(j=>positions.getY(index+j)));
+      if(custom.has(owners[triangle])&&maxY<4.2)continue;
+      keep.push(index,index+1,index+2);newOwners.push(owners[triangle]);
+    }
+    const geo=new THREE.BufferGeometry();Object.entries(old.attributes).forEach(([name,attr])=>{const values=new Float32Array(keep.length*attr.itemSize);keep.forEach((index,j)=>{for(let k=0;k<attr.itemSize;k++)values[j*attr.itemSize+k]=attr.array[index*attr.itemSize+k];});geo.setAttribute(name,new THREE.BufferAttribute(values,attr.itemSize));});geo.computeBoundingSphere();mesh.geometry=geo;mesh.userData.own=newOwners;old.dispose();
+  });
+  scene.children.filter(m=>m.userData?.shopModel!=null&&custom.has(m.userData.shopModel)).forEach(m=>{scene.remove(m);m.geometry.dispose();m.material.map?.dispose();m.material.dispose();});
+  // Structural balcony rails for mapped dorms, independent of category pins.
+  BLD.filter(b=>b.t==='dm'&&b.poi>=0).forEach(b=>{
+    const a=builder(b),bays=Math.max(1,Math.round(b.w/3.2)),step=b.w/bays;
+    for(let floor=1;floor<b.fl;floor++)for(let j=0;j<bays;j++){
+      const u=(j+.5)*step-b.w/2;
+      a.box(step*.88,.12,.85,'#bfc2b9',u,.24,floor*3.1+.03);
+      a.box(step*.84,.065,.065,'#87938f',u,.64,floor*3.1+.98);
+      for(const s of [-.40,0,.40])a.box(.045,.84,.045,'#929b96',u+step*s,.64,floor*3.1+.55);
+    }
+  });
+  // Street hardware is fitted to the existing named road edges. Leave buildings,
+  // junctions and carriageways clear rather than guessing new road alignments.
+  const occupied=(x,z,pad=.5)=>BLD.some(b=>{if(Math.abs(b.x-x)>b.w+b.d+3||Math.abs(b.z-z)>b.w+b.d+3)return false;const dx=x-b.x,dz=z-b.z,u=dx*Math.cos(b.a)+dz*Math.sin(b.a),v=-dx*Math.sin(b.a)+dz*Math.cos(b.a);return Math.abs(u)<b.w/2+pad&&Math.abs(v)<b.d/2+pad;});
+  function worldBox(w,h,d,c,x,y,z,r){o.position.set(x,y,z);o.rotation.set(0,r||0,0);o.scale.set(w,h,d);o.updateMatrix();const m=material(c);if(!batches.has(m))batches.set(m,[]);batches.get(m).push(o.matrix.clone());}
+  const roadLabels=new Set(),wirePositions=[];let kerbs=0;
+  D.roads.filter(r=>r[1]&&['rl','se','tk'].includes(r[0])).forEach(([type,name,pts])=>{
+    const width=type==='rl'?6:type==='se'?4:3.5;
+    for(let i=0;i<pts.length-1;i++){
+      const [x,z]=pts[i],[xx,zz]=pts[i+1],L=Math.hypot(xx-x,zz-z);if(L<6)continue;
+      const tx=(xx-x)/L,tz=(zz-z)/L,nx=-tz,nz=tx,r=-Math.atan2(tz,tx);
+      for(let u=2;u<L-2;u+=3)for(const side of [-1,1]){
+        const v=(width/2+.22)*side,px=x+tx*u+nx*v,pz=z+tz*u+nz*v;
+        if(occupied(px,pz,.12))continue;
+        worldBox(Math.min(2.85,L-u-1),.16,.18,'#b7b9ad',px,.27,pz,r);kerbs++;
+      }
+      if(L>22&&wirePositions.length<75){const px=x+tx*L*.45+nx*(width/2+.65),pz=z+tz*L*.45+nz*(width/2+.65);
+        if(!occupied(px,pz,.9)){
+          worldBox(.20,7.3,.20,'#939b92',px,3.65,pz,0);worldBox(1.25,.09,.11,'#535f5e',px,6.8,pz,r);wirePositions.push([px,7,pz]);
+          if(!roadLabels.has(name)){
+            const cv=document.createElement('canvas');cv.width=768;cv.height=160;const ctx=cv.getContext('2d'),t=new THREE.CanvasTexture(cv);
+            const draw=()=>{ctx.fillStyle='#285b52';ctx.fillRect(0,0,768,160);ctx.strokeStyle='#dae2d0';ctx.lineWidth=6;ctx.strokeRect(8,8,752,144);ctx.fillStyle='#f0eee1';ctx.font='600 58px Anuphan,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(name,384,80,716);t.needsUpdate=true;};draw();textDraws.push(draw);
+            const sign=new THREE.Mesh(new THREE.PlaneGeometry(3.4,.72),new THREE.MeshLambertMaterial({map:t,side:THREE.DoubleSide}));sign.position.set(px,3.2,pz);sign.rotation.y=Math.atan2(nx,nz);group.add(sign);roadLabels.add(name);
+          }
+        }
+      }
+    }
+  });
+  // Wire spans only along the same short road segment and outside footprints.
+  const wireMaterial=material('#535e5b');
+  for(let i=1;i<wirePositions.length;i++){
+    const A=new THREE.Vector3(...wirePositions[i-1]),B=new THREE.Vector3(...wirePositions[i]),distance=A.distanceTo(B);if(distance<9||distance>42)continue;
+    const middle=A.clone().lerp(B,.5);if(occupied(middle.x,middle.z,0))continue;middle.y-=.5;
+    const curve=new THREE.QuadraticBezierCurve3(A,middle,B),mesh=new THREE.Mesh(new THREE.TubeGeometry(curve,10,.025,4,false),wireMaterial);group.add(mesh);
+  }
+  batches.forEach((ms,m)=>{const mesh=new THREE.InstancedMesh(unit,m,ms.length);ms.forEach((mx,i)=>mesh.setMatrixAt(i,mx));mesh.castShadow=true;mesh.receiveShadow=true;mesh.name='street-identity-details';group.add(mesh);});
+  document.fonts?.ready.then(()=>textDraws.forEach(draw=>draw()));
+  window.__streetIdentityAudit={shops:records,kerbs,roadSigns:roadLabels.size,poles:wirePositions.length};
+  console.info('KMUTNB_STREET_IDENTITY '+JSON.stringify({customizedBuildings:custom.size,frontages:records.length,kerbs,roadSigns:roadLabels.size,poles:wirePositions.length}));
+})();
+
+</script>
+<script id="photo-shop-identity">
+/* Identity cues visible in the public authority's January 2025 exterior photographs. */
+(function photographedStorefronts(){
+  const cases=[
+    {match:/Subscribe Rama7/i,type:'subscribe',image:'https://www.vdch.go.th/images-detail/content-1-16-2025-9-16-28-AM.jpg',observed:'repeated rectangular steel entrance portals, warm outlining, diagonal raised SUBSCRIBE letters, paver entrance steps'},
+    {match:/^MOON RAMA7/i,type:'moon',image:'https://www.vdch.go.th/images-detail/content-1-16-2025-9-16-11-AM.jpg',observed:'large round pale mint MOON RAMA 7 sign with blue lettering and geometric graphic'},
+    {match:/^Bestbar bangkok/i,type:'bestbar',image:'https://www.vdch.go.th/images-detail/content-1-16-2025-9-16-17-AM.jpg',observed:'black facade, white glowing BESTBAR lettering with outlined square icon'}
+  ];
+  const group=new THREE.Group();group.name='photographed-shop-landmarks';scene.add(group);const lightMaterials=[];
+  const basic=(c,glow=0)=>{const m=new THREE.MeshLambertMaterial({color:c,emissive:glow?c:'#000',emissiveIntensity:glow});if(glow)lightMaterials.push(m);return m;};
+  const dark=basic('#303b3d'),steel=basic('#737c76'),warm=basic('#f2dca2',.45),paver=basic('#a8a998');
+  const board=(b,text,w,h,v,y,fg,bg,kind)=>{
+    const c=document.createElement('canvas');c.width=1024;c.height=kind==='moon'?1024:256;const x=c.getContext('2d'),t=new THREE.CanvasTexture(c);t.anisotropy=4;
+    const draw=()=>{x.clearRect(0,0,c.width,c.height);x.fillStyle=bg;kind==='moon'?(x.beginPath(),x.arc(512,512,500,0,Math.PI*2),x.fill()):x.fillRect(0,0,1024,256);
+      x.fillStyle=fg;x.textAlign='center';x.textBaseline='middle';x.font=`700 ${kind==='moon'?170:165}px 'Chakra Petch',Anuphan,sans-serif`;
+      if(kind==='moon'){x.fillText('MOON',512,250);x.font="600 92px 'Chakra Petch',sans-serif";x.fillText('RAMA 7',512,420);x.beginPath();x.moveTo(335,670);x.lineTo(385,540);x.lineTo(455,645);x.lineTo(550,530);x.lineTo(570,705);x.lineTo(670,640);x.lineTo(590,820);x.lineTo(405,820);x.closePath();x.fill();}
+      else{if(kind==='bestbar'){x.strokeStyle=fg;x.lineWidth=10;x.strokeRect(40,54,115,125);}x.fillText(text,kind==='bestbar'?590:512,130,kind==='bestbar'?800:1000);}t.needsUpdate=true;};draw();document.fonts?.ready.then(draw);
+    const m=new THREE.MeshLambertMaterial({map:t,transparent:kind==='moon',side:THREE.DoubleSide,emissive:'#ffffff',emissiveMap:t,emissiveIntensity:.18});lightMaterials.push(m);
+    const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),m);mesh.position.set(b.x+b.fx*(b.d/2+v),y,b.z+b.fz*(b.d/2+v));mesh.rotation.y=Math.atan2(b.fx,b.fz);if(kind==='subscribe')mesh.rotation.z=.12;group.add(mesh);
+  };
+  const references={};
+  const rebuilt=new Set();window.__photoRebuiltBuildings=rebuilt;
+  for(const spec of cases){
+    const index=D.P.findIndex(p=>spec.match.test(p.n));if(index<0)continue;const p=D.P[index],b=BLD[p.b];if(!b)continue;window.__customStorefronts?.add(b.i);scene.children.filter(m=>m.userData?.shopModel===b.i).forEach(m=>scene.remove(m));
+    const put=(w,h,d,m,u,v,y)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(b.x+Math.cos(b.a)*u+b.fx*(b.d/2+v),y,b.z+Math.sin(b.a)*u+b.fz*(b.d/2+v));o.rotation.y=-b.a;o.castShadow=true;o.receiveShadow=true;group.add(o);};
+    if(spec.type==='subscribe'){
+      rebuilt.add(b.i);window.__customStorefronts?.add(b.i);
+      // Replace this venue's closed stock shell with a recessed entrance hall.
+      // This also removes the old category-colored frontage and generic awning.
+      scene.children.filter(m=>m.isMesh&&Array.isArray(m.userData.own)).forEach(mesh=>{
+        const owners=mesh.userData.own;if(!owners.includes(b.i))return;
+        const old=mesh.geometry,keep=[],next=[];
+        for(let t=0;t<owners.length;t++)if(owners[t]!==b.i){keep.push(t*3,t*3+1,t*3+2);next.push(owners[t]);}
+        const geo=new THREE.BufferGeometry();Object.entries(old.attributes).forEach(([name,attr])=>{const data=new Float32Array(keep.length*attr.itemSize);keep.forEach((k,j)=>{for(let n=0;n<attr.itemSize;n++)data[j*attr.itemSize+n]=attr.array[k*attr.itemSize+n];});geo.setAttribute(name,new THREE.BufferAttribute(data,attr.itemSize));});mesh.geometry=geo;mesh.userData.own=next;old.dispose();
+      });
+      scene.children.filter(m=>m.userData?.shopModel===b.i).forEach(m=>scene.remove(m));
+      put(b.w,5.8,.22,dark,0,-b.d+.1,2.9);
+      for(const side of [-1,1])put(.22,5.8,b.d,dark,side*(b.w/2-.1),-b.d/2,2.9);
+      put(b.w,.18,b.d,steel,0,-b.d/2,5.85);
+      const W=Math.min(6.4,b.w*.6),H=4.3;
+      const wing=(b.w-W)/2;for(const side of [-1,1])put(wing,4.5,.16,dark,side*(W/2+wing/2),.04,2.25);
+      put(W,4.1,.15,dark,0,-4.1,2.3);
+      // Keep portals on the existing entrance/forecourt, not across a carriageway.
+      for(const v of [-3.4,-1.9,-.4,1.1]){
+        for(const side of [-1,1]){put(.11,H,.11,steel,side*W/2,v,H/2+.45);put(.035,H-.15,.035,warm,side*(W/2-.13),v+.07,H/2+.45);}
+        put(W,.12,.12,steel,0,v,H+.45);put(W-.16,.035,.035,warm,0,v+.07,H+.33);
+      }
+      put(W+1,.30,5.2,paver,0,-.4,.15);for(let i=0;i<3;i++)put(W+1,(i+1)*.10,.33,paver,0,2.8-i*.33,(i+1)*.05);
+      board(b,'SUBSCRIBE',Math.min(12,b.w*.8),1.15,.2,5.5,'#e3a150','#242e30','subscribe');
+    }else if(spec.type==='moon'){
+      const diameter=Math.min(4.1,b.w*.83);put(b.w,3.7,.25,dark,0,.28,1.9);board(b,'MOON',diameter,diameter,.45,Math.max(2.0,diameter*.56),'#296888','#c3dfcb','moon');
+    }else{
+      put(b.w,1.05,.18,dark,0,.38,3.17);board(b,'BESTBAR',Math.min(7.5,b.w*.95),1.0,.50,3.20,'#ecf6ec','#242c30','bestbar');
+    }
+    references[index]={image:spec.image,url:'https://www.vdch.go.th/DetailList.aspx?id=630061',date:'January 2025 publication',observed:spec.observed,limitations:'dimensions and placement fitted to supplied building; only visible facade cues used'};
+  }
+  window.__shopPhotoReferences=references;window.__photoLightMaterials=lightMaterials;
+  console.info('KMUTNB_SHOP_PHOTOS '+JSON.stringify(Object.keys(references).map(i=>D.P[i].n)));
+})();
+
+</script>
+<script id="additional-shop-photos">
+
+(function morePhotographedShops(){
+ const g=new THREE.Group();g.name='additional-photo-storefronts';scene.add(g);
+ const mat=c=>new THREE.MeshLambertMaterial({color:c});const dark=mat('#242c2e'),wood=mat('#ab8967'),cream=mat('#d8ceb3'),metal=mat('#5e696b'),glass=new THREE.MeshPhongMaterial({color:'#344c51',shininess:50});
+ function local(b,u,v,y){return new THREE.Vector3(b.x+Math.cos(b.a)*u+b.fx*(b.d/2+v),y,b.z+Math.sin(b.a)*u+b.fz*(b.d/2+v));}
+ function box(b,w,h,d,m,u,v,y){const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.copy(local(b,u,v,y));o.rotation.y=-b.a;o.castShadow=true;o.receiveShadow=true;g.add(o);return o;}
+ function board(b,text,w,h,u,v,y,bg,fg,cup=false){
+  const cv=document.createElement('canvas');cv.width=1024;cv.height=256;const x=cv.getContext('2d');const tx=new THREE.CanvasTexture(cv);tx.anisotropy=8;
+  const draw=()=>{x.fillStyle=bg;x.fillRect(0,0,1024,256);x.fillStyle=fg;x.textAlign='center';x.textBaseline='middle';x.font='700 144px Anuphan,sans-serif';x.fillText(text,cup?600:512,108,850);x.font='600 50px Anuphan,sans-serif';if(cup)x.fillText('coffee',740,215);if(cup){x.fillStyle='#2387c1';x.fillRect(30,75,200,115);x.beginPath();x.ellipse(130,190,100,37,0,0,Math.PI);x.fill();x.lineWidth=22;x.strokeStyle='#2387c1';x.beginPath();x.arc(40,125,42,Math.PI/2,Math.PI*1.5);x.stroke();}};draw();document.fonts.ready.then(()=>{draw();tx.needsUpdate=true;});const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshLambertMaterial({map:tx,emissive:'#b3c7c4',emissiveMap:tx,emissiveIntensity:.12,side:THREE.DoubleSide}));mesh.position.copy(local(b,u,v,y));mesh.rotation.y=Math.atan2(b.fx,b.fz);g.add(mesh);
+ }
+ const refs=window.__shopPhotoReferences||(window.__shopPhotoReferences={});
+ const seek=D.P.findIndex(p=>/^Seekr Coffee/i.test(p.n));if(seek>=0){const p=D.P[seek],b=BLD[p.b];if(b){
+   window.__customStorefronts?.add(b.i);scene.children.filter(m=>m.userData?.shopModel===b.i).forEach(m=>scene.remove(m));
+   box(b,b.w,4.05,.18,dark,0,.24,2.05);box(b,b.w*.86,2.4,.12,glass,0,.37,1.35);
+   for(let u=-b.w*.42;u<b.w*.45;u+=b.w*.22)box(b,.075,2.5,.16,metal,u,.46,1.35);
+   board(b,'seekr',b.w*.96,1.05,0,.48,3.45,'#202a2d','#f3f4ee',true);
+   box(b,b.w+.1,.12,1.05,dark,0,.7,2.75);box(b,1.15,.12,.65,wood,-b.w*.28,1.2,.8);
+   for(const u of [-b.w*.44,b.w*.44]){box(b,.55,.55,.55,mat('#8d8774'),u,1.1,.3);const leaf=new THREE.Mesh(new THREE.SphereGeometry(.42,8,6),mat('#3e6451'));leaf.position.copy(local(b,u,1.1,.82));leaf.scale.y=1.3;g.add(leaf);}
+   refs[seek]={image:'https://img.wongnai.com/p/1920x0/2026/02/03/837459ef9c23432b87e265364fd9a744.jpg',url:'https://www.wongnai.com/restaurants/671139oo-seekr-coffee',date:'uploaded 2026-02-03; capture date not stated',observed:'ป้ายพื้นดำ ตัวอักษร seekr coffee สีขาว สัญลักษณ์ถ้วยสีฟ้า และกระจกหน้าร้าน',limitations:'Photo establishes the shopfront only; supplied map placement retained'};
+ }}
+ const ci=D.P.findIndex(p=>/^Commu Rooftop/i.test(p.n));if(ci>=0){const p=D.P[ci],b=BLD[p.b];if(b){
+  const y=b.fl*3.1+.6,depth=Math.min(10,b.d*.7),W=Math.min(20,b.w*.75),v=-b.d/2;
+  box(b,W,.17,depth,wood,0,v,y);box(b,W*.18,.025,depth*.88,mat('#64825b'),W*.38,v,y+.11);for(let j=0;j<12;j++)box(b,W,.025,.04,mat('#756b5d'),0,v-depth/2+j*depth/12,y+.10);
+  for(const u of [-W/2,W/2])box(b,.12,1.05,depth,metal,u,v,y+.6);box(b,W,1.0,.13,dark,0,v-depth/2,y+.6);
+  // Timber tiers with cream parasols and a separate glazed pergola zone.
+  for(let k=0;k<3;k++)box(b,W*.62,.22+k*.16,1.2,wood,-W*.15,v-depth*.26+k*1.1,y+.16+k*.08);
+  for(const u of [-W*.32,-W*.02]){const p0=local(b,u,v-depth*.17,y+2.4);const shade=new THREE.Mesh(new THREE.ConeGeometry(1.65,.50,8),cream);shade.position.copy(p0);g.add(shade);box(b,.055,2.4,.055,metal,u,v-depth*.17,y+1.2);}
+  for(const u of [W*.22,W*.46])for(const q of [v-depth/2,v+depth/2])box(b,.10,2.7,.1,metal,u,q,y+1.4);
+  box(b,W*.28,.1,depth,metal,W*.34,v,y+2.78);
+  for(const u of [W*.25,W*.42])for(const q of [v-depth*.2,v+depth*.2]){box(b,1.2,.09,.7,wood,u,q,y+.7);box(b,.07,.65,.07,metal,u,q,y+.34);}
+  board(b,'commü',7,1.0,0,.25,y+1.1,'#242c2e','#ece8db');
+  refs[ci]={image:'https://img.wongnai.com/p/400x0/2023/05/18/0a0e75cd73bc4990a34b75edccc6ae3d.jpg',url:'https://www.wongnai.com/restaurants/1692343Ij',date:'uploaded 2023-05-18; capture date not stated',observed:'ชานไม้บนดาดฟ้า ที่นั่งไม้ยกระดับ ร่มสีครีม พื้นสีเขียวบางส่วน และโครงหลังคาเหล็ก',limitations:'Terrace details fitted to original roof footprint; exact layout approximate'};
+ }}
+})();
+
+</script>
+<script id="environment-refinement">
+/* KMUTNB visual refinement. Procedural materials and illustrative small details,
+   not surveyed equipment locations. Original footprints and routing are retained. */
+(function refineCampusEnvironment(){
+  'use strict';
+  const outside=typeof D!=='undefined' && !!D.roads;
+  const root=new THREE.Group();root.name='environment-refinement';scene.add(root);
+  let seed=7718;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
+  const anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
+  function texture(kind,size=256){
+    const c=document.createElement('canvas');c.width=c.height=size;const x=c.getContext('2d');
+    x.fillStyle=kind==='grass'?'#abb79a':kind==='water'?'#a1b1a7':'#c4c3bf';x.fillRect(0,0,size,size);
+    for(let i=0;i<12000;i++){
+      const v=Math.floor(105+random()*115);x.fillStyle=`rgba(${v},${v},${v},${kind==='grass'?.20:.16})`;
+      x.fillRect(random()*size,random()*size,kind==='grass'?1:1.5,kind==='grass'?3:1.5);
+    }
+    if(kind==='paving'){
+      x.strokeStyle='rgba(63,61,56,.28)';x.lineWidth=1.5;
+      for(let y=0;y<size;y+=64){x.beginPath();x.moveTo(0,y);x.lineTo(size,y);x.stroke();
+        for(let u=(y/64%2)*32;u<size;u+=64){x.beginPath();x.moveTo(u,y);x.lineTo(u,y+64);x.stroke();}}
+    }
+    if(kind==='concrete'){
+      x.strokeStyle='rgba(57,55,48,.16)';x.lineWidth=1;x.strokeRect(.5,.5,size-1,size-1);
+    }
+    if(kind==='water'){
+      for(let i=0;i<65;i++){x.strokeStyle=`rgba(235,245,236,${random()*.15})`;let u=random()*size,y=random()*size;
+        x.beginPath();x.moveTo(u,y);x.bezierCurveTo(u+12,y-2,u+22,y+2,u+42,y);x.stroke();}
+    }
+    const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=anisotropy;
+    const meters={asphalt:5,paving:3.2,grass:4,concrete:3,water:7}[kind]||3;t.repeat.set(1/meters,1/meters);return t;
+  }
+  const tex={asphalt:texture('asphalt'),paving:texture('paving'),grass:texture('grass'),concrete:texture('concrete'),water:texture('water')};
+  const surfaces={road:'asphalt',road2:'concrete',parking:'asphalt',walk:'paving',path:'paving',plaza:'paving',grass:'grass',bank:'grass',pad:'concrete',kerb:'concrete',water:'water'};
+  const surfaceMaterials=new Set();
+  Object.entries(surfaces).forEach(([name,kind])=>{const m=M[name];if(!m)return;
+    m.map=tex[kind];m.needsUpdate=true;surfaceMaterials.add(m);
+    if(m.isMeshPhongMaterial){m.bumpMap=tex[kind];m.bumpScale=kind==='water'?.075:.025;m.shininess=kind==='water'?38:8;}
+  });
+  // Bump relief is computed from screen-space slopes; zoomed out, one pixel spans metres of ground and the
+  // shading jumps every frame (shimmer / colour flicker). Fade relief out with distance; it is invisible that far anyway.
+  const bumpBase=new Map();surfaceMaterials.forEach(m=>{if(m.bumpMap)bumpBase.set(m,m.bumpScale);});
+  window.__surfaceLOD=dist=>{const k=Math.max(0,Math.min(1,(300-dist)/120));bumpBase.forEach((b,m)=>{m.bumpScale=b*k;});};
+  // All these ground meshes use meter-based world UVs, including roads without UVs.
+  scene.updateMatrixWorld(true);
+  scene.traverse(mesh=>{
+    if(!mesh.isMesh||mesh.isInstancedMesh||!surfaceMaterials.has(mesh.material))return;
+    const g=mesh.geometry.clone(),p=g.attributes.position,uv=new Float32Array(p.count*2),v=new THREE.Vector3();
+    for(let i=0;i<p.count;i++){v.fromBufferAttribute(p,i).applyMatrix4(mesh.matrixWorld);uv[i*2]=v.x;uv[i*2+1]=v.z;}
+    g.setAttribute('uv',new THREE.BufferAttribute(uv,2));mesh.geometry=g;
+  });
+  renderer.outputEncoding=THREE.sRGBEncoding;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.94;
+  sun.shadow.normalBias=.20;sun.shadow.radius=3;
+  camera.near=.5;camera.updateProjectionMatrix();controls.minDistance=24;
+  controls.maxPolarAngle=Math.PI*.475;
+  // Neutral roofs give the actual facade palettes more visual weight than category colors.
+  if(!outside&&typeof roofMats!=='undefined')Object.values(roofMats).forEach(m=>m.color.set('#c5c3ba'));
+  // A restrained sky/horizon reflection gives glass depth without remote assets.
+  const skyCanvas=document.createElement('canvas');skyCanvas.width=512;skyCanvas.height=256;
+  const skyContext=skyCanvas.getContext('2d'),skyGradient=skyContext.createLinearGradient(0,0,0,256);
+  skyGradient.addColorStop(0,'#6c99b0');skyGradient.addColorStop(.48,'#dce5e4');skyGradient.addColorStop(.57,'#adb6a8');skyGradient.addColorStop(1,'#6e7769');
+  skyContext.fillStyle=skyGradient;skyContext.fillRect(0,0,512,256);
+  skyContext.fillStyle='rgba(244,247,239,.32)';for(let i=0;i<8;i++)skyContext.fillRect(i*71,65+random()*35,45+random()*50,5+random()*7);
+  const skyTexture=new THREE.CanvasTexture(skyCanvas);skyTexture.encoding=THREE.sRGBEncoding;
+  const reflection=new THREE.WebGLCubeRenderTarget(128);reflection.fromEquirectangularTexture(renderer,skyTexture);
+  const processed=new Set(),coloredGeometries=new Set();scene.traverse(o=>{
+    if(!o.isMesh)return;
+    // The supplied merged buildings and tree instances store display-space colors.
+    // Convert vertex colors too, so sRGB output does not wash out shop rows.
+    const colors=o.geometry?.attributes.color;
+    if(colors&&!coloredGeometries.has(o.geometry)){
+      coloredGeometries.add(o.geometry);const c=new THREE.Color();
+      for(let i=0;i<colors.count;i++){c.fromBufferAttribute(colors,i).convertSRGBToLinear();colors.setXYZ(i,c.r,c.g,c.b);}colors.needsUpdate=true;
+    }
+    if(o.instanceColor){const c=new THREE.Color(),a=o.instanceColor;for(let i=0;i<a.count;i++){c.fromBufferAttribute(a,i).convertSRGBToLinear();a.setXYZ(i,c.r,c.g,c.b);}a.needsUpdate=true;}
+    (Array.isArray(o.material)?o.material:[o.material]).forEach(m=>{
+      if(!m||processed.has(m))return;processed.add(m);
+      if(m.color)m.color.convertSRGBToLinear();
+      if(m.emissive)m.emissive.convertSRGBToLinear();
+      if(m.map?.isCanvasTexture){m.map.encoding=THREE.sRGBEncoding;m.map.needsUpdate=true;}
+      if(m.isMeshPhongMaterial&&m.shininess>30&&m!==M.water){m.shininess=42;m.specular.lerp(new THREE.Color('#9aaeb8'),.35);m.envMap=reflection.texture;m.combine=THREE.MixOperation;m.reflectivity=.16;m.needsUpdate=true;}
+    });
+  });
+  const batches=new Map(),unit=new THREE.BoxGeometry(1,1,1),dummy=new THREE.Object3D();
+  function box(color,x,y,z,w,h,d,r=0){
+    if(!batches.has(color))batches.set(color,[]);
+    dummy.position.set(x,y,z);dummy.scale.set(w,h,d);dummy.rotation.set(0,r,0);dummy.updateMatrix();batches.get(color).push(dummy.matrix.clone());
+  }
+  // Small, dimensionally plausible details on existing outside building envelopes.
+  // Not attached to named campus landmarks or interpreted as verified survey data.
+  if(outside)BLD.forEach((b,i)=>{
+    if(window.__photoRebuiltBuildings?.has(b.i)||b.t==='hs'||b.w<4||b.d<4||b.fl<1)return;
+    const ux=Math.cos(b.a),uz=Math.sin(b.a),H=b.fl*3.1;
+    const at=(u,v)=>[b.x+ux*u+b.fx*v,b.z+uz*u+b.fz*v];
+    // Parapets stay on the four original roof edges.
+    for(const side of [-1,1]){
+      let p=at(0,side*(b.d/2-.12));box('#b3b2aa',p[0],H+.28,p[1],b.w,.55,.18,-b.a);
+      p=at(side*(b.w/2-.12),0);box('#b3b2aa',p[0],H+.28,p[1],.18,.55,b.d,-b.a);
+    }
+    if(i%3===0){const p=at(b.w*.31,-b.d*.25);box('#8c9695',p[0],H+.42,p[1],1.1,.8,1.5,-b.a);
+      box('#555f5f',p[0],H+.84,p[1],.8,.04,1.2,-b.a);}
+    // Recessed shop threshold, thin rainwater pipe, condenser units with dark fan grille.
+    const p=at(-b.w*.43,b.d/2+.10);box('#9a9d96',p[0],H*.49,p[1],.10,H*.98,.10);
+    const s=at(0,b.d/2+.14);box('#aaa79d',s[0],.12,s[1],b.w*.9,.24,.38,-b.a);
+    if(i%2===0)for(let floor=1;floor<Math.min(b.fl,5);floor++){
+      const q=at(b.w*.3,b.d/2+.34),y=floor*3.1+1;
+      box('#d2d1c8',q[0],y,q[1],.85,.52,.42,-b.a);
+      box('#626b6a',q[0]+b.fx*.22,y,q[1]+b.fz*.22,.45,.36,.025,-b.a);
+    }
+  });
+  batches.forEach((matrices,color)=>{
+    const m=new THREE.InstancedMesh(unit,new THREE.MeshLambertMaterial({color:new THREE.Color(color).convertSRGBToLinear()}),matrices.length);
+    matrices.forEach((matrix,i)=>m.setMatrixAt(i,matrix));m.name='illustrative-envelope-details';m.castShadow=true;m.receiveShadow=true;root.add(m);
+  });
+  const palette={
+    day:{bg:'#b9ced6',fog:'#b9ced6',ground:'#c2c9bd',pad:'#a7a99b',road:'#62686a',road2:'#98998e',walk:'#c6bda6',path:'#c6bda6',grass:'#6f925c',bank:'#758562',water:'#597f79',kerb:'#bcb9a9',campus:'#9ba98b',hemi:.68,sun:.82},
+    night:{water:'#203c3b',hemi:.40,sun:.22}
+  };
+  Object.assign(MODES.day,palette.day);Object.assign(MODES.night,palette.night);
+  const originalApply=applyMode;let ambience='day';
+  const ui=document.createElement('div');ui.className='environment-controls';
+  ui.innerHTML='<span class="lbl">บรรยากาศ</span><div class="environment-options" role="group" aria-label="บรรยากาศแผนที่"><button type="button" data-light="day" aria-pressed="true">กลางวัน</button><button type="button" data-light="evening" aria-pressed="false">แสงเย็น</button><button type="button" data-light="night" aria-pressed="false">กลางคืน</button><button type="button" data-detail aria-pressed="true">รายละเอียดเสริม</button></div>';
+  (document.querySelector('#side .foot')||document.getElementById('side')).appendChild(ui);
+  function sync(){
+    originalApply();const night=mode==='night',evening=!night&&ambience==='evening';
+    sun.color.set(night?'#adc9e2':evening?'#ffd6a0':'#fff2da');
+    hemi.color.set(night?'#a7bed5':evening?'#e2e4e6':'#dbe9f2');hemi.groundColor.set(night?'#293238':'#8b816e');
+    sun.position.set(outside?-160:-260,evening?210:520,outside?120:300);
+    if(evening){scene.background.set('#d2cbc0');if(scene.fog)scene.fog.color.set('#d2cbc0');hemi.intensity=.59;sun.intensity=1.0;}
+    renderer.toneMappingExposure=night?1.12:.94;
+    if(M.plaza)M.plaza.color.set(night?'#65533b':'#bcab83');
+    if(M.parking)M.parking.color.set(night?'#303735':'#7b7e77');
+    // applyMode writes the legacy sRGB palette on each change; linearize those
+    // materials once per update, matching the renderer's sRGB output.
+    Object.values(M).forEach(m=>{if(m.color)m.color.convertSRGBToLinear();});
+    if(!outside){wallMat.color.convertSRGBToLinear();[window.__treeMat,window.__treeDetailMat].forEach(m=>{if(m)m.color.convertSRGBToLinear();});}
+    else{Object.values(wallMats).forEach(m=>m.color.convertSRGBToLinear());flatMat.color.convertSRGBToLinear();if(window.__crown)window.__crown.material.color.convertSRGBToLinear();}
+    ui.querySelectorAll('[data-light]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.light===(night?'night':ambience))));
+  }
+  applyMode=sync;
+  ui.querySelectorAll('[data-light]').forEach(b=>b.addEventListener('click',()=>{ambience=b.dataset.light;mode=ambience==='night'?'night':'day';sync();}));
+  const toggle=ui.querySelector('[data-detail]');toggle.addEventListener('click',()=>{root.visible=!root.visible;surfaceMaterials.forEach(m=>{m.map=root.visible?tex[surfaces[Object.keys(M).find(k=>M[k]===m)]]:null;m.needsUpdate=true;});toggle.setAttribute('aria-pressed',String(root.visible));});
+  // Let facade fins and balconies shade their own building surfaces.
+  if(!outside)BLD.forEach(b=>b.group?.traverse(o=>{if(o.isMesh&&!o.material?.transparent)o.receiveShadow=true;}));
+  // Near building view uses the selected footprint, so edits and navigation remain consistent.
+  if(!outside){
+    const close=document.createElement('button');close.type='button';close.className='btn';close.textContent='ดูอาคารระยะใกล้';
+    close.addEventListener('click',()=>{
+      const b=ALL.find(item=>item.id===selId);if(!b)return;const h=Math.max(4,b.top||b.lv*3.6),target=new THREE.Vector3(b.cx+b.dx,0,b.cz+b.dz);
+      const offset=camera.position.clone().sub(controls.target);offset.y=0;if(offset.lengthSq()<1)offset.set(0,0,1);offset.normalize().multiplyScalar(Math.max(48,h*1.35));offset.y=Math.max(18,h*.65);
+      flyTo(target,target.clone().add(offset));
+    });document.getElementById('card').appendChild(close);
+  }
+  const style=document.createElement('style');style.textContent=`
+    .environment-controls{width:100%;padding-top:10px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+    .environment-controls .lbl{margin:0;font-size:10px;letter-spacing:.06em}
+    .environment-options{display:flex;gap:5px;flex-wrap:wrap}
+    .environment-options button{font:500 11px var(--body);padding:6px 9px;border-radius:7px;border:1px solid var(--line);background:var(--well);color:var(--fg);cursor:pointer}
+    .environment-options [data-light][aria-pressed=true]{background:#b77338;color:#fff5e9;border-color:#df9a5b}
+    .environment-options [data-detail][aria-pressed=false]{opacity:.5}
+    .tag{box-shadow:0 2px 6px #101c2630}.pin{box-shadow:0 2px 6px #101c2630}
+    .panel{box-shadow:0 8px 32px #14222720}
+    @media(max-width:760px){.environment-controls{padding-top:7px}.environment-options button{padding:5px 8px}}
+  `;document.head.appendChild(style);
+  sync();
+  console.info('KMUTNB_REFINEMENT',JSON.stringify({page:outside?'surroundings':'campus',surfaceMaterials:surfaceMaterials.size,detailInstances:[...batches.values()].reduce((n,a)=>n+a.length,0),equipmentLocations:'illustrative; not surveyed'}));
+})();
+
+</script>
+<script id="landmark-viewer">
+(function landmarkViews(){
+  const outside=typeof D!=='undefined'&&!!D.P;
+  const bar=document.createElement('div');bar.className='landmark-views';bar.setAttribute('role','group');bar.setAttribute('aria-label','ดูจุดสังเกต');
+  const heading=document.createElement('span');heading.textContent='ดูจุดสังเกต';heading.className='lbl';bar.append(heading);
+  function lookAtBuilding(b){
+    const h=Math.max(8,b.top||b.lv*3.6),center=new THREE.Vector3(b.cx+b.dx,0,b.cz+b.dz),size=Math.max(...b.p.map(p=>Math.hypot(p[0]-b.cx,p[1]-b.cz)));
+    // Known entrance directions for the two photo-fitted landmarks.
+    let normal=b.no==='23'?new THREE.Vector3(.93,0,.37):camera.position.clone().sub(controls.target);normal.y=0;if(normal.lengthSq()<1)normal.set(0,0,1);normal.normalize();
+    const distance=Math.max(36,size*2.4,h*1.55);normal.multiplyScalar(distance);normal.y=Math.max(20,h*(b.no==='23'?1.8:.85));
+    const destination=center.clone().add(normal);ALL.forEach(other=>{if(other.id===b.id||!other.p)return;if(inPoly(destination.x-other.dx,destination.z-other.dz,other.p))destination.y=Math.max(destination.y,(other.top||8)+12);});
+    flyTo(center,destination);
+  }
+  function lookAtShop(p){
+    if(/^Commu Rooftop/i.test(p.n)){const b=BLD[p.b],h=b.fl*3.1;window.__photoCloseView=true;controls.minDistance=4;camera.fov=46;camera.updateProjectionMatrix();flyTo(new THREE.Vector3(b.x,h,b.z),new THREE.Vector3(b.x+32,h+23,b.z+32));return;}
+    const closePhoto=/^MOON RAMA7|^Bestbar bangkok/i.test(p.n);window.__photoCloseView=true;controls.minDistance=4;camera.fov=closePhoto?64:42;camera.updateProjectionMatrix();
+    const b=p.b!=null?BLD[p.b]:null,x=b?b.x+b.fx*(b.d/2+.5):p.x,z=b?b.z+b.fz*(b.d/2+.5):p.z,center=new THREE.Vector3(x,closePhoto?3.2:0,z);
+    const distance=/Subscribe Rama7/i.test(p.n)?24:closePhoto?6.5:b?Math.max(19,Math.min(62,b.w*1.9)):48;
+    const direction=b?new THREE.Vector3(b.fx,0,b.fz):new THREE.Vector3(.5,0,1);direction.normalize().multiplyScalar(distance);direction.y=closePhoto?1.8:b?Math.max(8,Math.min(24,b.fl*3.1*.6)):20;flyTo(center,center.clone().add(direction));
+  }
+
+  const entries=outside?[
+    ['7-Eleven',p=>/^7-Eleven/.test(p.n)&&/ใกล้ประตูหลัง/.test(p.n)],
+    ['MIXUE',p=>/MIXUE-KMUTNB/i.test(p.n)],
+    ['คาเฟ่ตู้แดง',p=>/ตู้โทรศัพท์แดง/.test(p.n)],
+    ['ร้านซับ',p=>/Subscribe Rama7/.test(p.n)],['MOON',p=>/^MOON RAMA7/i.test(p.n)],['BESTBAR',p=>/^Bestbar bangkok/i.test(p.n)],['Seekr',p=>/^Seekr Coffee/i.test(p.n)],['Commu',p=>/^Commu Rooftop/i.test(p.n)]
+  ]:[['หอสมุด · 23','23'],['TGGS · 11','11'],['40 ปี · 77','77'],['นานาชาติ · 95','95']];
+  entries.forEach(([label,key])=>{const button=document.createElement('button');button.type='button';button.className='btn';button.textContent=label;button.onclick=()=>{document.getElementById('q').value='';refresh();if(outside){const i=D.P.findIndex(key);if(i<0)return;select(i,false);lookAtShop(D.P[i]);}else{const b=ALL.find(b=>b.no===key);if(!b)return;select(b.id,false);lookAtBuilding(b);}if(innerWidth<=760&&typeof setSide==='function')setSide(false);};bar.append(button);});
+  const search=document.querySelector('#side .searchrow');if(search)search.after(bar);else document.getElementById('side').prepend(bar);
+  if(outside){document.getElementById('reset')?.addEventListener('click',()=>{window.__photoCloseView=false;controls.minDistance=24;camera.fov=30;camera.updateProjectionMatrix();});const button=document.createElement('button');button.type='button';button.className='btn';button.textContent='ดูหน้าร้านระยะใกล้';button.onclick=()=>{const pn=pins.find(pn=>pn.i===selId);if(pn)lookAtShop(pn.p);};document.getElementById('card').append(button);}
+  const css=document.createElement('style');css.textContent='.landmark-views{display:flex;align-items:center;gap:5px;flex-wrap:wrap}.landmark-views .lbl{width:100%;margin:0 0 2px}.landmark-views .btn{font-size:11px;padding:5px 7px}.landmark-views .btn:hover{border-color:#c59363;background:#263236}@media(max-width:760px){#side:not(.open) .landmark-views{display:none}.landmark-views{padding-top:3px}}';document.head.append(css);
+})();
+
+</script>
+<script id="photo-comparison-script">
+(function photoComparison(){
+  const outside=typeof D!=='undefined'&&!!D.P;
+  const existing=select;select=function(id,fly){existing(id,fly);document.getElementById('photo-comparison')?.remove();if(id==null)return;
+    const place=outside?D.P[id]:ALL.find(b=>b.id===id),ref=outside?window.__shopPhotoReferences?.[id]:place?.photoReference;if(!place)return;
+    const details=document.createElement('details');details.id='photo-comparison';const title=document.createElement('summary');title.textContent='ภาพจริงที่ใช้เทียบโมเดล';details.append(title);
+    if(ref){
+      const a=document.createElement('a');a.href=ref.image;a.target='_blank';a.rel='noopener';a.textContent='เปิดภาพต้นฉบับ ↗';
+      const img=document.createElement('img');img.alt=outside?place.n:place.name;img.loading='lazy';img.src=ref.image;img.style.cssText='display:block;width:100%;max-height:230px;object-fit:contain;background:#151e25;border-radius:6px;margin:8px 0';
+      img.onerror=()=>{img.remove();};details.append(img,a);
+      const caption=document.createElement('p');caption.textContent='แหล่งภาพ: '+new URL(ref.image).hostname+' · '+(outside?(ref.date||'ไม่ระบุวันถ่าย'):/2026/.test(ref.date||'')?'อัปโหลดปี 2569 · ไม่ระบุวันถ่าย':/2023/.test(ref.date||'')?'อัปโหลดปี 2566 · ไม่ระบุวันถ่าย':/2021/.test(ref.date||'')?'อัปโหลดปี 2564 · ไม่ระบุวันถ่าย':'ไม่ระบุวันถ่าย');caption.className='exhint';details.append(caption);
+      const cues={'41':'ผนังขาว หน้าต่างแนวยาว ฐานอาคารกระจกสูง และกรอบหลังคายกตัว','43':'แถบสีส้ม กระจกดำแนวตั้ง และกันสาดโค้งเฉพาะทางเข้า','63':'กระจกเขียวอมฟ้า โครงแนวตั้งสีเทา และแผงบังแดดยื่น','78A':'ป้ายหินแดง ตัวอักษรขาว บันไดกว้าง และครีบแนวตั้งสีส้ม','88':'ผนังขาว ช่องเปิดแนวนอน แผงบังแดดด้านล่างและสีชมพูช่วงบน','89':'โครงสีแดงลอยจากกระจก กริดบังแดดสีเงิน และป้ายเลข 89','90':'กล่องกระจกสีแดงยื่นออก ผนังขาว และเสารับฐานอาคาร','96':'ผนังแผ่นสีขาว ช่องเปิดแนวตั้ง กระจกมุมกรอบม่วง และระแนงขาวทางเข้า','99':'กรอบสีขาวเฉียง แผงบังแดดสีน้ำตาลแดง และกรอบทางเข้าสีบรอนซ์','92':'ผนังขาว แถบส้ม–เหลือง และช่องหน้าต่างซ้ำ','93':'ผนังขาว แถบส้ม–เหลือง และช่องหน้าต่างซ้ำ'};
+      const observed=document.createElement('p');observed.textContent=outside&&ref.observed?ref.observed:outside?(/Subscribe/i.test(place.n)?'ซุ้มเหล็กซ้อนลึก เส้นไฟสีอุ่น ป้ายเอียง และทางเข้าปูพื้นยกขั้น':/MOON/i.test(place.n)?'ป้ายวงกลมสีเขียวอ่อน ตัวอักษรและรูปกราฟิกสีน้ำเงิน':'หน้าร้านสีดำและตัวอักษรป้ายไฟสีขาว'):cues[place.no]||'ภาพมุมกว้างใช้เทียบองค์ประกอบภายนอกที่มองเห็นบางส่วน';observed.className='exhint';details.append(observed);
+    }else details.append(document.createTextNode('ยังไม่พบภาพภายนอกที่ยืนยันเฉพาะจุดนี้ได้ในรอบค้นหานี้'));
+    const catalog=document.createElement('a');catalog.href='photo-references.html';catalog.target='_blank';catalog.rel='noopener';catalog.textContent='รายการภาพและจุดที่รอข้อมูล ↗';details.append(document.createElement('br'),catalog);document.getElementById('card').append(details);
+  };
+  const css=document.createElement('style');css.textContent='#photo-comparison{padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.6}#photo-comparison summary{cursor:pointer;color:var(--fg);font-weight:600}#photo-comparison a{color:#8dbde4}';document.head.append(css);
+  // Keep the photographed warm entrance outlines legible at night.
+  if(outside){const oldApply=applyMode;applyMode=function(){oldApply();(window.__photoLightMaterials||[]).forEach(m=>m.emissiveIntensity=mode==='night'?.9:.18);};applyMode();}
+})();
+
+</script>
+<script id="street-surface-pass">
+
+/* Street surfaces use the supplied map centerlines. Utility positions are illustrative,
+   not photo-confirmed survey points. Do not infer access rules from these meshes. */
+(function streetDetailPass(){
+ const outside=typeof D!=='undefined'&&!!D.roads,g=new THREE.Group();g.name='street-surface-details';scene.add(g);
+ const colors=new Map(),batches=new Map(),unit=new THREE.BoxGeometry(1,1,1),dummy=new THREE.Object3D();
+ function box(c,x,y,z,w,h,d,r=0){if(!batches.has(c))batches.set(c,[]);dummy.position.set(x,y,z);dummy.scale.set(w,h,d);dummy.rotation.set(0,r,0);dummy.updateMatrix();batches.get(c).push(dummy.matrix.clone());}
+ function segment(A,B,w,c,y=.34,h=.08){const dx=B[0]-A[0],dz=B[1]-A[1],L=Math.hypot(dx,dz);if(L<.1)return;box(c,(A[0]+B[0])/2,y,(A[1]+B[1])/2,L,h,w,-Math.atan2(dz,dx));}
+ if(outside){
+  const clear=(x,z)=>!BLD.some(b=>{if(Math.abs(x-b.x)>b.w+b.d||Math.abs(z-b.z)>b.w+b.d)return false;const dx=x-b.x,dz=z-b.z,ux=Math.cos(b.a),uz=Math.sin(b.a);return Math.abs(dx*ux+dz*uz)<b.w/2+.18&&Math.abs(-dx*uz+dz*ux)<b.d/2+.18;});
+  // Near-gate lanes: concrete shoulders are deliberately narrow and interrupted at buildings.
+  const roads=D.roads.filter(r=>r[0]==='rl'&&r[2].some(([x,z])=>Math.hypot(x-35,z+47)<155));let drains=0;
+  roads.forEach(r=>r[2].slice(1).forEach((B,i)=>{const A=r[2][i],dx=B[0]-A[0],dz=B[1]-A[1],L=Math.hypot(dx,dz),nx=-dz/L,nz=dx/L,ry=-Math.atan2(dz,dx);if(L<6)return;
+    for(let u=2;u<L-2;u+=2.0)for(const side of [-1,1]){const x=A[0]+dx*u/L+nx*side*3.38,z=A[1]+dz*u/L+nz*side*3.38;if(!clear(x,z))continue;
+      box('#9ca397',x,.24,z,1.92,.13,.55,ry);box('#6b746d',x+nx*side*.22,.315,z+nz*side*.22,1.82,.025,.07,ry);
+      if(Math.round(u)%12===2){for(let j=-3;j<=3;j++)box('#535c58',x+dx/L*j*.10,.32,z+dz/L*j*.10,.035,.035,.44,ry);drains++;}
+    }
+  }));
+  // Concrete paving joints along the existing pedestrian link, without widening its route.
+  D.roads.filter(r=>r[0]==='fy'&&/ประตูหลัง/.test(r[1])).forEach(r=>{const pts=r[2];for(let i=1;i<pts.length;i++){const A=pts[i-1],B=pts[i],dx=B[0]-A[0],dz=B[1]-A[1],L=Math.hypot(dx,dz),nx=-dz/L,nz=dx/L;
+    segment(A,B,1.82,'#b4b3a4',.31,.13);for(let t=1;t<L;t+=1.2){const x=A[0]+dx*t/L,z=A[1]+dz*t/L;segment([x-nx*.9,z-nz*.9],[x+nx*.9,z+nz*.9],.026,'#7e857a',.385,.012);}
+    for(const side of [-1,1])segment([A[0]+nx*side*.96,A[1]+nz*side*.96],[B[0]+nx*side*.96,B[1]+nz*side*.96],.14,'#8d9789',.35,.18);
+  }});
+  window.__streetSurfaceStats={nearGateRoads:roads.length,drainGroups:drains,basis:'map-aligned illustrative detail; exact kerb and utility positions not surveyed'};
+ }else{
+  // Fine granite edging and joints beside the photographed main entrance name wall.
+  const C=[13.6,312.6],d=[.956,.293],n=[-.293,.956],at=(u,v)=>[C[0]+d[0]*u+n[0]*v,C[1]+d[1]*u+n[1]*v];
+  segment(at(-23.5,7.25),at(-6.5,7.25),.18,'#727b70',.55,.24);
+  for(let u=-23.5;u<-6.4;u+=1.0)segment(at(u,5.3),at(u,7.2),.018,'#7e8479',.635,.012);
+ }
+ batches.forEach((m,c)=>{const mesh=new THREE.InstancedMesh(unit,new THREE.MeshLambertMaterial({color:c}),m.length);m.forEach((a,i)=>mesh.setMatrixAt(i,a));mesh.receiveShadow=true;mesh.castShadow=true;g.add(mesh);});
+ const views=document.querySelector('.landmark-views');if(!views)return;
+ const b=document.createElement('button');b.className='btn';b.type='button';b.textContent=outside?'ทางเดินประตูหลัง':'ป้ายหน้ามหาวิทยาลัย';b.onclick=()=>{
+  select(null);if(outside){window.__photoCloseView=true;controls.minDistance=4;camera.fov=48;camera.updateProjectionMatrix();flyTo(new THREE.Vector3(35,1.0,-47),new THREE.Vector3(5,38,-20));}
+  else{window.__campusPhotoView=true;controls.minDistance=8;camera.fov=43;camera.updateProjectionMatrix();flyTo(new THREE.Vector3(-.74,1.6,311.3),new THREE.Vector3(-6.7,8.3,331.0));}
+  if(innerWidth<=760&&typeof setSide==='function')setSide(false);
+ };views.append(b);
+})();
+
+</script>
 </body>
 </html>

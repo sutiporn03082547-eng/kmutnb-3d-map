@@ -5743,5 +5743,88 @@ applyMode();refresh();renderExport();requestAnimationFrame(frame);
 
 
 </script>
+<script>/* perf-v107 — smoother rendering without changing what is drawn.
+   1) Static batching: after the scene is built, meshes that share a parent and a material are merged into one mesh
+      (one draw call instead of hundreds). Originals stay in the scene, hidden, so clicking/picking buildings,
+      category toggles (group.visible) and edit mode keep working exactly as before.
+   2) Planar mirror (rear walkway): re-render the reflection only when the camera is near, every 2nd frame.
+      Far away it keeps the last reflection — it is a few pixels on screen there. */
+(function(){
+ 'use strict';
+ function mergeKey(o){
+  const g=o.geometry,a=g.attributes;
+  return [o.material.uuid,o.castShadow?1:0,o.receiveShadow?1:0,o.renderOrder,o.layers.mask,o.frustumCulled?1:0,
+   Object.keys(a).sort().map(k=>k+a[k].itemSize+(a[k].normalized?'n':'')).join(',')].join('|');
+ }
+ function mergeable(o){
+  if(!o.isMesh||o.isInstancedMesh||o.isSkinnedMesh||!o.visible||o.children.length)return false;
+  if(Array.isArray(o.material)||!o.material||o.userData.noMerge)return false;
+  const g=o.geometry;if(!g||!g.isBufferGeometry||!g.attributes.position)return false;
+  // single material: three.js draws the whole geometry and ignores groups (BoxGeometry always has 6), so groups are fine
+  if(Object.keys(g.morphAttributes||{}).length)return false;
+  if(g.drawRange&&(g.drawRange.start!==0||g.drawRange.count!==Infinity))return false;
+  if(o.onBeforeRender!==THREE.Object3D.prototype.onBeforeRender||o.onAfterRender!==THREE.Object3D.prototype.onAfterRender)return false;
+  for(const k in g.attributes){const at=g.attributes[k];if(at.isInterleavedBufferAttribute||at.isInstancedBufferAttribute)return false;}
+  return true;
+ }
+ function build(list,parent){
+  const inv=new THREE.Matrix4().copy(parent.matrixWorld).invert(),m=new THREE.Matrix4(),nm=new THREE.Matrix3(),v=new THREE.Vector3();
+  const names=Object.keys(list[0].geometry.attributes);let total=0;
+  list.forEach(o=>{const g=o.geometry;total+=g.index?g.index.count:g.attributes.position.count;});
+  const out={};names.forEach(k=>{const a=list[0].geometry.attributes[k];out[k]=new Float32Array(total*a.itemSize);});
+  let off=0;
+  for(const o of list){
+   o.updateMatrixWorld(true);m.multiplyMatrices(inv,o.matrixWorld);nm.getNormalMatrix(m);
+   const g=o.geometry,idx=g.index,n=idx?idx.count:g.attributes.position.count;
+   for(const k of names){
+    const a=g.attributes[k],s=a.itemSize,dst=out[k];
+    for(let i=0;i<n;i++){const j=idx?idx.getX(i):i,d=(off+i)*s;
+     if(k==='position'){v.fromBufferAttribute(a,j).applyMatrix4(m);dst[d]=v.x;dst[d+1]=v.y;dst[d+2]=v.z;}
+     else if(k==='normal'){v.fromBufferAttribute(a,j).applyMatrix3(nm).normalize();dst[d]=v.x;dst[d+1]=v.y;dst[d+2]=v.z;}
+     else for(let c=0;c<s;c++)dst[d+c]=a.array[j*s+c];}
+   }
+   off+=n;
+  }
+  const geo=new THREE.BufferGeometry();
+  names.forEach(k=>geo.setAttribute(k,new THREE.BufferAttribute(out[k],list[0].geometry.attributes[k].itemSize)));
+  geo.computeBoundingSphere();geo.computeBoundingBox();
+  const s=list[0],mesh=new THREE.Mesh(geo,s.material);
+  mesh.name='batched:'+(parent.name||parent.type);mesh.castShadow=s.castShadow;mesh.receiveShadow=s.receiveShadow;
+  mesh.renderOrder=s.renderOrder;mesh.layers.mask=s.layers.mask;mesh.frustumCulled=s.frustumCulled;mesh.userData.batched=list;
+  return mesh;
+ }
+ function batchScene(){
+  if(typeof scene==='undefined'||window.__batched)return;window.__batched=true;
+  const t0=performance.now();scene.updateMatrixWorld(true);
+  const byParent=new Map();
+  scene.traverse(o=>{if(!mergeable(o)||!o.parent)return;
+   const g=o.geometry,a=g.attributes;
+   // normalized integer colours/uvs would need rescaling: leave those meshes alone
+   for(const k in a)if(a[k].normalized)return;
+   let p=byParent.get(o.parent);if(!p){p=new Map();byParent.set(o.parent,p);}
+   const k=mergeKey(o);let l=p.get(k);if(!l){l=[];p.set(k,l);}l.push(o);});
+  let merged=0,made=0;
+  byParent.forEach((groups,parent)=>groups.forEach(list=>{
+   if(list.length<3)return;
+   try{const mesh=build(list,parent);parent.add(mesh);list.forEach(o=>{o.visible=false;});merged+=list.length;made++;}catch(e){console.warn('batch skipped',e);}
+  }));
+  window.__batchStats={merged,made,ms:Math.round(performance.now()-t0)};
+ }
+ function throttleMirrors(){
+  if(typeof scene==='undefined')return;let frame=0;
+  scene.traverse(o=>{
+   if(!o.isMesh||o.userData.mirrorThrottled)return;
+   const f=o.onBeforeRender;if(f===THREE.Object3D.prototype.onBeforeRender||!/virtualCamera|textureMatrix/.test(String(f)))return;
+   o.userData.mirrorThrottled=true;let rendered=false,allowFirst=false;const wp=new THREE.Vector3();
+   setTimeout(()=>{allowFirst=true;},2500); // first reflection after the page is up: its extra shader variants don't delay the first view
+   o.onBeforeRender=function(r,s,c){o.getWorldPosition(wp);const near=c.position.distanceTo(wp)<160;
+    if((!rendered&&(allowFirst||near))||(rendered&&near&&(frame++&1)===0)){rendered=true;return f.apply(this,arguments);}};
+  });
+ }
+ function go(){throttleMirrors();batchScene();}
+ if(document.readyState==='complete')setTimeout(go,1200);else addEventListener('load',()=>setTimeout(go,1200));
+})();
+</script>
+
 </body>
 </html>

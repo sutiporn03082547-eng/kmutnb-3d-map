@@ -1,0 +1,2 @@
+# v120 image attribution
+photos/campus-78B-north-upper-201303.png: Google Street View, Google, March2013; captured24October2026 from publicMaps UI, completeframe retaining attribution. Source https://www.google.com/maps/@?api=1&map_action=pano&pano=addLVF6zanpLWle1nxbVtQ&heading=180&pitch=40 . Copyright remains with respective rights holders; no open license asserted. Screenshot is reference evidence, not a current-condition survey. Research video frames are not included in this package.

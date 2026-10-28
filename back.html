@@ -314,8 +314,11 @@ const CATS={
 const DAYS=["จันทร์","อังคาร","พุธ","พฤหัสบดี","ศุกร์","เสาร์","อาทิตย์"];
 const fmt=m=>{m%=1440;return String(m/60|0).padStart(2,"0")+":"+String(m%60).padStart(2,"0");};
 function bkkNow(){const t=new Date(Date.now()+7*3600e3);return{d:(t.getUTCDay()+6)%7,m:t.getUTCHours()*60+t.getUTCMinutes()};}
+/* Opening hours are shown only for place types where they mean something. Dorms/apartments and other residential places never show
+   hours (p.h stays in the data; shops keep theirs). Controlled by category, not by deleting the field. */
+const NO_HOURS=new Set(["dorm","temple","bus","gate","landmark"]);const showsHours=p=>!!p&&!NO_HOURS.has(p.c);
 function status(p){
-  if(!p.h)return null;const{d,m}=bkkNow();const td=p.h[d],yd=p.h[(d+6)%7];
+  if(!p.h||!showsHours(p))return null;const{d,m}=bkkNow();const td=p.h[d],yd=p.h[(d+6)%7];
   if(td==="A")return{open:true,t:"เปิด 24 ชม."};
   if(yd&&yd!=="A"&&yd[1]>1440&&m<yd[1]-1440)return{open:true,t:"ปิด "+fmt(yd[1])};
   if(td&&m>=td[0]&&m<td[1])return{open:true,t:"ปิด "+fmt(td[1])};
@@ -661,12 +664,12 @@ function select(i,fly){
   const pn=pins[i],p=pn.p,cat=CATS[p.c];card.style.setProperty("--c",cat.c);
   document.getElementById("cKind").textContent=cat.ic+" "+cat.th;document.getElementById("cName").textContent=p.n;
   const meta=document.getElementById("cMeta");meta.innerHTML="";const pill=(t,c)=>{const s=document.createElement("span");s.className="pill "+(c||"");s.textContent=t;meta.appendChild(s);};
-  pill(cat.th,"cat");const st=status(p);if(st)pill((st.open?"เปิดอยู่ · ":"ปิดอยู่ · ")+st.t,st.open?"on":"off");else if(!["temple","bus","gate","landmark"].includes(p.c))pill("ไม่มีข้อมูลเวลาเปิด-ปิด");
+  pill(cat.th,"cat");const st=status(p);if(st)pill((st.open?"เปิดอยู่ · ":"ปิดอยู่ · ")+st.t,st.open?"on":"off");else if(showsHours(p))pill("ไม่มีข้อมูลเวลาเปิด-ปิด");
   if(p.b!=null&&p.c!=="gate")pill("ตำแหน่งโดยประมาณ");
   const ul=document.getElementById("cInfo");ul.innerHTML="";p.note.forEach(t=>{const li=document.createElement("li");li.textContent=t;ul.appendChild(li);});
   const tb=document.getElementById("hours");tb.innerHTML="";
-  if(p.h){const today=bkkNow().d;p.h.forEach((h,k)=>{const tr=document.createElement("tr");if(k===today)tr.className="today";tr.innerHTML=`<td>${DAYS[k]}</td><td>${h?hoursText(h):"ปิด"}</td>`;tb.appendChild(tr);});}
-  tb.hidden=!p.h;
+  if(p.h&&showsHours(p)){const today=bkkNow().d;p.h.forEach((h,k)=>{const tr=document.createElement("tr");if(k===today)tr.className="today";tr.innerHTML=`<td>${DAYS[k]}</td><td>${h?hoursText(h):"ปิด"}</td>`;tb.appendChild(tr);});}
+  tb.hidden=!(p.h&&showsHours(p));
   const a=document.getElementById("cMap");a.href=p.pid?`https://www.google.com/maps/search/?api=1&query=${p.ll[0]},${p.ll[1]}&query_place_id=${p.pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.q||p.n)}`;
   document.getElementById("cSrc").innerHTML=p.c==="bus"?'ข้อมูลป้ายและสายรถเมล์จาก <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> ควรเช็กกับป้ายจริง/แอป ViaBus อีกครั้ง':p.sv?'ร้านนี้ไม่มีใน Google Maps แต่พบจากการเดินดู Google Street View · ชื่อ/ตำแหน่งเป็นค่าประมาณ':p.pid?'ข้อมูลร้านและเวลาเปิด-ปิดจาก Google Maps (ต.ค. 2026) อาจเปลี่ยนแปลงได้ ควรเช็กก่อนไป':(p.ob?'รูปทรงอาคารจาก OpenStreetMap':'ข้อมูลจาก OpenStreetMap / ข้อมูลรวบรวมจากอินเทอร์เน็ต');
   const cg=document.getElementById("cGrp");if(pn.grp){cg.hidden=false;cg.querySelector("b").textContent=(p.c==="dorm"?"ในตึกนี้มีทั้งหมด ":"ร้านในตึก/จุดเดียวกัน ")+pn.grp.length+" แห่ง";const box=cg.querySelector("div");box.innerHTML="";

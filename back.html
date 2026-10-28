@@ -741,7 +741,12 @@ function plFitRaw(x,text,limit,start,min,font){
   x.font=font(s);while(s>min&&x.measureText(text).width>limit){s-=2;x.font=font(s);}
   return s;}
 /* ---- name boards on the POI buildings ---- */
-function makeSigns(){SIGNS.forEach(b=>{if(window.__customStorefronts?.has(b.i))return;const p=D.P[b.poi];if(!p)return;const cat=CATS[p.c];
+/* fast: shop name boards are built a few at a time in idle time after the map is shown, nearest to the camera first
+   (each needs Thai text measuring, which is slow on phones). Every board is still built. */
+function plIdle(fn){(window.requestIdleCallback||((f)=>setTimeout(()=>f({timeRemaining:()=>8}),16)))(fn,{timeout:300});}
+function plSliced(list,work,done){let k=0;const step=dl=>{const t0=performance.now();while(k<list.length&&(performance.now()-t0<8))work(list[k++]);if(window.__plDirty)window.__plDirty();if(k<list.length)plIdle(step);else if(done)done();};plIdle(step);}
+function makeSigns(){const list=SIGNS.filter(b=>!window.__customStorefronts?.has(b.i)&&D.P[b.poi]);const c=camera.position;list.sort((a,b)=>Math.hypot(a.x-c.x,a.z-c.z)-Math.hypot(b.x-c.x,b.z-c.z));plSliced(list,makeSign);}
+function makeSign(b){{if(window.__customStorefronts?.has(b.i))return;const p=D.P[b.poi];if(!p)return;const cat=CATS[p.c];
   const big=b.t==="dm",W=big?Math.min(b.w*0.8,12):Math.min(b.w-0.5,6),Hh=big?1.9:1.1;
   const cv=document.createElement("canvas");cv.width=512;cv.height=Math.round(512*Hh/W);const x=cv.getContext("2d");
   x.fillStyle=b.t==="bar"?"#17121f":big?"#ffffff":cat.c;x.fillRect(0,0,cv.width,cv.height);
@@ -752,7 +757,7 @@ function makeSigns(){SIGNS.forEach(b=>{if(window.__customStorefronts?.has(b.i))r
   const t=new THREE.CanvasTexture(cv);t.anisotropy=4;
   const m=new THREE.Mesh(new THREE.PlaneGeometry(W,Hh),new THREE.MeshBasicMaterial({map:t,side:THREE.DoubleSide}));
   const y=big?b.fl*3.1-1.3:3.75+(b.t==="bar"?0.6:0);
-  m.userData.shopModel=b.i;m.position.set(b.x+b.fx*(b.d/2+0.12),y,b.z+b.fz*(b.d/2+0.12));m.rotation.y=Math.atan2(b.fx,b.fz);scene.add(m);});}
+  m.userData.shopModel=b.i;m.position.set(b.x+b.fx*(b.d/2+0.12),y,b.z+b.fz*(b.d/2+0.12));m.rotation.y=Math.atan2(b.fx,b.fz);scene.add(m);}}
 (document.fonts&&document.fonts.load?document.fonts.load("600 40px Anuphan").catch(()=>{}):Promise.resolve()).then(makeSigns);
 
 /* ---- trees ---- */
@@ -1054,7 +1059,7 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
           x.fillStyle=fg;x.textAlign='center';x.textBaseline='middle';let size=Math.min(c.height*.57,120);x.font=`700 ${size}px Anuphan,sans-serif`;size=plFit(x,text,960,size,16,v=>`700 ${v}px Anuphan,sans-serif`);x.fillText(text,512,c.height*.5);
           if(kind==='mixue'){x.fillStyle='#fff';x.fillRect(20,c.height-10,984,3);}
         }t.needsUpdate=true;
-      };/* perf-lab: while the web font is still loading, draw once when it is ready instead of twice */if(document.fonts&&document.fonts.status==='loading')document.fonts.ready.then(draw);else draw();textDraws.push(draw);
+      };/* perf-lab: while the web font is still loading, draw once when it is ready instead of twice */textDraws.push(draw);/* fast: drawn in idle slices once the web font is ready (below), not one by one at creation */
       const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshLambertMaterial({map:t,side:THREE.DoubleSide}));mesh.position.copy(point(u,v,y));mesh.rotation.y=Math.atan2(nx,nz);mesh.name='individual-shop-fascia';mesh.userData.poi=b.poi;group.add(mesh);
     }
     return {box,label,point,normal:[nx,nz],ux,uz};
@@ -1120,7 +1125,10 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
   });
   // Street hardware is fitted to the existing named road edges. Leave buildings,
   // junctions and carriageways clear rather than guessing new road alignments.
-  const occupied=(x,z,pad=.5)=>BLD.some(b=>{if(Math.abs(b.x-x)>b.w+b.d+3||Math.abs(b.z-z)>b.w+b.d+3)return false;const dx=x-b.x,dz=z-b.z,u=dx*Math.cos(b.a)+dz*Math.sin(b.a),v=-dx*Math.sin(b.a)+dz*Math.cos(b.a);return Math.abs(u)<b.w/2+pad&&Math.abs(v)<b.d/2+pad;});
+  /* fast: grid of buildings by position; only buildings that could pass the bounding test below are checked (same result) */
+  const OCC=(()=>{const cs=40,g=new Map();let R=0;BLD.forEach(b=>{R=Math.max(R,b.w+b.d+3);const k=Math.floor(b.x/cs)+','+Math.floor(b.z/cs);let l=g.get(k);if(!l)g.set(k,l=[]);l.push(b);});return{cs,g,r:Math.ceil(R/cs)};})();
+  const near=(x,z)=>{const out=[],cx=Math.floor(x/OCC.cs),cz=Math.floor(z/OCC.cs);for(let a=-OCC.r;a<=OCC.r;a++)for(let c=-OCC.r;c<=OCC.r;c++){const l=OCC.g.get((cx+a)+','+(cz+c));if(l)for(const b of l)out.push(b);}return out;};
+  const occupied=(x,z,pad=.5)=>near(x,z).some(b=>{if(Math.abs(b.x-x)>b.w+b.d+3||Math.abs(b.z-z)>b.w+b.d+3)return false;const dx=x-b.x,dz=z-b.z,u=dx*Math.cos(b.a)+dz*Math.sin(b.a),v=-dx*Math.sin(b.a)+dz*Math.cos(b.a);return Math.abs(u)<b.w/2+pad&&Math.abs(v)<b.d/2+pad;});
   function worldBox(w,h,d,c,x,y,z,r){o.position.set(x,y,z);o.rotation.set(0,r||0,0);o.scale.set(w,h,d);o.updateMatrix();const m=material(c);if(!batches.has(m))batches.set(m,[]);batches.get(m).push(o.matrix.clone());}
   const roadLabels=new Set(),wirePositions=[];let kerbs=0;
   D.roads.filter(r=>r[1]&&['rl','se','tk'].includes(r[0])).forEach(([type,name,pts])=>{
@@ -1138,7 +1146,7 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
           worldBox(.20,7.3,.20,'#939b92',px,3.65,pz,0);worldBox(1.25,.09,.11,'#535f5e',px,6.8,pz,r);wirePositions.push([px,7,pz]);
           if(!roadLabels.has(name)){
             const cv=document.createElement('canvas');cv.width=768;cv.height=160;const ctx=cv.getContext('2d'),t=new THREE.CanvasTexture(cv);
-            const draw=()=>{ctx.fillStyle='#285b52';ctx.fillRect(0,0,768,160);ctx.strokeStyle='#dae2d0';ctx.lineWidth=6;ctx.strokeRect(8,8,752,144);ctx.fillStyle='#f0eee1';ctx.font='600 58px Anuphan,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(name,384,80,716);t.needsUpdate=true;};/* perf-lab: while the web font is still loading, draw once when it is ready instead of twice */if(document.fonts&&document.fonts.status==='loading')document.fonts.ready.then(draw);else draw();textDraws.push(draw);
+            const draw=()=>{ctx.fillStyle='#285b52';ctx.fillRect(0,0,768,160);ctx.strokeStyle='#dae2d0';ctx.lineWidth=6;ctx.strokeRect(8,8,752,144);ctx.fillStyle='#f0eee1';ctx.font='600 58px Anuphan,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(name,384,80,716);t.needsUpdate=true;};/* perf-lab: while the web font is still loading, draw once when it is ready instead of twice */textDraws.push(draw);/* fast: drawn in idle slices once the web font is ready (below), not one by one at creation */
             const sign=new THREE.Mesh(new THREE.PlaneGeometry(3.4,.72),new THREE.MeshLambertMaterial({map:t,side:THREE.DoubleSide}));sign.position.set(px,3.2,pz);sign.rotation.y=Math.atan2(nx,nz);group.add(sign);roadLabels.add(name);
           }
         }
@@ -1153,7 +1161,7 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
     const curve=new THREE.QuadraticBezierCurve3(A,middle,B),mesh=new THREE.Mesh(new THREE.TubeGeometry(curve,10,.025,4,false),wireMaterial);group.add(mesh);
   }
   batches.forEach((ms,m)=>{const mesh=new THREE.InstancedMesh(unit,m,ms.length);ms.forEach((mx,i)=>mesh.setMatrixAt(i,mx));mesh.castShadow=true;mesh.receiveShadow=true;mesh.name='street-identity-details';group.add(mesh);});
-  document.fonts?.ready.then(()=>textDraws.forEach(draw=>draw()));
+  (document.fonts?document.fonts.ready:Promise.resolve()).then(()=>plSliced(textDraws.slice(),draw=>draw()));
   window.__streetIdentityAudit={shops:records,kerbs,roadSigns:roadLabels.size,poles:wirePositions.length};
   console.info('KMUTNB_STREET_IDENTITY '+JSON.stringify({customizedBuildings:custom.size,frontages:records.length,kerbs,roadSigns:roadLabels.size,poles:wirePositions.length}));
 })();
@@ -2650,7 +2658,7 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
 /* v82: dimensional construction details fitted to the existing render envelopes.
    No survey data is inferred. D and campus building/road/POI data stay unchanged.
    Photo-fitted landmarks keep their silhouettes and openings. */
-(function constructionDetailPass(){
+const __constructionDetailPass=function constructionDetailPass(){
  'use strict';
  const outside=typeof D!=='undefined'&&!!D.P,root=new THREE.Group();root.name='construction-details-v82';scene.add(root);
  const unitBox=new THREE.BoxGeometry(1,1,1),unitRod=new THREE.CylinderGeometry(1,1,1,8),dummy=new THREE.Object3D(),up=new THREE.Vector3(0,1,0),palette=new Map(),tiles=new Map();
@@ -2852,7 +2860,9 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
  window.__constructionV82={...counts,spatialTiles:tiles.size,basis:'existing model envelopes; standard construction dimensions are illustrative; not a site survey'};
  const audit=document.createElement('meta');audit.name='construction-v82-audit';audit.content=JSON.stringify(window.__constructionV82);document.head.append(audit);
  console.info('KMUTNB_CONSTRUCTION_V82',JSON.stringify(window.__constructionV82));
-})();
+};
+/* fast: window frames, rods and other construction detail are added in idle time after the map is shown */
+(function(){const run=()=>{try{__constructionDetailPass();}catch(e){console.warn('construction details',e);}if(window.__plDirty)window.__plDirty();};if(document.readyState==='complete')setTimeout(()=>plIdle(run),500);else addEventListener('load',()=>setTimeout(()=>plIdle(run),500));})();
 
 </script>
 <script id="real-place-gallery-v121">

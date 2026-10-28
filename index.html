@@ -12422,6 +12422,22 @@ const a={version:172,building:'63',sideFrameBeams:beams,sideSolidSlabs:solidSlab
 })();
 
 </script>
+<script>/* audit 2026-10-29: open questions from qa/REPORT.md, shown on the building card as "รอยืนยัน" (not verified) so they are not read as fact. */
+(function(){if(typeof select!=='function')return;
+ const N={
+  '97':'ตำแหน่งรอยืนยัน: ภาพดาวเทียม Esri World Imagery ตรงกรอบนี้เห็นเป็นต้นไม้ ไม่เห็นอาคาร 5 ชั้น ต้องสำรวจหน้างาน',
+  '73':'จำนวนชั้น 5 เป็นค่าประมาณจากภาพหน้าอาคาร (ชั้นล่าง + 3 ระดับหน้าต่าง + ห้องบนหลังคา) ข้อมูลเดิมระบุ 3 ชั้น รอยืนยัน',
+  '78B':'จำนวนชั้นรอยืนยัน: แผนที่ 10 ชั้น แต่ OpenStreetMap ระบุ 9 ชั้น',
+  '72':'ความสูงของส่วนหลังคาเป็นค่าประมาณจากภาพดาวเทียม ผนังด้านยาวยังไม่มีภาพปัจจุบันให้เทียบ',
+  '21':'มีทางเดินในแผนที่ผ่านในกรอบอาคาร: เป็นทางลอดจริงหรือไม่ รอยืนยัน','22':'มีทางเดินในแผนที่ผ่านในกรอบอาคาร: เป็นทางลอดจริงหรือไม่ รอยืนยัน',
+  '44':'มีทางเดินในแผนที่ผ่านในกรอบอาคาร และกรอบทับกับอาคาร 43 ราว 14 ตร.ม. รอยืนยัน','43':'กรอบอาคารทับกับอาคาร 44 ราว 14 ตร.ม. รอยืนยัน',
+  '47':'มีทางเดินในแผนที่ผ่านในกรอบอาคาร: เป็นทางลอดจริงหรือไม่ รอยืนยัน','81':'ถนนรองในแผนที่ผ่านในกรอบอาคาร รอยืนยัน',
+  '71':'จุดเริ่มนำทางห่างตัวอาคารราว 50 ม. เพราะยังไม่มีข้อมูลทางเดินด้านหลัง','52':'ไม่มีใน OpenStreetMap กรอบมาจากแผนผังมหาวิทยาลัย (ภาพดาวเทียมเห็นอาคารตรงกรอบ)',
+  '98':'ไม่มีใน OpenStreetMap กรอบรอยืนยัน (ภาพดาวเทียมเห็นอาคารตรงกรอบ)'};
+ window.__auditNotes=N;
+ const prior=select;select=function(id,fly){const r=prior.apply(this,arguments);const t=id!=null&&N[id];const ul=document.getElementById('cInfo');
+  if(t&&ul&&!ul.querySelector('.audit-note')){const li=document.createElement('li');li.className='audit-note';li.textContent='หมายเหตุการตรวจ (29 ต.ค. 2569) · '+t;ul.appendChild(li);}return r;};})();
+</script>
 <script>/* audit 2026-10-29: hide stray model parts. Some builders left 1 m unit boxes with an identity transform, so they sat at the
    map origin (0,0,0), hundreds of metres from their building (e.g. 91). Only parts that are both an untransformed 1x1x1 box at the origin
    and more than 50 m from their building are hidden; each one is listed in window.__strayParts. */

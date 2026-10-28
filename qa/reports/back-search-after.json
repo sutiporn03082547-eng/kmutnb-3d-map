@@ -1,0 +1,3398 @@
+{
+ "url": "http://127.0.0.1:18937/repo/back.html",
+ "date": "2026-10-28T17:58:24.409Z",
+ "total": 677,
+ "passed": 677,
+ "failed": 0,
+ "results": [
+  {
+   "name": "name \"ประตูหลัง มจพ.\" → first row",
+   "pass": true,
+   "got": "ประตูหลัง มจพ."
+  },
+  {
+   "name": "name \"วัวล้วนๆ (ไอศกรีม)\" → first row",
+   "pass": true,
+   "got": "วัวล้วนๆ (ไอศกรีม)"
+  },
+  {
+   "name": "name \"Boardy Boardgame\" → first row",
+   "pass": true,
+   "got": "Boardy Boardgame"
+  },
+  {
+   "name": "name \"7-Eleven (ใกล้ซับ)\" → first row",
+   "pass": true,
+   "got": "7-Eleven (ใกล้ซับ)"
+  },
+  {
+   "name": "name \"ร้านอาหารตามสั่งป้าหน่อย\" → first row",
+   "pass": true,
+   "got": "ร้านอาหารตามสั่งป้าหน่อย"
+  },
+  {
+   "name": "name \"หอพัก (ตึกเดียวกับร้านป้าหน่อย\" → first row",
+   "pass": true,
+   "got": "หอพัก (ตึกเดียวกับร้านป้าหน่อย)"
+  },
+  {
+   "name": "name \"สนามหมูกะทะ\" → first row",
+   "pass": true,
+   "got": "สนามหมูกะทะ"
+  },
+  {
+   "name": "name \"เปิ่นกาแฟโบราณ ยำเปิ่นหลังมอ\" → first row",
+   "pass": true,
+   "got": "เปิ่นกาแฟโบราณ ยำเปิ่นหลังมอ"
+  },
+  {
+   "name": "name \"ร้านแซ่บซี๊ด หลังมอ มจพ.\" → first row",
+   "pass": true,
+   "got": "ร้านแซ่บซี๊ด หลังมอ มจพ."
+  },
+  {
+   "name": "name \"ครัวกาญจนา ตามสั่ง-ข้าวซอย\" → first row",
+   "pass": true,
+   "got": "ครัวกาญจนา ตามสั่ง-ข้าวซอย"
+  },
+  {
+   "name": "name \"ย่างกรอบ ดูโอ้บูตะ\" → first row",
+   "pass": true,
+   "got": "ย่างกรอบ ดูโอ้บูตะ"
+  },
+  {
+   "name": "name \"OkVietNoodle\" → first row",
+   "pass": true,
+   "got": "OkVietNoodle"
+  },
+  {
+   "name": "name \"Commu Rooftop Cafe & Chill\" → first row",
+   "pass": true,
+   "got": "Commu Rooftop Cafe & Chill"
+  },
+  {
+   "name": "name \"ชอุ่ม coffee\" → first row",
+   "pass": true,
+   "got": "ชอุ่ม coffee"
+  },
+  {
+   "name": "name \"Lang Mall Commu.\" → first row",
+   "pass": true,
+   "got": "Lang Mall Commu."
+  },
+  {
+   "name": "name \"U Life Prime\" → first row",
+   "pass": true,
+   "got": "U Life Prime"
+  },
+  {
+   "name": "name \"หอพักเรือนลีลา\" → first row",
+   "pass": true,
+   "got": "หอพักเรือนลีลา"
+  },
+  {
+   "name": "name \"เดอะคาริสม่าเฮ้าส์\" → first row",
+   "pass": true,
+   "got": "เดอะคาริสม่าเฮ้าส์"
+  },
+  {
+   "name": "name \"หอเครป หลัง มจพ.\" → first row",
+   "pass": true,
+   "got": "หอเครป หลัง มจพ."
+  },
+  {
+   "name": "name \"Grace Resident\" → first row",
+   "pass": true,
+   "got": "Grace Resident"
+  },
+  {
+   "name": "name \"The Curve\" → first row",
+   "pass": true,
+   "got": "The Curve"
+  },
+  {
+   "name": "name \"S.T. Apartment\" → first row",
+   "pass": true,
+   "got": "S.T. Apartment"
+  },
+  {
+   "name": "name \"Time Mansion\" → first row",
+   "pass": true,
+   "got": "Time Mansion"
+  },
+  {
+   "name": "name \"Subscribe Rama7 (ซับ)\" → first row",
+   "pass": true,
+   "got": "Subscribe Rama7 (ซับ)"
+  },
+  {
+   "name": "name \"MOON RAMA7\" → first row",
+   "pass": true,
+   "got": "MOON RAMA7"
+  },
+  {
+   "name": "name \"Bestbar bangkok\" → first row",
+   "pass": true,
+   "got": "Bestbar bangkok"
+  },
+  {
+   "name": "name \"พีดอทcopy\" → first row",
+   "pass": true,
+   "got": "พีดอทcopy"
+  },
+  {
+   "name": "name \"Bubbles Laundromat\" → first row",
+   "pass": true,
+   "got": "Bubbles Laundromat"
+  },
+  {
+   "name": "name \"สยามหมูกระทะ\" → first row",
+   "pass": true,
+   "got": "สยามหมูกระทะ"
+  },
+  {
+   "name": "name \"Oza Donburi\" → first row",
+   "pass": true,
+   "got": "Oza Donburi"
+  },
+  {
+   "name": "name \"ตำแซ่บ\" → first row",
+   "pass": true,
+   "got": "ตำแซ่บ"
+  },
+  {
+   "name": "name \"มูมาดี ขาหมูฮ่องกง\" → first row",
+   "pass": true,
+   "got": "มูมาดี ขาหมูฮ่องกง"
+  },
+  {
+   "name": "name \"กะทิข้าวราดแกง วงศ์สว่าง11\" → first row",
+   "pass": true,
+   "got": "กะทิข้าวราดแกง วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"ป.ประทีป บ้านก๋วยเตี๋ยวเรือ วง\" → first row",
+   "pass": true,
+   "got": "ป.ประทีป บ้านก๋วยเตี๋ยวเรือ วงศ์สว่าง 11"
+  },
+  {
+   "name": "name \"ร้านก๋วยเตี๋ยวลูกชิ้นหมูบีเอ็ม\" → first row",
+   "pass": true,
+   "got": "ร้านก๋วยเตี๋ยวลูกชิ้นหมูบีเอ็ม"
+  },
+  {
+   "name": "name \"เตี๋ยวหมูตุ๋นสูตรโบราณ(วงศ์สว่\" → first row",
+   "pass": true,
+   "got": "เตี๋ยวหมูตุ๋นสูตรโบราณ(วงศ์สว่าง19)"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวร้านเฮียตี๋\" → first row",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวร้านเฮียตี๋"
+  },
+  {
+   "name": "name \"เตี๋ยวเหอะ\" → first row",
+   "pass": true,
+   "got": "เตี๋ยวเหอะ"
+  },
+  {
+   "name": "name \"ร้านชมพู อาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ร้านชมพู อาหารตามสั่ง"
+  },
+  {
+   "name": "name \"ข้าวแกงพระนคร(ร้านลุงกับป้าซอย\" → first row",
+   "pass": true,
+   "got": "ข้าวแกงพระนคร(ร้านลุงกับป้าซอยหมาเดินหลั"
+  },
+  {
+   "name": "name \"ร้านอาหารตามสั่ง ต้นเอก\" → first row",
+   "pass": true,
+   "got": "ร้านอาหารตามสั่ง ต้นเอก"
+  },
+  {
+   "name": "name \"ร้าน Cha T'aime ชา-แตม ชานมไข่\" → first row",
+   "pass": true,
+   "got": "ร้าน Cha T'aime ชา-แตม ชานมไข่มุก"
+  },
+  {
+   "name": "name \"Sry tea ma cha\" → first row",
+   "pass": true,
+   "got": "Sry tea ma cha"
+  },
+  {
+   "name": "name \"OWL CHA สาขา วงศ์สว่าง 11\" → first row",
+   "pass": true,
+   "got": "OWL CHA สาขา วงศ์สว่าง 11"
+  },
+  {
+   "name": "name \"หมีพ่นไฟ The fire bear วงศ์สว่\" → first row",
+   "pass": true,
+   "got": "หมีพ่นไฟ The fire bear วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"เม้าท์มอยซอย11\" → first row",
+   "pass": true,
+   "got": "เม้าท์มอยซอย11"
+  },
+  {
+   "name": "name \"Seekr Coffee\" → first row",
+   "pass": true,
+   "got": "Seekr Coffee"
+  },
+  {
+   "name": "name \"ครัวนายภูมิ\" → first row",
+   "pass": true,
+   "got": "ครัวนายภูมิ"
+  },
+  {
+   "name": "name \"Ennnroll\" → first row",
+   "pass": true,
+   "got": "Ennnroll"
+  },
+  {
+   "name": "name \"Landmark ครัวนั่งเล่น\" → first row",
+   "pass": true,
+   "got": "Landmark ครัวนั่งเล่น"
+  },
+  {
+   "name": "name \"ครัวบ้านแม่ ยำแซ่บ\" → first row",
+   "pass": true,
+   "got": "ครัวบ้านแม่ ยำแซ่บ"
+  },
+  {
+   "name": "name \"(ย้าย) โอกะหมู หมูกระทะ&ยำ ติด\" → first row",
+   "pass": true,
+   "got": "(ย้าย) โอกะหมู หมูกระทะ&ยำ ติดปากหลังมอ"
+  },
+  {
+   "name": "name \"7-Eleven วงศ์สว่าง 11 จุด 4\" → first row",
+   "pass": true,
+   "got": "7-Eleven วงศ์สว่าง 11 จุด 4"
+  },
+  {
+   "name": "name \"7-Eleven ถ.วงศ์สว่าง\" → first row",
+   "pass": true,
+   "got": "7-Eleven ถ.วงศ์สว่าง"
+  },
+  {
+   "name": "name \"7-Eleven วงศ์สว่าง 11 จุด 3\" → first row",
+   "pass": true,
+   "got": "7-Eleven วงศ์สว่าง 11 จุด 3"
+  },
+  {
+   "name": "name \"7-Eleven (ใกล้ประตูหลัง)\" → first row",
+   "pass": true,
+   "got": "7-Eleven (ใกล้ประตูหลัง)"
+  },
+  {
+   "name": "name \"TK Hairtwo Style\" → first row",
+   "pass": true,
+   "got": "TK Hairtwo Style"
+  },
+  {
+   "name": "name \"Room 34 hair salon\" → first row",
+   "pass": true,
+   "got": "Room 34 hair salon"
+  },
+  {
+   "name": "name \"ร้านทำผมโตโต้แฮร์สตูดิโอ ซ.วงศ\" → first row",
+   "pass": true,
+   "got": "ร้านทำผมโตโต้แฮร์สตูดิโอ ซ.วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"ผกามาศ ซาลอน\" → first row",
+   "pass": true,
+   "got": "ผกามาศ ซาลอน"
+  },
+  {
+   "name": "name \"ซิวซาลอน\" → first row",
+   "pass": true,
+   "got": "ซิวซาลอน"
+  },
+  {
+   "name": "name \"BIG COMPUTER SERVICES\" → first row",
+   "pass": true,
+   "got": "BIG COMPUTER SERVICES"
+  },
+  {
+   "name": "name \"BIG Mobile Services ซ่อมไอโฟน\" → first row",
+   "pass": true,
+   "got": "BIG Mobile Services ซ่อมไอโฟน"
+  },
+  {
+   "name": "name \"พอใจ สีสวย\" → first row",
+   "pass": true,
+   "got": "พอใจ สีสวย"
+  },
+  {
+   "name": "name \"ซักจังซักอบรีด\" → first row",
+   "pass": true,
+   "got": "ซักจังซักอบรีด"
+  },
+  {
+   "name": "name \"Otteri Wash and Dry\" → first row",
+   "pass": true,
+   "got": "Otteri Wash and Dry"
+  },
+  {
+   "name": "name \"ร้านสะดวกซัก หอพักชายพาร์คส์1\" → first row",
+   "pass": true,
+   "got": "ร้านสะดวกซัก หอพักชายพาร์คส์1"
+  },
+  {
+   "name": "name \"เจริญสิริ Malatung soup สาขามจ\" → first row",
+   "pass": true,
+   "got": "เจริญสิริ Malatung soup สาขามจพ."
+  },
+  {
+   "name": "name \"Street FOOD WONGSAWANG\" → first row",
+   "pass": true,
+   "got": "Street FOOD WONGSAWANG"
+  },
+  {
+   "name": "name \"ร้าน ลาบบักเสือ\" → first row",
+   "pass": true,
+   "got": "ร้าน ลาบบักเสือ"
+  },
+  {
+   "name": "name \"ครัวป้าชวน\" → first row",
+   "pass": true,
+   "got": "ครัวป้าชวน"
+  },
+  {
+   "name": "name \"A. P. Apartment\" → first row",
+   "pass": true,
+   "got": "A. P. Apartment"
+  },
+  {
+   "name": "name \"หอพักเพชรสว่าง\" → first row",
+   "pass": true,
+   "got": "หอพักเพชรสว่าง"
+  },
+  {
+   "name": "name \"Mentor Gym\" → first row",
+   "pass": true,
+   "got": "Mentor Gym"
+  },
+  {
+   "name": "name \"ร้านยาเกรทส์เฮ้าส์ฟาร์ม่า (Gre\" → first row",
+   "pass": true,
+   "got": "ร้านยาเกรทส์เฮ้าส์ฟาร์ม่า (GreatHouse"
+  },
+  {
+   "name": "name \"เมืองยาเภสัช\" → first row",
+   "pass": true,
+   "got": "เมืองยาเภสัช"
+  },
+  {
+   "name": "name \"ร้านยาฟาร์มาโซล\" → first row",
+   "pass": true,
+   "got": "ร้านยาฟาร์มาโซล"
+  },
+  {
+   "name": "name \"Waiting Floor\" → first row",
+   "pass": true,
+   "got": "Waiting Floor"
+  },
+  {
+   "name": "name \"มาหาหน่อย หม่าล่าทั่ง สาขา\" → first row",
+   "pass": true,
+   "got": "มาหาหน่อย หม่าล่าทั่ง สาขา"
+  },
+  {
+   "name": "name \"iCook\" → first row",
+   "pass": true,
+   "got": "iCook"
+  },
+  {
+   "name": "name \"ชาชัก. หลัง. มจพ/ร้านชาช๊าก\" → first row",
+   "pass": true,
+   "got": "ชาชัก. หลัง. มจพ/ร้านชาช๊าก"
+  },
+  {
+   "name": "name \"ชาบัง\" → first row",
+   "pass": true,
+   "got": "ชาบัง"
+  },
+  {
+   "name": "name \"มีตังค์สเต็ก พระนครเหนือ\" → first row",
+   "pass": true,
+   "got": "มีตังค์สเต็ก พระนครเหนือ"
+  },
+  {
+   "name": "name \"ร้านละมุน บ้านไข่ข้น\" → first row",
+   "pass": true,
+   "got": "ร้านละมุน บ้านไข่ข้น"
+  },
+  {
+   "name": "name \"Bless Salcha เบลส ซัลชา: หอพัก\" → first row",
+   "pass": true,
+   "got": "Bless Salcha เบลส ซัลชา: หอพักหลัง"
+  },
+  {
+   "name": "name \"Soul dormitory(หอพักโซล)\" → first row",
+   "pass": true,
+   "got": "Soul dormitory(หอพักโซล)"
+  },
+  {
+   "name": "name \"เดอะ ริชเช็ส ริมน้ำ อพาร์ทเม้น\" → first row",
+   "pass": true,
+   "got": "เดอะ ริชเช็ส ริมน้ำ อพาร์ทเม้น หอพัก"
+  },
+  {
+   "name": "name \"หอพักเอวาริน (วงศ์สว่าง11อพาร์\" → first row",
+   "pass": true,
+   "got": "หอพักเอวาริน (วงศ์สว่าง11อพาร์ตเมนต์)"
+  },
+  {
+   "name": "name \"Chalerm Wong Peng Apartment\" → first row",
+   "pass": true,
+   "got": "Chalerm Wong Peng Apartment"
+  },
+  {
+   "name": "name \"7-Eleven\" → first row",
+   "pass": true,
+   "got": "7-Eleven"
+  },
+  {
+   "name": "name \"ร้านขายยาอภิวงสว่าง\" → first row",
+   "pass": true,
+   "got": "ร้านขายยาอภิวงสว่าง"
+  },
+  {
+   "name": "name \"WASHENJOY ร้านสะดวกซัก พระนครเ\" → first row",
+   "pass": true,
+   "got": "WASHENJOY ร้านสะดวกซัก พระนครเหนือ"
+  },
+  {
+   "name": "name \"Check​ in​ kitchen\" → first row",
+   "pass": true,
+   "got": "Check​ in​ kitchen"
+  },
+  {
+   "name": "name \"ร้านข้าวหมูทอดผัดไทยกุ้ง\" → first row",
+   "pass": true,
+   "got": "ร้านข้าวหมูทอดผัดไทยกุ้ง"
+  },
+  {
+   "name": "name \"หอพักพัฒลัดดา2\" → first row",
+   "pass": true,
+   "got": "หอพักพัฒลัดดา2"
+  },
+  {
+   "name": "name \"หอพัก SKY HOUSE วงศ์สว่าง\" → first row",
+   "pass": true,
+   "got": "หอพัก SKY HOUSE วงศ์สว่าง"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวตุ๋นตี3\" → first row",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวตุ๋นตี3"
+  },
+  {
+   "name": "name \"IDEA TEA (ชาไข่มุก by one 20บา\" → first row",
+   "pass": true,
+   "got": "IDEA TEA (ชาไข่มุก by one 20บาท)"
+  },
+  {
+   "name": "name \"ร้านอาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ร้านอาหารตามสั่ง"
+  },
+  {
+   "name": "name \"จุฬาฟาร์มาซี\" → first row",
+   "pass": true,
+   "got": "จุฬาฟาร์มาซี"
+  },
+  {
+   "name": "name \"You Sweet Homemade Cafe\" → first row",
+   "pass": true,
+   "got": "You Sweet Homemade Cafe"
+  },
+  {
+   "name": "name \"หอพักอารีญา\" → first row",
+   "pass": true,
+   "got": "หอพักอารีญา"
+  },
+  {
+   "name": "name \"ป๊อกๆ ก๋วยเตี๋ยวนักมวย\" → first row",
+   "pass": true,
+   "got": "ป๊อกๆ ก๋วยเตี๋ยวนักมวย"
+  },
+  {
+   "name": "name \"ศุภสินฟาร์มาซี\" → first row",
+   "pass": true,
+   "got": "ศุภสินฟาร์มาซี"
+  },
+  {
+   "name": "name \"Spin-Pro Laundromat\" → first row",
+   "pass": true,
+   "got": "Spin-Pro Laundromat"
+  },
+  {
+   "name": "name \"ชากะติม\" → first row",
+   "pass": true,
+   "got": "ชากะติม"
+  },
+  {
+   "name": "name \"Sunthari Mansion\" → first row",
+   "pass": true,
+   "got": "Sunthari Mansion"
+  },
+  {
+   "name": "name \"RS MANSION\" → first row",
+   "pass": true,
+   "got": "RS MANSION"
+  },
+  {
+   "name": "name \"หอพักหญิงบ้านตั้งใจ\" → first row",
+   "pass": true,
+   "got": "หอพักหญิงบ้านตั้งใจ"
+  },
+  {
+   "name": "name \"หอพักหญิงกาญจน์\" → first row",
+   "pass": true,
+   "got": "หอพักหญิงกาญจน์"
+  },
+  {
+   "name": "name \"หอพักหญิง Smile House\" → first row",
+   "pass": true,
+   "got": "หอพักหญิง Smile House"
+  },
+  {
+   "name": "name \"หอพักหญิง A & K\" → first row",
+   "pass": true,
+   "got": "หอพักหญิง A & K"
+  },
+  {
+   "name": "name \"หอพักหญิง ดุษฎีมาศ\" → first row",
+   "pass": true,
+   "got": "หอพักหญิง ดุษฎีมาศ"
+  },
+  {
+   "name": "name \"หอพักสุกรีนพาร์ค\" → first row",
+   "pass": true,
+   "got": "หอพักสุกรีนพาร์ค"
+  },
+  {
+   "name": "name \"S9 Residence\" → first row",
+   "pass": true,
+   "got": "S9 Residence"
+  },
+  {
+   "name": "name \"The Garden Dormitory\" → first row",
+   "pass": true,
+   "got": "The Garden Dormitory"
+  },
+  {
+   "name": "name \"The Mentor Dormitory\" → first row",
+   "pass": true,
+   "got": "The Mentor Dormitory"
+  },
+  {
+   "name": "name \"Grove Residence\" → first row",
+   "pass": true,
+   "got": "Grove Residence"
+  },
+  {
+   "name": "name \"ST Place\" → first row",
+   "pass": true,
+   "got": "ST Place"
+  },
+  {
+   "name": "name \"The Mira Wongsawang 11\" → first row",
+   "pass": true,
+   "got": "The Mira Wongsawang 11"
+  },
+  {
+   "name": "name \"กินข้าวมั้ย\" → first row",
+   "pass": true,
+   "got": "กินข้าวมั้ย"
+  },
+  {
+   "name": "name \"Nabi Cafe Wongsawang\" → first row",
+   "pass": true,
+   "got": "Nabi Cafe Wongsawang"
+  },
+  {
+   "name": "name \"มะเดี่ยว\" → first row",
+   "pass": true,
+   "got": "มะเดี่ยว"
+  },
+  {
+   "name": "name \"หอพัก The North\" → first row",
+   "pass": true,
+   "got": "หอพัก The North"
+  },
+  {
+   "name": "name \"หอพักสตรี บ้านสราญสุข\" → first row",
+   "pass": true,
+   "got": "หอพักสตรี บ้านสราญสุข"
+  },
+  {
+   "name": "name \"อินเตอร์แมนชั่น\" → first row",
+   "pass": true,
+   "got": "อินเตอร์แมนชั่น"
+  },
+  {
+   "name": "name \"หอพักคาซ่า (CASA)\" → first row",
+   "pass": true,
+   "got": "หอพักคาซ่า (CASA)"
+  },
+  {
+   "name": "name \"ARKAS11\" → first row",
+   "pass": true,
+   "got": "ARKAS11"
+  },
+  {
+   "name": "name \"U Life Apartment\" → first row",
+   "pass": true,
+   "got": "U Life Apartment"
+  },
+  {
+   "name": "name \"วิวพ้อยท์ อพาร์ทเม้นท์\" → first row",
+   "pass": true,
+   "got": "วิวพ้อยท์ อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"ธนกฤต เฮ้าส์\" → first row",
+   "pass": true,
+   "got": "ธนกฤต เฮ้าส์"
+  },
+  {
+   "name": "name \"TJ23 หลัง มจพ.\" → first row",
+   "pass": true,
+   "got": "TJ23 หลัง มจพ."
+  },
+  {
+   "name": "name \"Wrapnarok\" → first row",
+   "pass": true,
+   "got": "Wrapnarok"
+  },
+  {
+   "name": "name \"สยาม ชาบูหม่าล่าทั่ง\" → first row",
+   "pass": true,
+   "got": "สยาม ชาบูหม่าล่าทั่ง"
+  },
+  {
+   "name": "name \"ร้านคุ้มกะตัง\" → first row",
+   "pass": true,
+   "got": "ร้านคุ้มกะตัง"
+  },
+  {
+   "name": "name \"อาม่าหม่าล่าAMAMALA&SOUP\" → first row",
+   "pass": true,
+   "got": "อาม่าหม่าล่าAMAMALA&SOUP"
+  },
+  {
+   "name": "name \"ครัวฤกษ์ดี\" → first row",
+   "pass": true,
+   "got": "ครัวฤกษ์ดี"
+  },
+  {
+   "name": "name \"อิ่มเอมเอย(หมี่โคราช)\" → first row",
+   "pass": true,
+   "got": "อิ่มเอมเอย(หมี่โคราช)"
+  },
+  {
+   "name": "name \"หม่าล่าซินเจียง พระราม 5\" → first row",
+   "pass": true,
+   "got": "หม่าล่าซินเจียง พระราม 5"
+  },
+  {
+   "name": "name \"ต้นเตี๋ยวตุ๋น\" → first row",
+   "pass": true,
+   "got": "ต้นเตี๋ยวตุ๋น"
+  },
+  {
+   "name": "name \"ร้านเจ้เพ็ญ\" → first row",
+   "pass": true,
+   "got": "ร้านเจ้เพ็ญ"
+  },
+  {
+   "name": "name \"สลัดคำโต โรลจังหลัง ม.\" → first row",
+   "pass": true,
+   "got": "สลัดคำโต โรลจังหลัง ม."
+  },
+  {
+   "name": "name \"เล้งลุงน้อย by โอชาป๋าน้อย\" → first row",
+   "pass": true,
+   "got": "เล้งลุงน้อย by โอชาป๋าน้อย"
+  },
+  {
+   "name": "name \"SIBE WAFFLE\" → first row",
+   "pass": true,
+   "got": "SIBE WAFFLE"
+  },
+  {
+   "name": "name \"Longdu\" → first row",
+   "pass": true,
+   "got": "Longdu"
+  },
+  {
+   "name": "name \"ครัวคุณลุงอาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ครัวคุณลุงอาหารตามสั่ง"
+  },
+  {
+   "name": "name \"ร้านข้าวมันไก่ก๋วยเตี๋ยวไก่ส้ม\" → first row",
+   "pass": true,
+   "got": "ร้านข้าวมันไก่ก๋วยเตี๋ยวไก่ส้มตำเฮียบูลย์"
+  },
+  {
+   "name": "name \"ขนมจีนปักษ์ใต้ แม่หนูแดง\" → first row",
+   "pass": true,
+   "got": "ขนมจีนปักษ์ใต้ แม่หนูแดง"
+  },
+  {
+   "name": "name \"จุ๊บแจง แกงใต้ ครัวสมุย\" → first row",
+   "pass": true,
+   "got": "จุ๊บแจง แกงใต้ ครัวสมุย"
+  },
+  {
+   "name": "name \"บ้านป้าแอ๊วอาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "บ้านป้าแอ๊วอาหารตามสั่ง"
+  },
+  {
+   "name": "name \"ซุ้มไก่กรอบ\" → first row",
+   "pass": true,
+   "got": "ซุ้มไก่กรอบ"
+  },
+  {
+   "name": "name \"ร้านเถ้าแก่เนีย\" → first row",
+   "pass": true,
+   "got": "ร้านเถ้าแก่เนีย"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวลุงกับป้าเจ้าเก่า\" → first row",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวลุงกับป้าเจ้าเก่า"
+  },
+  {
+   "name": "name \"ไก่กรอบซอสมะนาว ป้าเชื่อม.\" → first row",
+   "pass": true,
+   "got": "ไก่กรอบซอสมะนาว ป้าเชื่อม."
+  },
+  {
+   "name": "name \"ครัวมารี อาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ครัวมารี อาหารตามสั่ง"
+  },
+  {
+   "name": "name \"GyuYoshi\" → first row",
+   "pass": true,
+   "got": "GyuYoshi"
+  },
+  {
+   "name": "name \"เฮียตี๋ หมูทอด\" → first row",
+   "pass": true,
+   "got": "เฮียตี๋ หมูทอด"
+  },
+  {
+   "name": "name \"ร้านเอ๋ แซ่บอีสาน\" → first row",
+   "pass": true,
+   "got": "ร้านเอ๋ แซ่บอีสาน"
+  },
+  {
+   "name": "name \"บ้านหลังมอ คอฟฟี่\" → first row",
+   "pass": true,
+   "got": "บ้านหลังมอ คอฟฟี่"
+  },
+  {
+   "name": "name \"TAMPER\" → first row",
+   "pass": true,
+   "got": "TAMPER"
+  },
+  {
+   "name": "name \"Coffee milk &Soda789\" → first row",
+   "pass": true,
+   "got": "Coffee milk &Soda789"
+  },
+  {
+   "name": "name \"คาเฟ่บ้านสวน\" → first row",
+   "pass": true,
+   "got": "คาเฟ่บ้านสวน"
+  },
+  {
+   "name": "name \"Coffee Cafe / กาแฟ้-กาแฟ\" → first row",
+   "pass": true,
+   "got": "Coffee Cafe / กาแฟ้-กาแฟ"
+  },
+  {
+   "name": "name \"บักขามคาเฟ่ Bakkham Cafe\" → first row",
+   "pass": true,
+   "got": "บักขามคาเฟ่ Bakkham Cafe"
+  },
+  {
+   "name": "name \"พี่เดือนกาแฟ หัวโค้ง\" → first row",
+   "pass": true,
+   "got": "พี่เดือนกาแฟ หัวโค้ง"
+  },
+  {
+   "name": "name \"Nook Coffee (บ้านริมคลอง)\" → first row",
+   "pass": true,
+   "got": "Nook Coffee (บ้านริมคลอง)"
+  },
+  {
+   "name": "name \"bobu cafe\" → first row",
+   "pass": true,
+   "got": "bobu cafe"
+  },
+  {
+   "name": "name \"ร้านผลไม้ที่จริงใจ\" → first row",
+   "pass": true,
+   "got": "ร้านผลไม้ที่จริงใจ"
+  },
+  {
+   "name": "name \"สมาร์ท เพลส\" → first row",
+   "pass": true,
+   "got": "สมาร์ท เพลส"
+  },
+  {
+   "name": "name \"บ้านเอื้องฟ้า\" → first row",
+   "pass": true,
+   "got": "บ้านเอื้องฟ้า"
+  },
+  {
+   "name": "name \"บ้านประพันธ์พัฒน์\" → first row",
+   "pass": true,
+   "got": "บ้านประพันธ์พัฒน์"
+  },
+  {
+   "name": "name \"บ้านศีลพิทักษ์\" → first row",
+   "pass": true,
+   "got": "บ้านศีลพิทักษ์"
+  },
+  {
+   "name": "name \"หอพักธนภัทรคอร์ท\" → first row",
+   "pass": true,
+   "got": "หอพักธนภัทรคอร์ท"
+  },
+  {
+   "name": "name \"หอพักชายพาร์คส์\" → first row",
+   "pass": true,
+   "got": "หอพักชายพาร์คส์"
+  },
+  {
+   "name": "name \"นิตย์สาร 1\" → first row",
+   "pass": true,
+   "got": "นิตย์สาร 1"
+  },
+  {
+   "name": "name \"วีรวรรณโฮม\" → first row",
+   "pass": true,
+   "got": "วีรวรรณโฮม"
+  },
+  {
+   "name": "name \"เค แอล โฮม\" → first row",
+   "pass": true,
+   "got": "เค แอล โฮม"
+  },
+  {
+   "name": "name \"แอทไซน์\" → first row",
+   "pass": true,
+   "got": "แอทไซน์"
+  },
+  {
+   "name": "name \"หอพักชายพรณรงค์\" → first row",
+   "pass": true,
+   "got": "หอพักชายพรณรงค์"
+  },
+  {
+   "name": "name \"พัฒน์ลัดดา\" → first row",
+   "pass": true,
+   "got": "พัฒน์ลัดดา"
+  },
+  {
+   "name": "name \"หอพักเจริญผล\" → first row",
+   "pass": true,
+   "got": "หอพักเจริญผล"
+  },
+  {
+   "name": "name \"หอพักชายจินตนา\" → first row",
+   "pass": true,
+   "got": "หอพักชายจินตนา"
+  },
+  {
+   "name": "name \"บ้านพอเพียง\" → first row",
+   "pass": true,
+   "got": "บ้านพอเพียง"
+  },
+  {
+   "name": "name \"หอพัก The K Family\" → first row",
+   "pass": true,
+   "got": "หอพัก The K Family"
+  },
+  {
+   "name": "name \"หอพักสตรีทิพย์อนันต์\" → first row",
+   "pass": true,
+   "got": "หอพักสตรีทิพย์อนันต์"
+  },
+  {
+   "name": "name \"BLISS by salcha\" → first row",
+   "pass": true,
+   "got": "BLISS by salcha"
+  },
+  {
+   "name": "name \"หอพักหญิงปิ่นสุข\" → first row",
+   "pass": true,
+   "got": "หอพักหญิงปิ่นสุข"
+  },
+  {
+   "name": "name \"พงศพร\" → first row",
+   "pass": true,
+   "got": "พงศพร"
+  },
+  {
+   "name": "name \"หอพักศดิศ\" → first row",
+   "pass": true,
+   "got": "หอพักศดิศ"
+  },
+  {
+   "name": "name \"หอพักซัลชา\" → first row",
+   "pass": true,
+   "got": "หอพักซัลชา"
+  },
+  {
+   "name": "name \"พิมพ์ & เพิ่มเฮ้าส์\" → first row",
+   "pass": true,
+   "got": "พิมพ์ & เพิ่มเฮ้าส์"
+  },
+  {
+   "name": "name \"หอพักรุ่งนภา แมนชั่น\" → first row",
+   "pass": true,
+   "got": "หอพักรุ่งนภา แมนชั่น"
+  },
+  {
+   "name": "name \"ชัยวัฒน์แมนชั่น วงศ์สว่าง11\" → first row",
+   "pass": true,
+   "got": "ชัยวัฒน์แมนชั่น วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"316 RGG8+2GF หอพักเดอะคอร์เนอร\" → first row",
+   "pass": true,
+   "got": "316 RGG8+2GF หอพักเดอะคอร์เนอร์"
+  },
+  {
+   "name": "name \"หอพักชาย ชญาลิสาโฮม\" → first row",
+   "pass": true,
+   "got": "หอพักชาย ชญาลิสาโฮม"
+  },
+  {
+   "name": "name \"Jariva Home\" → first row",
+   "pass": true,
+   "got": "Jariva Home"
+  },
+  {
+   "name": "name \"หอพักสตรีบัณฑิตา1\" → first row",
+   "pass": true,
+   "got": "หอพักสตรีบัณฑิตา1"
+  },
+  {
+   "name": "name \"บ้านทรัพย์ทวี รุ่งเรือง อพาร์ท\" → first row",
+   "pass": true,
+   "got": "บ้านทรัพย์ทวี รุ่งเรือง อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"นิภา แมนชั่น 2\" → first row",
+   "pass": true,
+   "got": "นิภา แมนชั่น 2"
+  },
+  {
+   "name": "name \"บ้านอุทัยวรรณ2\" → first row",
+   "pass": true,
+   "got": "บ้านอุทัยวรรณ2"
+  },
+  {
+   "name": "name \"หอพักหญิงจารุนันท์2\" → first row",
+   "pass": true,
+   "got": "หอพักหญิงจารุนันท์2"
+  },
+  {
+   "name": "name \"หอพักริมน้ำ(พี่จ๋า)\" → first row",
+   "pass": true,
+   "got": "หอพักริมน้ำ(พี่จ๋า)"
+  },
+  {
+   "name": "name \"ตาหมอ-ยายยุ้ย\" → first row",
+   "pass": true,
+   "got": "ตาหมอ-ยายยุ้ย"
+  },
+  {
+   "name": "name \"อพาร์ทเม้นท์บ้านพรรณนภา\" → first row",
+   "pass": true,
+   "got": "อพาร์ทเม้นท์บ้านพรรณนภา"
+  },
+  {
+   "name": "name \"อพาร์ทเมนต์ ศรีสันติธรรม\" → first row",
+   "pass": true,
+   "got": "อพาร์ทเมนต์ ศรีสันติธรรม"
+  },
+  {
+   "name": "name \"นาดาว เพลส อพาร์ทเม้นท์\" → first row",
+   "pass": true,
+   "got": "นาดาว เพลส อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"บ้านร่มเย็นมีสุข อพาร์ทเม้นท์\" → first row",
+   "pass": true,
+   "got": "บ้านร่มเย็นมีสุข อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"อาคารศรีสันติธรรม2\" → first row",
+   "pass": true,
+   "got": "อาคารศรีสันติธรรม2"
+  },
+  {
+   "name": "name \"หอพักสวนพุด\" → first row",
+   "pass": true,
+   "got": "หอพักสวนพุด"
+  },
+  {
+   "name": "name \"ภรภัทร อพาร์ทเม้นท์\" → first row",
+   "pass": true,
+   "got": "ภรภัทร อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"สมวงษ์เพลส อพาร์ทเมนท์ ( S.V. \" → first row",
+   "pass": true,
+   "got": "สมวงษ์เพลส อพาร์ทเมนท์ ( S.V. place )"
+  },
+  {
+   "name": "name \"สมศรี อพาร์ทเมนท์\" → first row",
+   "pass": true,
+   "got": "สมศรี อพาร์ทเมนท์"
+  },
+  {
+   "name": "name \"ลักษณัย อพาร์เมนท์\" → first row",
+   "pass": true,
+   "got": "ลักษณัย อพาร์เมนท์"
+  },
+  {
+   "name": "name \"ไชโย อพาร์ทเม้นท์\" → first row",
+   "pass": true,
+   "got": "ไชโย อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"Kin House\" → first row",
+   "pass": true,
+   "got": "Kin House"
+  },
+  {
+   "name": "name \"ร้านซักผ้า 24 ชม\" → first row",
+   "pass": true,
+   "got": "ร้านซักผ้า 24 ชม"
+  },
+  {
+   "name": "name \"Kori ตู้อบหมวกกันน็อค สาขา 7 -\" → first row",
+   "pass": true,
+   "got": "Kori ตู้อบหมวกกันน็อค สาขา 7 - Eleven"
+  },
+  {
+   "name": "name \"PB ซักรีด\" → first row",
+   "pass": true,
+   "got": "PB ซักรีด"
+  },
+  {
+   "name": "name \"Drug Box\" → first row",
+   "pass": true,
+   "got": "Drug Box"
+  },
+  {
+   "name": "name \"ร้านยาฟาร์เมอซี่พลัส สาขา 2\" → first row",
+   "pass": true,
+   "got": "ร้านยาฟาร์เมอซี่พลัส สาขา 2"
+  },
+  {
+   "name": "name \"วัดหลวง เภสัช\" → first row",
+   "pass": true,
+   "got": "วัดหลวง เภสัช"
+  },
+  {
+   "name": "name \"วชิรพงษ์เภสัช\" → first row",
+   "pass": true,
+   "got": "วชิรพงษ์เภสัช"
+  },
+  {
+   "name": "name \"TOTAL PRINT @KMUTNB\" → first row",
+   "pass": true,
+   "got": "TOTAL PRINT @KMUTNB"
+  },
+  {
+   "name": "name \"ร้าน ถ่ายเอกสาร\" → first row",
+   "pass": true,
+   "got": "ร้าน ถ่ายเอกสาร"
+  },
+  {
+   "name": "name \"ห้องที่3 ถ่ายเอกสาร\" → first row",
+   "pass": true,
+   "got": "ห้องที่3 ถ่ายเอกสาร"
+  },
+  {
+   "name": "name \"begin studio hair & beauty\" → first row",
+   "pass": true,
+   "got": "begin studio hair & beauty"
+  },
+  {
+   "name": "name \"TB Barber shop สาขา2 (ร้านตัดผ\" → first row",
+   "pass": true,
+   "got": "TB Barber shop สาขา2 (ร้านตัดผมชาย)"
+  },
+  {
+   "name": "name \"MIDN1CE BARBER ร้านตัดผมชาย วง\" → first row",
+   "pass": true,
+   "got": "MIDN1CE BARBER ร้านตัดผมชาย วงศ์สว่าง"
+  },
+  {
+   "name": "name \"Small cut club\" → first row",
+   "pass": true,
+   "got": "Small cut club"
+  },
+  {
+   "name": "name \"ร้านตัดผมชายหลังมจพ The barber\" → first row",
+   "pass": true,
+   "got": "ร้านตัดผมชายหลังมจพ The barber shop"
+  },
+  {
+   "name": "name \"Intrend Hair Design\" → first row",
+   "pass": true,
+   "got": "Intrend Hair Design"
+  },
+  {
+   "name": "name \"เขียวหวาน ซาลอน\" → first row",
+   "pass": true,
+   "got": "เขียวหวาน ซาลอน"
+  },
+  {
+   "name": "name \"ร้านหัวโค้งบาร์เบอร์\" → first row",
+   "pass": true,
+   "got": "ร้านหัวโค้งบาร์เบอร์"
+  },
+  {
+   "name": "name \"Rzero too & อาเตี๋ยวก๋วยเตี๋ยว\" → first row",
+   "pass": true,
+   "got": "Rzero too & อาเตี๋ยวก๋วยเตี๋ยวเป็ด"
+  },
+  {
+   "name": "name \"เตี๋ยวตกปากห้อย\" → first row",
+   "pass": true,
+   "got": "เตี๋ยวตกปากห้อย"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวบ้านเรา\" → first row",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวบ้านเรา"
+  },
+  {
+   "name": "name \"ต้มเลือดหมู&อาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ต้มเลือดหมู&อาหารตามสั่ง"
+  },
+  {
+   "name": "name \"ร้านแม่เล็กอาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ร้านแม่เล็กอาหารตามสั่ง"
+  },
+  {
+   "name": "name \"เจ้ เบ อาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "เจ้ เบ อาหารตามสั่ง"
+  },
+  {
+   "name": "name \"ร้านป้ารี อาหารตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ร้านป้ารี อาหารตามสั่ง"
+  },
+  {
+   "name": "name \"ศรีตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ศรีตามสั่ง"
+  },
+  {
+   "name": "name \"ไก่กัญญา ข้าวหมกไก่ แกงใต้ อาห\" → first row",
+   "pass": true,
+   "got": "ไก่กัญญา ข้าวหมกไก่ แกงใต้ อาหารตามสั่ง"
+  },
+  {
+   "name": "name \"Landmark หมูกระทะ\" → first row",
+   "pass": true,
+   "got": "Landmark หมูกระทะ"
+  },
+  {
+   "name": "name \"ปิ้งไปสิ บาร์คิวBBQ\" → first row",
+   "pass": true,
+   "got": "ปิ้งไปสิ บาร์คิวBBQ"
+  },
+  {
+   "name": "name \"ข้าวต้มบ้านกรู ( Baan Gru )\" → first row",
+   "pass": true,
+   "got": "ข้าวต้มบ้านกรู ( Baan Gru )"
+  },
+  {
+   "name": "name \"โก๋หลังมอ\" → first row",
+   "pass": true,
+   "got": "โก๋หลังมอ"
+  },
+  {
+   "name": "name \"บ้านคำหวาน หลังม.พระจอมเกล้าฯ\" → first row",
+   "pass": true,
+   "got": "บ้านคำหวาน หลังม.พระจอมเกล้าฯ"
+  },
+  {
+   "name": "name \"นาโนโรตี ซอยไฮโซ\" → first row",
+   "pass": true,
+   "got": "นาโนโรตี ซอยไฮโซ"
+  },
+  {
+   "name": "name \"ขนมหวานบ้านเรา\" → first row",
+   "pass": true,
+   "got": "ขนมหวานบ้านเรา"
+  },
+  {
+   "name": "name \"หนมหวานเย็น By Chef Mac\" → first row",
+   "pass": true,
+   "got": "หนมหวานเย็น By Chef Mac"
+  },
+  {
+   "name": "name \"หน่อยขนมลาดู (สั่งล่วงหน้า 1-2\" → first row",
+   "pass": true,
+   "got": "หน่อยขนมลาดู (สั่งล่วงหน้า 1-2วัน)"
+  },
+  {
+   "name": "name \"เวลาชานม\" → first row",
+   "pass": true,
+   "got": "เวลาชานม"
+  },
+  {
+   "name": "name \"ชาไข่มุกอินดี้ Nakhonpathom\" → first row",
+   "pass": true,
+   "got": "ชาไข่มุกอินดี้ Nakhonpathom"
+  },
+  {
+   "name": "name \"ซ่อมมือถือ ช่างมั่ม\" → first row",
+   "pass": true,
+   "got": "ซ่อมมือถือ ช่างมั่ม"
+  },
+  {
+   "name": "name \"Bikegussi Motoracing\" → first row",
+   "pass": true,
+   "got": "Bikegussi Motoracing"
+  },
+  {
+   "name": "name \"ทรัพย์สมบูรณ์ยานยนต์\" → first row",
+   "pass": true,
+   "got": "ทรัพย์สมบูรณ์ยานยนต์"
+  },
+  {
+   "name": "name \"ถัง เซอร์วิส ช่างซ่อมมอเตอร์ไซ\" → first row",
+   "pass": true,
+   "got": "ถัง เซอร์วิส ช่างซ่อมมอเตอร์ไซค์"
+  },
+  {
+   "name": "name \"อุบลมอเตอร์ไซค์\" → first row",
+   "pass": true,
+   "got": "อุบลมอเตอร์ไซค์"
+  },
+  {
+   "name": "name \"TK Service Shop\" → first row",
+   "pass": true,
+   "got": "TK Service Shop"
+  },
+  {
+   "name": "name \"โรงกลึงช่างโย และ อู่ซ่อมรถ\" → first row",
+   "pass": true,
+   "got": "โรงกลึงช่างโย และ อู่ซ่อมรถ"
+  },
+  {
+   "name": "name \"กุ้ง พระราม7\" → first row",
+   "pass": true,
+   "got": "กุ้ง พระราม7"
+  },
+  {
+   "name": "name \"คลินิกแพทย์\" → first row",
+   "pass": true,
+   "got": "คลินิกแพทย์"
+  },
+  {
+   "name": "name \"คลินิกแพทย์ไกรสิทธิ\" → first row",
+   "pass": true,
+   "got": "คลินิกแพทย์ไกรสิทธิ"
+  },
+  {
+   "name": "name \"นัดกับณัฐคลีนิก\" → first row",
+   "pass": true,
+   "got": "นัดกับณัฐคลีนิก"
+  },
+  {
+   "name": "name \"สัมฤทธิ์ คลินิก\" → first row",
+   "pass": true,
+   "got": "สัมฤทธิ์ คลินิก"
+  },
+  {
+   "name": "name \"Mentor Sport Massage & Deep ti\" → first row",
+   "pass": true,
+   "got": "Mentor Sport Massage & Deep tissue (สาขา"
+  },
+  {
+   "name": "name \"ป้ากันต์ นวดไทย วงศ์สว่าง ซอย \" → first row",
+   "pass": true,
+   "got": "ป้ากันต์ นวดไทย วงศ์สว่าง ซอย 4"
+  },
+  {
+   "name": "name \"สิริวรรณ\" → first row",
+   "pass": true,
+   "got": "สิริวรรณ"
+  },
+  {
+   "name": "name \"ร้านลุงจ่า\" → first row",
+   "pass": true,
+   "got": "ร้านลุงจ่า"
+  },
+  {
+   "name": "name \"ร้านคนนิยม\" → first row",
+   "pass": true,
+   "got": "ร้านคนนิยม"
+  },
+  {
+   "name": "name \"ลองดู\" → first row",
+   "pass": true,
+   "got": "ลองดู"
+  },
+  {
+   "name": "name \"Shevy Shop\" → first row",
+   "pass": true,
+   "got": "Shevy Shop"
+  },
+  {
+   "name": "name \"ป้าเล็ก\" → first row",
+   "pass": true,
+   "got": "ป้าเล็ก"
+  },
+  {
+   "name": "name \"ร้านค้าบุญบุตร\" → first row",
+   "pass": true,
+   "got": "ร้านค้าบุญบุตร"
+  },
+  {
+   "name": "name \"ร้านผักสดวงศ์สว่าง\" → first row",
+   "pass": true,
+   "got": "ร้านผักสดวงศ์สว่าง"
+  },
+  {
+   "name": "name \"ร้านตู้น้ำ7\" → first row",
+   "pass": true,
+   "got": "ร้านตู้น้ำ7"
+  },
+  {
+   "name": "name \"ร้านตัดเสื้อช็อปไอเดียร์\" → first row",
+   "pass": true,
+   "got": "ร้านตัดเสื้อช็อปไอเดียร์"
+  },
+  {
+   "name": "name \"Sudthang.storeเสื้อผ้ามือ2\" → first row",
+   "pass": true,
+   "got": "Sudthang.storeเสื้อผ้ามือ2"
+  },
+  {
+   "name": "name \"ห้องเสื้อ ฮีโร่\" → first row",
+   "pass": true,
+   "got": "ห้องเสื้อ ฮีโร่"
+  },
+  {
+   "name": "name \"ครัวเจ้เขียวแซ่บนัว (ร้านส้มตำ\" → first row",
+   "pass": true,
+   "got": "ครัวเจ้เขียวแซ่บนัว (ร้านส้มตำ)"
+  },
+  {
+   "name": "name \"ข้าวมันกั่ย\" → first row",
+   "pass": true,
+   "got": "ข้าวมันกั่ย"
+  },
+  {
+   "name": "name \"เด่นเป็ดย่าง ข้าวมันไก่ตอนแท้\" → first row",
+   "pass": true,
+   "got": "เด่นเป็ดย่าง ข้าวมันไก่ตอนแท้"
+  },
+  {
+   "name": "name \"ChocoToss พระราม 7\" → first row",
+   "pass": true,
+   "got": "ChocoToss พระราม 7"
+  },
+  {
+   "name": "name \"ร้านครัวเข้าเนื้อ BykhunNote\" → first row",
+   "pass": true,
+   "got": "ร้านครัวเข้าเนื้อ BykhunNote"
+  },
+  {
+   "name": "name \"KIN RAI DEE (สาขา8)\" → first row",
+   "pass": true,
+   "got": "KIN RAI DEE (สาขา8)"
+  },
+  {
+   "name": "name \"นำ้พริกกากหมูสูตรKu Byแอนสไปร์\" → first row",
+   "pass": true,
+   "got": "นำ้พริกกากหมูสูตรKu Byแอนสไปร์ซี่"
+  },
+  {
+   "name": "name \"หอพักพาเจริญ\" → first row",
+   "pass": true,
+   "got": "หอพักพาเจริญ"
+  },
+  {
+   "name": "name \"Save Burger & ร้านเฮียบอล Free\" → first row",
+   "pass": true,
+   "got": "Save Burger & ร้านเฮียบอล Freedom Space"
+  },
+  {
+   "name": "name \"ร้านเด็ก-เส้น ( DEK-SEN )\" → first row",
+   "pass": true,
+   "got": "ร้านเด็ก-เส้น ( DEK-SEN )"
+  },
+  {
+   "name": "name \"จิ้มจุ่มหลังมอbyพี่โน้ต\" → first row",
+   "pass": true,
+   "got": "จิ้มจุ่มหลังมอbyพี่โน้ต"
+  },
+  {
+   "name": "name \"บรื๋อ Milk&Toast\" → first row",
+   "pass": true,
+   "got": "บรื๋อ Milk&Toast"
+  },
+  {
+   "name": "name \"ครัวลูกหมู\" → first row",
+   "pass": true,
+   "got": "ครัวลูกหมู"
+  },
+  {
+   "name": "name \"ร้านไก่ฉีกบนหมี่\" → first row",
+   "pass": true,
+   "got": "ร้านไก่ฉีกบนหมี่"
+  },
+  {
+   "name": "name \"ชายสี่\" → first row",
+   "pass": true,
+   "got": "ชายสี่"
+  },
+  {
+   "name": "name \"ไก่ทอด ผัดกระเพรา พี่Art\" → first row",
+   "pass": true,
+   "got": "ไก่ทอด ผัดกระเพรา พี่Art"
+  },
+  {
+   "name": "name \"ร้านพี่เต้\" → first row",
+   "pass": true,
+   "got": "ร้านพี่เต้"
+  },
+  {
+   "name": "name \"ป้อม บะหมี่ เกี๊ยว\" → first row",
+   "pass": true,
+   "got": "ป้อม บะหมี่ เกี๊ยว"
+  },
+  {
+   "name": "name \"บะหมี่หลังวัด(วัดน้อย)\" → first row",
+   "pass": true,
+   "got": "บะหมี่หลังวัด(วัดน้อย)"
+  },
+  {
+   "name": "name \"เจ้ไหม ใครใครก็รู้จัก\" → first row",
+   "pass": true,
+   "got": "เจ้ไหม ใครใครก็รู้จัก"
+  },
+  {
+   "name": "name \"ร้านคุณนอม\" → first row",
+   "pass": true,
+   "got": "ร้านคุณนอม"
+  },
+  {
+   "name": "name \"ตำแซบสกล\" → first row",
+   "pass": true,
+   "got": "ตำแซบสกล"
+  },
+  {
+   "name": "name \"ต้าจินฟู่ หม่าล่าทั่ง\" → first row",
+   "pass": true,
+   "got": "ต้าจินฟู่ หม่าล่าทั่ง"
+  },
+  {
+   "name": "name \"ข้าวยำ ตำแซ่บ มจพ\" → first row",
+   "pass": true,
+   "got": "ข้าวยำ ตำแซ่บ มจพ"
+  },
+  {
+   "name": "name \"YOUR CAMP - ยัวร์แคมป์\" → first row",
+   "pass": true,
+   "got": "YOUR CAMP - ยัวร์แคมป์"
+  },
+  {
+   "name": "name \"Oct.Theory\" → first row",
+   "pass": true,
+   "got": "Oct.Theory"
+  },
+  {
+   "name": "name \"โซ้ยลำยอน มาม่าเกาหลี\" → first row",
+   "pass": true,
+   "got": "โซ้ยลำยอน มาม่าเกาหลี"
+  },
+  {
+   "name": "name \"ปลาเผาแซ่บอิแป้น\" → first row",
+   "pass": true,
+   "got": "ปลาเผาแซ่บอิแป้น"
+  },
+  {
+   "name": "name \"สปาเก็ตตี้ (วงศ์สว่าง19)\" → first row",
+   "pass": true,
+   "got": "สปาเก็ตตี้ (วงศ์สว่าง19)"
+  },
+  {
+   "name": "name \"อรอนงค์การ์เด้น\" → first row",
+   "pass": true,
+   "got": "อรอนงค์การ์เด้น"
+  },
+  {
+   "name": "name \"ATOM PLACE อะตอม เพลส\" → first row",
+   "pass": true,
+   "got": "ATOM PLACE อะตอม เพลส"
+  },
+  {
+   "name": "name \"หอพักพิบูลย์วรรณ\" → first row",
+   "pass": true,
+   "got": "หอพักพิบูลย์วรรณ"
+  },
+  {
+   "name": "name \"The Corner AP\" → first row",
+   "pass": true,
+   "got": "The Corner AP"
+  },
+  {
+   "name": "name \"ทสึซึกุ หอพักหลังมจพ.\" → first row",
+   "pass": true,
+   "got": "ทสึซึกุ หอพักหลังมจพ."
+  },
+  {
+   "name": "name \"หอพักMein Platz- มายพลัทซ์\" → first row",
+   "pass": true,
+   "got": "หอพักMein Platz- มายพลัทซ์"
+  },
+  {
+   "name": "name \"เรือนไม้น้ำ\" → first row",
+   "pass": true,
+   "got": "เรือนไม้น้ำ"
+  },
+  {
+   "name": "name \"B.T.Camp\" → first row",
+   "pass": true,
+   "got": "B.T.Camp"
+  },
+  {
+   "name": "name \"S.P. อพาร์ตเมนต์\" → first row",
+   "pass": true,
+   "got": "S.P. อพาร์ตเมนต์"
+  },
+  {
+   "name": "name \"หอพักบ้านป้าแจ๋วหลังมจพ.\" → first row",
+   "pass": true,
+   "got": "หอพักบ้านป้าแจ๋วหลังมจพ."
+  },
+  {
+   "name": "name \"ครัวล่ำซำ เกษียณหลังสวน\" → first row",
+   "pass": true,
+   "got": "ครัวล่ำซำ เกษียณหลังสวน"
+  },
+  {
+   "name": "name \"โคตรทอด โคตรหวาน\" → first row",
+   "pass": true,
+   "got": "โคตรทอด โคตรหวาน"
+  },
+  {
+   "name": "name \"บ้านนุชนาฏ\" → first row",
+   "pass": true,
+   "got": "บ้านนุชนาฏ"
+  },
+  {
+   "name": "name \"หอพักสตรี ห้องพัก อุมาภรณ์\" → first row",
+   "pass": true,
+   "got": "หอพักสตรี ห้องพัก อุมาภรณ์"
+  },
+  {
+   "name": "name \"หออรุณศิริ\" → first row",
+   "pass": true,
+   "got": "หออรุณศิริ"
+  },
+  {
+   "name": "name \"H.N. Residence\" → first row",
+   "pass": true,
+   "got": "H.N. Residence"
+  },
+  {
+   "name": "name \"โรงแรมเดอะล็อฟท์รีสอร์ท\" → first row",
+   "pass": true,
+   "got": "โรงแรมเดอะล็อฟท์รีสอร์ท"
+  },
+  {
+   "name": "name \"เดนไช\" → first row",
+   "pass": true,
+   "got": "เดนไช"
+  },
+  {
+   "name": "name \"หอพักณัฐพล Nattapon.dormitory\" → first row",
+   "pass": true,
+   "got": "หอพักณัฐพล Nattapon.dormitory"
+  },
+  {
+   "name": "name \"THE RICHES NB อพาร์ทเม้นท์ หอพ\" → first row",
+   "pass": true,
+   "got": "THE RICHES NB อพาร์ทเม้นท์ หอพัก"
+  },
+  {
+   "name": "name \"นวการ แมนชั่น\" → first row",
+   "pass": true,
+   "got": "นวการ แมนชั่น"
+  },
+  {
+   "name": "name \"พิกัดลับหอแสนสุข\" → first row",
+   "pass": true,
+   "got": "พิกัดลับหอแสนสุข"
+  },
+  {
+   "name": "name \"บ้านลดาวัลย์\" → first row",
+   "pass": true,
+   "got": "บ้านลดาวัลย์"
+  },
+  {
+   "name": "name \"Dusadi Mas 2\" → first row",
+   "pass": true,
+   "got": "Dusadi Mas 2"
+  },
+  {
+   "name": "name \"บ้านอุทัยวรรณ1\" → first row",
+   "pass": true,
+   "got": "บ้านอุทัยวรรณ1"
+  },
+  {
+   "name": "name \"KC House\" → first row",
+   "pass": true,
+   "got": "KC House"
+  },
+  {
+   "name": "name \"หอพักณัฐพล(ถนนส่วนบุคคล)\" → first row",
+   "pass": true,
+   "got": "หอพักณัฐพล(ถนนส่วนบุคคล)"
+  },
+  {
+   "name": "name \"หอพักชายพาร์คส์ 1\" → first row",
+   "pass": true,
+   "got": "หอพักชายพาร์คส์ 1"
+  },
+  {
+   "name": "name \"หอพักบุญบุตร 1\" → first row",
+   "pass": true,
+   "got": "หอพักบุญบุตร 1"
+  },
+  {
+   "name": "name \"หอพักพ์พิมพ์รดา2\" → first row",
+   "pass": true,
+   "got": "หอพักพ์พิมพ์รดา2"
+  },
+  {
+   "name": "name \"หอพักเสรีนนท์\" → first row",
+   "pass": true,
+   "got": "หอพักเสรีนนท์"
+  },
+  {
+   "name": "name \"หออาร์ดี วงสว่าง 11\" → first row",
+   "pass": true,
+   "got": "หออาร์ดี วงสว่าง 11"
+  },
+  {
+   "name": "name \"จงดี หอพักหญิง\" → first row",
+   "pass": true,
+   "got": "จงดี หอพักหญิง"
+  },
+  {
+   "name": "name \"หอบัณฑิตา 2\" → first row",
+   "pass": true,
+   "got": "หอบัณฑิตา 2"
+  },
+  {
+   "name": "name \"หอพักคุณพรรณ\" → first row",
+   "pass": true,
+   "got": "หอพักคุณพรรณ"
+  },
+  {
+   "name": "name \"หอพักวงศ์สว่าง 4\" → first row",
+   "pass": true,
+   "got": "หอพักวงศ์สว่าง 4"
+  },
+  {
+   "name": "name \"หอพักมจพ.\" → first row",
+   "pass": true,
+   "got": "หอพักมจพ."
+  },
+  {
+   "name": "name \"นิตย์สาร 2\" → first row",
+   "pass": true,
+   "got": "นิตย์สาร 2"
+  },
+  {
+   "name": "name \"พิมพ์รดา 1\" → first row",
+   "pass": true,
+   "got": "พิมพ์รดา 1"
+  },
+  {
+   "name": "name \"หอพักริมน้ำ\" → first row",
+   "pass": true,
+   "got": "หอพักริมน้ำ"
+  },
+  {
+   "name": "name \"เสริมสวัสดิ์ อพาร์ทเมนท\" → first row",
+   "pass": true,
+   "got": "เสริมสวัสดิ์ อพาร์ทเมนท"
+  },
+  {
+   "name": "name \"หอพักชาย บ้านสุภาชาย\" → first row",
+   "pass": true,
+   "got": "หอพักชาย บ้านสุภาชาย"
+  },
+  {
+   "name": "name \"ตึก เค ริมน้ำ\" → first row",
+   "pass": true,
+   "got": "ตึก เค ริมน้ำ"
+  },
+  {
+   "name": "name \"หอพักชายบ้านรุ่งตะวัน\" → first row",
+   "pass": true,
+   "got": "หอพักชายบ้านรุ่งตะวัน"
+  },
+  {
+   "name": "name \"หอพักหญิง ศิริสุข\" → first row",
+   "pass": true,
+   "got": "หอพักหญิง ศิริสุข"
+  },
+  {
+   "name": "name \"หอพักดร.ปริญญา\" → first row",
+   "pass": true,
+   "got": "หอพักดร.ปริญญา"
+  },
+  {
+   "name": "name \"หอพักบุษบง\" → first row",
+   "pass": true,
+   "got": "หอพักบุษบง"
+  },
+  {
+   "name": "name \"หอเรือนสุภาณี\" → first row",
+   "pass": true,
+   "got": "หอเรือนสุภาณี"
+  },
+  {
+   "name": "name \"U Life Apartment (wongsawang19\" → first row",
+   "pass": true,
+   "got": "U Life Apartment (wongsawang19 gate)"
+  },
+  {
+   "name": "name \"BB Resort (บ้านพัก/ห้องเช่าราย\" → first row",
+   "pass": true,
+   "got": "BB Resort (บ้านพัก/ห้องเช่ารายเดือน)"
+  },
+  {
+   "name": "name \"หอศิริสุข3\" → first row",
+   "pass": true,
+   "got": "หอศิริสุข3"
+  },
+  {
+   "name": "name \"เรือนไพริน\" → first row",
+   "pass": true,
+   "got": "เรือนไพริน"
+  },
+  {
+   "name": "name \"หอกุ\" → first row",
+   "pass": true,
+   "got": "หอกุ"
+  },
+  {
+   "name": "name \"ซอยบ้านครูโจ้\" → first row",
+   "pass": true,
+   "got": "ซอยบ้านครูโจ้"
+  },
+  {
+   "name": "name \"BHAN P.O. บ้านพี่โอ๋\" → first row",
+   "pass": true,
+   "got": "BHAN P.O. บ้านพี่โอ๋"
+  },
+  {
+   "name": "name \"ชิลล์บุรี\" → first row",
+   "pass": true,
+   "got": "ชิลล์บุรี"
+  },
+  {
+   "name": "name \"หอพักอุดมรภรี\" → first row",
+   "pass": true,
+   "got": "หอพักอุดมรภรี"
+  },
+  {
+   "name": "name \"หอวินเทจ\" → first row",
+   "pass": true,
+   "got": "หอวินเทจ"
+  },
+  {
+   "name": "name \"หอพักชายป้าแอ๊ว\" → first row",
+   "pass": true,
+   "got": "หอพักชายป้าแอ๊ว"
+  },
+  {
+   "name": "name \"U Life Prime ตึก2\" → first row",
+   "pass": true,
+   "got": "U Life Prime ตึก2"
+  },
+  {
+   "name": "name \"หอพักโนน\" → first row",
+   "pass": true,
+   "got": "หอพักโนน"
+  },
+  {
+   "name": "name \"หอพักชาย191\" → first row",
+   "pass": true,
+   "got": "หอพักชาย191"
+  },
+  {
+   "name": "name \"หอพักหญิง S.W.\" → first row",
+   "pass": true,
+   "got": "หอพักหญิง S.W."
+  },
+  {
+   "name": "name \"สวนอาหารบ้านพิบูลย์\" → first row",
+   "pass": true,
+   "got": "สวนอาหารบ้านพิบูลย์"
+  },
+  {
+   "name": "name \"อยกุ้งเผา\" → first row",
+   "pass": true,
+   "got": "อยกุ้งเผา"
+  },
+  {
+   "name": "name \"หมูแดงหมูกรอบติดแกรม\" → first row",
+   "pass": true,
+   "got": "หมูแดงหมูกรอบติดแกรม"
+  },
+  {
+   "name": "name \"แซ่บมณี ลาบยโส\" → first row",
+   "pass": true,
+   "got": "แซ่บมณี ลาบยโส"
+  },
+  {
+   "name": "name \"โมโม่ ทะเลดอง\" → first row",
+   "pass": true,
+   "got": "โมโม่ ทะเลดอง"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวไก่ รสเด็ด หลังมอ\" → first row",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวไก่ รสเด็ด หลังมอ"
+  },
+  {
+   "name": "name \"NORTH Zone Foodcenter\" → first row",
+   "pass": true,
+   "got": "NORTH Zone Foodcenter"
+  },
+  {
+   "name": "name \"น้องซันชวนจิ้ม\" → first row",
+   "pass": true,
+   "got": "น้องซันชวนจิ้ม"
+  },
+  {
+   "name": "name \"หม่าล่าทอดทอด หม่าล่าวงศ์สว่าง\" → first row",
+   "pass": true,
+   "got": "หม่าล่าทอดทอด หม่าล่าวงศ์สว่าง"
+  },
+  {
+   "name": "name \"ขนมจีนบ้านนายหัว\" → first row",
+   "pass": true,
+   "got": "ขนมจีนบ้านนายหัว"
+  },
+  {
+   "name": "name \"ร้านกะเพราคุณปู\" → first row",
+   "pass": true,
+   "got": "ร้านกะเพราคุณปู"
+  },
+  {
+   "name": "name \"พี่เจี๊ยบ หมูทอด ปลาทอด\" → first row",
+   "pass": true,
+   "got": "พี่เจี๊ยบ หมูทอด ปลาทอด"
+  },
+  {
+   "name": "name \"เจ้ฮาย บ้านแพน\" → first row",
+   "pass": true,
+   "got": "เจ้ฮาย บ้านแพน"
+  },
+  {
+   "name": "name \"ผัดไทยบ้านริมคลอง\" → first row",
+   "pass": true,
+   "got": "ผัดไทยบ้านริมคลอง"
+  },
+  {
+   "name": "name \"ไก่ย่าง5ดาวเซเว่นวงศ์สว่าง19.2\" → first row",
+   "pass": true,
+   "got": "ไก่ย่าง5ดาวเซเว่นวงศ์สว่าง19.2"
+  },
+  {
+   "name": "name \"อร่อยในซอย 17 (วงศ์สว่าง)\" → first row",
+   "pass": true,
+   "got": "อร่อยในซอย 17 (วงศ์สว่าง)"
+  },
+  {
+   "name": "name \"ร้านก๋วยจั๊บบ้านผึ้ง\" → first row",
+   "pass": true,
+   "got": "ร้านก๋วยจั๊บบ้านผึ้ง"
+  },
+  {
+   "name": "name \"อิ่มอร่อย\" → first row",
+   "pass": true,
+   "got": "อิ่มอร่อย"
+  },
+  {
+   "name": "name \"หมูปิ้ง โอปอ\" → first row",
+   "pass": true,
+   "got": "หมูปิ้ง โอปอ"
+  },
+  {
+   "name": "name \"พิซซ่า papa\" → first row",
+   "pass": true,
+   "got": "พิซซ่า papa"
+  },
+  {
+   "name": "name \"กะเพราอย่างเดียว\" → first row",
+   "pass": true,
+   "got": "กะเพราอย่างเดียว"
+  },
+  {
+   "name": "name \"ครัวบ้านลูกหมูตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ครัวบ้านลูกหมูตามสั่ง"
+  },
+  {
+   "name": "name \"ร้านครัวบ้านพ่อตามสั่ง\" → first row",
+   "pass": true,
+   "got": "ร้านครัวบ้านพ่อตามสั่ง"
+  },
+  {
+   "name": "name \"กูโรตีชาชัก พระนครเหนือ (มจพ.)\" → first row",
+   "pass": true,
+   "got": "กูโรตีชาชัก พระนครเหนือ (มจพ.)"
+  },
+  {
+   "name": "name \"LITTLE CUP COFFEE\" → first row",
+   "pass": true,
+   "got": "LITTLE CUP COFFEE"
+  },
+  {
+   "name": "name \"KK Cup Coffee And Friend\" → first row",
+   "pass": true,
+   "got": "KK Cup Coffee And Friend"
+  },
+  {
+   "name": "name \"แฮปปี้กะเพรา\" → first row",
+   "pass": true,
+   "got": "แฮปปี้กะเพรา"
+  },
+  {
+   "name": "name \"หมูกรอบหลังม.\" → first row",
+   "pass": true,
+   "got": "หมูกรอบหลังม."
+  },
+  {
+   "name": "name \"ร้านพี่ตั้ว&sixnine\" → first row",
+   "pass": true,
+   "got": "ร้านพี่ตั้ว&sixnine"
+  },
+  {
+   "name": "name \"R-Zero Café วงค์สว่าง 11 (R÷ อ\" → first row",
+   "pass": true,
+   "got": "R-Zero Café วงค์สว่าง 11 (R÷ อาหาร)"
+  },
+  {
+   "name": "name \"ร้านตุ๊กตา\" → first row",
+   "pass": true,
+   "got": "ร้านตุ๊กตา"
+  },
+  {
+   "name": "name \"BR7\" → first row",
+   "pass": true,
+   "got": "BR7"
+  },
+  {
+   "name": "name \"ร้านแยกขยะ (NYP)\" → first row",
+   "pass": true,
+   "got": "ร้านแยกขยะ (NYP)"
+  },
+  {
+   "name": "name \"@HOME,ตำยำแซ่บตาแตก\" → first row",
+   "pass": true,
+   "got": "@HOME,ตำยำแซ่บตาแตก"
+  },
+  {
+   "name": "name \"ตี๋น้ำปั่น\" → first row",
+   "pass": true,
+   "got": "ตี๋น้ำปั่น"
+  },
+  {
+   "name": "name \"สุขภาพสร้างได้ By BHip Thailan\" → first row",
+   "pass": true,
+   "got": "สุขภาพสร้างได้ By BHip Thailand"
+  },
+  {
+   "name": "name \"338 ช.รุ่งเรือง\" → first row",
+   "pass": true,
+   "got": "338 ช.รุ่งเรือง"
+  },
+  {
+   "name": "name \"White Coffee\" → first row",
+   "pass": true,
+   "got": "White Coffee"
+  },
+  {
+   "name": "name \"เครปเฮฟเว่น\" → first row",
+   "pass": true,
+   "got": "เครปเฮฟเว่น"
+  },
+  {
+   "name": "name \"ร้านราดหน้า เคี้ยงเอ็มไพร์\" → first row",
+   "pass": true,
+   "got": "ร้านราดหน้า เคี้ยงเอ็มไพร์"
+  },
+  {
+   "name": "name \"ขอบคุณcup\" → first row",
+   "pass": true,
+   "got": "ขอบคุณcup"
+  },
+  {
+   "name": "name \"Bloomsbury paint\" → first row",
+   "pass": true,
+   "got": "Bloomsbury paint"
+  },
+  {
+   "name": "name \"เตี๋ยวคาเฟ่วงศ์สว่าง\" → first row",
+   "pass": true,
+   "got": "เตี๋ยวคาเฟ่วงศ์สว่าง"
+  },
+  {
+   "name": "name \"koka cafe\" → first row",
+   "pass": true,
+   "got": "koka cafe"
+  },
+  {
+   "name": "name \"ไทยโฮเทลคาเฟ่\" → first row",
+   "pass": true,
+   "got": "ไทยโฮเทลคาเฟ่"
+  },
+  {
+   "name": "name \"สตอเบอร์รี่โยเกิร์ต 39 cafe’\" → first row",
+   "pass": true,
+   "got": "สตอเบอร์รี่โยเกิร์ต 39 cafe’"
+  },
+  {
+   "name": "name \"Astro Craft\" → first row",
+   "pass": true,
+   "got": "Astro Craft"
+  },
+  {
+   "name": "name \"Cafe Sinder/ร้านปังเย็น\" → first row",
+   "pass": true,
+   "got": "Cafe Sinder/ร้านปังเย็น"
+  },
+  {
+   "name": "name \"8coffee\" → first row",
+   "pass": true,
+   "got": "8coffee"
+  },
+  {
+   "name": "name \"Homemade Coffee&Bakery\" → first row",
+   "pass": true,
+   "got": "Homemade Coffee&Bakery"
+  },
+  {
+   "name": "name \"D'oro Sinopec วงศ์สว่าง\" → first row",
+   "pass": true,
+   "got": "D'oro Sinopec วงศ์สว่าง"
+  },
+  {
+   "name": "name \"เดอะไทม์ คอฟฟี่\" → first row",
+   "pass": true,
+   "got": "เดอะไทม์ คอฟฟี่"
+  },
+  {
+   "name": "name \"Carita cafe\" → first row",
+   "pass": true,
+   "got": "Carita cafe"
+  },
+  {
+   "name": "name \"ร้าน Coffee Corner @wongsawang\" → first row",
+   "pass": true,
+   "got": "ร้าน Coffee Corner @wongsawang 7"
+  },
+  {
+   "name": "name \"พันธุ์ไทย กระดังงา\" → first row",
+   "pass": true,
+   "got": "พันธุ์ไทย กระดังงา"
+  },
+  {
+   "name": "name \"MM coffee&kitchen\" → first row",
+   "pass": true,
+   "got": "MM coffee&kitchen"
+  },
+  {
+   "name": "name \"Thetime coffee\" → first row",
+   "pass": true,
+   "got": "Thetime coffee"
+  },
+  {
+   "name": "name \"Dday Coffee\" → first row",
+   "pass": true,
+   "got": "Dday Coffee"
+  },
+  {
+   "name": "name \"เปิ่น2 มาม่าหม้อไฟ ทะเลถัง\" → first row",
+   "pass": true,
+   "got": "เปิ่น2 มาม่าหม้อไฟ ทะเลถัง"
+  },
+  {
+   "name": "name \"Uncle bob’s ice cream สาขา 2\" → first row",
+   "pass": true,
+   "got": "Uncle bob’s ice cream สาขา 2"
+  },
+  {
+   "name": "name \"Fin Ice Cream\" → first row",
+   "pass": true,
+   "got": "Fin Ice Cream"
+  },
+  {
+   "name": "name \"Batman Bingsu สาขา มจพ.\" → first row",
+   "pass": true,
+   "got": "Batman Bingsu สาขา มจพ."
+  },
+  {
+   "name": "name \"MIXUE-KMUTNB\" → first row",
+   "pass": true,
+   "got": "MIXUE-KMUTNB"
+  },
+  {
+   "name": "name \"ร้านเครปนมสดป้าสุหลังม.\" → first row",
+   "pass": true,
+   "got": "ร้านเครปนมสดป้าสุหลังม."
+  },
+  {
+   "name": "name \"ถนัดย่าง หลังมอ\" → first row",
+   "pass": true,
+   "got": "ถนัดย่าง หลังมอ"
+  },
+  {
+   "name": "name \"ร้านก๋วยเตี๋ยวหนุ่มลูกชิ้นปลาท\" → first row",
+   "pass": true,
+   "got": "ร้านก๋วยเตี๋ยวหนุ่มลูกชิ้นปลาทำเองหน้าซอยว"
+  },
+  {
+   "name": "name \"เตี๋ยวต้มยำสองพี่น้อง ซ.วงศ์สว\" → first row",
+   "pass": true,
+   "got": "เตี๋ยวต้มยำสองพี่น้อง ซ.วงศ์สว่าง 19"
+  },
+  {
+   "name": "name \"ร้านชายสี่บะหมี่เกี๊ยว ม.4/4\" → first row",
+   "pass": true,
+   "got": "ร้านชายสี่บะหมี่เกี๊ยว ม.4/4"
+  },
+  {
+   "name": "name \"ลียา บะหมี่ เกี๊ยวน้ำดำ สาขา 2\" → first row",
+   "pass": true,
+   "got": "ลียา บะหมี่ เกี๊ยวน้ำดำ สาขา 2 วงศ์สว่าง"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวเรือ ป.ประทีบ พระราม\" → first row",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวเรือ ป.ประทีบ พระราม 7"
+  },
+  {
+   "name": "name \"สมัย อิเล็กทรอนิกส์ เซอร์วิส\" → first row",
+   "pass": true,
+   "got": "สมัย อิเล็กทรอนิกส์ เซอร์วิส"
+  },
+  {
+   "name": "name \"Barber BOY’S\" → first row",
+   "pass": true,
+   "got": "Barber BOY’S"
+  },
+  {
+   "name": "name \"Bangkok barbershop\" → first row",
+   "pass": true,
+   "got": "Bangkok barbershop"
+  },
+  {
+   "name": "name \"TAO BARBER\" → first row",
+   "pass": true,
+   "got": "TAO BARBER"
+  },
+  {
+   "name": "name \"อุทัย บาร์เบอร์\" → first row",
+   "pass": true,
+   "got": "อุทัย บาร์เบอร์"
+  },
+  {
+   "name": "name \"ร้านตัดผม\" → first row",
+   "pass": true,
+   "got": "ร้านตัดผม"
+  },
+  {
+   "name": "name \"ร้านตัดผมชาย\" → first row",
+   "pass": true,
+   "got": "ร้านตัดผมชาย"
+  },
+  {
+   "name": "name \"ร้านตัดผม (ร้านตัด)\" → first row",
+   "pass": true,
+   "got": "ร้านตัดผม (ร้านตัด)"
+  },
+  {
+   "name": "name \"เนียร์ เจริญยนต์\" → first row",
+   "pass": true,
+   "got": "เนียร์ เจริญยนต์"
+  },
+  {
+   "name": "name \"Garage 19\" → first row",
+   "pass": true,
+   "got": "Garage 19"
+  },
+  {
+   "name": "name \"Tec Tire\" → first row",
+   "pass": true,
+   "got": "Tec Tire"
+  },
+  {
+   "name": "name \"ช่างทำกุญแจ-ซ่อมนาฬิกา-ตัดผมชา\" → first row",
+   "pass": true,
+   "got": "ช่างทำกุญแจ-ซ่อมนาฬิกา-ตัดผมชาย(อุทัย)"
+  },
+  {
+   "name": "name \"อู่สมบัติ\" → first row",
+   "pass": true,
+   "got": "อู่สมบัติ"
+  },
+  {
+   "name": "name \"เอ็มแอนด์เอ็น ออโต้เซอร์วิส\" → first row",
+   "pass": true,
+   "got": "เอ็มแอนด์เอ็น ออโต้เซอร์วิส"
+  },
+  {
+   "name": "name \"เจริญแสงยางยนต์\" → first row",
+   "pass": true,
+   "got": "เจริญแสงยางยนต์"
+  },
+  {
+   "name": "name \"เจ.อาร์.ออยล์\" → first row",
+   "pass": true,
+   "got": "เจ.อาร์.ออยล์"
+  },
+  {
+   "name": "name \"ร้านปั้มกุญแจ (อู๊ด ซ.วงศ์สว่า\" → first row",
+   "pass": true,
+   "got": "ร้านปั้มกุญแจ (อู๊ด ซ.วงศ์สว่าง 11)"
+  },
+  {
+   "name": "name \"อู่สมศักดิ์ วงศ์สว่าง 19\" → first row",
+   "pass": true,
+   "got": "อู่สมศักดิ์ วงศ์สว่าง 19"
+  },
+  {
+   "name": "name \"ร้านปะยางพระราม7\" → first row",
+   "pass": true,
+   "got": "ร้านปะยางพระราม7"
+  },
+  {
+   "name": "name \"มีชัยออโต้แอร์\" → first row",
+   "pass": true,
+   "got": "มีชัยออโต้แอร์"
+  },
+  {
+   "name": "name \"Technology Engine (ซ่อมรถยนต์)\" → first row",
+   "pass": true,
+   "got": "Technology Engine (ซ่อมรถยนต์)"
+  },
+  {
+   "name": "name \"ร้านป.จำเริญการช่าง\" → first row",
+   "pass": true,
+   "got": "ร้านป.จำเริญการช่าง"
+  },
+  {
+   "name": "name \"ช่างสมศักดิ์ มิตชู\" → first row",
+   "pass": true,
+   "got": "ช่างสมศักดิ์ มิตชู"
+  },
+  {
+   "name": "name \"ร้านปะยางนอกสถานที่ 24 ชม.\" → first row",
+   "pass": true,
+   "got": "ร้านปะยางนอกสถานที่ 24 ชม."
+  },
+  {
+   "name": "name \"แร้วแต่ปุ๊ วงศ์สว่าง\" → first row",
+   "pass": true,
+   "got": "แร้วแต่ปุ๊ วงศ์สว่าง"
+  },
+  {
+   "name": "name \"S.T.Computer\" → first row",
+   "pass": true,
+   "got": "S.T.Computer"
+  },
+  {
+   "name": "name \"Baiya Drugstor\" → first row",
+   "pass": true,
+   "got": "Baiya Drugstor"
+  },
+  {
+   "name": "name \"มุมยา\" → first row",
+   "pass": true,
+   "got": "มุมยา"
+  },
+  {
+   "name": "name \"เนินทรเภสัช\" → first row",
+   "pass": true,
+   "got": "เนินทรเภสัช"
+  },
+  {
+   "name": "name \"Denta Cloud Dental Clinic\" → first row",
+   "pass": true,
+   "got": "Denta Cloud Dental Clinic"
+  },
+  {
+   "name": "name \"Bonni\" → first row",
+   "pass": true,
+   "got": "Bonni"
+  },
+  {
+   "name": "name \"ร้านบ้านธรรมชาติ สปาสลายไขมัน\" → first row",
+   "pass": true,
+   "got": "ร้านบ้านธรรมชาติ สปาสลายไขมัน"
+  },
+  {
+   "name": "name \"วงศ์สว่างเดนทัลแคร์\" → first row",
+   "pass": true,
+   "got": "วงศ์สว่างเดนทัลแคร์"
+  },
+  {
+   "name": "name \"7-Eleven สาขา ตลาดพระราม 7 (08\" → first row",
+   "pass": true,
+   "got": "7-Eleven สาขา ตลาดพระราม 7 (08530)"
+  },
+  {
+   "name": "name \"7-Eleven สาขา วงศ์สว่าง 19 (00\" → first row",
+   "pass": true,
+   "got": "7-Eleven สาขา วงศ์สว่าง 19 (00399)"
+  },
+  {
+   "name": "name \"สเลอปี้ส้มสด&ของทอด\" → first row",
+   "pass": true,
+   "got": "สเลอปี้ส้มสด&ของทอด"
+  },
+  {
+   "name": "name \"KTB Convenience\" → first row",
+   "pass": true,
+   "got": "KTB Convenience"
+  },
+  {
+   "name": "name \"ปลาแกะสองพี่น้อง\" → first row",
+   "pass": true,
+   "got": "ปลาแกะสองพี่น้อง"
+  },
+  {
+   "name": "name \"สาธุบาร์ บางซื่อ - Sathu Bar B\" → first row",
+   "pass": true,
+   "got": "สาธุบาร์ บางซื่อ - Sathu Bar BangSue"
+  },
+  {
+   "name": "name \"ร้านดูดดื่ม ขายส่งน้ำแพ็ค\" → first row",
+   "pass": true,
+   "got": "ร้านดูดดื่ม ขายส่งน้ำแพ็ค"
+  },
+  {
+   "name": "name \"นั่งเล่น Community\" → first row",
+   "pass": true,
+   "got": "นั่งเล่น Community"
+  },
+  {
+   "name": "name \"คลับ 19 คาราโอเกะ & ผับ\" → first row",
+   "pass": true,
+   "got": "คลับ 19 คาราโอเกะ & ผับ"
+  },
+  {
+   "name": "name \"ภัทตาคารริมคลอง2ชั้น ย่านมจพ\" → first row",
+   "pass": true,
+   "got": "ภัทตาคารริมคลอง2ชั้น ย่านมจพ"
+  },
+  {
+   "name": "name \"รังสิต\" → first row",
+   "pass": true,
+   "got": "รังสิต"
+  },
+  {
+   "name": "name \"ร้านสมุนโจร\" → first row",
+   "pass": true,
+   "got": "ร้านสมุนโจร"
+  },
+  {
+   "name": "name \"ค่ายมวย จิตรเมืองนนท์\" → first row",
+   "pass": true,
+   "got": "ค่ายมวย จิตรเมืองนนท์"
+  },
+  {
+   "name": "name \"Handling Home\" → first row",
+   "pass": true,
+   "got": "Handling Home"
+  },
+  {
+   "name": "name \"จันทรจิรา ซาลอน\" → first row",
+   "pass": true,
+   "got": "จันทรจิรา ซาลอน"
+  },
+  {
+   "name": "name \"ร้านปราณี\" → first row",
+   "pass": true,
+   "got": "ร้านปราณี"
+  },
+  {
+   "name": "name \"ถ้ำเสือมิวสิค\" → first row",
+   "pass": true,
+   "got": "ถ้ำเสือมิวสิค"
+  },
+  {
+   "name": "name \"บัส ท่าพระจันทร์ สาขาหลังม.พระ\" → first row",
+   "pass": true,
+   "got": "บัส ท่าพระจันทร์ สาขาหลังม.พระจอมเกล้า"
+  },
+  {
+   "name": "name \"CAPMART\" → first row",
+   "pass": true,
+   "got": "CAPMART"
+  },
+  {
+   "name": "name \"Printprint & Copier\" → first row",
+   "pass": true,
+   "got": "Printprint & Copier"
+  },
+  {
+   "name": "name \"BUNNY SIXTY - NINE สาขา วงศ์สว\" → first row",
+   "pass": true,
+   "got": "BUNNY SIXTY - NINE สาขา วงศ์สว่าง"
+  },
+  {
+   "name": "name \"ส้มตำนายพล\" → first row",
+   "pass": true,
+   "got": "ส้มตำนายพล"
+  },
+  {
+   "name": "name \"ส้มตำยายยูน ปากซอย 19\" → first row",
+   "pass": true,
+   "got": "ส้มตำยายยูน ปากซอย 19"
+  },
+  {
+   "name": "name \"คลับ888\" → first row",
+   "pass": true,
+   "got": "คลับ888"
+  },
+  {
+   "name": "name \"PM MyHome\" → first row",
+   "pass": true,
+   "got": "PM MyHome"
+  },
+  {
+   "name": "name \"วงศ์สว่าง อพาร์ทเม้นท์\" → first row",
+   "pass": true,
+   "got": "วงศ์สว่าง อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"บ้านปัญญรังสี\" → first row",
+   "pass": true,
+   "got": "บ้านปัญญรังสี"
+  },
+  {
+   "name": "name \"Santos Burger\" → first row",
+   "pass": true,
+   "got": "Santos Burger"
+  },
+  {
+   "name": "name \"ล้านทะเลเพชรตังค์\" → first row",
+   "pass": true,
+   "got": "ล้านทะเลเพชรตังค์"
+  },
+  {
+   "name": "name \"Frenchy fries สาขาพระนครเหนือ\" → first row",
+   "pass": true,
+   "got": "Frenchy fries สาขาพระนครเหนือ"
+  },
+  {
+   "name": "name \"ตามสั่ง ตามใจ by two\" → first row",
+   "pass": true,
+   "got": "ตามสั่ง ตามใจ by two"
+  },
+  {
+   "name": "name \"หมูสะเต๊ะ คุณหรั่ง\" → first row",
+   "pass": true,
+   "got": "หมูสะเต๊ะ คุณหรั่ง"
+  },
+  {
+   "name": "name \"Shrimps Si กุ้งดองเกาหลี\" → first row",
+   "pass": true,
+   "got": "Shrimps Si กุ้งดองเกาหลี"
+  },
+  {
+   "name": "name \"ร้านศรีสุวรรณ\" → first row",
+   "pass": true,
+   "got": "ร้านศรีสุวรรณ"
+  },
+  {
+   "name": "name \"Koji\" → first row",
+   "pass": true,
+   "got": "Koji"
+  },
+  {
+   "name": "name \"ร้านชาบูลวกลิ้น\" → first row",
+   "pass": true,
+   "got": "ร้านชาบูลวกลิ้น"
+  },
+  {
+   "name": "name \"ร้านข้าวเด็กอ้วน\" → first row",
+   "pass": true,
+   "got": "ร้านข้าวเด็กอ้วน"
+  },
+  {
+   "name": "name \"Sweet Mode\" → first row",
+   "pass": true,
+   "got": "Sweet Mode"
+  },
+  {
+   "name": "name \"BURGER KOOK\" → first row",
+   "pass": true,
+   "got": "BURGER KOOK"
+  },
+  {
+   "name": "name \"DEEWAAสลัดโรล\" → first row",
+   "pass": true,
+   "got": "DEEWAAสลัดโรล"
+  },
+  {
+   "name": "name \"อีฟส้มสด&ของทอด\" → first row",
+   "pass": true,
+   "got": "อีฟส้มสด&ของทอด"
+  },
+  {
+   "name": "name \"ขาหมู พุงแตก\" → first row",
+   "pass": true,
+   "got": "ขาหมู พุงแตก"
+  },
+  {
+   "name": "name \"วชิรธรรม 57 แยก 24 (ร้านอาหาร)\" → first row",
+   "pass": true,
+   "got": "วชิรธรรม 57 แยก 24 (ร้านอาหาร)"
+  },
+  {
+   "name": "name \"ร้านชอบทอด หลังมอ\" → first row",
+   "pass": true,
+   "got": "ร้านชอบทอด หลังมอ"
+  },
+  {
+   "name": "name \"กรูย่าง by กรูอยู่นี่\" → first row",
+   "pass": true,
+   "got": "กรูย่าง by กรูอยู่นี่"
+  },
+  {
+   "name": "name \"โจ๊กเมืองกรุง วงศ์สว่าง19\" → first row",
+   "pass": true,
+   "got": "โจ๊กเมืองกรุง วงศ์สว่าง19"
+  },
+  {
+   "name": "name \"ร้านฉันจะกินนมหมีปั่นทุกวัน\" → first row",
+   "pass": true,
+   "got": "ร้านฉันจะกินนมหมีปั่นทุกวัน"
+  },
+  {
+   "name": "name \"Heameng Nooddle\" → first row",
+   "pass": true,
+   "got": "Heameng Nooddle"
+  },
+  {
+   "name": "name \"ต้มเลือดหมู ปั้มซัสโก้\" → first row",
+   "pass": true,
+   "got": "ต้มเลือดหมู ปั้มซัสโก้"
+  },
+  {
+   "name": "name \"ร้านป้านงค์ แกงใต้\" → first row",
+   "pass": true,
+   "got": "ร้านป้านงค์ แกงใต้"
+  },
+  {
+   "name": "name \"กะบับไก่ชีสพ่นไฟ (วงศ์สว่าง19)\" → first row",
+   "pass": true,
+   "got": "กะบับไก่ชีสพ่นไฟ (วงศ์สว่าง19)"
+  },
+  {
+   "name": "name \"โจ๊กบางกอก ก๋วยจั๊บญวน ต้มเลือ\" → first row",
+   "pass": true,
+   "got": "โจ๊กบางกอก ก๋วยจั๊บญวน ต้มเลือดหมู"
+  },
+  {
+   "name": "name \"ไข่ข้นฟีเวอร์\" → first row",
+   "pass": true,
+   "got": "ไข่ข้นฟีเวอร์"
+  },
+  {
+   "name": "name \"วาฟเฟิลฮ่องกง ลิตเติ้ลเอ้ก วงศ\" → first row",
+   "pass": true,
+   "got": "วาฟเฟิลฮ่องกง ลิตเติ้ลเอ้ก วงศ์สว่างซอย11"
+  },
+  {
+   "name": "name \"ครัวเจี๊ยบจ้า\" → first row",
+   "pass": true,
+   "got": "ครัวเจี๊ยบจ้า"
+  },
+  {
+   "name": "name \"Landmark Snooker Club\" → first row",
+   "pass": true,
+   "got": "Landmark Snooker Club"
+  },
+  {
+   "name": "name \"ร้านโอปอ\" → first row",
+   "pass": true,
+   "got": "ร้านโอปอ"
+  },
+  {
+   "name": "name \"Nagel by Ame\" → first row",
+   "pass": true,
+   "got": "Nagel by Ame"
+  },
+  {
+   "name": "name \"Romya restaurant\" → first row",
+   "pass": true,
+   "got": "Romya restaurant"
+  },
+  {
+   "name": "name \"ดองเว้ยเฮ้ย\" → first row",
+   "pass": true,
+   "got": "ดองเว้ยเฮ้ย"
+  },
+  {
+   "name": "name \"ร้านเต้อาหารเครื่องดื่มขนม\" → first row",
+   "pass": true,
+   "got": "ร้านเต้อาหารเครื่องดื่มขนม"
+  },
+  {
+   "name": "name \"อู้ฟู่วว หมาล่า&ชาบูน้ำดำ\" → first row",
+   "pass": true,
+   "got": "อู้ฟู่วว หมาล่า&ชาบูน้ำดำ"
+  },
+  {
+   "name": "name \"SickSicksick Inc.\" → first row",
+   "pass": true,
+   "got": "SickSicksick Inc."
+  },
+  {
+   "name": "name \"PIGER WORKS\" → first row",
+   "pass": true,
+   "got": "PIGER WORKS"
+  },
+  {
+   "name": "name \"Meuri Official\" → first row",
+   "pass": true,
+   "got": "Meuri Official"
+  },
+  {
+   "name": "name \"ร้านขายเสื้อยืด\" → first row",
+   "pass": true,
+   "got": "ร้านขายเสื้อยืด"
+  },
+  {
+   "name": "name \"ชุดนอนราคาถูก\" → first row",
+   "pass": true,
+   "got": "ชุดนอนราคาถูก"
+  },
+  {
+   "name": "name \"Ballads.co Studio\" → first row",
+   "pass": true,
+   "got": "Ballads.co Studio"
+  },
+  {
+   "name": "name \"ร้านตัดเย็บเสื้อ คุณสุภาพร\" → first row",
+   "pass": true,
+   "got": "ร้านตัดเย็บเสื้อ คุณสุภาพร"
+  },
+  {
+   "name": "name \"รังกระดาษ บอร์ดเกม\" → first row",
+   "pass": true,
+   "got": "รังกระดาษ บอร์ดเกม"
+  },
+  {
+   "name": "name \"Jobs Esport\" → first row",
+   "pass": true,
+   "got": "Jobs Esport"
+  },
+  {
+   "name": "name \"Dccard game\" → first row",
+   "pass": true,
+   "got": "Dccard game"
+  },
+  {
+   "name": "name \"JustMeet Co-Working Space\" → first row",
+   "pass": true,
+   "got": "JustMeet Co-Working Space"
+  },
+  {
+   "name": "name \"นิกา แมนชั่น\" → first row",
+   "pass": true,
+   "got": "นิกา แมนชั่น"
+  },
+  {
+   "name": "name \"นิกา แมนชั่น (อาคาร 2)\" → first row",
+   "pass": true,
+   "got": "นิกา แมนชั่น (อาคาร 2)"
+  },
+  {
+   "name": "name \"สุนทรีย์ แมนชั่น (อาคาร 2)\" → first row",
+   "pass": true,
+   "got": "สุนทรีย์ แมนชั่น (อาคาร 2)"
+  },
+  {
+   "name": "name \"Rita home cake\" → first row",
+   "pass": true,
+   "got": "Rita home cake"
+  },
+  {
+   "name": "name \"เค้กหน้านิ่มถ้วยละ25 ซ.วงศ์สว่\" → first row",
+   "pass": true,
+   "got": "เค้กหน้านิ่มถ้วยละ25 ซ.วงศ์สว่าง19"
+  },
+  {
+   "name": "name \"บ้านขนมถ้วย&บ้าบิ่น@บางซื่อ\" → first row",
+   "pass": true,
+   "got": "บ้านขนมถ้วย&บ้าบิ่น@บางซื่อ"
+  },
+  {
+   "name": "name \"ตลาดสด วงศ์สว่าง\" → first row",
+   "pass": true,
+   "got": "ตลาดสด วงศ์สว่าง"
+  },
+  {
+   "name": "name \"Chill Chill Zone\" → first row",
+   "pass": true,
+   "got": "Chill Chill Zone"
+  },
+  {
+   "name": "name \"ตลาดนัดชิวชิว\" → first row",
+   "pass": true,
+   "got": "ตลาดนัดชิวชิว"
+  },
+  {
+   "name": "name \"Flash Express สาขา ตลาดขวัญ 2\" → first row",
+   "pass": true,
+   "got": "Flash Express สาขา ตลาดขวัญ 2"
+  },
+  {
+   "name": "name \"ข้าวมันไก่ (วงศ์สว่าง 19)\" → first row",
+   "pass": true,
+   "got": "ข้าวมันไก่ (วงศ์สว่าง 19)"
+  },
+  {
+   "name": "name \"back to schools\" → first row",
+   "pass": true,
+   "got": "back to schools"
+  },
+  {
+   "name": "name \"วงศ์สว่างเครื่องเขียน\" → first row",
+   "pass": true,
+   "got": "วงศ์สว่างเครื่องเขียน"
+  },
+  {
+   "name": "name \"Echo - Ink Tattoo\" → first row",
+   "pass": true,
+   "got": "Echo - Ink Tattoo"
+  },
+  {
+   "name": "name \"BDN TATTOO\" → first row",
+   "pass": true,
+   "got": "BDN TATTOO"
+  },
+  {
+   "name": "name \"พันลำTATTOO\" → first row",
+   "pass": true,
+   "got": "พันลำTATTOO"
+  },
+  {
+   "name": "name \"goddog studio (ร้านสัก)\" → first row",
+   "pass": true,
+   "got": "goddog studio (ร้านสัก)"
+  },
+  {
+   "name": "name \"ร้านสักกะชา\" → first row",
+   "pass": true,
+   "got": "ร้านสักกะชา"
+  },
+  {
+   "name": "name \"Triple P piercing and tattoo\" → first row",
+   "pass": true,
+   "got": "Triple P piercing and tattoo"
+  },
+  {
+   "name": "name \"นำทัพคิ้ว 3มิติ\" → first row",
+   "pass": true,
+   "got": "นำทัพคิ้ว 3มิติ"
+  },
+  {
+   "name": "name \"ผลไม้สด-กรีกโยเกิร์ต\" → first row",
+   "pass": true,
+   "got": "ผลไม้สด-กรีกโยเกิร์ต"
+  },
+  {
+   "name": "name \"JOSIE.SALON\" → first row",
+   "pass": true,
+   "got": "JOSIE.SALON"
+  },
+  {
+   "name": "name \"ตู้ยา DrugBox\" → first row",
+   "pass": true,
+   "got": "ตู้ยา DrugBox"
+  },
+  {
+   "name": "name \"หวานปาก\" → first row",
+   "pass": true,
+   "got": "หวานปาก"
+  },
+  {
+   "name": "name \"ร้านอาหารญี่ปุ่น Ramen & Teriy\" → first row",
+   "pass": true,
+   "got": "ร้านอาหารญี่ปุ่น Ramen & Teriyaki"
+  },
+  {
+   "name": "name \"ร้านจำหน่ายชุดนักศึกษา\" → first row",
+   "pass": true,
+   "got": "ร้านจำหน่ายชุดนักศึกษา"
+  },
+  {
+   "name": "name \"วินมอเตอร์ไซค์รับจ้าง\" → first row",
+   "pass": true,
+   "got": "วินมอเตอร์ไซค์รับจ้าง"
+  },
+  {
+   "name": "name \"วาฬ ชานม\" → first row",
+   "pass": true,
+   "got": "วาฬ ชานม"
+  },
+  {
+   "name": "name \"goddog tattoo\" → first row",
+   "pass": true,
+   "got": "goddog tattoo"
+  },
+  {
+   "name": "name \"ร้านหมูกระทะ (ใกล้ร้านซับ)\" → first row",
+   "pass": true,
+   "got": "ร้านหมูกระทะ (ใกล้ร้านซับ)"
+  },
+  {
+   "name": "name \"ร้านนั่งดื่มกลางแจ้ง (โต๊ะถังเ\" → first row",
+   "pass": true,
+   "got": "ร้านนั่งดื่มกลางแจ้ง (โต๊ะถังเบียร์)"
+  },
+  {
+   "name": "name \"คาเฟ่ตู้โทรศัพท์แดง\" → first row",
+   "pass": true,
+   "got": "คาเฟ่ตู้โทรศัพท์แดง"
+  },
+  {
+   "name": "name \"ร้านหน้าแพนด้า\" → first row",
+   "pass": true,
+   "got": "ร้านหน้าแพนด้า"
+  },
+  {
+   "name": "name \"ร้านอาหารตามสั่ง (ป้ายเมนู)\" → first row",
+   "pass": true,
+   "got": "ร้านอาหารตามสั่ง (ป้ายเมนู)"
+  },
+  {
+   "name": "name \"ร้านอาหาร (หลังคากระเบื้องส้ม)\" → first row",
+   "pass": true,
+   "got": "ร้านอาหาร (หลังคากระเบื้องส้ม)"
+  },
+  {
+   "name": "name \"ร้านขนม/ของกิน (หลังคาฟ้า)\" → first row",
+   "pass": true,
+   "got": "ร้านขนม/ของกิน (หลังคาฟ้า)"
+  },
+  {
+   "name": "name \"ร้านอาหารริมคลอง\" → first row",
+   "pass": true,
+   "got": "ร้านอาหารริมคลอง"
+  },
+  {
+   "name": "name \"ร้านอาหาร (กันสาดลาย)\" → first row",
+   "pass": true,
+   "got": "ร้านอาหาร (กันสาดลาย)"
+  },
+  {
+   "name": "name \"ร้านอาหารใต้ผ้าใบเขียว\" → first row",
+   "pass": true,
+   "got": "ร้านอาหารใต้ผ้าใบเขียว"
+  },
+  {
+   "name": "name \"ร้านอาหารในสวน (โต๊ะไม้)\" → first row",
+   "pass": true,
+   "got": "ร้านอาหารในสวน (โต๊ะไม้)"
+  },
+  {
+   "name": "name \"ร้านกาแฟเล็กริมคลอง\" → first row",
+   "pass": true,
+   "got": "ร้านกาแฟเล็กริมคลอง"
+  },
+  {
+   "name": "name \"คาเฟ่ผนังดำ (ริมคลอง)\" → first row",
+   "pass": true,
+   "got": "คาเฟ่ผนังดำ (ริมคลอง)"
+  },
+  {
+   "name": "name \"ร้านขายของชำ (ซอยสิริลักษณ์)\" → first row",
+   "pass": true,
+   "got": "ร้านขายของชำ (ซอยสิริลักษณ์)"
+  },
+  {
+   "name": "name \"ร้านขายของชำ (ปากซอยฝั่งถนนวงศ\" → first row",
+   "pass": true,
+   "got": "ร้านขายของชำ (ปากซอยฝั่งถนนวงศ์สว่าง)"
+  },
+  {
+   "name": "name \"ร้านอัดฉีด/ล้างรถ\" → first row",
+   "pass": true,
+   "got": "ร้านอัดฉีด/ล้างรถ"
+  },
+  {
+   "name": "name \"ร้านปิ้งย่างกลางแจ้ง\" → first row",
+   "pass": true,
+   "got": "ร้านปิ้งย่างกลางแจ้ง"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ วัดน้อย (ถ.วงศ์สว่า\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ วัดน้อย (ถ.วงศ์สว่าง)"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ถ.วงศ์สว่าง (ใกล้ปา\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ถ.วงศ์สว่าง (ใกล้ปากซอย 11)"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ถ.วงศ์สว่าง (ฝั่งตร\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ถ.วงศ์สว่าง (ฝั่งตรงข้าม)"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ตรงข้ามวงศ์สว่างซอย\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ตรงข้ามวงศ์สว่างซอย 4"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ วัดประชาศรัทธาธรรม\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ วัดประชาศรัทธาธรรม"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ตรงข้ามวัดประชาศรัท\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ตรงข้ามวัดประชาศรัทธาธรรม"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ หมู่บ้านจงสุข\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ หมู่บ้านจงสุข"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ถ.ประชาราษฎร์สาย 1 \" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ถ.ประชาราษฎร์สาย 1 (ใต้ทางยกระดับ)"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ถ.ประชาราษฎร์สาย 1 \" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ถ.ประชาราษฎร์สาย 1 (เชิงสะพานพระราม 7)"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ถ.ประชาราษฎร์สาย 1 \" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ถ.ประชาราษฎร์สาย 1 (ฝั่งตรงข้าม)"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ตรงข้ามวัดสร้อยทอง\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ตรงข้ามวัดสร้อยทอง"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ วัดสร้อยทอง\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ วัดสร้อยทอง"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ โรงเรียนโยธินบูรณะ\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ โรงเรียนโยธินบูรณะ"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ฝั่งตรงข้ามท่าเรือส\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ฝั่งตรงข้ามท่าเรือสะพานพระราม 7"
+  },
+  {
+   "name": "name \"ท่ารถพระราม 7 (สาย 50)\" → first row",
+   "pass": true,
+   "got": "ท่ารถพระราม 7 (สาย 50)"
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ หน้า มจพ.\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ หน้า มจพ."
+  },
+  {
+   "name": "name \"ป้ายรถเมล์ ตรงข้าม มจพ.\" → first row",
+   "pass": true,
+   "got": "ป้ายรถเมล์ ตรงข้าม มจพ."
+  },
+  {
+   "name": "name \"วัดมัชฌันติการาม (วัดน้อย)\" → first row",
+   "pass": true,
+   "got": "วัดมัชฌันติการาม (วัดน้อย)"
+  },
+  {
+   "name": "name \"สะพานพระราม 7\" → first row",
+   "pass": true,
+   "got": "สะพานพระราม 7"
+  },
+  {
+   "name": "name \"โรงเรียนวัดมัชฌันติการาม\" → first row",
+   "pass": true,
+   "got": "โรงเรียนวัดมัชฌันติการาม"
+  },
+  {
+   "name": "name \"ประตูหลัง มจพ.\" + Enter opens it",
+   "pass": true,
+   "got": "ประตูหลัง มจพ."
+  },
+  {
+   "name": "name \"วัวล้วนๆ (ไอศกรีม)\" + Enter opens it",
+   "pass": true,
+   "got": "วัวล้วนๆ (ไอศกรีม)"
+  },
+  {
+   "name": "name \"Boardy Boardgame\" + Enter opens it",
+   "pass": true,
+   "got": "Boardy Boardgame"
+  },
+  {
+   "name": "name \"7-Eleven (ใกล้ซับ)\" + Enter opens it",
+   "pass": true,
+   "got": "7-Eleven (ใกล้ซับ)"
+  },
+  {
+   "name": "name \"ร้านอาหารตามสั่งป้าหน่อย\" + Enter opens it",
+   "pass": true,
+   "got": "ร้านอาหารตามสั่งป้าหน่อย"
+  },
+  {
+   "name": "name \"หอพัก (ตึกเดียวกับร้านป้าหน่อย\" + Enter opens it",
+   "pass": true,
+   "got": "หอพัก (ตึกเดียวกับร้านป้าหน่อย)"
+  },
+  {
+   "name": "name \"สนามหมูกะทะ\" + Enter opens it",
+   "pass": true,
+   "got": "สนามหมูกะทะ"
+  },
+  {
+   "name": "name \"เปิ่นกาแฟโบราณ ยำเปิ่นหลังมอ\" + Enter opens it",
+   "pass": true,
+   "got": "เปิ่นกาแฟโบราณ ยำเปิ่นหลังมอ"
+  },
+  {
+   "name": "name \"ร้านแซ่บซี๊ด หลังมอ มจพ.\" + Enter opens it",
+   "pass": true,
+   "got": "ร้านแซ่บซี๊ด หลังมอ มจพ."
+  },
+  {
+   "name": "name \"ครัวกาญจนา ตามสั่ง-ข้าวซอย\" + Enter opens it",
+   "pass": true,
+   "got": "ครัวกาญจนา ตามสั่ง-ข้าวซอย"
+  },
+  {
+   "name": "name \"ย่างกรอบ ดูโอ้บูตะ\" + Enter opens it",
+   "pass": true,
+   "got": "ย่างกรอบ ดูโอ้บูตะ"
+  },
+  {
+   "name": "name \"OkVietNoodle\" + Enter opens it",
+   "pass": true,
+   "got": "OkVietNoodle"
+  },
+  {
+   "name": "name \"Commu Rooftop Cafe & Chill\" + Enter opens it",
+   "pass": true,
+   "got": "Commu Rooftop Cafe & Chill"
+  },
+  {
+   "name": "name \"ชอุ่ม coffee\" + Enter opens it",
+   "pass": true,
+   "got": "ชอุ่ม coffee"
+  },
+  {
+   "name": "name \"Lang Mall Commu.\" + Enter opens it",
+   "pass": true,
+   "got": "Lang Mall Commu."
+  },
+  {
+   "name": "name \"U Life Prime\" + Enter opens it",
+   "pass": true,
+   "got": "U Life Prime"
+  },
+  {
+   "name": "name \"หอพักเรือนลีลา\" + Enter opens it",
+   "pass": true,
+   "got": "หอพักเรือนลีลา"
+  },
+  {
+   "name": "name \"เดอะคาริสม่าเฮ้าส์\" + Enter opens it",
+   "pass": true,
+   "got": "เดอะคาริสม่าเฮ้าส์"
+  },
+  {
+   "name": "name \"หอเครป หลัง มจพ.\" + Enter opens it",
+   "pass": true,
+   "got": "หอเครป หลัง มจพ."
+  },
+  {
+   "name": "name \"Grace Resident\" + Enter opens it",
+   "pass": true,
+   "got": "Grace Resident"
+  },
+  {
+   "name": "name \"The Curve\" + Enter opens it",
+   "pass": true,
+   "got": "The Curve"
+  },
+  {
+   "name": "name \"S.T. Apartment\" + Enter opens it",
+   "pass": true,
+   "got": "S.T. Apartment"
+  },
+  {
+   "name": "name \"Time Mansion\" + Enter opens it",
+   "pass": true,
+   "got": "Time Mansion"
+  },
+  {
+   "name": "name \"Subscribe Rama7 (ซับ)\" + Enter opens it",
+   "pass": true,
+   "got": "Subscribe Rama7 (ซับ)"
+  },
+  {
+   "name": "name \"MOON RAMA7\" + Enter opens it",
+   "pass": true,
+   "got": "MOON RAMA7"
+  },
+  {
+   "name": "name \"Bestbar bangkok\" + Enter opens it",
+   "pass": true,
+   "got": "Bestbar bangkok"
+  },
+  {
+   "name": "name \"พีดอทcopy\" + Enter opens it",
+   "pass": true,
+   "got": "พีดอทcopy"
+  },
+  {
+   "name": "name \"Bubbles Laundromat\" + Enter opens it",
+   "pass": true,
+   "got": "Bubbles Laundromat"
+  },
+  {
+   "name": "name \"สยามหมูกระทะ\" + Enter opens it",
+   "pass": true,
+   "got": "สยามหมูกระทะ"
+  },
+  {
+   "name": "name \"Oza Donburi\" + Enter opens it",
+   "pass": true,
+   "got": "Oza Donburi"
+  },
+  {
+   "name": "name \"ตำแซ่บ\" + Enter opens it",
+   "pass": true,
+   "got": "ตำแซ่บ"
+  },
+  {
+   "name": "name \"มูมาดี ขาหมูฮ่องกง\" + Enter opens it",
+   "pass": true,
+   "got": "มูมาดี ขาหมูฮ่องกง"
+  },
+  {
+   "name": "name \"กะทิข้าวราดแกง วงศ์สว่าง11\" + Enter opens it",
+   "pass": true,
+   "got": "กะทิข้าวราดแกง วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"ป.ประทีป บ้านก๋วยเตี๋ยวเรือ วง\" + Enter opens it",
+   "pass": true,
+   "got": "ป.ประทีป บ้านก๋วยเตี๋ยวเรือ วงศ์สว่าง 11"
+  },
+  {
+   "name": "name \"ร้านก๋วยเตี๋ยวลูกชิ้นหมูบีเอ็ม\" + Enter opens it",
+   "pass": true,
+   "got": "ร้านก๋วยเตี๋ยวลูกชิ้นหมูบีเอ็ม"
+  },
+  {
+   "name": "name \"เตี๋ยวหมูตุ๋นสูตรโบราณ(วงศ์สว่\" + Enter opens it",
+   "pass": true,
+   "got": "เตี๋ยวหมูตุ๋นสูตรโบราณ(วงศ์สว่าง19)"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวร้านเฮียตี๋\" + Enter opens it",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวร้านเฮียตี๋"
+  },
+  {
+   "name": "name \"เตี๋ยวเหอะ\" + Enter opens it",
+   "pass": true,
+   "got": "เตี๋ยวเหอะ"
+  },
+  {
+   "name": "name \"ร้านชมพู อาหารตามสั่ง\" + Enter opens it",
+   "pass": true,
+   "got": "ร้านชมพู อาหารตามสั่ง"
+  },
+  {
+   "name": "name \"ข้าวแกงพระนคร(ร้านลุงกับป้าซอย\" + Enter opens it",
+   "pass": true,
+   "got": "ข้าวแกงพระนคร(ร้านลุงกับป้าซอยหมาเดินหลั"
+  },
+  {
+   "name": "name \"ร้านอาหารตามสั่ง ต้นเอก\" + Enter opens it",
+   "pass": true,
+   "got": "ร้านอาหารตามสั่ง ต้นเอก"
+  },
+  {
+   "name": "name \"ร้าน Cha T'aime ชา-แตม ชานมไข่\" + Enter opens it",
+   "pass": true,
+   "got": "ร้าน Cha T'aime ชา-แตม ชานมไข่มุก"
+  },
+  {
+   "name": "name \"Sry tea ma cha\" + Enter opens it",
+   "pass": true,
+   "got": "Sry tea ma cha"
+  },
+  {
+   "name": "name \"OWL CHA สาขา วงศ์สว่าง 11\" + Enter opens it",
+   "pass": true,
+   "got": "OWL CHA สาขา วงศ์สว่าง 11"
+  },
+  {
+   "name": "name \"หมีพ่นไฟ The fire bear วงศ์สว่\" + Enter opens it",
+   "pass": true,
+   "got": "หมีพ่นไฟ The fire bear วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"เม้าท์มอยซอย11\" + Enter opens it",
+   "pass": true,
+   "got": "เม้าท์มอยซอย11"
+  },
+  {
+   "name": "name \"Seekr Coffee\" + Enter opens it",
+   "pass": true,
+   "got": "Seekr Coffee"
+  },
+  {
+   "name": "name \"ครัวนายภูมิ\" + Enter opens it",
+   "pass": true,
+   "got": "ครัวนายภูมิ"
+  },
+  {
+   "name": "name \"Ennnroll\" + Enter opens it",
+   "pass": true,
+   "got": "Ennnroll"
+  },
+  {
+   "name": "name \"Landmark ครัวนั่งเล่น\" + Enter opens it",
+   "pass": true,
+   "got": "Landmark ครัวนั่งเล่น"
+  },
+  {
+   "name": "name \"ครัวบ้านแม่ ยำแซ่บ\" + Enter opens it",
+   "pass": true,
+   "got": "ครัวบ้านแม่ ยำแซ่บ"
+  },
+  {
+   "name": "name \"(ย้าย) โอกะหมู หมูกระทะ&ยำ ติด\" + Enter opens it",
+   "pass": true,
+   "got": "(ย้าย) โอกะหมู หมูกระทะ&ยำ ติดปากหลังมอ"
+  },
+  {
+   "name": "name \"7-Eleven วงศ์สว่าง 11 จุด 4\" + Enter opens it",
+   "pass": true,
+   "got": "7-Eleven วงศ์สว่าง 11 จุด 4"
+  },
+  {
+   "name": "name \"7-Eleven ถ.วงศ์สว่าง\" + Enter opens it",
+   "pass": true,
+   "got": "7-Eleven ถ.วงศ์สว่าง"
+  },
+  {
+   "name": "name \"7-Eleven วงศ์สว่าง 11 จุด 3\" + Enter opens it",
+   "pass": true,
+   "got": "7-Eleven วงศ์สว่าง 11 จุด 3"
+  },
+  {
+   "name": "name \"7-Eleven (ใกล้ประตูหลัง)\" + Enter opens it",
+   "pass": true,
+   "got": "7-Eleven (ใกล้ประตูหลัง)"
+  },
+  {
+   "name": "name \"TK Hairtwo Style\" + Enter opens it",
+   "pass": true,
+   "got": "TK Hairtwo Style"
+  },
+  {
+   "name": "name \"Room 34 hair salon\" + Enter opens it",
+   "pass": true,
+   "got": "Room 34 hair salon"
+  },
+  {
+   "name": "name \"ร้านทำผมโตโต้แฮร์สตูดิโอ ซ.วงศ\" + Enter opens it",
+   "pass": true,
+   "got": "ร้านทำผมโตโต้แฮร์สตูดิโอ ซ.วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"ผกามาศ ซาลอน\" + Enter opens it",
+   "pass": true,
+   "got": "ผกามาศ ซาลอน"
+  },
+  {
+   "name": "ArrowDown + Enter opens the 2nd row",
+   "pass": true,
+   "got": "ร้านก๋วยเตี๋ยวลูกชิ้นหมูบีเอ็ม"
+  },
+  {
+   "name": "\"7-11\" finds 7-Eleven shops",
+   "pass": true,
+   "got": [
+    "7-Eleven",
+    "7-Eleven (ใกล้ซับ)",
+    "7-Eleven (ใกล้ประตูหลัง)"
+   ]
+  },
+  {
+   "name": "no match shows a message",
+   "pass": true,
+   "got": "ไม่พบร้านที่ตรงกับเงื่อนไข"
+  },
+  {
+   "name": "no page errors",
+   "pass": true,
+   "got": []
+  }
+ ]
+}

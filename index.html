@@ -11,7 +11,7 @@
 <meta property="og:image" content="og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff8a2b'/%3E%3Cpath d='M18 44V26l14-8 14 8v18H36V34h-8v10z' fill='%231d1006'/%3E%3C/svg%3E">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}#list button.active{outline:2px solid #ff8a2b;outline-offset:-2px}</style>
 <title>แผนที่ 3D มจพ.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Anuphan:wght@400;500;600&display=swap">
@@ -514,7 +514,7 @@ const BLD=[
  {no:"69",fx:{wall:"#f1f0ec",band:"#f4f3ef",lip:"#6b7076",glass:"#3f474e",stripes:true,num:{t:"69",bg:"#6b7076"}},name:CIT+" (อาคาร 69)",en:"College of Industrial Technology",cat:"fac",lv:3,info:[],p:[[303,78],[311,80],[304,100],[297,97]]},
  {no:"72",fx:{wall:"#e8e7e2",band:"#dddcd6",glass:"#46525a",fins:"#b7cad8",finStep:2.4,parapet:"#d9dbd6",winX:20},name:"อาคาร 72 (ยิมเนเซียม)",en:"Building 72 — Gymnasium / Faculty of Applied Science",cat:"sport",lv:7,info:["OpenStreetMap ระบุชื่อยิมเนเซียม","ชั้น 5 และ 7 ภาควิชาเทคโนโลยีชีวภาพ คณะวิทยาศาสตร์ประยุกต์","ชั้น 6 ห้องประชุม Sci-SPHERE (ข่าวปี 2569)","จำนวนชั้นในโมเดล: อย่างน้อย 7 ชั้นตามเอกสาร; Street View พ.ย. 2024 เห็นเป็นตึกสูงหลายชั้นมีครีบแนวตั้ง ยังไม่ยืนยันชั้นสูงสุด","หลังคา: ภาพดาวเทียม Esri World Imagery (ตรวจ 29 ต.ค. 2569) เห็นหลังคาโถงสีเทาตลอดแนวยาว ขอบคอนกรีตรอบ และห้องเครื่องฝั่งตะวันออก; ความสูงของส่วนหลังคาเป็นค่าประมาณ"],p:[[118,-64],[178,-40],[170,-21],[110,-45]]},
  {no:"71",fx:{wall:"#dcd9d2",band:"#d0cdc5",glass:"#3c4449",balc:true,fins:"#e08a3c",finStep:4,hip:"#8e969b"},name:"อาคาร 71 ภาควิชาเคมีอุตสาหกรรม",en:"Building 71 — Department of Industrial Chemistry",cat:"fac",lv:4,info:["ป้ายใน Google Maps: อาคาร 71 ภาควิชาเคมีอุตสาหกรรม / ห้องปฏิบัติการเคมีและอาคารเก็บสารเคมี","สำนักงานภาควิชาเคมีอุตสาหกรรมปัจจุบันอยู่ชั้น 8 อาคาร 78 โซน A (สารบบคณะ) — การใช้พื้นที่อาคาร 71 ตอนนี้ยังต้องยืนยัน","อยู่ข้างลานจอดรถหลังอาคารยิมเนเซียม (72) ติดซอยวงศ์สว่าง 11","ตำแหน่งจาก Google Maps + วัดขนาดจากภาพดาวเทียม; จำนวนชั้นประมาณ 4 ชั้นจาก Street View (พ.ย. 2024) ยังไม่ยืนยัน"],p:[[96,-63],[105,-58.5],[97,-41],[87,-45.5]]},
- {no:"73",fx:{wall:"#f1f1ef",band:"#e3e3e0",glass:"#34424b",accents:[{u:0.6,w:1.6,col:"#f0731f",over:1.5,d:1.2}],sign:{t:"ศูนย์ทดสอบวัดความสามารถภาษาอังกฤษและพัฒนาสื่อดิจิทัล (ศทอ.)"},num:{t:"73",bg:"#ffffff",fg:"#333333",u:0.2},steps:{u:0.45}},name:"ศูนย์ทดสอบวัดความสามารถภาษาอังกฤษและพัฒนาสื่อดิจิทัล (ศทอ.)",en:"Center for English Proficiency Assessment and Multilingual Growth (CEM)",cat:"inst",lv:3,info:["ชื่อตามป้ายหน้าอาคารปัจจุบัน (แผนผังเดิมระบุว่าเป็นสถาบัน TGDE)","ทางเดินข้างอาคารนี้เป็นทางไปประตูหลังมหาวิทยาลัย"],p:[[50,-37],[37,-44],[26,-25],[39,-18]]},
+ {no:"73",fx:{wall:"#f1f1ef",band:"#e3e3e0",glass:"#34424b",accents:[{u:0.6,w:1.6,col:"#f0731f",over:1.5,d:1.2}],sign:{t:"ศูนย์ทดสอบวัดความสามารถภาษาอังกฤษและพัฒนาสื่อดิจิทัล (ศทอ.)"},num:{t:"73",bg:"#ffffff",fg:"#333333",u:0.2},steps:{u:0.45}},name:"ศูนย์ทดสอบวัดความสามารถภาษาอังกฤษและพัฒนาสื่อดิจิทัล (ศทอ.)",en:"Center for English Proficiency Assessment and Multilingual Growth (CEM)",cat:"inst",lv:5,info:["ชื่อตามป้ายหน้าอาคารปัจจุบัน (แผนผังเดิมระบุว่าเป็นสถาบัน TGDE)","จำนวนชั้น 5 เป็นค่าประมาณจากภาพหน้าอาคาร (ชั้นล่าง + 3 ระดับหน้าต่าง + ห้องบนหลังคา); ข้อมูลเดิมระบุ 3 ชั้น ซึ่งขัดกับความสูงโมเดลราว 24 ม. ที่ปรับตามสัดส่วนภาพ (ตรวจ 29 ต.ค. 2569)","ทางเดินข้างอาคารนี้เป็นทางไปประตูหลังมหาวิทยาลัย"],p:[[50,-37],[37,-44],[26,-25],[39,-18]]},
  {no:"75",fx:{wall:"#d7d6c8",band:"#b2b5b0",glass:"#405d57",balc:false,accents:[]},name:SCI+" (อาคาร 75)",en:"Faculty of Applied Science",cat:"fac",lv:15,osm:true,info:[],p:[[91,-18],[82,3],[68,-3],[76,-24]]},
  {no:"76",fx:{wall:"#f2f2ef",band:"#f2f2ef",glass:"#3d464d",lip:"#a7adb2",hlouv:"#e6e6e2",hlouvN:1},name:"สำนักพัฒนาเทคนิคศึกษา (ITED)",en:"Institute for Technology Education Development",cat:"inst",lv:4,info:[],p:[[22,75],[55,112],[43,122],[11,85]]},
  {no:"77",kind:"terra77",name:"อาคาร 40 ปี มจพ. และโรงอาหารกลาง",en:"40th Year Building and Main Canteen",cat:"svc",lv:11,osm:true,info:["ชั้น 7: สนามแบดมินตัน 4 สนาม โถงสูงใต้หลังคา ล้อมด้วยทางเดินชั้นบน (งานวิจัยปี 2568)","รูปตัดระบุช่วงชั้นบน 3.9 เมตร; แนวโถงและสนามในโมเดลเทียบผังโดยประมาณ","KMUTNB Guesthouse อยู่ฝั่งตะวันตกของอาคาร","ชั้น 1: ที่จอดรถยนต์และรถมอเตอร์ไซค์","ชั้น 2: ศูนย์อาหาร / โรงอาหารกลาง (นักศึกษาเรียกสั้น ๆ ว่า \"โรงอาหาร 40\")","ในอาคารมี PDB KMUTNB และศูนย์รับรองสมรรถนะบุคคลตามมาตรฐานอาชีพ (ตามป้ายใน Google Maps)","ร้าน Fermo Cafe และจุดออกกำลังกายอยู่ข้างอาคาร","ธนาคารกรุงเทพอยู่ฝั่งตะวันออกของอาคาร"],p:[[48,11],[88,27],[94,30],[74,84],[25,65]]},
@@ -551,7 +551,7 @@ const BLD=[
  {no:"P",id:"lotDorm",flat:true,kind:"lot",ang:Math.atan2(16,12),name:"ลานจอดรถยนต์ระหว่างสนามกีฬากับหอพัก",en:"Car park between the stadium and the dormitories",cat:"other",lv:0,info:["ลานจอดรถยนต์ติดถนนข้างสนามฟุตบอล ใกล้หอพักนักศึกษา","ถัดไปทางตะวันออกมี 7-Eleven และที่นั่งพัก"],p:[[-204.8,-178.3],[-191.5,-184.2],[-179,-174.2],[-181.5,-162.5],[-186.5,-157.5],[-199.8,-170.8]]},
  {no:"7-11",id:"seven",kind:"store",name:"7-Eleven (โซนหอพัก)",en:"7-Eleven, dormitory zone",cat:"svc",lv:1,info:["ร้านสะดวกซื้อข้างลานจอดรถ ใกล้หอพักนักศึกษา","ทิศใต้ของร้านมีที่นั่งพัก"],p:[[-176.5,-174.2],[-164.8,-173.3],[-161.5,-169.2],[-165.7,-163.3],[-174,-165.8]]},
  {no:"พัก",id:"rest5",flat:true,kind:"rest",name:"ที่นั่งพัก (ข้าง 7-Eleven โซนหอพัก)",en:"Seating area by the dormitory 7-Eleven",cat:"other",lv:0,info:["ที่นั่งพักข้าง 7-Eleven ใกล้หอพักและสนามกีฬา"],p:[[-174,-162],[-164,-160.5],[-167.3,-145.8],[-180.7,-147.5],[-179,-152.5]]},
- {no:"97",fx:{wall:"#f3f1ea",band:"#e9e4d6",glass:"#3d464d",lip:"#9b8f7c"},name:"อาคารปฏิบัติการฝึกฝีมือพื้นฐาน (อาคาร 97)",en:"Building 97",cat:"fac",lv:5,est:true,info:["เอกสาร TOR งานบำรุงรักษาเครื่องปรับอากาศของมหาวิทยาลัยระบุอาคาร คสล. 5 ชั้น","ตำแหน่งตามป้าย Google Maps","ขอบเขตอาคารเป็นค่าประมาณ"],p:[[-246,-306],[-232,-312],[-224,-296],[-238,-290]]},
+ {no:"97",fx:{wall:"#f3f1ea",band:"#e9e4d6",glass:"#3d464d",lip:"#9b8f7c"},name:"อาคารปฏิบัติการฝึกฝีมือพื้นฐาน (อาคาร 97)",en:"Building 97",cat:"fac",lv:5,est:true,info:["เอกสาร TOR งานบำรุงรักษาเครื่องปรับอากาศของมหาวิทยาลัยระบุอาคาร คสล. 5 ชั้น","ตำแหน่งตามป้าย Google Maps","ขอบเขตอาคารเป็นค่าประมาณ","ตำแหน่งรอยืนยัน: ภาพดาวเทียม Esri World Imagery ตรงกรอบนี้เห็นเป็นต้นไม้ ไม่เห็นอาคาร 5 ชั้น (ตรวจ 29 ต.ค. 2569) ต้องสำรวจหน้างาน"],p:[[-246,-306],[-232,-312],[-224,-296],[-238,-290]]},
  {no:"ipc",fx:{wall:"#f2f2ef",band:"#e4e4e1",glass:"#3a454e",lip:"#7d858c"},id:"ipc",name:"สำนักประสานงานชุดโครงการอุตสาหกรรมฯ",en:"Building south of STRI - current use unverified",cat:"inst",lv:6,est:true,info:["ชื่อตามป้าย Google Maps","มีสถานีชาร์จรถยนต์ไฟฟ้าอยู่หน้าอาคาร","อยู่ทางทิศใต้ของอาคาร 47 (STRI)"],p:[[113.4,275.9],[150.8,282.5],[146.6,306.1],[109.2,299.5]]},
  {no:"99",fx:{wall:"#ecebe8",band:"#f1f0ed",glass:"#2f3b44",lip:"#8e3a2e",winX:4},id:"u1",name:"KMUTNB Techno Park (อาคาร 99)",en:"KMUTNB Techno Park",cat:"inst",lv:10,osm:true,info:["อุทยานเทคโนโลยีของมหาวิทยาลัย (ชื่อตามป้าย Google Maps)"],p:[[-146,-277],[-169,-261],[-145,-228],[-122,-245]]},
  {no:"?",fx:{wall:"#f1ece2",band:"#f7f4ee",glass:"#4a545b",balc:true},id:"u2",name:"อาคารโซนหอพัก (ยังไม่ทราบชื่อ)",en:"Building in the dormitory zone",cat:"dorm",lv:3,info:["Google Maps ปักป้าย \"หอพักนักศึกษาชาย\" ไว้ข้างอาคารนี้","ตามแผนผังมหาวิทยาลัย อาจเป็นอาคาร 99 (เก็บเอกสาร) ช่วยยืนยันได้"],p:[[-161,-241],[-171,-234],[-158,-214],[-147,-221]]}
@@ -6471,10 +6471,31 @@ Object.entries(CATS).forEach(([k,v])=>chip(document.getElementById("cats"),v.th,
 Object.entries(AMS).forEach(([k,v])=>chip(document.getElementById("ams"),v.th,v.c,amOn[k],on=>{amOn[k]=on;refresh();}));
 const q=document.getElementById("q"),list=document.getElementById("list"),side=document.getElementById("side");
 q.addEventListener("input",refresh);
-q.addEventListener("keydown",e=>{if(e.key==="Enter"){const m=matches();if(m.length){select(m[0].id,true);q.blur();setSide(false);}}});
+/* keyboard: ArrowDown/ArrowUp move through the results, Enter opens the highlighted one (the best match by default), Escape clears */
+let searchActive=0;
+function markActive(){const items=[...list.querySelectorAll("li > button")];items.forEach((b,i)=>{b.classList.toggle("active",i===searchActive);b.setAttribute("aria-selected",String(i===searchActive));});if(items[searchActive])items[searchActive].scrollIntoView({block:"nearest"});}
+q.addEventListener("keydown",e=>{const m=matches();
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){if(!m.length)return;e.preventDefault();searchActive=(searchActive+(e.key==="ArrowDown"?1:-1)+m.length)%m.length;markActive();return;}
+  if(e.key==="Escape"){if(q.value){q.value="";refresh();}else{q.blur();setSide(false);}return;}
+  if(e.key==="Enter"){const b=m[Math.min(searchActive,m.length-1)];if(b){select(b.id,true);q.blur();setSide(false);}}});
 const norm=s=>(s||"").toLowerCase().replace(/\s+/g,"");
 const numKey=b=>{const n=parseInt(b.no);return isNaN(n)?999:n+(b.no.length>2?0.1:0);};
-function matches(){const s=norm(q.value);return ALL.filter(b=>catOn[b.cat]&&(!s||norm(b.no).startsWith(s)||norm(b.name).includes(s)||norm(b.en).includes(s)||norm(b.directory?.searchTerms||"").includes(s)||b.info.some(i=>norm(i).includes(s)))).sort((a,b)=>(a.directory?.frontToRearOrder??999)-(b.directory?.frontToRearOrder??999)||numKey(a)-numKey(b));}
+/* search ranking (audit): results used to be sorted only by front-to-rear position, so "72" listed 52 first (room 52720 in its
+   search terms) and Enter opened 52. Now: the same set of results, ranked by how the query matched; position only breaks ties.
+   0 exact number · 1 exact name · 2 number prefix · 3 name starts with / a word starts with · 4 name contains · 5 search terms · 6 details */
+const words=t=>(t||"").toLowerCase().split(/[\s·—\-–()\/,]+/).filter(Boolean);
+function matchRank(b,s){
+  if(!s)return 0;const no=norm(b.no),nm=norm(b.name),en=norm(b.en),sh=norm(typeof short==="function"?short(b):"");
+  if(no===s)return 0;
+  if(nm===s||en===s||sh===s)return 1;
+  if(no.startsWith(s))return 2;
+  if(nm.startsWith(s)||en.startsWith(s)||sh.startsWith(s)||words(b.name).concat(words(b.en)).some(w=>w.startsWith(s)))return 3;
+  if(nm.includes(s)||en.includes(s)||sh.includes(s))return 4;
+  if(norm(b.directory?.searchTerms||"").includes(s))return 5;
+  if(b.info.some(i=>norm(i).includes(s)))return 6;
+  return -1;}
+function matches(){const s=norm(q.value),order=(a,b)=>(a.directory?.frontToRearOrder??999)-(b.directory?.frontToRearOrder??999)||numKey(a)-numKey(b);
+  return ALL.filter(b=>catOn[b.cat]).map(b=>({b,r:matchRank(b,s)})).filter(x=>x.r>=0).sort((x,y)=>x.r-y.r||order(x.b,y.b)).map(x=>x.b);}
 function refresh(){
   const m=matches(),ids=new Set(m.map(b=>b.id)),searching=!!q.value.trim();
   list.innerHTML="";
@@ -6482,6 +6503,7 @@ function refresh(){
   m.forEach(b=>{const li=document.createElement("li"),bt=document.createElement("button");bt.type="button";bt.style.setProperty("--c",CATS[b.cat].c);
     bt.innerHTML='<span class="no"></span><span class="t"></span>';bt.querySelector(".no").textContent=b.no;bt.querySelector(".t").textContent=short(b);
     bt.onclick=()=>{select(b.id,true);setSide(false);};li.appendChild(bt);list.appendChild(li);});
+  searchActive=0;if(searching)markActive();
   ALL.forEach(b=>{const vis=catOn[b.cat];if(b.group)b.group.visible=vis;b.tag.hidden=!vis;b.tag.classList.toggle("dim",searching&&!ids.has(b.id));b.match=searching&&ids.has(b.id);});
   pins.forEach(p=>p.el.hidden=!amOn[p.t]);
 }
@@ -12399,6 +12421,15 @@ const a={version:172,building:'63',sideFrameBeams:beams,sideSolidSlabs:solidSlab
  meta.content=JSON.stringify(audit);document.head.append(meta);
 })();
 
+</script>
+<script>/* audit 2026-10-29: hide stray model parts. Some builders left 1 m unit boxes with an identity transform, so they sat at the
+   map origin (0,0,0), hundreds of metres from their building (e.g. 91). Only parts that are both an untransformed 1x1x1 box at the origin
+   and more than 50 m from their building are hidden; each one is listed in window.__strayParts. */
+(function(){if(typeof ALL==='undefined')return;const out=window.__strayParts=[],I=new THREE.Matrix4();
+ ALL.forEach(b=>{if(!b.group)return;const cx=b.cx+(b.dx||0),cz=b.cz+(b.dz||0);if(Math.hypot(cx,cz)<50)return;b.group.updateMatrixWorld(true);
+  b.group.traverse(o=>{if(!o.isMesh||o.isInstancedMesh||!o.visible)return;const p=o.geometry&&o.geometry.parameters;
+   if(o.geometry.type!=='BoxGeometry'||!p||p.width!==1||p.height!==1||p.depth!==1)return;if(!o.matrixWorld.equals(I))return;
+   o.visible=false;out.push({building:b.id,color:o.material&&o.material.color&&o.material.color.getHexString()});});});})();
 </script>
 <script>/* perf-v107 — smoother rendering without changing what is drawn.
    1) Static batching: after the scene is built, meshes that share a parent and a material are merged into one mesh

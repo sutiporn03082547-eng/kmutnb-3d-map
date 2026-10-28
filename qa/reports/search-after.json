@@ -1,0 +1,1009 @@
+{
+ "url": "http://127.0.0.1:18937/repo/index.html",
+ "date": "2026-10-28T17:58:53.898Z",
+ "total": 200,
+ "passed": 200,
+ "failed": 0,
+ "results": [
+  {
+   "name": "\"72\" lists building 72 first",
+   "pass": true,
+   "got": "72"
+  },
+  {
+   "name": "\"72\" + Enter selects 72 (not 52)",
+   "pass": true,
+   "got": "72"
+  },
+  {
+   "name": "\"72\" ArrowDown + Enter selects the 2nd result",
+   "pass": true,
+   "got": "[\"lot72\",\"lot72\"]"
+  },
+  {
+   "name": "\"72\" ArrowUp wraps to the last result",
+   "pass": true,
+   "got": "[\"73\",\"73\"]"
+  },
+  {
+   "name": "Escape clears the query",
+   "pass": true,
+   "got": ""
+  },
+  {
+   "name": "select(72) moves the camera target to 72",
+   "pass": true,
+   "got": "[144,-42.5,144,-42.5]"
+  },
+  {
+   "name": "selected building is highlighted (halo shown at it)",
+   "pass": true,
+   "got": "[true,true]"
+  },
+  {
+   "name": "no match shows a readable message",
+   "pass": true,
+   "got": "ไม่พบสถานที่ · ลองค้นด้วยเลขอาคารหรือชื่อคณะ"
+  },
+  {
+   "name": "empty query lists every visible place",
+   "pass": true,
+   "got": "[66,66]"
+  },
+  {
+   "name": "number \"11\" → first result has number 11",
+   "pass": true,
+   "got": "11"
+  },
+  {
+   "name": "number \"13\" → first result has number 13",
+   "pass": true,
+   "got": "13"
+  },
+  {
+   "name": "number \"21\" → first result has number 21",
+   "pass": true,
+   "got": "21"
+  },
+  {
+   "name": "number \"22\" → first result has number 22",
+   "pass": true,
+   "got": "22"
+  },
+  {
+   "name": "number \"23\" → first result has number 23",
+   "pass": true,
+   "got": "23"
+  },
+  {
+   "name": "number \"41\" → first result has number 41",
+   "pass": true,
+   "got": "41"
+  },
+  {
+   "name": "number \"42\" → first result has number 42",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "number \"43\" → first result has number 43",
+   "pass": true,
+   "got": "43"
+  },
+  {
+   "name": "number \"44\" → first result has number 44",
+   "pass": true,
+   "got": "44"
+  },
+  {
+   "name": "number \"46\" → first result has number 46",
+   "pass": true,
+   "got": "46"
+  },
+  {
+   "name": "number \"47\" → first result has number 47",
+   "pass": true,
+   "got": "47"
+  },
+  {
+   "name": "number \"52\" → first result has number 52",
+   "pass": true,
+   "got": "52"
+  },
+  {
+   "name": "number \"62\" → first result has number 62",
+   "pass": true,
+   "got": "62"
+  },
+  {
+   "name": "number \"63\" → first result has number 63",
+   "pass": true,
+   "got": "63"
+  },
+  {
+   "name": "number \"64\" → first result has number 64",
+   "pass": true,
+   "got": "64"
+  },
+  {
+   "name": "number \"65\" → first result has number 65",
+   "pass": true,
+   "got": "65"
+  },
+  {
+   "name": "number \"66\" → first result has number 66",
+   "pass": true,
+   "got": "66"
+  },
+  {
+   "name": "number \"67\" → first result has number 67",
+   "pass": true,
+   "got": "67"
+  },
+  {
+   "name": "number \"68\" → first result has number 68",
+   "pass": true,
+   "got": "68"
+  },
+  {
+   "name": "number \"69\" → first result has number 69",
+   "pass": true,
+   "got": "69"
+  },
+  {
+   "name": "number \"72\" → first result has number 72",
+   "pass": true,
+   "got": "72"
+  },
+  {
+   "name": "number \"71\" → first result has number 71",
+   "pass": true,
+   "got": "71"
+  },
+  {
+   "name": "number \"73\" → first result has number 73",
+   "pass": true,
+   "got": "73"
+  },
+  {
+   "name": "number \"75\" → first result has number 75",
+   "pass": true,
+   "got": "75"
+  },
+  {
+   "name": "number \"76\" → first result has number 76",
+   "pass": true,
+   "got": "76"
+  },
+  {
+   "name": "number \"77\" → first result has number 77",
+   "pass": true,
+   "got": "77"
+  },
+  {
+   "name": "number \"78A\" → first result has number 78A",
+   "pass": true,
+   "got": "78A"
+  },
+  {
+   "name": "number \"78B\" → first result has number 78B",
+   "pass": true,
+   "got": "78B"
+  },
+  {
+   "name": "number \"79\" → first result has number 79",
+   "pass": true,
+   "got": "79"
+  },
+  {
+   "name": "number \"81\" → first result has number 81",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "number \"82\" → first result has number 82",
+   "pass": true,
+   "got": "82"
+  },
+  {
+   "name": "number \"83\" → first result has number 83",
+   "pass": true,
+   "got": "83"
+  },
+  {
+   "name": "number \"84\" → first result has number 84",
+   "pass": true,
+   "got": "84"
+  },
+  {
+   "name": "number \"85\" → first result has number 85",
+   "pass": true,
+   "got": "85"
+  },
+  {
+   "name": "number \"86\" → first result has number 86",
+   "pass": true,
+   "got": "86"
+  },
+  {
+   "name": "number \"88\" → first result has number 88",
+   "pass": true,
+   "got": "88"
+  },
+  {
+   "name": "number \"89\" → first result has number 89",
+   "pass": true,
+   "got": "89"
+  },
+  {
+   "name": "number \"90\" → first result has number 90",
+   "pass": true,
+   "got": "90"
+  },
+  {
+   "name": "number \"91\" → first result has number 91",
+   "pass": true,
+   "got": "91"
+  },
+  {
+   "name": "number \"92\" → first result has number 92",
+   "pass": true,
+   "got": "92"
+  },
+  {
+   "name": "number \"93\" → first result has number 93",
+   "pass": true,
+   "got": "93"
+  },
+  {
+   "name": "number \"95\" → first result has number 95",
+   "pass": true,
+   "got": "95"
+  },
+  {
+   "name": "number \"96\" → first result has number 96",
+   "pass": true,
+   "got": "96"
+  },
+  {
+   "name": "number \"98\" → first result has number 98",
+   "pass": true,
+   "got": "98"
+  },
+  {
+   "name": "number \"ลาน\" → first result has number ลาน",
+   "pass": true,
+   "got": "court62"
+  },
+  {
+   "name": "number \"สะพาน\" → first result has number สะพาน",
+   "pass": true,
+   "got": "greenBridge"
+  },
+  {
+   "name": "number \"ป้อม\" → first result has number ป้อม",
+   "pass": true,
+   "got": "guard"
+  },
+  {
+   "name": "number \"ศาล\" → first result has number ศาล",
+   "pass": true,
+   "got": "giraffe"
+  },
+  {
+   "name": "number \"7-11\" → first result has number 7-11",
+   "pass": true,
+   "got": "seven"
+  },
+  {
+   "name": "number \"พัก\" → first result has number พัก",
+   "pass": true,
+   "got": "rest5"
+  },
+  {
+   "name": "number \"97\" → first result has number 97",
+   "pass": true,
+   "got": "97"
+  },
+  {
+   "name": "number \"ipc\" → first result has number ipc",
+   "pass": true,
+   "got": "ipc"
+  },
+  {
+   "name": "number \"99\" → first result has number 99",
+   "pass": true,
+   "got": "u1"
+  },
+  {
+   "name": "number \"94\" → first result has number 94",
+   "pass": true,
+   "got": "94"
+  },
+  {
+   "name": "th name \"บัณฑิตวิทยาลัยวิศวกรรมศาสตร์นานาชาติสิริ\" → that place first",
+   "pass": true,
+   "got": "11"
+  },
+  {
+   "name": "en name \"Sirindhorn International Thai-German Gra\" → that place first",
+   "pass": true,
+   "got": "11"
+  },
+  {
+   "name": "th name \"อาคาร13 · ป้ายกองอาคารฯในภาพปี2556 (การใ\" → that place first",
+   "pass": true,
+   "got": "13"
+  },
+  {
+   "name": "en name \"Building 13 - current use unverified\" → that place first",
+   "pass": true,
+   "got": "13"
+  },
+  {
+   "name": "th name \"อาคารอเนกประสงค์ (อาคาร 21)\" → that place first",
+   "pass": true,
+   "got": "21"
+  },
+  {
+   "name": "en name \"Multipurpose Hall\" → that place first",
+   "pass": true,
+   "got": "21"
+  },
+  {
+   "name": "th name \"อาคารอเนกประสงค์ (อาคาร 22) · สำนักงานอธ\" → that place first",
+   "pass": true,
+   "got": "22"
+  },
+  {
+   "name": "en name \"Office of the President\" → that place first",
+   "pass": true,
+   "got": "22"
+  },
+  {
+   "name": "th name \"อาคารนวมินทรราชินี (สำนักหอสมุดกลาง)\" → that place first",
+   "pass": true,
+   "got": "23"
+  },
+  {
+   "name": "en name \"Navamindra Rajini Building — Central Lib\" → that place first",
+   "pass": true,
+   "got": "23"
+  },
+  {
+   "name": "th name \"คณะสถาปัตยกรรมและการออกแบบ\" → that place first",
+   "pass": true,
+   "got": "41"
+  },
+  {
+   "name": "en name \"Faculty of Architecture and Design\" → that place first",
+   "pass": true,
+   "got": "41"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 42)\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"สถาบันนวัตกรรมเทคโนโลยีไทย-ฝรั่งเศส (TFI\" → that place first",
+   "pass": true,
+   "got": "43"
+  },
+  {
+   "name": "en name \"Thai-French Innovation Institute\" → that place first",
+   "pass": true,
+   "got": "43"
+  },
+  {
+   "name": "th name \"คณะครุศาสตร์อุตสาหกรรม (อาคาร 44)\" → that place first",
+   "pass": true,
+   "got": "44"
+  },
+  {
+   "name": "en name \"Faculty of Technical Education\" → that place first",
+   "pass": true,
+   "got": "44"
+  },
+  {
+   "name": "th name \"คณะศิลปศาสตร์ประยุกต์ และโรงอาหารสวนปาล์\" → that place first",
+   "pass": true,
+   "got": "46"
+  },
+  {
+   "name": "en name \"Faculty of Applied Arts\" → that place first",
+   "pass": true,
+   "got": "46"
+  },
+  {
+   "name": "th name \"สำนักวิจัยวิทยาศาสตร์และเทคโนโลยี (STRI)\" → that place first",
+   "pass": true,
+   "got": "47"
+  },
+  {
+   "name": "en name \"Science and Technology Research Institut\" → that place first",
+   "pass": true,
+   "got": "47"
+  },
+  {
+   "name": "th name \"คณะครุศาสตร์อุตสาหกรรม (อาคาร 52)\" → that place first",
+   "pass": true,
+   "got": "52"
+  },
+  {
+   "name": "en name \"Faculty of Technical Education\" → that place first",
+   "pass": true,
+   "got": "44"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 62)\" → that place first",
+   "pass": true,
+   "got": "62"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 63)\" → that place first",
+   "pass": true,
+   "got": "63"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 64)\" → that place first",
+   "pass": true,
+   "got": "64"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 65)\" → that place first",
+   "pass": true,
+   "got": "65"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 66)\" → that place first",
+   "pass": true,
+   "got": "66"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 67)\" → that place first",
+   "pass": true,
+   "got": "67"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 68)\" → that place first",
+   "pass": true,
+   "got": "68"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 69)\" → that place first",
+   "pass": true,
+   "got": "69"
+  },
+  {
+   "name": "en name \"College of Industrial Technology\" → that place first",
+   "pass": true,
+   "got": "42"
+  },
+  {
+   "name": "th name \"อาคาร 72 (ยิมเนเซียม) · คณะวิทยาศาสตร์ปร\" → that place first",
+   "pass": true,
+   "got": "72"
+  },
+  {
+   "name": "en name \"Building 72 — Gymnasium / Faculty of App\" → that place first",
+   "pass": true,
+   "got": "72"
+  },
+  {
+   "name": "th name \"อาคาร71 · อาคารเก็บสารเคมี (ตามเอกสารปี2\" → that place first",
+   "pass": true,
+   "got": "71"
+  },
+  {
+   "name": "en name \"Building 71 — Department of Industrial C\" → that place first",
+   "pass": true,
+   "got": "71"
+  },
+  {
+   "name": "th name \"ศูนย์ทดสอบภาษาอังกฤษและพัฒนาพหุภาษา (CEM\" → that place first",
+   "pass": true,
+   "got": "73"
+  },
+  {
+   "name": "en name \"Center for English Proficiency Assessmen\" → that place first",
+   "pass": true,
+   "got": "73"
+  },
+  {
+   "name": "th name \"คณะวิทยาศาสตร์ประยุกต์ (อาคาร 75)\" → that place first",
+   "pass": true,
+   "got": "75"
+  },
+  {
+   "name": "en name \"Faculty of Applied Science\" → that place first",
+   "pass": true,
+   "got": "75"
+  },
+  {
+   "name": "th name \"สำนักพัฒนาเทคนิคศึกษา (ITED)\" → that place first",
+   "pass": true,
+   "got": "76"
+  },
+  {
+   "name": "en name \"Institute for Technology Education Devel\" → that place first",
+   "pass": true,
+   "got": "76"
+  },
+  {
+   "name": "th name \"อาคาร 40 ปี มจพ. และโรงอาหารกลาง\" → that place first",
+   "pass": true,
+   "got": "77"
+  },
+  {
+   "name": "en name \"40th Year Building and Main Canteen\" → that place first",
+   "pass": true,
+   "got": "77"
+  },
+  {
+   "name": "th name \"คณะวิทยาศาสตร์ประยุกต์ (อาคาร 78 โซน A)\" → that place first",
+   "pass": true,
+   "got": "78A"
+  },
+  {
+   "name": "en name \"Faculty of Applied Science — Zone A\" → that place first",
+   "pass": true,
+   "got": "78A"
+  },
+  {
+   "name": "th name \"คณะวิทยาศาสตร์ประยุกต์ (อาคาร 78 โซน B)\" → that place first",
+   "pass": true,
+   "got": "78B"
+  },
+  {
+   "name": "en name \"Faculty of Applied Science — Zone B\" → that place first",
+   "pass": true,
+   "got": "78B"
+  },
+  {
+   "name": "th name \"อาคารสโมสรบุคลากร (ตึกสโมสร)\" → that place first",
+   "pass": true,
+   "got": "79"
+  },
+  {
+   "name": "en name \"Staff Club Building\" → that place first",
+   "pass": true,
+   "got": "79"
+  },
+  {
+   "name": "th name \"คณะวิศวกรรมศาสตร์ (อาคาร 81)\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "en name \"Faculty of Engineering\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "th name \"คณะวิศวกรรมศาสตร์ (อาคาร 82)\" → that place first",
+   "pass": true,
+   "got": "82"
+  },
+  {
+   "name": "en name \"Faculty of Engineering\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "th name \"คณะวิศวกรรมศาสตร์ (อาคาร 83)\" → that place first",
+   "pass": true,
+   "got": "83"
+  },
+  {
+   "name": "en name \"Faculty of Engineering\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "th name \"คณะวิศวกรรมศาสตร์ (อาคาร 84)\" → that place first",
+   "pass": true,
+   "got": "84"
+  },
+  {
+   "name": "en name \"Faculty of Engineering\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "th name \"คณะวิศวกรรมศาสตร์ (อาคาร 85)\" → that place first",
+   "pass": true,
+   "got": "85"
+  },
+  {
+   "name": "en name \"Faculty of Engineering\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "th name \"คณะวิศวกรรมศาสตร์ (อาคาร 86)\" → that place first",
+   "pass": true,
+   "got": "86"
+  },
+  {
+   "name": "en name \"Faculty of Engineering\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "th name \"คณะวิศวกรรมศาสตร์ (อาคาร 88)\" → that place first",
+   "pass": true,
+   "got": "88"
+  },
+  {
+   "name": "en name \"Faculty of Engineering\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "th name \"คณะวิศวกรรมศาสตร์ (อาคาร 89)\" → that place first",
+   "pass": true,
+   "got": "89"
+  },
+  {
+   "name": "en name \"Faculty of Engineering\" → that place first",
+   "pass": true,
+   "got": "81"
+  },
+  {
+   "name": "th name \"โรงเรียนเตรียมวิศวกรรมศาสตร์ ไทย-เยอรมัน\" → that place first",
+   "pass": true,
+   "got": "90"
+  },
+  {
+   "name": "en name \"Thai-German Pre-Engineering School\" → that place first",
+   "pass": true,
+   "got": "90"
+  },
+  {
+   "name": "th name \"อาคารเรียนและโรงอาหาร (อาคาร 91)\" → that place first",
+   "pass": true,
+   "got": "91"
+  },
+  {
+   "name": "en name \"Classroom and canteen building 91\" → that place first",
+   "pass": true,
+   "got": "91"
+  },
+  {
+   "name": "th name \"หอพักนักศึกษาชาย มจพ.\" → that place first",
+   "pass": true,
+   "got": "92"
+  },
+  {
+   "name": "en name \"KMUTNB Dormitory (male)\" → that place first",
+   "pass": true,
+   "got": "92"
+  },
+  {
+   "name": "th name \"หอพักนักศึกษาหญิง มจพ.\" → that place first",
+   "pass": true,
+   "got": "93"
+  },
+  {
+   "name": "en name \"KMUTNB Dormitory (female)\" → that place first",
+   "pass": true,
+   "got": "93"
+  },
+  {
+   "name": "th name \"วิทยาลัยนานาชาติ\" → that place first",
+   "pass": true,
+   "got": "95"
+  },
+  {
+   "name": "en name \"International College\" → that place first",
+   "pass": true,
+   "got": "95"
+  },
+  {
+   "name": "th name \"คณะพัฒนาธุรกิจและอุตสาหกรรม\" → that place first",
+   "pass": true,
+   "got": "96"
+  },
+  {
+   "name": "en name \"Faculty of Business and Industrial Devel\" → that place first",
+   "pass": true,
+   "got": "96"
+  },
+  {
+   "name": "th name \"อาคาร 98 — โรงอาหารและสันทนาการ\" → that place first",
+   "pass": true,
+   "got": "98"
+  },
+  {
+   "name": "en name \"Building 98 - Canteen and Recreation\" → that place first",
+   "pass": true,
+   "got": "98"
+  },
+  {
+   "name": "th name \"สนามบาสและลานจอดรถ (ระหว่างอาคาร 62–63)\" → that place first",
+   "pass": true,
+   "got": "court62"
+  },
+  {
+   "name": "en name \"Basketball court and parking — 2026 imag\" → that place first",
+   "pass": true,
+   "got": "court62"
+  },
+  {
+   "name": "th name \"ลานจอดรถหลังอาคารยิมเนเซียม (72)\" → that place first",
+   "pass": true,
+   "got": "lot72"
+  },
+  {
+   "name": "en name \"Parking lot behind the Gymnasium\" → that place first",
+   "pass": true,
+   "got": "lot72"
+  },
+  {
+   "name": "th name \"ที่จอดรถยนต์ริมถนนหน้าหอสมุด (ฝั่งอาคาร \" → that place first",
+   "pass": true,
+   "got": "lotLib"
+  },
+  {
+   "name": "en name \"Roadside car parking by the Central Libr\" → that place first",
+   "pass": true,
+   "got": "lotLib"
+  },
+  {
+   "name": "th name \"ที่จอดมอเตอร์ไซค์ ริมคลองข้างหอสมุด\" → that place first",
+   "pass": true,
+   "got": "bikeLib"
+  },
+  {
+   "name": "en name \"Motorcycle parking along the canal by th\" → that place first",
+   "pass": true,
+   "got": "bikeLib"
+  },
+  {
+   "name": "th name \"ที่จอดมอเตอร์ไซค์ ปลายถนนหลังอาคาร 22\" → that place first",
+   "pass": true,
+   "got": "bikeStub"
+  },
+  {
+   "name": "en name \"Motorcycle parking at the road end behin\" → that place first",
+   "pass": true,
+   "got": "bikeStub"
+  },
+  {
+   "name": "th name \"สะพานเขียว (ข้ามคลองบางเขนใหม่)\" → that place first",
+   "pass": true,
+   "got": "greenBridge"
+  },
+  {
+   "name": "en name \"Green footbridge over Khlong Bang Khen M\" → that place first",
+   "pass": true,
+   "got": "greenBridge"
+  },
+  {
+   "name": "th name \"ลานจอดรถยนต์ข้างประตูป้อมยาม\" → that place first",
+   "pass": true,
+   "got": "lotGate"
+  },
+  {
+   "name": "en name \"Car park by the guard-house gate\" → that place first",
+   "pass": true,
+   "got": "lotGate"
+  },
+  {
+   "name": "th name \"ที่จอดรถยนต์ใต้ดิน อาคารอเนกประสงค์ (ทาง\" → that place first",
+   "pass": true,
+   "got": "ugGate"
+  },
+  {
+   "name": "en name \"Underground car park entrance\" → that place first",
+   "pass": true,
+   "got": "ugGate"
+  },
+  {
+   "name": "th name \"ป้อมยามประตูหลัก (จุดตรวจเข้า-ออก)\" → that place first",
+   "pass": true,
+   "got": "guard"
+  },
+  {
+   "name": "en name \"Main guard house & checkpoint\" → that place first",
+   "pass": true,
+   "got": "guard"
+  },
+  {
+   "name": "th name \"ที่จอดมอเตอร์ไซค์บนคลอง (ข้างลานเฉลิมพระ\" → that place first",
+   "pass": true,
+   "got": "canalBikes"
+  },
+  {
+   "name": "en name \"Motorcycle parking on the covered canal\" → that place first",
+   "pass": true,
+   "got": "canalBikes"
+  },
+  {
+   "name": "th name \"ศาลยีราฟ\" → that place first",
+   "pass": true,
+   "got": "giraffe"
+  },
+  {
+   "name": "en name \"Giraffe Shrine\" → that place first",
+   "pass": true,
+   "got": "giraffe"
+  },
+  {
+   "name": "th name \"ลานจอดรถยนต์ข้างอาคาร 52\" → that place first",
+   "pass": true,
+   "got": "lot52"
+  },
+  {
+   "name": "en name \"Car park beside building 52\" → that place first",
+   "pass": true,
+   "got": "lot52"
+  },
+  {
+   "name": "th name \"ลานจอดรถยนต์ระหว่างสนามกีฬากับหอพัก\" → that place first",
+   "pass": true,
+   "got": "lotDorm"
+  },
+  {
+   "name": "en name \"Car park between the stadium and the dor\" → that place first",
+   "pass": true,
+   "got": "lotDorm"
+  },
+  {
+   "name": "th name \"7-Eleven (โซนหอพัก)\" → that place first",
+   "pass": true,
+   "got": "seven"
+  },
+  {
+   "name": "en name \"7-Eleven, dormitory zone\" → that place first",
+   "pass": true,
+   "got": "seven"
+  },
+  {
+   "name": "th name \"ที่นั่งพัก (ข้าง 7-Eleven โซนหอพัก)\" → that place first",
+   "pass": true,
+   "got": "rest5"
+  },
+  {
+   "name": "en name \"Seating area by the dormitory 7-Eleven\" → that place first",
+   "pass": true,
+   "got": "rest5"
+  },
+  {
+   "name": "th name \"อาคารปฏิบัติการฝึกฝีมือพื้นฐาน (อาคาร 97\" → that place first",
+   "pass": true,
+   "got": "97"
+  },
+  {
+   "name": "en name \"Building 97\" → that place first",
+   "pass": true,
+   "got": "97"
+  },
+  {
+   "name": "th name \"อาคารทางใต้STRI · จุดipc (ชื่อใช้งานรอยื\" → that place first",
+   "pass": true,
+   "got": "ipc"
+  },
+  {
+   "name": "en name \"Building south of STRI - current use unv\" → that place first",
+   "pass": true,
+   "got": "ipc"
+  },
+  {
+   "name": "th name \"KMUTNB Techno Park (อาคาร 99)\" → that place first",
+   "pass": true,
+   "got": "u1"
+  },
+  {
+   "name": "en name \"KMUTNB Techno Park\" → that place first",
+   "pass": true,
+   "got": "u1"
+  },
+  {
+   "name": "th name \"อาคารโซนหอพัก (ยังไม่ทราบชื่อ)\" → that place first",
+   "pass": true,
+   "got": "u2"
+  },
+  {
+   "name": "en name \"Building in the dormitory zone\" → that place first",
+   "pass": true,
+   "got": "u2"
+  },
+  {
+   "name": "th name \"พระบรมราชานุสาวรีย์ ร.4 · หน้าอาคาร21–22\" → that place first",
+   "pass": true,
+   "got": "frontmonument"
+  },
+  {
+   "name": "en name \"King Mongkut's Monument\" → that place first",
+   "pass": true,
+   "got": "frontmonument"
+  },
+  {
+   "name": "th name \"หอพระหลวงพ่อสิงห์ · ข้างTGGS\" → that place first",
+   "pass": true,
+   "got": "hophra"
+  },
+  {
+   "name": "en name \"Luang Pho Sing Buddhist Shrine\" → that place first",
+   "pass": true,
+   "got": "hophra"
+  },
+  {
+   "name": "th name \"สนามกีฬา (อาคารปฏิบัติการด้านวิทยาศาสตร์\" → that place first",
+   "pass": true,
+   "got": "94"
+  },
+  {
+   "name": "en name \"Stadium\" → that place first",
+   "pass": true,
+   "got": "94"
+  },
+  {
+   "name": "partial Thai \"หอสมุด\" finds the central library (23)",
+   "pass": true,
+   "got": "23,lotLib,bikeLib"
+  },
+  {
+   "name": "partial English \"library\" finds 23",
+   "pass": true,
+   "got": "23,lotLib,bikeLib"
+  },
+  {
+   "name": "case/space insensitive \"Gym nasium\" finds 72",
+   "pass": true,
+   "got": "72,lot72"
+  },
+  {
+   "name": "result list has no duplicate place ids",
+   "pass": true,
+   "got": "[40,40]"
+  },
+  {
+   "name": "no page errors during the tests",
+   "pass": true,
+   "got": "[]"
+  }
+ ]
+}

@@ -1,0 +1,11455 @@
+{
+ "generated": "2026-10-28T17:59:07.501Z",
+ "geo": {
+  "lat0": 13.82156,
+  "lon0": 100.51408,
+  "kx": 108096.66847345114,
+  "kz": 110574,
+  "note": "x = east metres, z = south metres; equirectangular around (lat0, lon0)"
+ },
+ "rows": [
+  {
+   "id": "11",
+   "no": "11",
+   "name": "บัณฑิตวิทยาลัยวิศวกรรมศาสตร์นานาชาติสิรินธรไทย-เยอรมัน (TGGS)",
+   "en": "Sirindhorn International Thai-German Graduate School of Engineering",
+   "cat": "fac",
+   "kind": "tggs",
+   "flat": false,
+   "lv": 10,
+   "lv0": 10,
+   "top": 37,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 106,
+   "vertices": 4,
+   "area": 1577.5,
+   "cx": -26.7,
+   "cz": 277.5,
+   "lat": 13.8190503,
+   "lon": 100.5138335,
+   "bboxW": 77,
+   "bboxD": 45,
+   "orientDeg": 160.3,
+   "insideCampus": true,
+   "degenerateInstances": 72,
+   "modelMinY": -3.3,
+   "modelMaxY": 36.69,
+   "modelW": 80.9,
+   "modelD": 47.4,
+   "modelOverhang": 3.1,
+   "metresPerFloor": 3.7,
+   "osmWay": 158474985,
+   "osmName": "บัณฑิตวิทยาลัยวิศวกรรมศาสตร์นานาชาติสิรินธรไทย-เยอรมัน",
+   "osmLevels": "",
+   "osmIoU": 0.99,
+   "osmCentroidOffset": 0.1,
+   "osmAreaRatio": 0.99,
+   "osmOrientDiff": 0.1,
+   "nearestRoad": 2.8,
+   "nearestFootpath": 4.2,
+   "walkSnap": 2.8
+  },
+  {
+   "id": "13",
+   "no": "13",
+   "name": "อาคาร13 · ป้ายกองอาคารฯในภาพปี2556 (การใช้ปัจจุบันรอยืนยัน)",
+   "en": "Building 13 - current use unverified",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 3,
+   "lv0": 3,
+   "top": 13.2,
+   "sourceFlags": "est(แผนผัง)",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 144,
+   "vertices": 6,
+   "area": 339,
+   "cx": -96.9,
+   "cz": 264.7,
+   "lat": 13.8191658,
+   "lon": 100.5131833,
+   "bboxW": 26,
+   "bboxD": 20,
+   "orientDeg": 164.1,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 13.16,
+   "modelW": 28.3,
+   "modelD": 24,
+   "modelOverhang": 3,
+   "metresPerFloor": 4.4,
+   "osmWay": 158475183,
+   "osmName": "",
+   "osmLevels": "",
+   "osmIoU": 0.97,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 0.98,
+   "osmOrientDiff": 1.3,
+   "nearestRoad": 2.2,
+   "nearestFootpath": 44.1,
+   "walkSnap": 1.6
+  },
+  {
+   "id": "21",
+   "no": "21",
+   "name": "อาคารอเนกประสงค์ (อาคาร 21)",
+   "en": "Multipurpose Hall",
+   "cat": "inst",
+   "kind": "hall21",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 17.3,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 347,
+   "vertices": 11,
+   "area": 1819.5,
+   "cx": 42.9,
+   "cz": 238.4,
+   "lat": 13.8194037,
+   "lon": 100.5144768,
+   "bboxW": 60,
+   "bboxD": 48,
+   "orientDeg": 160.7,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 16.7,
+   "modelW": 60.6,
+   "modelD": 49.8,
+   "modelOverhang": 1.8,
+   "metresPerFloor": 4.33,
+   "osmWay": 158474997,
+   "osmName": "อาคาร 21 อเนกประสงค์",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.3,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.2,
+   "nearestRoad": 11.9,
+   "nearestFootpath": 0,
+   "walkSnap": 0.1
+  },
+  {
+   "id": "22",
+   "no": "22",
+   "name": "อาคารอเนกประสงค์ (อาคาร 22) · สำนักงานอธิการบดี",
+   "en": "Office of the President",
+   "cat": "inst",
+   "kind": "tower22",
+   "flat": false,
+   "lv": 11,
+   "lv0": 11,
+   "top": 41.1,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 363,
+   "vertices": 13,
+   "area": 1303,
+   "cx": 3.3,
+   "cz": 252.2,
+   "lat": 13.8192794,
+   "lon": 100.5141101,
+   "bboxW": 61,
+   "bboxD": 38,
+   "orientDeg": 161.6,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 48.9,
+   "modelW": 62.8,
+   "modelD": 43.4,
+   "modelOverhang": 4.8,
+   "metresPerFloor": 3.74,
+   "osmWay": 158474986,
+   "osmName": "อาคาร 22 อเนกประสงค์",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.7,
+   "nearestRoad": 6.8,
+   "nearestFootpath": 0,
+   "walkSnap": 0.3
+  },
+  {
+   "id": "23",
+   "no": "23",
+   "name": "อาคารนวมินทรราชินี (สำนักหอสมุดกลาง)",
+   "en": "Navamindra Rajini Building — Central Library",
+   "cat": "svc",
+   "kind": "lib23",
+   "flat": false,
+   "lv": 12,
+   "lv0": 12,
+   "top": 48.3,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 885,
+   "vertices": 13,
+   "area": 2611.5,
+   "cx": -7,
+   "cz": 201.8,
+   "lat": 13.8197348,
+   "lon": 100.5140149,
+   "bboxW": 104,
+   "bboxD": 80,
+   "orientDeg": 34.1,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 48.45,
+   "modelW": 104,
+   "modelD": 80,
+   "modelOverhang": 0,
+   "metresPerFloor": 4.02,
+   "osmWay": 158475181,
+   "osmName": "อาคารนวมินทรราชินี",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.4,
+   "osmAreaRatio": 1.02,
+   "osmOrientDiff": 0.3,
+   "nearestRoad": 0,
+   "nearestFootpath": 0.9,
+   "walkSnap": 0
+  },
+  {
+   "id": "41",
+   "no": "41",
+   "name": "คณะสถาปัตยกรรมและการออกแบบ",
+   "en": "Faculty of Architecture and Design",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 9,
+   "lv0": 9,
+   "top": 33.1,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 62,
+   "vertices": 6,
+   "area": 1015,
+   "cx": 221.4,
+   "cz": 191.9,
+   "lat": 13.8198248,
+   "lon": 100.5161278,
+   "bboxW": 76,
+   "bboxD": 36,
+   "orientDeg": 158.8,
+   "insideCampus": true,
+   "degenerateInstances": 18,
+   "modelMinY": 0.3,
+   "modelMaxY": 32.92,
+   "modelW": 81,
+   "modelD": 38.3,
+   "modelOverhang": 4.9,
+   "metresPerFloor": 3.68,
+   "osmWay": 158474999,
+   "osmName": "คณะสถาปัตยกรรมและการออกแบบ",
+   "osmLevels": "",
+   "osmIoU": 0.97,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 0.99,
+   "osmOrientDiff": 0.5,
+   "nearestRoad": 9.4,
+   "nearestFootpath": 31.4,
+   "walkSnap": 9.4
+  },
+  {
+   "id": "42",
+   "no": "42",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 42)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 3,
+   "lv0": 3,
+   "top": 12.4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 339,
+   "vertices": 4,
+   "area": 1446,
+   "cx": 207,
+   "cz": 227,
+   "lat": 13.8195071,
+   "lon": 100.515995,
+   "bboxW": 60,
+   "bboxD": 44,
+   "orientDeg": 159.6,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 12,
+   "modelW": 62.1,
+   "modelD": 45.5,
+   "modelOverhang": 1.1,
+   "metresPerFloor": 4.13,
+   "osmWay": 158474981,
+   "osmName": "อาคาร 42",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 0.99,
+   "osmOrientDiff": 0.3,
+   "nearestRoad": 26.7,
+   "nearestFootpath": 41.9,
+   "walkSnap": 26.7
+  },
+  {
+   "id": "43",
+   "no": "43",
+   "name": "สถาบันนวัตกรรมเทคโนโลยีไทย-ฝรั่งเศส (TFII)",
+   "en": "Thai-French Innovation Institute",
+   "cat": "inst",
+   "kind": "styled",
+   "flat": false,
+   "lv": 9,
+   "lv0": 9,
+   "top": 33.2,
+   "sourceFlags": "est(แผนผัง)+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 12,
+   "vertices": 5,
+   "area": 213,
+   "cx": 176.4,
+   "cz": 213,
+   "lat": 13.8196339,
+   "lon": 100.515712,
+   "bboxW": 17,
+   "bboxD": 34,
+   "orientDeg": 70.5,
+   "insideCampus": true,
+   "modelMinY": 0.17,
+   "modelMaxY": 32.97,
+   "modelW": 18.1,
+   "modelD": 35.6,
+   "modelOverhang": 1.1,
+   "metresPerFloor": 3.69,
+   "osmWay": 986219913,
+   "osmName": "สถาบันนวัตกรรมเทคโนโลยีไทย-ฝรั่งเศษ",
+   "osmLevels": "",
+   "osmIoU": 0.95,
+   "osmCentroidOffset": 0.4,
+   "osmAreaRatio": 0.99,
+   "osmOrientDiff": 0.4,
+   "nearestRoad": 19.2,
+   "nearestFootpath": 32.5,
+   "walkSnap": 19.2
+  },
+  {
+   "id": "44",
+   "no": "44",
+   "name": "คณะครุศาสตร์อุตสาหกรรม (อาคาร 44)",
+   "en": "Faculty of Technical Education",
+   "cat": "fac",
+   "kind": "styled",
+   "flat": false,
+   "lv": 8,
+   "lv0": 8,
+   "top": 35.4,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 710,
+   "vertices": 7,
+   "area": 1321.5,
+   "cx": 157.7,
+   "cz": 204.8,
+   "lat": 13.8197079,
+   "lon": 100.5155384,
+   "bboxW": 42,
+   "bboxD": 53,
+   "orientDeg": 69.1,
+   "insideCampus": true,
+   "modelMinY": 0.16,
+   "modelMaxY": 34.9,
+   "modelW": 49.1,
+   "modelD": 55.6,
+   "modelOverhang": 5.9,
+   "metresPerFloor": 4.43,
+   "osmWay": 158475016,
+   "osmName": "อาคาร 44",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.3,
+   "osmAreaRatio": 1.01,
+   "osmOrientDiff": 0,
+   "nearestRoad": 6.1,
+   "nearestFootpath": 0,
+   "walkSnap": 0
+  },
+  {
+   "id": "46",
+   "no": "46",
+   "name": "คณะศิลปศาสตร์ประยุกต์ และโรงอาหารสวนปาล์ม",
+   "en": "Faculty of Applied Arts",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 16,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 216,
+   "vertices": 4,
+   "area": 1069,
+   "cx": 58.2,
+   "cz": 176.1,
+   "lat": 13.8199671,
+   "lon": 100.5146183,
+   "bboxW": 38,
+   "bboxD": 50,
+   "orientDeg": 69.1,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 15.6,
+   "modelW": 40.1,
+   "modelD": 52.5,
+   "modelOverhang": 1.3,
+   "metresPerFloor": 4,
+   "osmWay": 158475000,
+   "osmName": "คณะศิลปศาสตร์ประยุกต์",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.3,
+   "osmAreaRatio": 0.98,
+   "osmOrientDiff": 1.1,
+   "nearestRoad": 4,
+   "nearestFootpath": 1.3,
+   "walkSnap": 1.3
+  },
+  {
+   "id": "47",
+   "no": "47",
+   "name": "สำนักวิจัยวิทยาศาสตร์และเทคโนโลยี (STRI)",
+   "en": "Science and Technology Research Institute",
+   "cat": "inst",
+   "kind": "styled",
+   "flat": false,
+   "lv": 9,
+   "lv0": 9,
+   "top": 34.9,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 112,
+   "vertices": 4,
+   "area": 875,
+   "cx": 137.2,
+   "cz": 253.1,
+   "lat": 13.8192714,
+   "lon": 100.5153492,
+   "bboxW": 38,
+   "bboxD": 38,
+   "orientDeg": 68.6,
+   "insideCampus": true,
+   "degenerateInstances": 120,
+   "modelMinY": 0,
+   "modelMaxY": 43.07,
+   "modelW": 38.7,
+   "modelD": 41,
+   "modelOverhang": 3,
+   "metresPerFloor": 3.88,
+   "osmWay": 158474984,
+   "osmName": "สำนักวิจัยวิทยาศาสตร์และเทคโนโลยี",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.4,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.8,
+   "nearestRoad": 2.6,
+   "nearestFootpath": 0,
+   "walkSnap": 0
+  },
+  {
+   "id": "52",
+   "no": "52",
+   "name": "คณะครุศาสตร์อุตสาหกรรม (อาคาร 52)",
+   "en": "Faculty of Technical Education",
+   "cat": "fac",
+   "kind": "fte52",
+   "flat": false,
+   "lv": 7,
+   "lv0": 7,
+   "top": 28.2,
+   "sourceFlags": "est(แผนผัง)+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 850,
+   "vertices": 7,
+   "area": 2434,
+   "cx": 125.6,
+   "cz": 122.1,
+   "lat": 13.8204554,
+   "lon": 100.5152417,
+   "bboxW": 68,
+   "bboxD": 54,
+   "orientDeg": 38.9,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 29.45,
+   "modelW": 77.7,
+   "modelD": 58.9,
+   "modelOverhang": 6.3,
+   "metresPerFloor": 4.03,
+   "nearestRoad": 6.1,
+   "nearestFootpath": 3,
+   "walkSnap": 3.1
+  },
+  {
+   "id": "62",
+   "no": "62",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 62)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 8,
+   "lv0": 8,
+   "top": 29.8,
+   "sourceFlags": "osm+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 209,
+   "vertices": 4,
+   "area": 2613,
+   "cx": 264.9,
+   "cz": 112.7,
+   "lat": 13.8205409,
+   "lon": 100.5165303,
+   "bboxW": 78,
+   "bboxD": 59,
+   "orientDeg": 159.7,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 29.8,
+   "modelW": 78.8,
+   "modelD": 59.8,
+   "modelOverhang": 0.4,
+   "metresPerFloor": 3.73,
+   "osmWay": 158475012,
+   "osmName": "อาคาร 62",
+   "osmLevels": "",
+   "osmIoU": 0.99,
+   "osmCentroidOffset": 0.3,
+   "osmAreaRatio": 0.99,
+   "osmOrientDiff": 0.6,
+   "nearestRoad": 5.1,
+   "nearestFootpath": 50.9,
+   "walkSnap": 5.2
+  },
+  {
+   "id": "63",
+   "no": "63",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 63)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "cit63",
+   "flat": false,
+   "lv": 5,
+   "lv0": 5,
+   "top": 18.9,
+   "sourceFlags": "osm+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 243,
+   "vertices": 12,
+   "area": 3280,
+   "cx": 203.2,
+   "cz": 121.2,
+   "lat": 13.8204639,
+   "lon": 100.5159598,
+   "bboxW": 67,
+   "bboxD": 102,
+   "orientDeg": 159.7,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 19,
+   "modelW": 68.7,
+   "modelD": 104.6,
+   "modelOverhang": 1.3,
+   "metresPerFloor": 3.78,
+   "osmWay": 158475007,
+   "osmName": "อาคาร 63",
+   "osmLevels": "",
+   "osmIoU": 0.99,
+   "osmCentroidOffset": 0.1,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.5,
+   "nearestRoad": 0.4,
+   "nearestFootpath": 8,
+   "walkSnap": 0.6
+  },
+  {
+   "id": "64",
+   "no": "64",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 64)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "cit64",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 18.9,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 356,
+   "vertices": 8,
+   "area": 741.5,
+   "cx": 179.2,
+   "cz": 60,
+   "lat": 13.8210178,
+   "lon": 100.5157373,
+   "bboxW": 40,
+   "bboxD": 40,
+   "orientDeg": 53.5,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 15.13,
+   "modelW": 40.3,
+   "modelD": 40.2,
+   "modelOverhang": 0.3,
+   "metresPerFloor": 4.72,
+   "osmWay": 158475005,
+   "osmName": "อาคาร 64",
+   "osmLevels": "",
+   "osmIoU": 0.97,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 1.01,
+   "osmOrientDiff": 0.4,
+   "nearestRoad": 3.9,
+   "nearestFootpath": 24.1,
+   "walkSnap": 3.9
+  },
+  {
+   "id": "65",
+   "no": "65",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 65)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 11,
+   "lv0": 11,
+   "top": 40.4,
+   "sourceFlags": "osm+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 247,
+   "vertices": 9,
+   "area": 551.5,
+   "cx": 214.1,
+   "cz": 45.8,
+   "lat": 13.8211454,
+   "lon": 100.5160603,
+   "bboxW": 31,
+   "bboxD": 33,
+   "orientDeg": 157.1,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 40.15,
+   "modelW": 31.6,
+   "modelD": 33.7,
+   "modelOverhang": 0.3,
+   "metresPerFloor": 3.67,
+   "osmWay": 986219908,
+   "osmName": "อาคาร 65",
+   "osmLevels": "",
+   "osmIoU": 0.96,
+   "osmCentroidOffset": 0.1,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 1.1,
+   "nearestRoad": 5.1,
+   "nearestFootpath": 57.9,
+   "walkSnap": 5.1
+  },
+  {
+   "id": "66",
+   "no": "66",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 66)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 2,
+   "lv0": 2,
+   "top": 7.75,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 4,
+   "vertices": 5,
+   "area": 127.5,
+   "cx": 229.1,
+   "cz": 64.3,
+   "lat": 13.8209787,
+   "lon": 100.516199,
+   "bboxW": 20,
+   "bboxD": 13,
+   "orientDeg": 161.6,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 7.38,
+   "modelW": 20.3,
+   "modelD": 13.6,
+   "modelOverhang": 0.6,
+   "metresPerFloor": 3.88,
+   "osmWay": 986219909,
+   "osmName": "ตึก66 มจพ",
+   "osmLevels": "",
+   "osmIoU": 0.93,
+   "osmCentroidOffset": 0.5,
+   "osmAreaRatio": 0.97,
+   "osmOrientDiff": 1.9,
+   "nearestRoad": 5.2,
+   "nearestFootpath": 62.4,
+   "walkSnap": 5.3
+  },
+  {
+   "id": "67",
+   "no": "67",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 67)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 2,
+   "lv0": 2,
+   "top": 7.75,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 4,
+   "vertices": 4,
+   "area": 178.5,
+   "cx": 259.3,
+   "cz": 76.5,
+   "lat": 13.8208683,
+   "lon": 100.5164789,
+   "bboxW": 21,
+   "bboxD": 15,
+   "orientDeg": 161.6,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 7.44,
+   "modelW": 21.7,
+   "modelD": 15.8,
+   "modelOverhang": 0.7,
+   "metresPerFloor": 3.88,
+   "osmWay": 986219910,
+   "osmName": "ตึก67 มจพ",
+   "osmLevels": "",
+   "osmIoU": 0.93,
+   "osmCentroidOffset": 0.3,
+   "osmAreaRatio": 1.04,
+   "osmOrientDiff": 1.6,
+   "nearestRoad": 2.9,
+   "nearestFootpath": 79.4,
+   "walkSnap": 2.9
+  },
+  {
+   "id": "68",
+   "no": "68",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 68)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 2,
+   "lv0": 2,
+   "top": 7.75,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 4,
+   "vertices": 4,
+   "area": 160.5,
+   "cx": 275.7,
+   "cz": 82.5,
+   "lat": 13.8208137,
+   "lon": 100.5166304,
+   "bboxW": 19,
+   "bboxD": 15,
+   "orientDeg": 159.4,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 7.76,
+   "modelW": 19.3,
+   "modelD": 15.6,
+   "modelOverhang": 0.6,
+   "metresPerFloor": 3.88,
+   "osmWay": 986219911,
+   "osmName": "ตึก68 มจพ",
+   "osmLevels": "",
+   "osmIoU": 0.94,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.2,
+   "nearestRoad": 2.5,
+   "nearestFootpath": 93.4,
+   "walkSnap": 2.5
+  },
+  {
+   "id": "69",
+   "no": "69",
+   "name": "วิทยาลัยเทคโนโลยีอุตสาหกรรม (อาคาร 69)",
+   "en": "College of Industrial Technology",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 3,
+   "lv0": 3,
+   "top": 11.35,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 50,
+   "vertices": 4,
+   "area": 162.5,
+   "cx": 303.8,
+   "cz": 88.6,
+   "lat": 13.8207584,
+   "lon": 100.5168907,
+   "bboxW": 14,
+   "bboxD": 22,
+   "orientDeg": 70.7,
+   "insideCampus": true,
+   "degenerateInstances": 5,
+   "modelMinY": 0,
+   "modelMaxY": 11.01,
+   "modelW": 15.2,
+   "modelD": 22.6,
+   "modelOverhang": 1.2,
+   "metresPerFloor": 3.78,
+   "osmWay": 986219912,
+   "osmName": "ตึก69 มจพ",
+   "osmLevels": "",
+   "osmIoU": 0.97,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 0.99,
+   "osmOrientDiff": 0.8,
+   "nearestRoad": 14.6,
+   "nearestFootpath": 121.6,
+   "walkSnap": 14.6
+  },
+  {
+   "id": "72",
+   "no": "72",
+   "name": "อาคาร 72 (ยิมเนเซียม) · คณะวิทยาศาสตร์ประยุกต์",
+   "en": "Building 72 — Gymnasium / Faculty of Applied Science",
+   "cat": "sport",
+   "kind": "",
+   "flat": false,
+   "lv": 6,
+   "lv0": 6,
+   "top": 23.2,
+   "sourceFlags": "imageryRoof",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 150,
+   "vertices": 4,
+   "area": 1332,
+   "cx": 144,
+   "cz": -42.5,
+   "lat": 13.8219444,
+   "lon": 100.5154121,
+   "bboxW": 68,
+   "bboxD": 43,
+   "orientDeg": 158.2,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 25.52,
+   "modelW": 68.5,
+   "modelD": 44.4,
+   "modelOverhang": 1.3,
+   "metresPerFloor": 3.87,
+   "osmWay": 158475014,
+   "osmName": "ยิมเนเซี่ยม",
+   "osmLevels": "",
+   "osmIoU": 0.97,
+   "osmCentroidOffset": 0.5,
+   "osmAreaRatio": 0.99,
+   "osmOrientDiff": 0.3,
+   "nearestRoad": 51.9,
+   "nearestFootpath": 75,
+   "walkSnap": 51.9
+  },
+  {
+   "id": "71",
+   "no": "71",
+   "name": "อาคาร71 · อาคารเก็บสารเคมี (ตามเอกสารปี2568)",
+   "en": "Building 71 — Department of Industrial Chemistry",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 15.3,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 8,
+   "vertices": 4,
+   "area": 204.5,
+   "cx": 96.2,
+   "cz": -51.9,
+   "lat": 13.8220292,
+   "lon": 100.5149697,
+   "bboxW": 18,
+   "bboxD": 22,
+   "orientDeg": 62.8,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 15.26,
+   "modelW": 20.8,
+   "modelD": 24.7,
+   "modelOverhang": 1.6,
+   "metresPerFloor": 3.83,
+   "nearestRoad": 53.8,
+   "nearestFootpath": 52,
+   "walkSnap": 52
+  },
+  {
+   "id": "73",
+   "no": "73",
+   "name": "ศูนย์ทดสอบภาษาอังกฤษและพัฒนาพหุภาษา (CEM)",
+   "en": "Center for English Proficiency Assessment and Multilingual Growth (CEM)",
+   "cat": "inst",
+   "kind": "",
+   "flat": false,
+   "lv": 5,
+   "lv0": 5,
+   "top": 24.31,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 38,
+   "vertices": 4,
+   "area": 324,
+   "cx": 38,
+   "cz": -31,
+   "lat": 13.8218404,
+   "lon": 100.5144315,
+   "bboxW": 24,
+   "bboxD": 26,
+   "orientDeg": 59.9,
+   "insideCampus": true,
+   "modelMinY": 0.24,
+   "modelMaxY": 24.18,
+   "modelW": 24.8,
+   "modelD": 28.4,
+   "modelOverhang": 2.4,
+   "metresPerFloor": 4.86,
+   "osmWay": 986219922,
+   "osmName": "สถาบันพัฒนาสื่ออิเล็กทรอนิกส์ไทย-เยอรมัน",
+   "osmLevels": "",
+   "osmIoU": 0.95,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 1.01,
+   "osmOrientDiff": 0.1,
+   "nearestRoad": 11,
+   "nearestFootpath": 2.1,
+   "walkSnap": 2.1
+  },
+  {
+   "id": "75",
+   "no": "75",
+   "name": "คณะวิทยาศาสตร์ประยุกต์ (อาคาร 75)",
+   "en": "Faculty of Applied Science",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 15,
+   "lv0": 15,
+   "top": 55.6,
+   "sourceFlags": "osm+coordinateEvidence",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 196,
+   "vertices": 4,
+   "area": 359.5,
+   "cx": 79.1,
+   "cz": -10.1,
+   "lat": 13.8216517,
+   "lon": 100.5148121,
+   "bboxW": 23.2,
+   "bboxD": 27,
+   "orientDeg": 67.7,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 55.2,
+   "modelW": 23.7,
+   "modelD": 27.5,
+   "modelOverhang": 0.2,
+   "metresPerFloor": 3.71,
+   "osmWay": 986219914,
+   "osmName": "อาคาร 75",
+   "osmLevels": "15",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0.1,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 6.8,
+   "nearestFootpath": 47.3,
+   "walkSnap": 6.8
+  },
+  {
+   "id": "76",
+   "no": "76",
+   "name": "สำนักพัฒนาเทคนิคศึกษา (ITED)",
+   "en": "Institute for Technology Education Development",
+   "cat": "inst",
+   "kind": "",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 15.2,
+   "sourceFlags": "coordinateEvidence+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 314,
+   "vertices": 4,
+   "area": 746.4,
+   "cx": 32.9,
+   "cz": 98.2,
+   "lat": 13.8206722,
+   "lon": 100.5143839,
+   "bboxW": 43.9,
+   "bboxD": 46.8,
+   "orientDeg": 131.4,
+   "insideCampus": true,
+   "modelMinY": 0.25,
+   "modelMaxY": 14.95,
+   "modelW": 44.5,
+   "modelD": 47.3,
+   "modelOverhang": 0.3,
+   "metresPerFloor": 3.8,
+   "osmWay": 986168003,
+   "osmName": "สำนักพัฒนาเทคนิคศึกษา",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0.1,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 22,
+   "nearestFootpath": 7.6,
+   "walkSnap": 4.1
+  },
+  {
+   "id": "77",
+   "no": "77",
+   "name": "อาคาร 40 ปี มจพ. และโรงอาหารกลาง",
+   "en": "40th Year Building and Main Canteen",
+   "cat": "svc",
+   "kind": "terra77",
+   "flat": false,
+   "lv": 11,
+   "lv0": 11,
+   "top": 40.4,
+   "sourceFlags": "osm+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 243,
+   "vertices": 5,
+   "area": 2985.5,
+   "cx": 60.1,
+   "cz": 47.6,
+   "lat": 13.8211294,
+   "lon": 100.5146364,
+   "bboxW": 69,
+   "bboxD": 73,
+   "orientDeg": 66.9,
+   "insideCampus": true,
+   "modelMinY": 0.18,
+   "modelMaxY": 40.17,
+   "modelW": 71.2,
+   "modelD": 78.1,
+   "modelOverhang": 4.5,
+   "metresPerFloor": 3.67,
+   "osmWay": 158474996,
+   "osmName": "อาคาร 40 ปีมจพ.",
+   "osmLevels": "11",
+   "osmIoU": 0.99,
+   "osmCentroidOffset": 0.1,
+   "osmAreaRatio": 1.01,
+   "osmOrientDiff": 0.2,
+   "nearestRoad": 12.1,
+   "nearestFootpath": 16.1,
+   "walkSnap": 12.1
+  },
+  {
+   "id": "78A",
+   "no": "78A",
+   "name": "คณะวิทยาศาสตร์ประยุกต์ (อาคาร 78 โซน A)",
+   "en": "Faculty of Applied Science — Zone A",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 12,
+   "lv0": 12,
+   "top": 44,
+   "sourceFlags": "osm+coordinateEvidence+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 659,
+   "vertices": 6,
+   "area": 736.7,
+   "cx": 101.4,
+   "cz": -1.2,
+   "lat": 13.8215706,
+   "lon": 100.5150179,
+   "bboxW": 38.5,
+   "bboxD": 33.2,
+   "orientDeg": 158,
+   "insideCampus": true,
+   "modelMinY": 0.15,
+   "modelMaxY": 43.8,
+   "modelW": 40.8,
+   "modelD": 38.1,
+   "modelOverhang": 4.3,
+   "metresPerFloor": 3.67,
+   "osmWay": 158474987,
+   "osmName": "อาคาร 78 โซน A",
+   "osmLevels": "12",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 6.7,
+   "nearestFootpath": 47,
+   "walkSnap": 6.7
+  },
+  {
+   "id": "78B",
+   "no": "78B",
+   "name": "คณะวิทยาศาสตร์ประยุกต์ (อาคาร 78 โซน B)",
+   "en": "Faculty of Applied Science — Zone B",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 10,
+   "lv0": 10,
+   "top": 37.6,
+   "sourceFlags": "osm",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 807,
+   "vertices": 10,
+   "area": 1291,
+   "cx": 157.6,
+   "cz": 2.8,
+   "lat": 13.8215345,
+   "lon": 100.5155382,
+   "bboxW": 75,
+   "bboxD": 50,
+   "orientDeg": 157.7,
+   "insideCampus": true,
+   "modelMinY": 0.03,
+   "modelMaxY": 37.2,
+   "modelW": 78.7,
+   "modelD": 52.5,
+   "modelOverhang": 2.2,
+   "metresPerFloor": 3.76,
+   "osmWay": 158474983,
+   "osmName": "อาคาร 78 โซน B",
+   "osmLevels": "9",
+   "osmIoU": 0.96,
+   "osmCentroidOffset": 0.3,
+   "osmAreaRatio": 0.98,
+   "osmOrientDiff": 0.1,
+   "nearestRoad": 2,
+   "nearestFootpath": 38.9,
+   "walkSnap": 2
+  },
+  {
+   "id": "79",
+   "no": "79",
+   "name": "อาคารสโมสรบุคลากร (ตึกสโมสร)",
+   "en": "Staff Club Building",
+   "cat": "svc",
+   "kind": "club79",
+   "flat": false,
+   "lv": 2,
+   "lv0": 2,
+   "top": 8.7,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 60,
+   "vertices": 6,
+   "area": 971.3,
+   "cx": 133.7,
+   "cz": 23.1,
+   "lat": 13.8213511,
+   "lon": 100.5153167,
+   "bboxW": 41.4,
+   "bboxD": 46.1,
+   "orientDeg": 130,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 8.85,
+   "modelW": 55.6,
+   "modelD": 54.9,
+   "modelOverhang": 13,
+   "metresPerFloor": 4.35,
+   "osmWay": 158475006,
+   "osmName": "สโมสรบุคลากรมจพ.",
+   "osmLevels": "",
+   "osmIoU": 0.93,
+   "osmCentroidOffset": 1,
+   "osmAreaRatio": 0.94,
+   "osmOrientDiff": 0.9,
+   "nearestRoad": 5.3,
+   "nearestFootpath": 11,
+   "walkSnap": 5.3
+  },
+  {
+   "id": "81",
+   "no": "81",
+   "name": "คณะวิศวกรรมศาสตร์ (อาคาร 81)",
+   "en": "Faculty of Engineering",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 8,
+   "lv0": 8,
+   "top": 29.8,
+   "sourceFlags": "coordinateEvidence+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 117,
+   "vertices": 8,
+   "area": 2212.5,
+   "cx": -63.7,
+   "cz": 27.7,
+   "lat": 13.8213098,
+   "lon": 100.5134909,
+   "bboxW": 96.3,
+   "bboxD": 68.1,
+   "orientDeg": 146.8,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 29.77,
+   "modelW": 101.4,
+   "modelD": 71.5,
+   "modelOverhang": 2.8,
+   "metresPerFloor": 3.73,
+   "osmWay": 158475010,
+   "osmName": "อาคาร 81",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 0,
+   "nearestFootpath": 70.5,
+   "walkSnap": 0.1
+  },
+  {
+   "id": "82",
+   "no": "82",
+   "name": "คณะวิศวกรรมศาสตร์ (อาคาร 82)",
+   "en": "Faculty of Engineering",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 5,
+   "lv0": 5,
+   "top": 18.7,
+   "sourceFlags": "coordinateEvidence",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 141,
+   "vertices": 4,
+   "area": 1160.4,
+   "cx": -115.8,
+   "cz": -22.7,
+   "lat": 13.8217653,
+   "lon": 100.5130091,
+   "bboxW": 46.4,
+   "bboxD": 58,
+   "orientDeg": 59.1,
+   "insideCampus": true,
+   "modelMinY": 0.26,
+   "modelMaxY": 18.35,
+   "modelW": 49.4,
+   "modelD": 59.9,
+   "modelOverhang": 2.8,
+   "metresPerFloor": 3.74,
+   "osmWay": 158474989,
+   "osmName": "อาคาร 82",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 9.2,
+   "nearestFootpath": 114.3,
+   "walkSnap": 9.3
+  },
+  {
+   "id": "83",
+   "no": "83",
+   "name": "คณะวิศวกรรมศาสตร์ (อาคาร 83)",
+   "en": "Faculty of Engineering",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 5,
+   "lv0": 5,
+   "top": 19.6,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 141,
+   "vertices": 4,
+   "area": 1007,
+   "cx": -77.4,
+   "cz": -50.1,
+   "lat": 13.8220127,
+   "lon": 100.5133641,
+   "bboxW": 57,
+   "bboxD": 46,
+   "orientDeg": 147.1,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 19.8,
+   "modelW": 59,
+   "modelD": 47.6,
+   "modelOverhang": 1,
+   "metresPerFloor": 3.92,
+   "osmWay": 158475003,
+   "osmName": "อาคาร 83",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.5,
+   "nearestRoad": 8,
+   "nearestFootpath": 72.8,
+   "walkSnap": 8
+  },
+  {
+   "id": "84",
+   "no": "84",
+   "name": "คณะวิศวกรรมศาสตร์ (อาคาร 84)",
+   "en": "Faculty of Engineering",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 15.3,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 43,
+   "vertices": 4,
+   "area": 1040,
+   "cx": -22,
+   "cz": -14.5,
+   "lat": 13.8216911,
+   "lon": 100.5138765,
+   "bboxW": 58,
+   "bboxD": 47,
+   "orientDeg": 146.3,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 14.92,
+   "modelW": 59.7,
+   "modelD": 48.2,
+   "modelOverhang": 1.3,
+   "metresPerFloor": 3.83,
+   "osmWay": 158475013,
+   "osmName": "อาคาร 84",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.3,
+   "nearestRoad": 10.8,
+   "nearestFootpath": 15.6,
+   "walkSnap": 10.8
+  },
+  {
+   "id": "85",
+   "no": "85",
+   "name": "คณะวิศวกรรมศาสตร์ (อาคาร 85)",
+   "en": "Faculty of Engineering",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 15,
+   "sourceFlags": "coordinateEvidence",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 160,
+   "vertices": 4,
+   "area": 679.9,
+   "cx": -35.7,
+   "cz": 14.4,
+   "lat": 13.8214298,
+   "lon": 100.5137496,
+   "bboxW": 35.5,
+   "bboxD": 37.1,
+   "orientDeg": 56.8,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 14.68,
+   "modelW": 37.5,
+   "modelD": 38.5,
+   "modelOverhang": 2,
+   "metresPerFloor": 3.75,
+   "osmWay": 986219906,
+   "osmName": "อาคาร 85",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 13,
+   "nearestFootpath": 44.4,
+   "walkSnap": 13
+  },
+  {
+   "id": "86",
+   "no": "86",
+   "name": "คณะวิศวกรรมศาสตร์ (อาคาร 86)",
+   "en": "Faculty of Engineering",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 13,
+   "lv0": 13,
+   "top": 49,
+   "sourceFlags": "coordinateEvidence",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 191,
+   "vertices": 4,
+   "area": 442.8,
+   "cx": -89.5,
+   "cz": -103.4,
+   "lat": 13.8224949,
+   "lon": 100.513252,
+   "bboxW": 28.9,
+   "bboxD": 34,
+   "orientDeg": 57.2,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 47.74,
+   "modelW": 31,
+   "modelD": 35,
+   "modelOverhang": 1.9,
+   "metresPerFloor": 3.77,
+   "osmWay": 986219920,
+   "osmName": "อาคาร 86",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 5.5,
+   "nearestFootpath": 128.2,
+   "walkSnap": 5.6
+  },
+  {
+   "id": "88",
+   "no": "88",
+   "name": "คณะวิศวกรรมศาสตร์ (อาคาร 88)",
+   "en": "Faculty of Engineering",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 7,
+   "lv0": 7,
+   "top": 26.1,
+   "sourceFlags": "coordinateEvidence+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 354,
+   "vertices": 4,
+   "area": 616.3,
+   "cx": -110.3,
+   "cz": -116.9,
+   "lat": 13.822617,
+   "lon": 100.5130599,
+   "bboxW": 37.1,
+   "bboxD": 32.3,
+   "orientDeg": 151.1,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 25.72,
+   "modelW": 38.3,
+   "modelD": 33.9,
+   "modelOverhang": 1,
+   "metresPerFloor": 3.73,
+   "osmWay": 986219919,
+   "osmName": "อาคาร 88",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 12.2,
+   "nearestFootpath": 145.2,
+   "walkSnap": 12.2
+  },
+  {
+   "id": "89",
+   "no": "89",
+   "name": "คณะวิศวกรรมศาสตร์ (อาคาร 89)",
+   "en": "Faculty of Engineering",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 11,
+   "lv0": 11,
+   "top": 41.8,
+   "sourceFlags": "osm+coordinateEvidence+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 382,
+   "vertices": 4,
+   "area": 1531,
+   "cx": -153.5,
+   "cz": -42.2,
+   "lat": 13.8219419,
+   "lon": 100.5126604,
+   "bboxW": 55.7,
+   "bboxD": 65,
+   "orientDeg": 55.3,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 41.6,
+   "modelW": 56.8,
+   "modelD": 66.3,
+   "modelOverhang": 1.1,
+   "metresPerFloor": 3.8,
+   "osmWay": 158474992,
+   "osmName": "อาคาร 89",
+   "osmLevels": "11",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0.1,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 1.8,
+   "nearestFootpath": 151.4,
+   "walkSnap": 1.9
+  },
+  {
+   "id": "90",
+   "no": "90",
+   "name": "โรงเรียนเตรียมวิศวกรรมศาสตร์ ไทย-เยอรมัน",
+   "en": "Thai-German Pre-Engineering School",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 6,
+   "lv0": 6,
+   "top": 22.3,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 61,
+   "vertices": 4,
+   "area": 1170.5,
+   "cx": -262.3,
+   "cz": -228.2,
+   "lat": 13.8236239,
+   "lon": 100.5116538,
+   "bboxW": 47,
+   "bboxD": 53,
+   "orientDeg": 123.4,
+   "insideCampus": true,
+   "modelMinY": 0.26,
+   "modelMaxY": 22.12,
+   "modelW": 49.9,
+   "modelD": 55.9,
+   "modelOverhang": 1.5,
+   "metresPerFloor": 3.72,
+   "osmWay": 985826915,
+   "osmName": "โรงเรียนเตรียมวิศวกรรมศาสตร์ไทย-เยอรมัน",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.5,
+   "nearestRoad": 1,
+   "nearestFootpath": 322.5,
+   "walkSnap": 1.1
+  },
+  {
+   "id": "91",
+   "no": "91",
+   "name": "อาคารเรียนและโรงอาหาร (อาคาร 91)",
+   "en": "Classroom and canteen building 91",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 15.6,
+   "sourceFlags": "coordinateEvidence",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 8,
+   "vertices": 4,
+   "area": 1433.7,
+   "cx": -286.8,
+   "cz": -266.6,
+   "lat": 13.8239708,
+   "lon": 100.5114264,
+   "bboxW": 56.1,
+   "bboxD": 51.6,
+   "orientDeg": 34.4,
+   "insideCampus": true,
+   "degenerateInstances": 7,
+   "modelMinY": -0.5,
+   "modelMaxY": 15.51,
+   "modelW": 317.8,
+   "modelD": 295.4,
+   "modelOverhang": 259.3,
+   "metresPerFloor": 3.9,
+   "osmWay": 1561697997,
+   "osmName": "",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 2.4,
+   "nearestFootpath": 367.2,
+   "walkSnap": 2.4
+  },
+  {
+   "id": "92",
+   "no": "92",
+   "name": "หอพักนักศึกษาชาย มจพ.",
+   "en": "KMUTNB Dormitory (male)",
+   "cat": "dorm",
+   "kind": "",
+   "flat": false,
+   "lv": 13,
+   "lv0": 13,
+   "top": 47.6,
+   "sourceFlags": "coordinateEvidence+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 368,
+   "vertices": 4,
+   "area": 754.9,
+   "cx": -198.7,
+   "cz": -211.9,
+   "lat": 13.8234765,
+   "lon": 100.5122422,
+   "bboxW": 38.2,
+   "bboxD": 45.5,
+   "orientDeg": 123,
+   "insideCampus": true,
+   "modelMinY": 0.27,
+   "modelMaxY": 47.43,
+   "modelW": 42,
+   "modelD": 47.7,
+   "modelOverhang": 3.2,
+   "metresPerFloor": 3.66,
+   "osmWay": 985826916,
+   "osmName": "หอพักนักศึกษาชายมจพ.",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 9.1,
+   "nearestFootpath": 262.7,
+   "walkSnap": 9.1
+  },
+  {
+   "id": "93",
+   "no": "93",
+   "name": "หอพักนักศึกษาหญิง มจพ.",
+   "en": "KMUTNB Dormitory (female)",
+   "cat": "dorm",
+   "kind": "",
+   "flat": false,
+   "lv": 13,
+   "lv0": 13,
+   "top": 47.6,
+   "sourceFlags": "coordinateEvidence+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 368,
+   "vertices": 4,
+   "area": 728,
+   "cx": -178.9,
+   "cz": -224.5,
+   "lat": 13.8235904,
+   "lon": 100.512425,
+   "bboxW": 37.7,
+   "bboxD": 44.8,
+   "orientDeg": 123.3,
+   "insideCampus": true,
+   "modelMinY": 0.27,
+   "modelMaxY": 47.43,
+   "modelW": 41.4,
+   "modelD": 46.9,
+   "modelOverhang": 3.2,
+   "metresPerFloor": 3.66,
+   "osmWay": 985826917,
+   "osmName": "หอพักนักศึกษาหญิงมจพ.",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 11,
+   "nearestFootpath": 255.1,
+   "walkSnap": 11
+  },
+  {
+   "id": "95",
+   "no": "95",
+   "name": "วิทยาลัยนานาชาติ",
+   "en": "International College",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 4,
+   "lv0": 4,
+   "top": 15.2,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 45,
+   "vertices": 5,
+   "area": 843.5,
+   "cx": -144.5,
+   "cz": -136.5,
+   "lat": 13.8227948,
+   "lon": 100.5127431,
+   "bboxW": 47,
+   "bboxD": 39,
+   "orientDeg": 157,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 15.28,
+   "modelW": 50.5,
+   "modelD": 40.3,
+   "modelOverhang": 3,
+   "metresPerFloor": 3.8,
+   "osmWay": 986219918,
+   "osmName": "วิทยาลัยนานาชาติ",
+   "osmLevels": "",
+   "osmIoU": 0.98,
+   "osmCentroidOffset": 0.1,
+   "osmAreaRatio": 1.01,
+   "osmOrientDiff": 0.3,
+   "nearestRoad": 6.4,
+   "nearestFootpath": 181.5,
+   "walkSnap": 6.4
+  },
+  {
+   "id": "96",
+   "no": "96",
+   "name": "คณะพัฒนาธุรกิจและอุตสาหกรรม",
+   "en": "Faculty of Business and Industrial Development",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 7,
+   "lv0": 7,
+   "top": 37.04,
+   "sourceFlags": "photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 196,
+   "vertices": 6,
+   "area": 789.5,
+   "cx": -212.4,
+   "cz": -267.5,
+   "lat": 13.8239791,
+   "lon": 100.5121153,
+   "bboxW": 46,
+   "bboxD": 39,
+   "orientDeg": 34.4,
+   "insideCampus": true,
+   "modelMinY": 0.23,
+   "modelMaxY": 36.84,
+   "modelW": 50.7,
+   "modelD": 41.6,
+   "modelOverhang": 4,
+   "metresPerFloor": 5.29,
+   "osmWay": 986168002,
+   "osmName": "คณะพัฒนาธุรกิจและอุตสาหกรรม",
+   "osmLevels": "",
+   "osmIoU": 0.96,
+   "osmCentroidOffset": 0.4,
+   "osmAreaRatio": 1.01,
+   "osmOrientDiff": 0.2,
+   "nearestRoad": 11.6,
+   "nearestFootpath": 317.5,
+   "walkSnap": 11.6
+  },
+  {
+   "id": "98",
+   "no": "98",
+   "name": "อาคาร 98 — โรงอาหารและสันทนาการ",
+   "en": "Building 98 - Canteen and Recreation",
+   "cat": "svc",
+   "kind": "",
+   "flat": false,
+   "lv": 3,
+   "lv0": 3,
+   "top": 11.3,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 6,
+   "vertices": 5,
+   "area": 467,
+   "cx": -185.6,
+   "cz": -291.6,
+   "lat": 13.8241971,
+   "lon": 100.5123628,
+   "bboxW": 31,
+   "bboxD": 25,
+   "orientDeg": 19.2,
+   "insideCampus": true,
+   "degenerateInstances": 20,
+   "modelMinY": 0.08,
+   "modelMaxY": 11.2,
+   "modelW": 31.6,
+   "modelD": 27.6,
+   "modelOverhang": 2.6,
+   "metresPerFloor": 3.77,
+   "nearestRoad": 14.8,
+   "nearestFootpath": 318.7,
+   "walkSnap": 14.8
+  },
+  {
+   "id": "court62",
+   "no": "ลาน",
+   "name": "สนามบาสและลานจอดรถ (ระหว่างอาคาร 62–63)",
+   "en": "Basketball court and parking — 2026 imagery alignment",
+   "cat": "sport",
+   "kind": "",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 1800.5,
+   "cx": 249.6,
+   "cz": 164.1,
+   "lat": 13.8200757,
+   "lon": 100.5163886,
+   "bboxW": 53,
+   "bboxD": 53,
+   "orientDeg": 160.4,
+   "insideCampus": true,
+   "modelMinY": -0.18,
+   "modelMaxY": 4.9,
+   "modelW": 53,
+   "modelD": 54.4,
+   "modelOverhang": 1.4
+  },
+  {
+   "id": "lot72",
+   "no": "P",
+   "name": "ลานจอดรถหลังอาคารยิมเนเซียม (72)",
+   "en": "Parking lot behind the Gymnasium",
+   "cat": "other",
+   "kind": "lot",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "est(แผนผัง)",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 7,
+   "area": 512,
+   "cx": 99.3,
+   "cz": -38.9,
+   "lat": 13.8219114,
+   "lon": 100.5149985,
+   "bboxW": 33,
+   "bboxD": 32,
+   "orientDeg": 80.9,
+   "insideCampus": true,
+   "modelMinY": 0.35,
+   "modelMaxY": 2.2,
+   "modelW": 33,
+   "modelD": 32,
+   "modelOverhang": 0
+  },
+  {
+   "id": "lotLib",
+   "no": "P",
+   "name": "ที่จอดรถยนต์ริมถนนหน้าหอสมุด (ฝั่งอาคาร 46)",
+   "en": "Roadside car parking by the Central Library",
+   "cat": "other",
+   "kind": "roadside",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 123.5,
+   "cx": 53.2,
+   "cz": 202.6,
+   "lat": 13.8197273,
+   "lon": 100.5145718,
+   "bboxW": 28.5,
+   "bboxD": 13.5,
+   "orientDeg": 161,
+   "insideCampus": true,
+   "modelMinY": 0.35,
+   "modelMaxY": 6.32,
+   "modelW": 28.6,
+   "modelD": 13.8,
+   "modelOverhang": 0.3
+  },
+  {
+   "id": "bikeLib",
+   "no": "P",
+   "name": "ที่จอดมอเตอร์ไซค์ ริมคลองข้างหอสมุด",
+   "en": "Motorcycle parking along the canal by the Central Library",
+   "cat": "other",
+   "kind": "bikes",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 425.8,
+   "cx": -21.4,
+   "cz": 193,
+   "lat": 13.8198146,
+   "lon": 100.5138819,
+   "bboxW": 80.3,
+   "bboxD": 56.4,
+   "orientDeg": 34.1,
+   "insideCampus": false,
+   "modelMinY": 0.35,
+   "modelMaxY": 1.48,
+   "modelW": 80.3,
+   "modelD": 56.4,
+   "modelOverhang": 0
+  },
+  {
+   "id": "bikeStub",
+   "no": "P",
+   "name": "ที่จอดมอเตอร์ไซค์ ปลายถนนหลังอาคาร 22",
+   "en": "Motorcycle parking at the road end behind building 22",
+   "cat": "other",
+   "kind": "bikes",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 322,
+   "cx": -64,
+   "cz": 248.1,
+   "lat": 13.8193163,
+   "lon": 100.5134879,
+   "bboxW": 28,
+   "bboxD": 18,
+   "orientDeg": 174.8,
+   "insideCampus": true,
+   "modelMinY": 0.35,
+   "modelMaxY": 1.48,
+   "modelW": 28,
+   "modelD": 18.2,
+   "modelOverhang": 0.2
+  },
+  {
+   "id": "greenBridge",
+   "no": "สะพาน",
+   "name": "สะพานเขียว (ข้ามคลองบางเขนใหม่)",
+   "en": "Green footbridge over Khlong Bang Khen Mai",
+   "cat": "other",
+   "kind": "bridge",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 5.1,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 352,
+   "cx": 69,
+   "cz": 121,
+   "lat": 13.8204657,
+   "lon": 100.5147183,
+   "bboxW": 26,
+   "bboxD": 34,
+   "orientDeg": 124.7,
+   "insideCampus": true,
+   "modelMinY": -0.39,
+   "modelMaxY": 5.05,
+   "modelW": 25.4,
+   "modelD": 27.1,
+   "modelOverhang": 0
+  },
+  {
+   "id": "lotGate",
+   "no": "P",
+   "name": "ลานจอดรถยนต์ข้างประตูป้อมยาม",
+   "en": "Car park by the guard-house gate",
+   "cat": "other",
+   "kind": "lot",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 464,
+   "cx": 105.2,
+   "cz": 244.8,
+   "lat": 13.8193462,
+   "lon": 100.5150533,
+   "bboxW": 31,
+   "bboxD": 28,
+   "orientDeg": 46.5,
+   "insideCampus": true,
+   "modelMinY": 0.35,
+   "modelMaxY": 2.2,
+   "modelW": 31,
+   "modelD": 28,
+   "modelOverhang": 0
+  },
+  {
+   "id": "ugGate",
+   "no": "P",
+   "name": "ที่จอดรถยนต์ใต้ดิน อาคารอเนกประสงค์ (ทางลง)",
+   "en": "Underground car park entrance",
+   "cat": "other",
+   "kind": "ramp",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 44,
+   "cx": 68.5,
+   "cz": 253,
+   "lat": 13.8192719,
+   "lon": 100.5147137,
+   "bboxW": 7,
+   "bboxD": 10,
+   "orientDeg": 76,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 3.45,
+   "modelW": 8.2,
+   "modelD": 10,
+   "modelOverhang": 0.9
+  },
+  {
+   "id": "guard",
+   "no": "ป้อม",
+   "name": "ป้อมยามประตูหลัก (จุดตรวจเข้า-ออก)",
+   "en": "Main guard house & checkpoint",
+   "cat": "other",
+   "kind": "guard",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 99.5,
+   "cx": 79.5,
+   "cz": 253.8,
+   "lat": 13.8192647,
+   "lon": 100.5148159,
+   "bboxW": 11,
+   "bboxD": 14,
+   "orientDeg": 76,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 6.75,
+   "modelW": 15.8,
+   "modelD": 14.6,
+   "modelOverhang": 2.9
+  },
+  {
+   "id": "canalBikes",
+   "no": "P",
+   "name": "ที่จอดมอเตอร์ไซค์บนคลอง (ข้างลานเฉลิมพระเกียรติ)",
+   "en": "Motorcycle parking on the covered canal",
+   "cat": "other",
+   "kind": "canalbikes",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 20,
+   "area": 384.7,
+   "cx": 113,
+   "cz": 162.2,
+   "lat": 13.8200934,
+   "lon": 100.5151251,
+   "bboxW": 47.5,
+   "bboxD": 29.5,
+   "orientDeg": 161.6,
+   "insideCampus": true,
+   "modelMinY": 0.5,
+   "modelMaxY": 1.68,
+   "modelW": 51,
+   "modelD": 32.8,
+   "modelOverhang": 3.3
+  },
+  {
+   "id": "giraffe",
+   "no": "ศาล",
+   "name": "ศาลยีราฟ",
+   "en": "Giraffe Shrine",
+   "cat": "other",
+   "kind": "shrine",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 6.4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 43.5,
+   "cx": 66.5,
+   "cz": 143.3,
+   "lat": 13.8202645,
+   "lon": 100.5146952,
+   "bboxW": 9,
+   "bboxD": 8.5,
+   "orientDeg": 116.6,
+   "insideCampus": true,
+   "modelMinY": 0.09,
+   "modelMaxY": 6.3,
+   "modelW": 7.3,
+   "modelD": 6,
+   "modelOverhang": 0
+  },
+  {
+   "id": "lot52",
+   "no": "P",
+   "name": "ลานจอดรถยนต์ข้างอาคาร 52",
+   "en": "Car park beside building 52",
+   "cat": "other",
+   "kind": "lot",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 7,
+   "area": 523,
+   "cx": 122.2,
+   "cz": 153.7,
+   "lat": 13.82017,
+   "lon": 100.5152101,
+   "bboxW": 42.5,
+   "bboxD": 16,
+   "orientDeg": 0,
+   "insideCampus": true,
+   "modelMinY": 0.35,
+   "modelMaxY": 2.2,
+   "modelW": 42.5,
+   "modelD": 16,
+   "modelOverhang": 0
+  },
+  {
+   "id": "lotDorm",
+   "no": "P",
+   "name": "ลานจอดรถยนต์ระหว่างสนามกีฬากับหอพัก",
+   "en": "Car park between the stadium and the dormitories",
+   "cat": "other",
+   "kind": "lot",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 6,
+   "area": 373.8,
+   "cx": -190.4,
+   "cz": -172.1,
+   "lat": 13.8231163,
+   "lon": 100.5123187,
+   "bboxW": 25.8,
+   "bboxD": 26.7,
+   "orientDeg": 135,
+   "insideCampus": true,
+   "modelMinY": 0.35,
+   "modelMaxY": 2.2,
+   "modelW": 25.8,
+   "modelD": 26.7,
+   "modelOverhang": 0
+  },
+  {
+   "id": "seven",
+   "no": "7-11",
+   "name": "7-Eleven (โซนหอพัก)",
+   "en": "7-Eleven, dormitory zone",
+   "cat": "svc",
+   "kind": "store",
+   "flat": false,
+   "lv": 1,
+   "lv0": 1,
+   "top": 4.6,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 2,
+   "vertices": 5,
+   "area": 109,
+   "cx": -169.1,
+   "cz": -169.3,
+   "lat": 13.8230907,
+   "lon": 100.5125161,
+   "bboxW": 15,
+   "bboxD": 10.9,
+   "orientDeg": 175.6,
+   "insideCampus": true,
+   "modelMinY": 0.14,
+   "modelMaxY": 4.67,
+   "modelW": 15,
+   "modelD": 13.4,
+   "modelOverhang": 2.5,
+   "metresPerFloor": 4.6,
+   "nearestRoad": 13.4,
+   "nearestFootpath": 231.4,
+   "walkSnap": 13.5
+  },
+  {
+   "id": "rest5",
+   "no": "พัก",
+   "name": "ที่นั่งพัก (ข้าง 7-Eleven โซนหอพัก)",
+   "en": "Seating area by the dormitory 7-Eleven",
+   "cat": "other",
+   "kind": "rest",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 4,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 5,
+   "area": 183.2,
+   "cx": -171.8,
+   "cz": -153.6,
+   "lat": 13.8229493,
+   "lon": 100.5124908,
+   "bboxW": 16.7,
+   "bboxD": 16.2,
+   "orientDeg": 77.3,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 8.26,
+   "modelW": 16.9,
+   "modelD": 19.9,
+   "modelOverhang": 1.9
+  },
+  {
+   "id": "97",
+   "no": "97",
+   "name": "อาคารปฏิบัติการฝึกฝีมือพื้นฐาน (อาคาร 97)",
+   "en": "Building 97",
+   "cat": "fac",
+   "kind": "",
+   "flat": false,
+   "lv": 5,
+   "lv0": 5,
+   "top": 19.6,
+   "sourceFlags": "est(แผนผัง)",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 114,
+   "vertices": 4,
+   "area": 272,
+   "cx": -235,
+   "cz": -301,
+   "lat": 13.8242822,
+   "lon": 100.511906,
+   "bboxW": 22,
+   "bboxD": 22,
+   "orientDeg": 116.6,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 19.2,
+   "modelW": 22.8,
+   "modelD": 22.8,
+   "modelOverhang": 0.4,
+   "metresPerFloor": 3.92,
+   "nearestRoad": 4.1,
+   "nearestFootpath": 359.3,
+   "walkSnap": 4.4
+  },
+  {
+   "id": "ipc",
+   "no": "ipc",
+   "name": "อาคารทางใต้STRI · จุดipc (ชื่อใช้งานรอยืนยัน)",
+   "en": "Building south of STRI - current use unverified",
+   "cat": "inst",
+   "kind": "",
+   "flat": false,
+   "lv": 6,
+   "lv0": 6,
+   "top": 22.25,
+   "sourceFlags": "est(แผนผัง)",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 148,
+   "vertices": 4,
+   "area": 910.4,
+   "cx": 130,
+   "cz": 291,
+   "lat": 13.8189283,
+   "lon": 100.5152826,
+   "bboxW": 41.6,
+   "bboxD": 30.2,
+   "orientDeg": 170,
+   "insideCampus": true,
+   "modelMinY": -0.05,
+   "modelMaxY": 22.01,
+   "modelW": 43.9,
+   "modelD": 32.8,
+   "modelOverhang": 1.6,
+   "metresPerFloor": 3.71,
+   "osmWay": 158475015,
+   "osmName": "",
+   "osmLevels": "",
+   "osmIoU": 0.7,
+   "osmCentroidOffset": 0.5,
+   "osmAreaRatio": 1.43,
+   "osmOrientDiff": 7,
+   "nearestRoad": 6.7,
+   "nearestFootpath": 9,
+   "walkSnap": 6.7
+  },
+  {
+   "id": "u1",
+   "no": "99",
+   "name": "KMUTNB Techno Park (อาคาร 99)",
+   "en": "KMUTNB Techno Park",
+   "cat": "inst",
+   "kind": "",
+   "flat": false,
+   "lv": 10,
+   "lv0": 10,
+   "top": 36.8,
+   "sourceFlags": "osm+coordinateEvidence+photo",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 175,
+   "vertices": 4,
+   "area": 1131.5,
+   "cx": -145.4,
+   "cz": -252.9,
+   "lat": 13.8238472,
+   "lon": 100.5127345,
+   "bboxW": 46.6,
+   "bboxD": 48.9,
+   "orientDeg": 126.4,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 36.42,
+   "modelW": 53.7,
+   "modelD": 53.6,
+   "modelOverhang": 3.9,
+   "metresPerFloor": 3.68,
+   "osmWay": 1561697996,
+   "osmName": "",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 9.4,
+   "nearestFootpath": 252.7,
+   "walkSnap": 9.5
+  },
+  {
+   "id": "u2",
+   "no": "?",
+   "name": "อาคารโซนหอพัก (ยังไม่ทราบชื่อ)",
+   "en": "Building in the dormitory zone",
+   "cat": "dorm",
+   "kind": "",
+   "flat": false,
+   "lv": 3,
+   "lv0": 3,
+   "top": 11.15,
+   "sourceFlags": "coordinateEvidence",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 6,
+   "vertices": 4,
+   "area": 310.8,
+   "cx": -159.2,
+   "cz": -227.8,
+   "lat": 13.8236203,
+   "lon": 100.512607,
+   "bboxW": 24.1,
+   "bboxD": 27.2,
+   "orientDeg": 123.5,
+   "insideCampus": true,
+   "modelMinY": 0.3,
+   "modelMaxY": 11.27,
+   "modelW": 25.3,
+   "modelD": 28.6,
+   "modelOverhang": 0.7,
+   "metresPerFloor": 3.72,
+   "osmWay": 1561314830,
+   "osmName": "",
+   "osmLevels": "",
+   "osmIoU": 1,
+   "osmCentroidOffset": 0,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0,
+   "nearestRoad": 29.2,
+   "nearestFootpath": 252.1,
+   "walkSnap": 29.2
+  },
+  {
+   "id": "frontmonument",
+   "no": "A",
+   "name": "พระบรมราชานุสาวรีย์ ร.4 · หน้าอาคาร21–22",
+   "en": "King Mongkut's Monument",
+   "cat": "other",
+   "kind": "monument114",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 8.85,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 60,
+   "cx": 38,
+   "cz": 266,
+   "lat": 13.8191544,
+   "lon": 100.5144315,
+   "bboxW": 11.4,
+   "bboxD": 9,
+   "orientDeg": 160.7,
+   "insideCampus": true,
+   "modelMinY": 0.01,
+   "modelMaxY": 8.65,
+   "modelW": 11.3,
+   "modelD": 9.2,
+   "modelOverhang": 0.1
+  },
+  {
+   "id": "hophra",
+   "no": "B",
+   "name": "หอพระหลวงพ่อสิงห์ · ข้างTGGS",
+   "en": "Luang Pho Sing Buddhist Shrine",
+   "cat": "other",
+   "kind": "hophra115",
+   "flat": true,
+   "lv": 0,
+   "lv0": 0,
+   "top": 8.9,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": false,
+   "aliases": 0,
+   "vertices": 4,
+   "area": 79.6,
+   "cx": -75.3,
+   "cz": 269.3,
+   "lat": 13.8191243,
+   "lon": 100.5133835,
+   "bboxW": 7.8,
+   "bboxD": 10.2,
+   "orientDeg": 90,
+   "insideCampus": true,
+   "modelMinY": 0.03,
+   "modelMaxY": 8.82,
+   "modelW": 7.6,
+   "modelD": 10.9,
+   "modelOverhang": 0.6
+  },
+  {
+   "id": "94",
+   "no": "94",
+   "name": "สนามกีฬา (อาคารปฏิบัติการด้านวิทยาศาสตร์การกีฬา)",
+   "en": "Stadium",
+   "cat": "sport",
+   "kind": "",
+   "flat": false,
+   "lv": 1,
+   "lv0": 1,
+   "top": 11,
+   "sourceFlags": "",
+   "evidenceClass": "",
+   "hasDirectory": true,
+   "aliases": 2,
+   "vertices": 23,
+   "area": 11167.5,
+   "cx": -213.9,
+   "cz": -120.4,
+   "lat": 13.8226489,
+   "lon": 100.5121013,
+   "bboxW": 138,
+   "bboxD": 147,
+   "orientDeg": 126.4,
+   "insideCampus": true,
+   "modelMinY": 0,
+   "modelMaxY": 7.2,
+   "modelW": 138,
+   "modelD": 147,
+   "modelOverhang": 0,
+   "metresPerFloor": 11,
+   "osmWay": 1338567120,
+   "osmName": "อาคารปฏิบัติการด้านวิทยาศาสตร์การกีฬา",
+   "osmLevels": "",
+   "osmIoU": 0.99,
+   "osmCentroidOffset": 0.2,
+   "osmAreaRatio": 1,
+   "osmOrientDiff": 0.1,
+   "nearestRoad": 0.7,
+   "nearestFootpath": 182.5,
+   "walkSnap": 0.7
+  }
+ ],
+ "osmUnmatched": [
+  {
+   "osmWay": 986219917,
+   "name": "โรงอาหาร",
+   "building": "yes",
+   "levels": "",
+   "area": 76.7,
+   "cx": -192.4,
+   "cz": -280.8
+  }
+ ],
+ "osmShared": [],
+ "overlaps": [
+  {
+   "a": "43",
+   "b": "44",
+   "overlapM2": 14.3,
+   "shareOfSmaller": 0.07
+  }
+ ],
+ "close": [],
+ "roads": {
+  "count": 43,
+  "byType": {
+   "r": 22,
+   "s": 11,
+   "f": 10
+  },
+  "throughBuildings": [
+   {
+    "road": 16,
+    "type": "s",
+    "building": "81",
+    "segment": 0
+   },
+   {
+    "road": 39,
+    "type": "f",
+    "building": "44",
+    "segment": 1
+   },
+   {
+    "road": 39,
+    "type": "f",
+    "building": "47",
+    "segment": 0
+   },
+   {
+    "road": 41,
+    "type": "f",
+    "building": "21",
+    "segment": 2
+   },
+   {
+    "road": 41,
+    "type": "f",
+    "building": "22",
+    "segment": 1
+   }
+  ]
+ },
+ "nav": {
+  "nodes": 1156,
+  "components": 1,
+  "largest": 1156,
+  "usable": 1156,
+  "insideBuildings": {
+   "21": 6,
+   "22": 8,
+   "44": 3,
+   "47": 8,
+   "81": 4
+  }
+ },
+ "pairs": [
+  {
+   "a": "11",
+   "b": "13",
+   "centroid": 71.4,
+   "edge": 22.8,
+   "walkNetwork": 23.8
+  },
+  {
+   "a": "11",
+   "b": "21",
+   "centroid": 79.8,
+   "edge": 31.4,
+   "walkNetwork": 177.3
+  },
+  {
+   "a": "11",
+   "b": "22",
+   "centroid": 39.2,
+   "edge": 10.8,
+   "walkNetwork": 167.6
+  },
+  {
+   "a": "11",
+   "b": "23",
+   "centroid": 78.2,
+   "edge": 19.9,
+   "walkNetwork": 237.7
+  },
+  {
+   "a": "11",
+   "b": "41",
+   "centroid": 262.5,
+   "edge": 197.6,
+   "walkNetwork": 362.7
+  },
+  {
+   "a": "11",
+   "b": "42",
+   "centroid": 239.1,
+   "edge": 172.4,
+   "walkNetwork": 258.5
+  },
+  {
+   "a": "11",
+   "b": "43",
+   "centroid": 213.1,
+   "edge": 164.8,
+   "walkNetwork": 258.5
+  },
+  {
+   "a": "11",
+   "b": "44",
+   "centroid": 198.2,
+   "edge": 138.2,
+   "walkNetwork": 264
+  },
+  {
+   "a": "11",
+   "b": "46",
+   "centroid": 132.2,
+   "edge": 91,
+   "walkNetwork": 226.4
+  },
+  {
+   "a": "11",
+   "b": "47",
+   "centroid": 165.7,
+   "edge": 107.5,
+   "walkNetwork": 240.2
+  },
+  {
+   "a": "11",
+   "b": "52",
+   "centroid": 217.6,
+   "edge": 162.5,
+   "walkNetwork": 316
+  },
+  {
+   "a": "11",
+   "b": "62",
+   "centroid": 334.9,
+   "edge": 267.8,
+   "walkNetwork": 454.4
+  },
+  {
+   "a": "11",
+   "b": "63",
+   "centroid": 278,
+   "edge": 201.2,
+   "walkNetwork": 409.3
+  },
+  {
+   "a": "11",
+   "b": "64",
+   "centroid": 299.5,
+   "edge": 254.5,
+   "walkNetwork": 394.3
+  },
+  {
+   "a": "11",
+   "b": "65",
+   "centroid": 334.2,
+   "edge": 292.9,
+   "walkNetwork": 419.9
+  },
+  {
+   "a": "11",
+   "b": "66",
+   "centroid": 333,
+   "edge": 299.2,
+   "walkNetwork": 446.8
+  },
+  {
+   "a": "11",
+   "b": "67",
+   "centroid": 349.6,
+   "edge": 311.4,
+   "walkNetwork": 480.8
+  },
+  {
+   "a": "11",
+   "b": "68",
+   "centroid": 359.8,
+   "edge": 320.8,
+   "walkNetwork": 495.9
+  },
+  {
+   "a": "11",
+   "b": "69",
+   "centroid": 380.7,
+   "edge": 338.7,
+   "walkNetwork": 499.7
+  },
+  {
+   "a": "11",
+   "b": "72",
+   "centroid": 362.7,
+   "edge": 338.2,
+   "walkNetwork": 449.2
+  },
+  {
+   "a": "11",
+   "b": "71",
+   "centroid": 351.6,
+   "edge": 330.9,
+   "walkNetwork": 581.3
+  },
+  {
+   "a": "11",
+   "b": "73",
+   "centroid": 315.2,
+   "edge": 289.7,
+   "walkNetwork": 558.1
+  },
+  {
+   "a": "11",
+   "b": "75",
+   "centroid": 306.4,
+   "edge": 284.1,
+   "walkNetwork": 498.2
+  },
+  {
+   "a": "11",
+   "b": "76",
+   "centroid": 188.9,
+   "edge": 159.8,
+   "walkNetwork": 327.3
+  },
+  {
+   "a": "11",
+   "b": "77",
+   "centroid": 245.7,
+   "edge": 205.4,
+   "walkNetwork": 472.6
+  },
+  {
+   "a": "11",
+   "b": "78A",
+   "centroid": 306.7,
+   "edge": 282.8,
+   "walkNetwork": 462.2
+  },
+  {
+   "a": "11",
+   "b": "78B",
+   "centroid": 330.8,
+   "edge": 287.7,
+   "walkNetwork": 449.2
+  },
+  {
+   "a": "11",
+   "b": "79",
+   "centroid": 300.7,
+   "edge": 264.5,
+   "walkNetwork": 418.5
+  },
+  {
+   "a": "11",
+   "b": "81",
+   "centroid": 252.5,
+   "edge": 196.3,
+   "walkNetwork": 632.4
+  },
+  {
+   "a": "11",
+   "b": "82",
+   "centroid": 313.1,
+   "edge": 256.5,
+   "walkNetwork": 768.3
+  },
+  {
+   "a": "11",
+   "b": "83",
+   "centroid": 331.5,
+   "edge": 282,
+   "walkNetwork": 676.7
+  },
+  {
+   "a": "11",
+   "b": "84",
+   "centroid": 292,
+   "edge": 252.1,
+   "walkNetwork": 556.1
+  },
+  {
+   "a": "11",
+   "b": "85",
+   "centroid": 263.3,
+   "edge": 223.3,
+   "walkNetwork": 614.4
+  },
+  {
+   "a": "11",
+   "b": "86",
+   "centroid": 386,
+   "edge": 343.1,
+   "walkNetwork": 680.6
+  },
+  {
+   "a": "11",
+   "b": "88",
+   "centroid": 403.2,
+   "edge": 358.4,
+   "walkNetwork": 727.3
+  },
+  {
+   "a": "11",
+   "b": "89",
+   "centroid": 343.9,
+   "edge": 284.1,
+   "walkNetwork": 791.8
+  },
+  {
+   "a": "11",
+   "b": "90",
+   "centroid": 557.9,
+   "edge": 498.3,
+   "walkNetwork": 962.4
+  },
+  {
+   "a": "11",
+   "b": "91",
+   "centroid": 603.1,
+   "edge": 550.6,
+   "walkNetwork": 1005.1
+  },
+  {
+   "a": "11",
+   "b": "92",
+   "centroid": 518.7,
+   "edge": 464.6,
+   "walkNetwork": 891.8
+  },
+  {
+   "a": "11",
+   "b": "93",
+   "centroid": 524.6,
+   "edge": 471.7,
+   "walkNetwork": 915
+  },
+  {
+   "a": "11",
+   "b": "95",
+   "centroid": 430.4,
+   "edge": 378.9,
+   "walkNetwork": 750.2
+  },
+  {
+   "a": "11",
+   "b": "96",
+   "centroid": 575.8,
+   "edge": 529.7,
+   "walkNetwork": 942.1
+  },
+  {
+   "a": "11",
+   "b": "98",
+   "centroid": 590.9,
+   "edge": 548.9,
+   "walkNetwork": 949.7
+  },
+  {
+   "a": "11",
+   "b": "seven",
+   "centroid": 468.9,
+   "edge": 431.9,
+   "walkNetwork": 800.5
+  },
+  {
+   "a": "11",
+   "b": "97",
+   "centroid": 614.9,
+   "edge": 574,
+   "walkNetwork": 989.2
+  },
+  {
+   "a": "11",
+   "b": "ipc",
+   "centroid": 157.3,
+   "edge": 99.1,
+   "walkNetwork": 234.5
+  },
+  {
+   "a": "11",
+   "b": "u1",
+   "centroid": 543.5,
+   "edge": 491.2,
+   "walkNetwork": 953.5
+  },
+  {
+   "a": "11",
+   "b": "u2",
+   "centroid": 522.4,
+   "edge": 479.7,
+   "walkNetwork": 934.4
+  },
+  {
+   "a": "11",
+   "b": "94",
+   "centroid": 439.7,
+   "edge": 336.7,
+   "walkNetwork": 849.9
+  },
+  {
+   "a": "13",
+   "b": "21",
+   "centroid": 142.3,
+   "edge": 97.5,
+   "walkNetwork": 201
+  },
+  {
+   "a": "13",
+   "b": "22",
+   "centroid": 101,
+   "edge": 58.1,
+   "walkNetwork": 191.4
+  },
+  {
+   "a": "13",
+   "b": "23",
+   "centroid": 109.7,
+   "edge": 37.5,
+   "walkNetwork": 261.5
+  },
+  {
+   "a": "13",
+   "b": "41",
+   "centroid": 326.5,
+   "edge": 278.4,
+   "walkNetwork": 386.5
+  },
+  {
+   "a": "13",
+   "b": "42",
+   "centroid": 306.2,
+   "edge": 262.7,
+   "walkNetwork": 282.3
+  },
+  {
+   "a": "13",
+   "b": "43",
+   "centroid": 278.1,
+   "edge": 254.2,
+   "walkNetwork": 282.3
+  },
+  {
+   "a": "13",
+   "b": "44",
+   "centroid": 261.6,
+   "edge": 223.8,
+   "walkNetwork": 287.7
+  },
+  {
+   "a": "13",
+   "b": "46",
+   "centroid": 178.6,
+   "edge": 140.1,
+   "walkNetwork": 250.2
+  },
+  {
+   "a": "13",
+   "b": "47",
+   "centroid": 234.4,
+   "edge": 202,
+   "walkNetwork": 264
+  },
+  {
+   "a": "13",
+   "b": "52",
+   "centroid": 264.3,
+   "edge": 218,
+   "walkNetwork": 339.8
+  },
+  {
+   "a": "13",
+   "b": "62",
+   "centroid": 392.4,
+   "edge": 340.6,
+   "walkNetwork": 478.2
+  },
+  {
+   "a": "13",
+   "b": "63",
+   "centroid": 332.6,
+   "edge": 273.8,
+   "walkNetwork": 433.1
+  },
+  {
+   "a": "13",
+   "b": "64",
+   "centroid": 343.7,
+   "edge": 307.2,
+   "walkNetwork": 418.1
+  },
+  {
+   "a": "13",
+   "b": "65",
+   "centroid": 380.3,
+   "edge": 351,
+   "walkNetwork": 443.7
+  },
+  {
+   "a": "13",
+   "b": "66",
+   "centroid": 382.7,
+   "edge": 360.9,
+   "walkNetwork": 470.6
+  },
+  {
+   "a": "13",
+   "b": "67",
+   "centroid": 402.9,
+   "edge": 379.5,
+   "walkNetwork": 504.6
+  },
+  {
+   "a": "13",
+   "b": "68",
+   "centroid": 414.8,
+   "edge": 391.8,
+   "walkNetwork": 519.7
+  },
+  {
+   "a": "13",
+   "b": "69",
+   "centroid": 437.7,
+   "edge": 414.4,
+   "walkNetwork": 523.5
+  },
+  {
+   "a": "13",
+   "b": "72",
+   "centroid": 390.4,
+   "edge": 361.5,
+   "walkNetwork": 473
+  },
+  {
+   "a": "13",
+   "b": "71",
+   "centroid": 370.8,
+   "edge": 350.1,
+   "walkNetwork": 605.1
+  },
+  {
+   "a": "13",
+   "b": "73",
+   "centroid": 325,
+   "edge": 304,
+   "walkNetwork": 581.8
+  },
+  {
+   "a": "13",
+   "b": "75",
+   "centroid": 326.3,
+   "edge": 303.1,
+   "walkNetwork": 522
+  },
+  {
+   "a": "13",
+   "b": "76",
+   "centroid": 211.1,
+   "edge": 188.1,
+   "walkNetwork": 351.1
+  },
+  {
+   "a": "13",
+   "b": "77",
+   "centroid": 267.9,
+   "edge": 223.4,
+   "walkNetwork": 496.4
+  },
+  {
+   "a": "13",
+   "b": "78A",
+   "centroid": 331.7,
+   "edge": 305.7,
+   "walkNetwork": 486
+  },
+  {
+   "a": "13",
+   "b": "78B",
+   "centroid": 365.2,
+   "edge": 318.1,
+   "walkNetwork": 473
+  },
+  {
+   "a": "13",
+   "b": "79",
+   "centroid": 334,
+   "edge": 306.4,
+   "walkNetwork": 442.3
+  },
+  {
+   "a": "13",
+   "b": "81",
+   "centroid": 239.3,
+   "edge": 207.5,
+   "walkNetwork": 656.2
+  },
+  {
+   "a": "13",
+   "b": "82",
+   "centroid": 288,
+   "edge": 249.5,
+   "walkNetwork": 792.1
+  },
+  {
+   "a": "13",
+   "b": "83",
+   "centroid": 315.4,
+   "edge": 285.3,
+   "walkNetwork": 700.5
+  },
+  {
+   "a": "13",
+   "b": "84",
+   "centroid": 289.1,
+   "edge": 263.7,
+   "walkNetwork": 579.9
+  },
+  {
+   "a": "13",
+   "b": "85",
+   "centroid": 257.7,
+   "edge": 231.9,
+   "walkNetwork": 638.2
+  },
+  {
+   "a": "13",
+   "b": "86",
+   "centroid": 368.2,
+   "edge": 341.5,
+   "walkNetwork": 704.4
+  },
+  {
+   "a": "13",
+   "b": "88",
+   "centroid": 381.8,
+   "edge": 355.7,
+   "walkNetwork": 751.1
+  },
+  {
+   "a": "13",
+   "b": "89",
+   "centroid": 312.1,
+   "edge": 271.4,
+   "walkNetwork": 815.6
+  },
+  {
+   "a": "13",
+   "b": "90",
+   "centroid": 519.9,
+   "edge": 482.6,
+   "walkNetwork": 986.2
+  },
+  {
+   "a": "13",
+   "b": "91",
+   "centroid": 564.2,
+   "edge": 533,
+   "walkNetwork": 1028.9
+  },
+  {
+   "a": "13",
+   "b": "92",
+   "centroid": 487.4,
+   "edge": 453.8,
+   "walkNetwork": 915.6
+  },
+  {
+   "a": "13",
+   "b": "93",
+   "centroid": 496,
+   "edge": 463,
+   "walkNetwork": 938.8
+  },
+  {
+   "a": "13",
+   "b": "95",
+   "centroid": 404,
+   "edge": 372.6,
+   "walkNetwork": 774
+  },
+  {
+   "a": "13",
+   "b": "96",
+   "centroid": 544.6,
+   "edge": 517.8,
+   "walkNetwork": 965.9
+  },
+  {
+   "a": "13",
+   "b": "98",
+   "centroid": 563.3,
+   "edge": 540.6,
+   "walkNetwork": 973.5
+  },
+  {
+   "a": "13",
+   "b": "seven",
+   "centroid": 440,
+   "edge": 423.3,
+   "walkNetwork": 824.3
+  },
+  {
+   "a": "13",
+   "b": "97",
+   "centroid": 582.3,
+   "edge": 562,
+   "walkNetwork": 1013
+  },
+  {
+   "a": "13",
+   "b": "ipc",
+   "centroid": 228.4,
+   "edge": 197.1,
+   "walkNetwork": 258.3
+  },
+  {
+   "a": "13",
+   "b": "u1",
+   "centroid": 519.9,
+   "edge": 485.4,
+   "walkNetwork": 977.3
+  },
+  {
+   "a": "13",
+   "b": "u2",
+   "centroid": 496.4,
+   "edge": 472.6,
+   "walkNetwork": 958.2
+  },
+  {
+   "a": "13",
+   "b": "94",
+   "centroid": 402.5,
+   "edge": 320,
+   "walkNetwork": 873.7
+  },
+  {
+   "a": "21",
+   "b": "22",
+   "centroid": 41.9,
+   "edge": 0,
+   "walkNetwork": 9.7
+  },
+  {
+   "a": "21",
+   "b": "23",
+   "centroid": 61.9,
+   "edge": 11.3,
+   "walkNetwork": 60.5
+  },
+  {
+   "a": "21",
+   "b": "41",
+   "centroid": 184.5,
+   "edge": 123,
+   "walkNetwork": 262.2
+  },
+  {
+   "a": "21",
+   "b": "42",
+   "centroid": 164.5,
+   "edge": 105.1,
+   "walkNetwork": 157.9
+  },
+  {
+   "a": "21",
+   "b": "43",
+   "centroid": 135.9,
+   "edge": 96.3,
+   "walkNetwork": 157.9
+  },
+  {
+   "a": "21",
+   "b": "44",
+   "centroid": 119.6,
+   "edge": 65.7,
+   "walkNetwork": 163.4
+  },
+  {
+   "a": "21",
+   "b": "46",
+   "centroid": 64.2,
+   "edge": 24.1,
+   "walkNetwork": 49.2
+  },
+  {
+   "a": "21",
+   "b": "47",
+   "centroid": 95.4,
+   "edge": 52.6,
+   "walkNetwork": 139.6
+  },
+  {
+   "a": "21",
+   "b": "52",
+   "centroid": 142.7,
+   "edge": 90.1,
+   "walkNetwork": 215.4
+  },
+  {
+   "a": "21",
+   "b": "62",
+   "centroid": 255.1,
+   "edge": 191.7,
+   "walkNetwork": 353.8
+  },
+  {
+   "a": "21",
+   "b": "63",
+   "centroid": 198.6,
+   "edge": 124.8,
+   "walkNetwork": 308.7
+  },
+  {
+   "a": "21",
+   "b": "64",
+   "centroid": 224.5,
+   "edge": 179.5,
+   "walkNetwork": 293.7
+  },
+  {
+   "a": "21",
+   "b": "65",
+   "centroid": 257.7,
+   "edge": 217.2,
+   "walkNetwork": 319.4
+  },
+  {
+   "a": "21",
+   "b": "66",
+   "centroid": 254.9,
+   "edge": 223,
+   "walkNetwork": 346.2
+  },
+  {
+   "a": "21",
+   "b": "67",
+   "centroid": 270.3,
+   "edge": 234.9,
+   "walkNetwork": 380.2
+  },
+  {
+   "a": "21",
+   "b": "68",
+   "centroid": 280.2,
+   "edge": 244.6,
+   "walkNetwork": 395.3
+  },
+  {
+   "a": "21",
+   "b": "69",
+   "centroid": 300.8,
+   "edge": 263.4,
+   "walkNetwork": 399.1
+  },
+  {
+   "a": "21",
+   "b": "72",
+   "centroid": 298.5,
+   "edge": 269.6,
+   "walkNetwork": 271.9
+  },
+  {
+   "a": "21",
+   "b": "71",
+   "centroid": 295.2,
+   "edge": 264.9,
+   "walkNetwork": 404.1
+  },
+  {
+   "a": "21",
+   "b": "73",
+   "centroid": 269.4,
+   "edge": 233.2,
+   "walkNetwork": 380.8
+  },
+  {
+   "a": "21",
+   "b": "75",
+   "centroid": 251.1,
+   "edge": 218.2,
+   "walkNetwork": 321
+  },
+  {
+   "a": "21",
+   "b": "76",
+   "centroid": 140.6,
+   "edge": 94.5,
+   "walkNetwork": 150
+  },
+  {
+   "a": "21",
+   "b": "77",
+   "centroid": 191.6,
+   "edge": 138.5,
+   "walkNetwork": 295.4
+  },
+  {
+   "a": "21",
+   "b": "78A",
+   "centroid": 246.6,
+   "edge": 215.8,
+   "walkNetwork": 284.9
+  },
+  {
+   "a": "21",
+   "b": "78B",
+   "centroid": 262,
+   "edge": 220.1,
+   "walkNetwork": 271.9
+  },
+  {
+   "a": "21",
+   "b": "79",
+   "centroid": 233.7,
+   "edge": 194.6,
+   "walkNetwork": 241.3
+  },
+  {
+   "a": "21",
+   "b": "81",
+   "centroid": 236.1,
+   "edge": 161.4,
+   "walkNetwork": 455.2
+  },
+  {
+   "a": "21",
+   "b": "82",
+   "centroid": 305.5,
+   "edge": 254.8,
+   "walkNetwork": 591
+  },
+  {
+   "a": "21",
+   "b": "83",
+   "centroid": 312.6,
+   "edge": 257.2,
+   "walkNetwork": 499.4
+  },
+  {
+   "a": "21",
+   "b": "84",
+   "centroid": 261.1,
+   "edge": 208.5,
+   "walkNetwork": 378.8
+  },
+  {
+   "a": "21",
+   "b": "85",
+   "centroid": 237.4,
+   "edge": 192.6,
+   "walkNetwork": 437.1
+  },
+  {
+   "a": "21",
+   "b": "86",
+   "centroid": 366.5,
+   "edge": 324.7,
+   "walkNetwork": 503.3
+  },
+  {
+   "a": "21",
+   "b": "88",
+   "centroid": 386.9,
+   "edge": 341.4,
+   "walkNetwork": 550.1
+  },
+  {
+   "a": "21",
+   "b": "89",
+   "centroid": 342.5,
+   "edge": 291.5,
+   "walkNetwork": 614.5
+  },
+  {
+   "a": "21",
+   "b": "90",
+   "centroid": 557.6,
+   "edge": 503.9,
+   "walkNetwork": 785.2
+  },
+  {
+   "a": "21",
+   "b": "91",
+   "centroid": 603.1,
+   "edge": 558.5,
+   "walkNetwork": 827.8
+  },
+  {
+   "a": "21",
+   "b": "92",
+   "centroid": 511,
+   "edge": 460.6,
+   "walkNetwork": 714.5
+  },
+  {
+   "a": "21",
+   "b": "93",
+   "centroid": 513.3,
+   "edge": 463.4,
+   "walkNetwork": 737.8
+  },
+  {
+   "a": "21",
+   "b": "95",
+   "centroid": 419.1,
+   "edge": 368.6,
+   "walkNetwork": 572.9
+  },
+  {
+   "a": "21",
+   "b": "96",
+   "centroid": 566.7,
+   "edge": 526.5,
+   "walkNetwork": 764.9
+  },
+  {
+   "a": "21",
+   "b": "98",
+   "centroid": 577.2,
+   "edge": 538,
+   "walkNetwork": 772.5
+  },
+  {
+   "a": "21",
+   "b": "seven",
+   "centroid": 459.5,
+   "edge": 424.6,
+   "walkNetwork": 623.2
+  },
+  {
+   "a": "21",
+   "b": "97",
+   "centroid": 606.8,
+   "edge": 569.4,
+   "walkNetwork": 811.9
+  },
+  {
+   "a": "21",
+   "b": "ipc",
+   "centroid": 101.8,
+   "edge": 52.8,
+   "walkNetwork": 173.7
+  },
+  {
+   "a": "21",
+   "b": "u1",
+   "centroid": 526.1,
+   "edge": 476.3,
+   "walkNetwork": 776.2
+  },
+  {
+   "a": "21",
+   "b": "u2",
+   "centroid": 508.1,
+   "edge": 467.8,
+   "walkNetwork": 757.1
+  },
+  {
+   "a": "21",
+   "b": "94",
+   "centroid": 441.2,
+   "edge": 344.2,
+   "walkNetwork": 672.6
+  },
+  {
+   "a": "22",
+   "b": "23",
+   "centroid": 51.4,
+   "edge": 7.9,
+   "walkNetwork": 70.1
+  },
+  {
+   "a": "22",
+   "b": "41",
+   "centroid": 226.3,
+   "edge": 166.4,
+   "walkNetwork": 271.8
+  },
+  {
+   "a": "22",
+   "b": "42",
+   "centroid": 205.3,
+   "edge": 145.2,
+   "walkNetwork": 167.6
+  },
+  {
+   "a": "22",
+   "b": "43",
+   "centroid": 177.5,
+   "edge": 136.9,
+   "walkNetwork": 167.6
+  },
+  {
+   "a": "22",
+   "b": "44",
+   "centroid": 161.5,
+   "edge": 108.2,
+   "walkNetwork": 173
+  },
+  {
+   "a": "22",
+   "b": "46",
+   "centroid": 93.8,
+   "edge": 55.8,
+   "walkNetwork": 58.8
+  },
+  {
+   "a": "22",
+   "b": "47",
+   "centroid": 133.9,
+   "edge": 84.3,
+   "walkNetwork": 149.3
+  },
+  {
+   "a": "22",
+   "b": "52",
+   "centroid": 178.6,
+   "edge": 126.8,
+   "walkNetwork": 225.1
+  },
+  {
+   "a": "22",
+   "b": "62",
+   "centroid": 296.5,
+   "edge": 235.2,
+   "walkNetwork": 363.5
+  },
+  {
+   "a": "22",
+   "b": "63",
+   "centroid": 239,
+   "edge": 168.1,
+   "walkNetwork": 318.4
+  },
+  {
+   "a": "22",
+   "b": "64",
+   "centroid": 260.5,
+   "edge": 218.9,
+   "walkNetwork": 303.4
+  },
+  {
+   "a": "22",
+   "b": "65",
+   "centroid": 295,
+   "edge": 257.7,
+   "walkNetwork": 329
+  },
+  {
+   "a": "22",
+   "b": "66",
+   "centroid": 293.8,
+   "edge": 264.5,
+   "walkNetwork": 355.9
+  },
+  {
+   "a": "22",
+   "b": "67",
+   "centroid": 310.5,
+   "edge": 277.9,
+   "walkNetwork": 389.9
+  },
+  {
+   "a": "22",
+   "b": "68",
+   "centroid": 320.9,
+   "edge": 288,
+   "walkNetwork": 405
+  },
+  {
+   "a": "22",
+   "b": "69",
+   "centroid": 342.1,
+   "edge": 306.8,
+   "walkNetwork": 408.8
+  },
+  {
+   "a": "22",
+   "b": "72",
+   "centroid": 326.6,
+   "edge": 302.7,
+   "walkNetwork": 281.6
+  },
+  {
+   "a": "22",
+   "b": "71",
+   "centroid": 318,
+   "edge": 295.8,
+   "walkNetwork": 413.7
+  },
+  {
+   "a": "22",
+   "b": "73",
+   "centroid": 285.3,
+   "edge": 256.7,
+   "walkNetwork": 390.5
+  },
+  {
+   "a": "22",
+   "b": "75",
+   "centroid": 273,
+   "edge": 249.1,
+   "walkNetwork": 330.6
+  },
+  {
+   "a": "22",
+   "b": "76",
+   "centroid": 156.8,
+   "edge": 124.8,
+   "walkNetwork": 159.7
+  },
+  {
+   "a": "22",
+   "b": "77",
+   "centroid": 212.3,
+   "edge": 170.4,
+   "walkNetwork": 305
+  },
+  {
+   "a": "22",
+   "b": "78A",
+   "centroid": 271.7,
+   "edge": 247.6,
+   "walkNetwork": 294.6
+  },
+  {
+   "a": "22",
+   "b": "78B",
+   "centroid": 293.3,
+   "edge": 252.4,
+   "walkNetwork": 281.6
+  },
+  {
+   "a": "22",
+   "b": "79",
+   "centroid": 263.6,
+   "edge": 228.6,
+   "walkNetwork": 250.9
+  },
+  {
+   "a": "22",
+   "b": "81",
+   "centroid": 234.3,
+   "edge": 171.2,
+   "walkNetwork": 464.8
+  },
+  {
+   "a": "22",
+   "b": "82",
+   "centroid": 299.6,
+   "edge": 248.6,
+   "walkNetwork": 600.7
+  },
+  {
+   "a": "22",
+   "b": "83",
+   "centroid": 312.9,
+   "edge": 263.5,
+   "walkNetwork": 509.1
+  },
+  {
+   "a": "22",
+   "b": "84",
+   "centroid": 267.9,
+   "edge": 224.3,
+   "walkNetwork": 388.5
+  },
+  {
+   "a": "22",
+   "b": "85",
+   "centroid": 241,
+   "edge": 200.9,
+   "walkNetwork": 446.8
+  },
+  {
+   "a": "22",
+   "b": "86",
+   "centroid": 367.5,
+   "edge": 328.2,
+   "walkNetwork": 513
+  },
+  {
+   "a": "22",
+   "b": "88",
+   "centroid": 386.2,
+   "edge": 344.2,
+   "walkNetwork": 559.7
+  },
+  {
+   "a": "22",
+   "b": "89",
+   "centroid": 333.6,
+   "edge": 281.1,
+   "walkNetwork": 624.2
+  },
+  {
+   "a": "22",
+   "b": "90",
+   "centroid": 548.9,
+   "edge": 495.9,
+   "walkNetwork": 794.8
+  },
+  {
+   "a": "22",
+   "b": "91",
+   "centroid": 594.4,
+   "edge": 549.4,
+   "walkNetwork": 837.5
+  },
+  {
+   "a": "22",
+   "b": "92",
+   "centroid": 506.2,
+   "edge": 457.3,
+   "walkNetwork": 724.2
+  },
+  {
+   "a": "22",
+   "b": "93",
+   "centroid": 510.3,
+   "edge": 462.3,
+   "walkNetwork": 747.4
+  },
+  {
+   "a": "22",
+   "b": "95",
+   "centroid": 415.9,
+   "edge": 368.1,
+   "walkNetwork": 582.6
+  },
+  {
+   "a": "22",
+   "b": "96",
+   "centroid": 562.7,
+   "edge": 523,
+   "walkNetwork": 774.5
+  },
+  {
+   "a": "22",
+   "b": "98",
+   "centroid": 575.7,
+   "edge": 538.6,
+   "walkNetwork": 782.1
+  },
+  {
+   "a": "22",
+   "b": "seven",
+   "centroid": 455.4,
+   "edge": 422.8,
+   "walkNetwork": 632.9
+  },
+  {
+   "a": "22",
+   "b": "97",
+   "centroid": 602.3,
+   "edge": 567.2,
+   "walkNetwork": 821.6
+  },
+  {
+   "a": "22",
+   "b": "ipc",
+   "centroid": 132.5,
+   "edge": 82.1,
+   "walkNetwork": 164
+  },
+  {
+   "a": "22",
+   "b": "u1",
+   "centroid": 526.5,
+   "edge": 478.7,
+   "walkNetwork": 785.9
+  },
+  {
+   "a": "22",
+   "b": "u2",
+   "centroid": 506.8,
+   "edge": 468.6,
+   "walkNetwork": 766.8
+  },
+  {
+   "a": "22",
+   "b": "94",
+   "centroid": 431.3,
+   "edge": 334.5,
+   "walkNetwork": 682.3
+  },
+  {
+   "a": "23",
+   "b": "41",
+   "centroid": 228.6,
+   "edge": 141.4,
+   "walkNetwork": 247
+  },
+  {
+   "a": "23",
+   "b": "42",
+   "centroid": 215.5,
+   "edge": 146.8,
+   "walkNetwork": 142.7
+  },
+  {
+   "a": "23",
+   "b": "43",
+   "centroid": 183.7,
+   "edge": 137.3,
+   "walkNetwork": 142.7
+  },
+  {
+   "a": "23",
+   "b": "44",
+   "centroid": 164.7,
+   "edge": 104.5,
+   "walkNetwork": 148.2
+  },
+  {
+   "a": "23",
+   "b": "46",
+   "centroid": 70.1,
+   "edge": 4.6,
+   "walkNetwork": 12.2
+  },
+  {
+   "a": "23",
+   "b": "47",
+   "centroid": 153.1,
+   "edge": 105,
+   "walkNetwork": 124.4
+  },
+  {
+   "a": "23",
+   "b": "52",
+   "centroid": 154.7,
+   "edge": 63.4,
+   "walkNetwork": 200.2
+  },
+  {
+   "a": "23",
+   "b": "62",
+   "centroid": 286.1,
+   "edge": 190.9,
+   "walkNetwork": 325.7
+  },
+  {
+   "a": "23",
+   "b": "63",
+   "centroid": 225.1,
+   "edge": 127.1,
+   "walkNetwork": 293.5
+  },
+  {
+   "a": "23",
+   "b": "64",
+   "centroid": 234,
+   "edge": 152.6,
+   "walkNetwork": 265.7
+  },
+  {
+   "a": "23",
+   "b": "65",
+   "centroid": 270.6,
+   "edge": 196.1,
+   "walkNetwork": 291.3
+  },
+  {
+   "a": "23",
+   "b": "66",
+   "centroid": 273.2,
+   "edge": 206.3,
+   "walkNetwork": 318.2
+  },
+  {
+   "a": "23",
+   "b": "67",
+   "centroid": 294.3,
+   "edge": 226.5,
+   "walkNetwork": 352.2
+  },
+  {
+   "a": "23",
+   "b": "68",
+   "centroid": 306.8,
+   "edge": 239.9,
+   "walkNetwork": 367.3
+  },
+  {
+   "a": "23",
+   "b": "69",
+   "centroid": 330.8,
+   "edge": 265.2,
+   "walkNetwork": 371
+  },
+  {
+   "a": "23",
+   "b": "72",
+   "centroid": 287.2,
+   "edge": 218.6,
+   "walkNetwork": 211.5
+  },
+  {
+   "a": "23",
+   "b": "71",
+   "centroid": 273.9,
+   "edge": 210.6,
+   "walkNetwork": 343.6
+  },
+  {
+   "a": "23",
+   "b": "73",
+   "centroid": 237.1,
+   "edge": 178.1,
+   "walkNetwork": 320.3
+  },
+  {
+   "a": "23",
+   "b": "75",
+   "centroid": 228.7,
+   "edge": 163.9,
+   "walkNetwork": 260.5
+  },
+  {
+   "a": "23",
+   "b": "76",
+   "centroid": 111,
+   "edge": 39.6,
+   "walkNetwork": 89.6
+  },
+  {
+   "a": "23",
+   "b": "77",
+   "centroid": 168.2,
+   "edge": 85.3,
+   "walkNetwork": 234.9
+  },
+  {
+   "a": "23",
+   "b": "78A",
+   "centroid": 230.1,
+   "edge": 163.3,
+   "walkNetwork": 224.5
+  },
+  {
+   "a": "23",
+   "b": "78B",
+   "centroid": 258.3,
+   "edge": 169.1,
+   "walkNetwork": 211.5
+  },
+  {
+   "a": "23",
+   "b": "79",
+   "centroid": 227.4,
+   "edge": 152.5,
+   "walkNetwork": 180.8
+  },
+  {
+   "a": "23",
+   "b": "81",
+   "centroid": 183.1,
+   "edge": 113,
+   "walkNetwork": 394.7
+  },
+  {
+   "a": "23",
+   "b": "82",
+   "centroid": 249.5,
+   "edge": 214.1,
+   "walkNetwork": 530.6
+  },
+  {
+   "a": "23",
+   "b": "83",
+   "centroid": 261.6,
+   "edge": 208.4,
+   "walkNetwork": 438.9
+  },
+  {
+   "a": "23",
+   "b": "84",
+   "centroid": 216.8,
+   "edge": 155.5,
+   "walkNetwork": 318.3
+  },
+  {
+   "a": "23",
+   "b": "85",
+   "centroid": 189.6,
+   "edge": 144.1,
+   "walkNetwork": 376.7
+  },
+  {
+   "a": "23",
+   "b": "86",
+   "centroid": 316.2,
+   "edge": 276.8,
+   "walkNetwork": 442.9
+  },
+  {
+   "a": "23",
+   "b": "88",
+   "centroid": 335,
+   "edge": 293.7,
+   "walkNetwork": 489.6
+  },
+  {
+   "a": "23",
+   "b": "89",
+   "centroid": 284.6,
+   "edge": 249.9,
+   "walkNetwork": 554
+  },
+  {
+   "a": "23",
+   "b": "90",
+   "centroid": 500.1,
+   "edge": 463.2,
+   "walkNetwork": 724.7
+  },
+  {
+   "a": "23",
+   "b": "91",
+   "centroid": 545.6,
+   "edge": 517.7,
+   "walkNetwork": 767.4
+  },
+  {
+   "a": "23",
+   "b": "92",
+   "centroid": 456,
+   "edge": 417.2,
+   "walkNetwork": 654.1
+  },
+  {
+   "a": "23",
+   "b": "93",
+   "centroid": 459.7,
+   "edge": 417.8,
+   "walkNetwork": 677.3
+  },
+  {
+   "a": "23",
+   "b": "95",
+   "centroid": 365.2,
+   "edge": 323.6,
+   "walkNetwork": 512.4
+  },
+  {
+   "a": "23",
+   "b": "96",
+   "centroid": 512.3,
+   "edge": 482.7,
+   "walkNetwork": 704.4
+  },
+  {
+   "a": "23",
+   "b": "98",
+   "centroid": 524.7,
+   "edge": 490.6,
+   "walkNetwork": 712
+  },
+  {
+   "a": "23",
+   "b": "seven",
+   "centroid": 405,
+   "edge": 380,
+   "walkNetwork": 562.7
+  },
+  {
+   "a": "23",
+   "b": "97",
+   "centroid": 552.1,
+   "edge": 523.9,
+   "walkNetwork": 751.5
+  },
+  {
+   "a": "23",
+   "b": "ipc",
+   "centroid": 163.5,
+   "edge": 115.9,
+   "walkNetwork": 178.7
+  },
+  {
+   "a": "23",
+   "b": "u1",
+   "centroid": 475.3,
+   "edge": 427.6,
+   "walkNetwork": 715.8
+  },
+  {
+   "a": "23",
+   "b": "u2",
+   "centroid": 455.8,
+   "edge": 420.5,
+   "walkNetwork": 696.6
+  },
+  {
+   "a": "23",
+   "b": "94",
+   "centroid": 382.9,
+   "edge": 303,
+   "walkNetwork": 612.2
+  },
+  {
+   "a": "41",
+   "b": "42",
+   "centroid": 37.9,
+   "edge": 17.4,
+   "walkNetwork": 142.7
+  },
+  {
+   "a": "41",
+   "b": "43",
+   "centroid": 49.7,
+   "edge": 12.8,
+   "walkNetwork": 142.7
+  },
+  {
+   "a": "41",
+   "b": "44",
+   "centroid": 65,
+   "edge": 10.8,
+   "walkNetwork": 98.8
+  },
+  {
+   "a": "41",
+   "b": "46",
+   "centroid": 164,
+   "edge": 108.3,
+   "walkNetwork": 234.8
+  },
+  {
+   "a": "41",
+   "b": "47",
+   "centroid": 104.1,
+   "edge": 66.3,
+   "walkNetwork": 130.1
+  },
+  {
+   "a": "41",
+   "b": "52",
+   "centroid": 118.5,
+   "edge": 53.7,
+   "walkNetwork": 62
+  },
+  {
+   "a": "41",
+   "b": "62",
+   "centroid": 90.4,
+   "edge": 62.7,
+   "walkNetwork": 191.9
+  },
+  {
+   "a": "41",
+   "b": "63",
+   "centroid": 73,
+   "edge": 10.6,
+   "walkNetwork": 46.6
+  },
+  {
+   "a": "41",
+   "b": "64",
+   "centroid": 138.5,
+   "edge": 95,
+   "walkNetwork": 131.9
+  },
+  {
+   "a": "41",
+   "b": "65",
+   "centroid": 146.3,
+   "edge": 113.6,
+   "walkNetwork": 157.5
+  },
+  {
+   "a": "41",
+   "b": "66",
+   "centroid": 127.8,
+   "edge": 111.1,
+   "walkNetwork": 184.4
+  },
+  {
+   "a": "41",
+   "b": "67",
+   "centroid": 121.5,
+   "edge": 109.2,
+   "walkNetwork": 218.4
+  },
+  {
+   "a": "41",
+   "b": "68",
+   "centroid": 122.1,
+   "edge": 109.8,
+   "walkNetwork": 233.5
+  },
+  {
+   "a": "41",
+   "b": "69",
+   "centroid": 132.1,
+   "edge": 108.7,
+   "walkNetwork": 237.3
+  },
+  {
+   "a": "41",
+   "b": "72",
+   "centroid": 246.8,
+   "edge": 197.6,
+   "walkNetwork": 193.1
+  },
+  {
+   "a": "41",
+   "b": "71",
+   "centroid": 274.1,
+   "edge": 234.5,
+   "walkNetwork": 327.2
+  },
+  {
+   "a": "41",
+   "b": "73",
+   "centroid": 288.7,
+   "edge": 243.4,
+   "walkNetwork": 304
+  },
+  {
+   "a": "41",
+   "b": "75",
+   "centroid": 247.1,
+   "edge": 201.5,
+   "walkNetwork": 244.1
+  },
+  {
+   "a": "41",
+   "b": "76",
+   "centroid": 210.5,
+   "edge": 145.8,
+   "walkNetwork": 247.4
+  },
+  {
+   "a": "41",
+   "b": "77",
+   "centroid": 216.4,
+   "edge": 144.9,
+   "walkNetwork": 218.5
+  },
+  {
+   "a": "41",
+   "b": "78A",
+   "centroid": 227.3,
+   "edge": 176.8,
+   "walkNetwork": 208.1
+  },
+  {
+   "a": "41",
+   "b": "78B",
+   "centroid": 199.6,
+   "edge": 149.1,
+   "walkNetwork": 193.1
+  },
+  {
+   "a": "41",
+   "b": "79",
+   "centroid": 190.2,
+   "edge": 139.4,
+   "walkNetwork": 162.4
+  },
+  {
+   "a": "41",
+   "b": "81",
+   "centroid": 329,
+   "edge": 236.5,
+   "walkNetwork": 378.3
+  },
+  {
+   "a": "41",
+   "b": "82",
+   "centroid": 399.7,
+   "edge": 350.4,
+   "walkNetwork": 514.2
+  },
+  {
+   "a": "41",
+   "b": "83",
+   "centroid": 384.5,
+   "edge": 317.4,
+   "walkNetwork": 422.6
+  },
+  {
+   "a": "41",
+   "b": "84",
+   "centroid": 319.1,
+   "edge": 252.2,
+   "walkNetwork": 302
+  },
+  {
+   "a": "41",
+   "b": "85",
+   "centroid": 312.4,
+   "edge": 262.4,
+   "walkNetwork": 360.3
+  },
+  {
+   "a": "41",
+   "b": "86",
+   "centroid": 428.8,
+   "edge": 382.3,
+   "walkNetwork": 426.5
+  },
+  {
+   "a": "41",
+   "b": "88",
+   "centroid": 453.2,
+   "edge": 398.9,
+   "walkNetwork": 473.2
+  },
+  {
+   "a": "41",
+   "b": "89",
+   "centroid": 442,
+   "edge": 391,
+   "walkNetwork": 537.7
+  },
+  {
+   "a": "41",
+   "b": "90",
+   "centroid": 640.7,
+   "edge": 578.9,
+   "walkNetwork": 708.3
+  },
+  {
+   "a": "41",
+   "b": "91",
+   "centroid": 684.5,
+   "edge": 627.9,
+   "walkNetwork": 751
+  },
+  {
+   "a": "41",
+   "b": "92",
+   "centroid": 582.7,
+   "edge": 523.4,
+   "walkNetwork": 637.7
+  },
+  {
+   "a": "41",
+   "b": "93",
+   "centroid": 577.6,
+   "edge": 519.5,
+   "walkNetwork": 660.9
+  },
+  {
+   "a": "41",
+   "b": "95",
+   "centroid": 491.7,
+   "edge": 433.9,
+   "walkNetwork": 496.1
+  },
+  {
+   "a": "41",
+   "b": "96",
+   "centroid": 631.8,
+   "edge": 584.2,
+   "walkNetwork": 688
+  },
+  {
+   "a": "41",
+   "b": "98",
+   "centroid": 632,
+   "edge": 587.1,
+   "walkNetwork": 695.7
+  },
+  {
+   "a": "41",
+   "b": "seven",
+   "centroid": 531.9,
+   "edge": 488.7,
+   "walkNetwork": 546.4
+  },
+  {
+   "a": "41",
+   "b": "97",
+   "centroid": 671.8,
+   "edge": 625.2,
+   "walkNetwork": 735.1
+  },
+  {
+   "a": "41",
+   "b": "ipc",
+   "centroid": 134.8,
+   "edge": 102.6,
+   "walkNetwork": 184.3
+  },
+  {
+   "a": "41",
+   "b": "u1",
+   "centroid": 576.5,
+   "edge": 521.7,
+   "walkNetwork": 699.4
+  },
+  {
+   "a": "41",
+   "b": "u2",
+   "centroid": 566.6,
+   "edge": 518.4,
+   "walkNetwork": 680.3
+  },
+  {
+   "a": "41",
+   "b": "94",
+   "centroid": 535.7,
+   "edge": 427.9,
+   "walkNetwork": 595.8
+  },
+  {
+   "a": "42",
+   "b": "43",
+   "centroid": 33.7,
+   "edge": 2.8,
+   "walkNetwork": 0
+  },
+  {
+   "a": "42",
+   "b": "44",
+   "centroid": 54.1,
+   "edge": 8.5,
+   "walkNetwork": 44
+  },
+  {
+   "a": "42",
+   "b": "46",
+   "centroid": 157.3,
+   "edge": 118.1,
+   "walkNetwork": 130.6
+  },
+  {
+   "a": "42",
+   "b": "47",
+   "centroid": 74.5,
+   "edge": 25.2,
+   "walkNetwork": 21.2
+  },
+  {
+   "a": "42",
+   "b": "52",
+   "centroid": 132.8,
+   "edge": 74.8,
+   "walkNetwork": 117.7
+  },
+  {
+   "a": "42",
+   "b": "62",
+   "centroid": 128.1,
+   "edge": 94.6,
+   "walkNetwork": 247.7
+  },
+  {
+   "a": "42",
+   "b": "63",
+   "centroid": 105.9,
+   "edge": 42.5,
+   "walkNetwork": 189.3
+  },
+  {
+   "a": "42",
+   "b": "64",
+   "centroid": 169.3,
+   "edge": 123.8,
+   "walkNetwork": 187.6
+  },
+  {
+   "a": "42",
+   "b": "65",
+   "centroid": 181.3,
+   "edge": 145.1,
+   "walkNetwork": 213.3
+  },
+  {
+   "a": "42",
+   "b": "66",
+   "centroid": 164.2,
+   "edge": 143,
+   "walkNetwork": 240.1
+  },
+  {
+   "a": "42",
+   "b": "67",
+   "centroid": 159.3,
+   "edge": 141,
+   "walkNetwork": 274.1
+  },
+  {
+   "a": "42",
+   "b": "68",
+   "centroid": 160,
+   "edge": 141.3,
+   "walkNetwork": 289.2
+  },
+  {
+   "a": "42",
+   "b": "69",
+   "centroid": 168.9,
+   "edge": 140.5,
+   "walkNetwork": 293
+  },
+  {
+   "a": "42",
+   "b": "72",
+   "centroid": 276.8,
+   "edge": 226.6,
+   "walkNetwork": 248.8
+  },
+  {
+   "a": "42",
+   "b": "71",
+   "centroid": 300.1,
+   "edge": 261.6,
+   "walkNetwork": 383
+  },
+  {
+   "a": "42",
+   "b": "73",
+   "centroid": 308.4,
+   "edge": 267.1,
+   "walkNetwork": 359.7
+  },
+  {
+   "a": "42",
+   "b": "75",
+   "centroid": 269.4,
+   "edge": 226.8,
+   "walkNetwork": 299.9
+  },
+  {
+   "a": "42",
+   "b": "76",
+   "centroid": 216.6,
+   "edge": 161.1,
+   "walkNetwork": 201.4
+  },
+  {
+   "a": "42",
+   "b": "77",
+   "centroid": 231.9,
+   "edge": 164.9,
+   "walkNetwork": 274.3
+  },
+  {
+   "a": "42",
+   "b": "78A",
+   "centroid": 251.4,
+   "edge": 203.5,
+   "walkNetwork": 263.8
+  },
+  {
+   "a": "42",
+   "b": "78B",
+   "centroid": 229.6,
+   "edge": 177.8,
+   "walkNetwork": 248.8
+  },
+  {
+   "a": "42",
+   "b": "79",
+   "centroid": 216.7,
+   "edge": 166.8,
+   "walkNetwork": 218.2
+  },
+  {
+   "a": "42",
+   "b": "81",
+   "centroid": 336.2,
+   "edge": 252.6,
+   "walkNetwork": 434.1
+  },
+  {
+   "a": "42",
+   "b": "82",
+   "centroid": 408.1,
+   "edge": 365.6,
+   "walkNetwork": 570
+  },
+  {
+   "a": "42",
+   "b": "83",
+   "centroid": 397.1,
+   "edge": 336.7,
+   "walkNetwork": 478.3
+  },
+  {
+   "a": "42",
+   "b": "84",
+   "centroid": 332.8,
+   "edge": 272.3,
+   "walkNetwork": 357.7
+  },
+  {
+   "a": "42",
+   "b": "85",
+   "centroid": 322.6,
+   "edge": 279.2,
+   "walkNetwork": 416
+  },
+  {
+   "a": "42",
+   "b": "86",
+   "centroid": 443.9,
+   "edge": 402.8,
+   "walkNetwork": 482.2
+  },
+  {
+   "a": "42",
+   "b": "88",
+   "centroid": 467.9,
+   "edge": 419.5,
+   "walkNetwork": 529
+  },
+  {
+   "a": "42",
+   "b": "89",
+   "centroid": 449.9,
+   "edge": 407.5,
+   "walkNetwork": 593.4
+  },
+  {
+   "a": "42",
+   "b": "90",
+   "centroid": 653.8,
+   "edge": 598.9,
+   "walkNetwork": 764.1
+  },
+  {
+   "a": "42",
+   "b": "91",
+   "centroid": 698.2,
+   "edge": 648.7,
+   "walkNetwork": 806.7
+  },
+  {
+   "a": "42",
+   "b": "92",
+   "centroid": 597.7,
+   "edge": 544.5,
+   "walkNetwork": 693.4
+  },
+  {
+   "a": "42",
+   "b": "93",
+   "centroid": 593.9,
+   "edge": 541.5,
+   "walkNetwork": 716.7
+  },
+  {
+   "a": "42",
+   "b": "95",
+   "centroid": 505.7,
+   "edge": 454,
+   "walkNetwork": 551.8
+  },
+  {
+   "a": "42",
+   "b": "96",
+   "centroid": 648.4,
+   "edge": 606.8,
+   "walkNetwork": 743.8
+  },
+  {
+   "a": "42",
+   "b": "98",
+   "centroid": 650.4,
+   "edge": 609.8,
+   "walkNetwork": 751.4
+  },
+  {
+   "a": "42",
+   "b": "seven",
+   "centroid": 546.4,
+   "edge": 509.3,
+   "walkNetwork": 602.1
+  },
+  {
+   "a": "42",
+   "b": "97",
+   "centroid": 688.6,
+   "edge": 647.4,
+   "walkNetwork": 790.8
+  },
+  {
+   "a": "42",
+   "b": "ipc",
+   "centroid": 100.1,
+   "edge": 58.7,
+   "walkNetwork": 75.5
+  },
+  {
+   "a": "42",
+   "b": "u1",
+   "centroid": 595.4,
+   "edge": 545.1,
+   "walkNetwork": 755.1
+  },
+  {
+   "a": "42",
+   "b": "u2",
+   "centroid": 583.9,
+   "edge": 541,
+   "walkNetwork": 736
+  },
+  {
+   "a": "42",
+   "b": "94",
+   "centroid": 545.8,
+   "edge": 446.8,
+   "walkNetwork": 651.5
+  },
+  {
+   "a": "43",
+   "b": "44",
+   "centroid": 20.4,
+   "edge": 0,
+   "walkNetwork": 44
+  },
+  {
+   "a": "43",
+   "b": "46",
+   "centroid": 123.8,
+   "edge": 108.5,
+   "walkNetwork": 130.6
+  },
+  {
+   "a": "43",
+   "b": "47",
+   "centroid": 56.1,
+   "edge": 20.8,
+   "walkNetwork": 21.2
+  },
+  {
+   "a": "43",
+   "b": "52",
+   "centroid": 104.1,
+   "edge": 63.4,
+   "walkNetwork": 117.7
+  },
+  {
+   "a": "43",
+   "b": "62",
+   "centroid": 133.8,
+   "edge": 89.9,
+   "walkNetwork": 247.7
+  },
+  {
+   "a": "43",
+   "b": "63",
+   "centroid": 95.6,
+   "edge": 36.5,
+   "walkNetwork": 189.3
+  },
+  {
+   "a": "43",
+   "b": "64",
+   "centroid": 153,
+   "edge": 114.2,
+   "walkNetwork": 187.6
+  },
+  {
+   "a": "43",
+   "b": "65",
+   "centroid": 171.4,
+   "edge": 138.1,
+   "walkNetwork": 213.3
+  },
+  {
+   "a": "43",
+   "b": "66",
+   "centroid": 157.8,
+   "edge": 137.4,
+   "walkNetwork": 240.1
+  },
+  {
+   "a": "43",
+   "b": "67",
+   "centroid": 159.7,
+   "edge": 136.9,
+   "walkNetwork": 274.1
+  },
+  {
+   "a": "43",
+   "b": "68",
+   "centroid": 164,
+   "edge": 140.7,
+   "walkNetwork": 289.2
+  },
+  {
+   "a": "43",
+   "b": "69",
+   "centroid": 178.1,
+   "edge": 151.5,
+   "walkNetwork": 293
+  },
+  {
+   "a": "43",
+   "b": "72",
+   "centroid": 257.5,
+   "edge": 217.2,
+   "walkNetwork": 248.8
+  },
+  {
+   "a": "43",
+   "b": "71",
+   "centroid": 276.8,
+   "edge": 250.8,
+   "walkNetwork": 383
+  },
+  {
+   "a": "43",
+   "b": "73",
+   "centroid": 280.5,
+   "edge": 255.7,
+   "walkNetwork": 359.7
+  },
+  {
+   "a": "43",
+   "b": "75",
+   "centroid": 243.4,
+   "edge": 215.6,
+   "walkNetwork": 299.9
+  },
+  {
+   "a": "43",
+   "b": "76",
+   "centroid": 183.8,
+   "edge": 150.2,
+   "walkNetwork": 201.4
+  },
+  {
+   "a": "43",
+   "b": "77",
+   "centroid": 202.2,
+   "edge": 153.5,
+   "walkNetwork": 274.3
+  },
+  {
+   "a": "43",
+   "b": "78A",
+   "centroid": 227,
+   "edge": 192.6,
+   "walkNetwork": 263.8
+  },
+  {
+   "a": "43",
+   "b": "78B",
+   "centroid": 211,
+   "edge": 168,
+   "walkNetwork": 248.8
+  },
+  {
+   "a": "43",
+   "b": "79",
+   "centroid": 194.6,
+   "edge": 156.1,
+   "walkNetwork": 218.2
+  },
+  {
+   "a": "43",
+   "b": "81",
+   "centroid": 303.3,
+   "edge": 241.7,
+   "walkNetwork": 434.1
+  },
+  {
+   "a": "43",
+   "b": "82",
+   "centroid": 375.4,
+   "edge": 354.8,
+   "walkNetwork": 570
+  },
+  {
+   "a": "43",
+   "b": "83",
+   "centroid": 365.6,
+   "edge": 325.4,
+   "walkNetwork": 478.3
+  },
+  {
+   "a": "43",
+   "b": "84",
+   "centroid": 301.9,
+   "edge": 260.9,
+   "walkNetwork": 357.7
+  },
+  {
+   "a": "43",
+   "b": "85",
+   "centroid": 290.6,
+   "edge": 268.2,
+   "walkNetwork": 416
+  },
+  {
+   "a": "43",
+   "b": "86",
+   "centroid": 413.3,
+   "edge": 391.4,
+   "walkNetwork": 482.2
+  },
+  {
+   "a": "43",
+   "b": "88",
+   "centroid": 437.1,
+   "edge": 408.2,
+   "walkNetwork": 529
+  },
+  {
+   "a": "43",
+   "b": "89",
+   "centroid": 417.1,
+   "edge": 396.6,
+   "walkNetwork": 593.4
+  },
+  {
+   "a": "43",
+   "b": "90",
+   "centroid": 622.2,
+   "edge": 587.6,
+   "walkNetwork": 764.1
+  },
+  {
+   "a": "43",
+   "b": "91",
+   "centroid": 666.8,
+   "edge": 637.4,
+   "walkNetwork": 806.7
+  },
+  {
+   "a": "43",
+   "b": "92",
+   "centroid": 566.8,
+   "edge": 533.2,
+   "walkNetwork": 693.4
+  },
+  {
+   "a": "43",
+   "b": "93",
+   "centroid": 563.6,
+   "edge": 530.1,
+   "walkNetwork": 716.7
+  },
+  {
+   "a": "43",
+   "b": "95",
+   "centroid": 474.5,
+   "edge": 442.7,
+   "walkNetwork": 551.8
+  },
+  {
+   "a": "43",
+   "b": "96",
+   "centroid": 618.1,
+   "edge": 595.4,
+   "walkNetwork": 743.8
+  },
+  {
+   "a": "43",
+   "b": "98",
+   "centroid": 621,
+   "edge": 598.4,
+   "walkNetwork": 751.4
+  },
+  {
+   "a": "43",
+   "b": "seven",
+   "centroid": 515.3,
+   "edge": 497.9,
+   "walkNetwork": 602.1
+  },
+  {
+   "a": "43",
+   "b": "97",
+   "centroid": 658.4,
+   "edge": 636,
+   "walkNetwork": 790.8
+  },
+  {
+   "a": "43",
+   "b": "ipc",
+   "centroid": 90.8,
+   "edge": 57.4,
+   "walkNetwork": 75.5
+  },
+  {
+   "a": "43",
+   "b": "u1",
+   "centroid": 566.2,
+   "edge": 533.7,
+   "walkNetwork": 755.1
+  },
+  {
+   "a": "43",
+   "b": "u2",
+   "centroid": 554,
+   "edge": 529.6,
+   "walkNetwork": 736
+  },
+  {
+   "a": "43",
+   "b": "94",
+   "centroid": 513.3,
+   "edge": 435.6,
+   "walkNetwork": 651.5
+  },
+  {
+   "a": "44",
+   "b": "46",
+   "centroid": 103.6,
+   "edge": 75.7,
+   "walkNetwork": 136.1
+  },
+  {
+   "a": "44",
+   "b": "47",
+   "centroid": 52.5,
+   "edge": 16.5,
+   "walkNetwork": 31.3
+  },
+  {
+   "a": "44",
+   "b": "52",
+   "centroid": 88.7,
+   "edge": 33.2,
+   "walkNetwork": 73.7
+  },
+  {
+   "a": "44",
+   "b": "62",
+   "centroid": 141.3,
+   "edge": 84.6,
+   "walkNetwork": 203.7
+  },
+  {
+   "a": "44",
+   "b": "63",
+   "centroid": 95.2,
+   "edge": 28.1,
+   "walkNetwork": 145.3
+  },
+  {
+   "a": "44",
+   "b": "64",
+   "centroid": 146.4,
+   "edge": 97.1,
+   "walkNetwork": 143.7
+  },
+  {
+   "a": "44",
+   "b": "65",
+   "centroid": 168.7,
+   "edge": 128.7,
+   "walkNetwork": 169.3
+  },
+  {
+   "a": "44",
+   "b": "66",
+   "centroid": 157.6,
+   "edge": 129.4,
+   "walkNetwork": 196.2
+  },
+  {
+   "a": "44",
+   "b": "67",
+   "centroid": 163.7,
+   "edge": 131.2,
+   "walkNetwork": 230.1
+  },
+  {
+   "a": "44",
+   "b": "68",
+   "centroid": 169.9,
+   "edge": 137.3,
+   "walkNetwork": 245.2
+  },
+  {
+   "a": "44",
+   "b": "69",
+   "centroid": 186.7,
+   "edge": 152.1,
+   "walkNetwork": 249
+  },
+  {
+   "a": "44",
+   "b": "72",
+   "centroid": 247.7,
+   "edge": 198.8,
+   "walkNetwork": 204.9
+  },
+  {
+   "a": "44",
+   "b": "71",
+   "centroid": 264,
+   "edge": 224.8,
+   "walkNetwork": 339
+  },
+  {
+   "a": "44",
+   "b": "73",
+   "centroid": 264.4,
+   "edge": 225.4,
+   "walkNetwork": 315.7
+  },
+  {
+   "a": "44",
+   "b": "75",
+   "centroid": 228.8,
+   "edge": 187.2,
+   "walkNetwork": 255.9
+  },
+  {
+   "a": "44",
+   "b": "76",
+   "centroid": 164.1,
+   "edge": 117.2,
+   "walkNetwork": 206.9
+  },
+  {
+   "a": "44",
+   "b": "77",
+   "centroid": 185,
+   "edge": 121.4,
+   "walkNetwork": 230.3
+  },
+  {
+   "a": "44",
+   "b": "78A",
+   "centroid": 213.6,
+   "edge": 166.4,
+   "walkNetwork": 219.9
+  },
+  {
+   "a": "44",
+   "b": "78B",
+   "centroid": 202,
+   "edge": 148.3,
+   "walkNetwork": 204.9
+  },
+  {
+   "a": "44",
+   "b": "79",
+   "centroid": 183.3,
+   "edge": 131.9,
+   "walkNetwork": 174.2
+  },
+  {
+   "a": "44",
+   "b": "81",
+   "centroid": 283.5,
+   "edge": 208.7,
+   "walkNetwork": 390.1
+  },
+  {
+   "a": "44",
+   "b": "82",
+   "centroid": 355.8,
+   "edge": 321.8,
+   "walkNetwork": 526
+  },
+  {
+   "a": "44",
+   "b": "83",
+   "centroid": 346.8,
+   "edge": 292.8,
+   "walkNetwork": 434.3
+  },
+  {
+   "a": "44",
+   "b": "84",
+   "centroid": 283.5,
+   "edge": 228.6,
+   "walkNetwork": 313.8
+  },
+  {
+   "a": "44",
+   "b": "85",
+   "centroid": 271.4,
+   "edge": 235.2,
+   "walkNetwork": 372.1
+  },
+  {
+   "a": "44",
+   "b": "86",
+   "centroid": 395.1,
+   "edge": 359.1,
+   "walkNetwork": 438.3
+  },
+  {
+   "a": "44",
+   "b": "88",
+   "centroid": 418.7,
+   "edge": 375.9,
+   "walkNetwork": 485
+  },
+  {
+   "a": "44",
+   "b": "89",
+   "centroid": 397.3,
+   "edge": 363.6,
+   "walkNetwork": 549.5
+  },
+  {
+   "a": "44",
+   "b": "90",
+   "centroid": 603.2,
+   "edge": 555.1,
+   "walkNetwork": 720.1
+  },
+  {
+   "a": "44",
+   "b": "91",
+   "centroid": 647.9,
+   "edge": 605.1,
+   "walkNetwork": 762.8
+  },
+  {
+   "a": "44",
+   "b": "92",
+   "centroid": 548.3,
+   "edge": 501,
+   "walkNetwork": 649.5
+  },
+  {
+   "a": "44",
+   "b": "93",
+   "centroid": 545.5,
+   "edge": 498.3,
+   "walkNetwork": 672.7
+  },
+  {
+   "a": "44",
+   "b": "95",
+   "centroid": 455.9,
+   "edge": 410.1,
+   "walkNetwork": 507.8
+  },
+  {
+   "a": "44",
+   "b": "96",
+   "centroid": 600,
+   "edge": 563.8,
+   "walkNetwork": 699.8
+  },
+  {
+   "a": "44",
+   "b": "98",
+   "centroid": 603.5,
+   "edge": 567,
+   "walkNetwork": 707.4
+  },
+  {
+   "a": "44",
+   "b": "seven",
+   "centroid": 496.7,
+   "edge": 465.6,
+   "walkNetwork": 558.1
+  },
+  {
+   "a": "44",
+   "b": "97",
+   "centroid": 640.3,
+   "edge": 604.2,
+   "walkNetwork": 746.9
+  },
+  {
+   "a": "44",
+   "b": "ipc",
+   "centroid": 90.5,
+   "edge": 54.9,
+   "walkNetwork": 85.5
+  },
+  {
+   "a": "44",
+   "b": "u1",
+   "centroid": 549,
+   "edge": 502.5,
+   "walkNetwork": 711.2
+  },
+  {
+   "a": "44",
+   "b": "u2",
+   "centroid": 536.3,
+   "edge": 498.1,
+   "walkNetwork": 692.1
+  },
+  {
+   "a": "44",
+   "b": "94",
+   "centroid": 493.8,
+   "edge": 402.8,
+   "walkNetwork": 607.6
+  },
+  {
+   "a": "46",
+   "b": "47",
+   "centroid": 110.3,
+   "edge": 74.7,
+   "walkNetwork": 112.3
+  },
+  {
+   "a": "46",
+   "b": "52",
+   "centroid": 86.4,
+   "edge": 29.2,
+   "walkNetwork": 188.1
+  },
+  {
+   "a": "46",
+   "b": "62",
+   "centroid": 216.2,
+   "edge": 154.3,
+   "walkNetwork": 326.5
+  },
+  {
+   "a": "46",
+   "b": "63",
+   "centroid": 155,
+   "edge": 91.2,
+   "walkNetwork": 281.4
+  },
+  {
+   "a": "46",
+   "b": "64",
+   "centroid": 167.7,
+   "edge": 119.6,
+   "walkNetwork": 266.4
+  },
+  {
+   "a": "46",
+   "b": "65",
+   "centroid": 203.2,
+   "edge": 161.5,
+   "walkNetwork": 292
+  },
+  {
+   "a": "46",
+   "b": "66",
+   "centroid": 204.2,
+   "edge": 170.8,
+   "walkNetwork": 318.9
+  },
+  {
+   "a": "46",
+   "b": "67",
+   "centroid": 224.4,
+   "edge": 190.1,
+   "walkNetwork": 352.9
+  },
+  {
+   "a": "46",
+   "b": "68",
+   "centroid": 236.8,
+   "edge": 203.3,
+   "walkNetwork": 368
+  },
+  {
+   "a": "46",
+   "b": "69",
+   "centroid": 260.7,
+   "edge": 228.6,
+   "walkNetwork": 371.8
+  },
+  {
+   "a": "46",
+   "b": "72",
+   "centroid": 234.8,
+   "edge": 201.7,
+   "walkNetwork": 223.2
+  },
+  {
+   "a": "46",
+   "b": "71",
+   "centroid": 231.1,
+   "edge": 196.5,
+   "walkNetwork": 355.4
+  },
+  {
+   "a": "46",
+   "b": "73",
+   "centroid": 208.1,
+   "edge": 169.8,
+   "walkNetwork": 332.1
+  },
+  {
+   "a": "46",
+   "b": "75",
+   "centroid": 187.4,
+   "edge": 150.1,
+   "walkNetwork": 272.3
+  },
+  {
+   "a": "46",
+   "b": "76",
+   "centroid": 81.9,
+   "edge": 31.7,
+   "walkNetwork": 101.3
+  },
+  {
+   "a": "46",
+   "b": "77",
+   "centroid": 128.5,
+   "edge": 69.6,
+   "walkNetwork": 246.7
+  },
+  {
+   "a": "46",
+   "b": "78A",
+   "centroid": 182.5,
+   "edge": 146.9,
+   "walkNetwork": 236.2
+  },
+  {
+   "a": "46",
+   "b": "78B",
+   "centroid": 199.8,
+   "edge": 151.7,
+   "walkNetwork": 223.2
+  },
+  {
+   "a": "46",
+   "b": "79",
+   "centroid": 170.6,
+   "edge": 127.1,
+   "walkNetwork": 192.6
+  },
+  {
+   "a": "46",
+   "b": "81",
+   "centroid": 192,
+   "edge": 117.8,
+   "walkNetwork": 406.5
+  },
+  {
+   "a": "46",
+   "b": "82",
+   "centroid": 264.2,
+   "edge": 227.7,
+   "walkNetwork": 542.4
+  },
+  {
+   "a": "46",
+   "b": "83",
+   "centroid": 263.7,
+   "edge": 210.8,
+   "walkNetwork": 450.7
+  },
+  {
+   "a": "46",
+   "b": "84",
+   "centroid": 206.8,
+   "edge": 153.4,
+   "walkNetwork": 330.1
+  },
+  {
+   "a": "46",
+   "b": "85",
+   "centroid": 187,
+   "edge": 147.8,
+   "walkNetwork": 388.4
+  },
+  {
+   "a": "46",
+   "b": "86",
+   "centroid": 316.1,
+   "edge": 279.2,
+   "walkNetwork": 454.6
+  },
+  {
+   "a": "46",
+   "b": "88",
+   "centroid": 338,
+   "edge": 296.3,
+   "walkNetwork": 501.4
+  },
+  {
+   "a": "46",
+   "b": "89",
+   "centroid": 304.1,
+   "edge": 269.2,
+   "walkNetwork": 565.8
+  },
+  {
+   "a": "46",
+   "b": "90",
+   "centroid": 515.9,
+   "edge": 471,
+   "walkNetwork": 736.5
+  },
+  {
+   "a": "46",
+   "b": "91",
+   "centroid": 561.3,
+   "edge": 522.9,
+   "walkNetwork": 779.1
+  },
+  {
+   "a": "46",
+   "b": "92",
+   "centroid": 465.3,
+   "edge": 421,
+   "walkNetwork": 665.9
+  },
+  {
+   "a": "46",
+   "b": "93",
+   "centroid": 465.5,
+   "edge": 421.1,
+   "walkNetwork": 689.1
+  },
+  {
+   "a": "46",
+   "b": "95",
+   "centroid": 372.6,
+   "edge": 327.7,
+   "walkNetwork": 524.2
+  },
+  {
+   "a": "46",
+   "b": "96",
+   "centroid": 519.6,
+   "edge": 486.8,
+   "walkNetwork": 716.2
+  },
+  {
+   "a": "46",
+   "b": "98",
+   "centroid": 527.4,
+   "edge": 492.4,
+   "walkNetwork": 723.8
+  },
+  {
+   "a": "46",
+   "b": "seven",
+   "centroid": 413.5,
+   "edge": 384,
+   "walkNetwork": 574.5
+  },
+  {
+   "a": "46",
+   "b": "97",
+   "centroid": 560,
+   "edge": 526.9,
+   "walkNetwork": 763.3
+  },
+  {
+   "a": "46",
+   "b": "ipc",
+   "centroid": 135.5,
+   "edge": 90.8,
+   "walkNetwork": 166.5
+  },
+  {
+   "a": "46",
+   "b": "u1",
+   "centroid": 474.9,
+   "edge": 428.9,
+   "walkNetwork": 727.5
+  },
+  {
+   "a": "46",
+   "b": "u2",
+   "centroid": 458.7,
+   "edge": 422.7,
+   "walkNetwork": 708.4
+  },
+  {
+   "a": "46",
+   "b": "94",
+   "centroid": 402.4,
+   "edge": 314,
+   "walkNetwork": 624
+  },
+  {
+   "a": "47",
+   "b": "52",
+   "centroid": 131.5,
+   "edge": 88,
+   "walkNetwork": 105
+  },
+  {
+   "a": "47",
+   "b": "62",
+   "centroid": 189.8,
+   "edge": 143.3,
+   "walkNetwork": 235
+  },
+  {
+   "a": "47",
+   "b": "63",
+   "centroid": 147.5,
+   "edge": 89.5,
+   "walkNetwork": 176.6
+  },
+  {
+   "a": "47",
+   "b": "64",
+   "centroid": 197.6,
+   "edge": 158,
+   "walkNetwork": 174.9
+  },
+  {
+   "a": "47",
+   "b": "65",
+   "centroid": 221.1,
+   "edge": 190,
+   "walkNetwork": 200.6
+  },
+  {
+   "a": "47",
+   "b": "66",
+   "centroid": 210,
+   "edge": 190.6,
+   "walkNetwork": 227.4
+  },
+  {
+   "a": "47",
+   "b": "67",
+   "centroid": 214.7,
+   "edge": 190.3,
+   "walkNetwork": 261.4
+  },
+  {
+   "a": "47",
+   "b": "68",
+   "centroid": 219.7,
+   "edge": 194.2,
+   "walkNetwork": 276.5
+  },
+  {
+   "a": "47",
+   "b": "69",
+   "centroid": 234.1,
+   "edge": 203.7,
+   "walkNetwork": 280.3
+  },
+  {
+   "a": "47",
+   "b": "72",
+   "centroid": 295.7,
+   "edge": 258.3,
+   "walkNetwork": 236.1
+  },
+  {
+   "a": "47",
+   "b": "71",
+   "centroid": 307.7,
+   "edge": 276.9,
+   "walkNetwork": 370.3
+  },
+  {
+   "a": "47",
+   "b": "73",
+   "centroid": 300.9,
+   "edge": 267.6,
+   "walkNetwork": 347
+  },
+  {
+   "a": "47",
+   "b": "75",
+   "centroid": 269.5,
+   "edge": 235.3,
+   "walkNetwork": 287.2
+  },
+  {
+   "a": "47",
+   "b": "76",
+   "centroid": 186.7,
+   "edge": 141.4,
+   "walkNetwork": 183.1
+  },
+  {
+   "a": "47",
+   "b": "77",
+   "centroid": 219.5,
+   "edge": 159.8,
+   "walkNetwork": 261.6
+  },
+  {
+   "a": "47",
+   "b": "78A",
+   "centroid": 256.8,
+   "edge": 219.2,
+   "walkNetwork": 251.2
+  },
+  {
+   "a": "47",
+   "b": "78B",
+   "centroid": 251.1,
+   "edge": 207.5,
+   "walkNetwork": 236.1
+  },
+  {
+   "a": "47",
+   "b": "79",
+   "centroid": 230,
+   "edge": 188,
+   "walkNetwork": 205.5
+  },
+  {
+   "a": "47",
+   "b": "81",
+   "centroid": 301.9,
+   "edge": 229,
+   "walkNetwork": 421.4
+  },
+  {
+   "a": "47",
+   "b": "82",
+   "centroid": 374.3,
+   "edge": 338,
+   "walkNetwork": 557.3
+  },
+  {
+   "a": "47",
+   "b": "83",
+   "centroid": 371.5,
+   "edge": 321.1,
+   "walkNetwork": 465.6
+  },
+  {
+   "a": "47",
+   "b": "84",
+   "centroid": 311.4,
+   "edge": 260.9,
+   "walkNetwork": 345
+  },
+  {
+   "a": "47",
+   "b": "85",
+   "centroid": 294.7,
+   "edge": 258.8,
+   "walkNetwork": 403.3
+  },
+  {
+   "a": "47",
+   "b": "86",
+   "centroid": 422.5,
+   "edge": 389.2,
+   "walkNetwork": 469.5
+  },
+  {
+   "a": "47",
+   "b": "88",
+   "centroid": 445.1,
+   "edge": 406.3,
+   "walkNetwork": 516.3
+  },
+  {
+   "a": "47",
+   "b": "89",
+   "centroid": 414.4,
+   "edge": 378.8,
+   "walkNetwork": 580.7
+  },
+  {
+   "a": "47",
+   "b": "90",
+   "centroid": 625.5,
+   "edge": 582.1,
+   "walkNetwork": 751.4
+  },
+  {
+   "a": "47",
+   "b": "91",
+   "centroid": 670.7,
+   "edge": 633.7,
+   "walkNetwork": 794
+  },
+  {
+   "a": "47",
+   "b": "92",
+   "centroid": 573.6,
+   "edge": 531.4,
+   "walkNetwork": 680.8
+  },
+  {
+   "a": "47",
+   "b": "93",
+   "centroid": 572.7,
+   "edge": 531,
+   "walkNetwork": 704
+  },
+  {
+   "a": "47",
+   "b": "95",
+   "centroid": 480.8,
+   "edge": 438.4,
+   "walkNetwork": 539.1
+  },
+  {
+   "a": "47",
+   "b": "96",
+   "centroid": 627.1,
+   "edge": 597.2,
+   "walkNetwork": 731.1
+  },
+  {
+   "a": "47",
+   "b": "98",
+   "centroid": 633.2,
+   "edge": 601.5,
+   "walkNetwork": 738.7
+  },
+  {
+   "a": "47",
+   "b": "seven",
+   "centroid": 521.8,
+   "edge": 494.7,
+   "walkNetwork": 589.4
+  },
+  {
+   "a": "47",
+   "b": "97",
+   "centroid": 667.5,
+   "edge": 636.8,
+   "walkNetwork": 778.2
+  },
+  {
+   "a": "47",
+   "b": "ipc",
+   "centroid": 38.6,
+   "edge": 9.5,
+   "walkNetwork": 54.3
+  },
+  {
+   "a": "47",
+   "b": "u1",
+   "centroid": 579.6,
+   "edge": 537.5,
+   "walkNetwork": 742.4
+  },
+  {
+   "a": "47",
+   "b": "u2",
+   "centroid": 564.9,
+   "edge": 532.2,
+   "walkNetwork": 723.3
+  },
+  {
+   "a": "47",
+   "b": "94",
+   "centroid": 512.6,
+   "edge": 425.2,
+   "walkNetwork": 638.9
+  },
+  {
+   "a": "52",
+   "b": "62",
+   "centroid": 139.6,
+   "edge": 71.8,
+   "walkNetwork": 138.4
+  },
+  {
+   "a": "52",
+   "b": "63",
+   "centroid": 77.6,
+   "edge": 24.1,
+   "walkNetwork": 108.6
+  },
+  {
+   "a": "52",
+   "b": "64",
+   "centroid": 82,
+   "edge": 26.4,
+   "walkNetwork": 78.3
+  },
+  {
+   "a": "52",
+   "b": "65",
+   "centroid": 116.9,
+   "edge": 65.1,
+   "walkNetwork": 104
+  },
+  {
+   "a": "52",
+   "b": "66",
+   "centroid": 118.5,
+   "edge": 74.1,
+   "walkNetwork": 130.8
+  },
+  {
+   "a": "52",
+   "b": "67",
+   "centroid": 141.3,
+   "edge": 96.3,
+   "walkNetwork": 164.8
+  },
+  {
+   "a": "52",
+   "b": "68",
+   "centroid": 155.2,
+   "edge": 111.6,
+   "walkNetwork": 179.9
+  },
+  {
+   "a": "52",
+   "b": "69",
+   "centroid": 181.3,
+   "edge": 141.1,
+   "walkNetwork": 183.7
+  },
+  {
+   "a": "52",
+   "b": "72",
+   "centroid": 165.6,
+   "edge": 118,
+   "walkNetwork": 134
+  },
+  {
+   "a": "52",
+   "b": "71",
+   "centroid": 176.5,
+   "edge": 138.6,
+   "walkNetwork": 268.1
+  },
+  {
+   "a": "52",
+   "b": "73",
+   "centroid": 176.4,
+   "edge": 143,
+   "walkNetwork": 244.8
+  },
+  {
+   "a": "52",
+   "b": "75",
+   "centroid": 140.1,
+   "edge": 102.6,
+   "walkNetwork": 185
+  },
+  {
+   "a": "52",
+   "b": "76",
+   "centroid": 95.7,
+   "edge": 36.2,
+   "walkNetwork": 188.3
+  },
+  {
+   "a": "52",
+   "b": "77",
+   "centroid": 99.2,
+   "edge": 41.5,
+   "walkNetwork": 159.4
+  },
+  {
+   "a": "52",
+   "b": "78A",
+   "centroid": 125.7,
+   "edge": 80.2,
+   "walkNetwork": 149
+  },
+  {
+   "a": "52",
+   "b": "78B",
+   "centroid": 123.5,
+   "edge": 67.8,
+   "walkNetwork": 134
+  },
+  {
+   "a": "52",
+   "b": "79",
+   "centroid": 99.3,
+   "edge": 45.9,
+   "walkNetwork": 103.3
+  },
+  {
+   "a": "52",
+   "b": "81",
+   "centroid": 211.5,
+   "edge": 127.2,
+   "walkNetwork": 319.2
+  },
+  {
+   "a": "52",
+   "b": "82",
+   "centroid": 281.5,
+   "edge": 240.7,
+   "walkNetwork": 455.1
+  },
+  {
+   "a": "52",
+   "b": "83",
+   "centroid": 266.2,
+   "edge": 211.5,
+   "walkNetwork": 363.5
+  },
+  {
+   "a": "52",
+   "b": "84",
+   "centroid": 201.1,
+   "edge": 148.2,
+   "walkNetwork": 242.9
+  },
+  {
+   "a": "52",
+   "b": "85",
+   "centroid": 194,
+   "edge": 153.4,
+   "walkNetwork": 301.2
+  },
+  {
+   "a": "52",
+   "b": "86",
+   "centroid": 311.6,
+   "edge": 278.4,
+   "walkNetwork": 367.4
+  },
+  {
+   "a": "52",
+   "b": "88",
+   "centroid": 335.8,
+   "edge": 295.4,
+   "walkNetwork": 414.1
+  },
+  {
+   "a": "52",
+   "b": "89",
+   "centroid": 323.9,
+   "edge": 282,
+   "walkNetwork": 478.6
+  },
+  {
+   "a": "52",
+   "b": "90",
+   "centroid": 522.7,
+   "edge": 473.9,
+   "walkNetwork": 649.2
+  },
+  {
+   "a": "52",
+   "b": "91",
+   "centroid": 566.7,
+   "edge": 524.3,
+   "walkNetwork": 691.9
+  },
+  {
+   "a": "52",
+   "b": "92",
+   "centroid": 465.5,
+   "edge": 420.7,
+   "walkNetwork": 578.6
+  },
+  {
+   "a": "52",
+   "b": "93",
+   "centroid": 461.4,
+   "edge": 418.4,
+   "walkNetwork": 601.8
+  },
+  {
+   "a": "52",
+   "b": "95",
+   "centroid": 373.9,
+   "edge": 329.1,
+   "walkNetwork": 437
+  },
+  {
+   "a": "52",
+   "b": "96",
+   "centroid": 515.8,
+   "edge": 483.7,
+   "walkNetwork": 628.9
+  },
+  {
+   "a": "52",
+   "b": "98",
+   "centroid": 517.7,
+   "edge": 486.6,
+   "walkNetwork": 636.5
+  },
+  {
+   "a": "52",
+   "b": "seven",
+   "centroid": 414.4,
+   "edge": 384.8,
+   "walkNetwork": 487.3
+  },
+  {
+   "a": "52",
+   "b": "97",
+   "centroid": 555.9,
+   "edge": 524.4,
+   "walkNetwork": 676
+  },
+  {
+   "a": "52",
+   "b": "ipc",
+   "centroid": 169,
+   "edge": 129.9,
+   "walkNetwork": 159.3
+  },
+  {
+   "a": "52",
+   "b": "u1",
+   "centroid": 462.7,
+   "edge": 421.3,
+   "walkNetwork": 640.3
+  },
+  {
+   "a": "52",
+   "b": "u2",
+   "centroid": 451.2,
+   "edge": 417.9,
+   "walkNetwork": 621.2
+  },
+  {
+   "a": "52",
+   "b": "94",
+   "centroid": 417.2,
+   "edge": 321.1,
+   "walkNetwork": 536.7
+  },
+  {
+   "a": "62",
+   "b": "63",
+   "centroid": 62.3,
+   "edge": 4.1,
+   "walkNetwork": 238.5
+  },
+  {
+   "a": "62",
+   "b": "64",
+   "centroid": 100.6,
+   "edge": 48.3,
+   "walkNetwork": 60.1
+  },
+  {
+   "a": "62",
+   "b": "65",
+   "centroid": 84,
+   "edge": 30.5,
+   "walkNetwork": 34.4
+  },
+  {
+   "a": "62",
+   "b": "66",
+   "centroid": 60.2,
+   "edge": 12.4,
+   "walkNetwork": 7.6
+  },
+  {
+   "a": "62",
+   "b": "67",
+   "centroid": 36.6,
+   "edge": 8.2,
+   "walkNetwork": 26.4
+  },
+  {
+   "a": "62",
+   "b": "68",
+   "centroid": 32.1,
+   "edge": 8.3,
+   "walkNetwork": 41.5
+  },
+  {
+   "a": "62",
+   "b": "69",
+   "centroid": 45.8,
+   "edge": 6.6,
+   "walkNetwork": 45.3
+  },
+  {
+   "a": "62",
+   "b": "72",
+   "centroid": 196.7,
+   "edge": 124.8,
+   "walkNetwork": 195.5
+  },
+  {
+   "a": "62",
+   "b": "71",
+   "centroid": 235.7,
+   "edge": 188.5,
+   "walkNetwork": 329.6
+  },
+  {
+   "a": "62",
+   "b": "73",
+   "centroid": 268.6,
+   "edge": 223.7,
+   "walkNetwork": 306.4
+  },
+  {
+   "a": "62",
+   "b": "75",
+   "centroid": 222.7,
+   "edge": 175.9,
+   "walkNetwork": 246.6
+  },
+  {
+   "a": "62",
+   "b": "76",
+   "centroid": 232.5,
+   "edge": 171.4,
+   "walkNetwork": 249.8
+  },
+  {
+   "a": "62",
+   "b": "77",
+   "centroid": 214.9,
+   "edge": 154.4,
+   "walkNetwork": 220.9
+  },
+  {
+   "a": "62",
+   "b": "78A",
+   "centroid": 199.3,
+   "edge": 143.8,
+   "walkNetwork": 210.5
+  },
+  {
+   "a": "62",
+   "b": "78B",
+   "centroid": 153.6,
+   "edge": 89.8,
+   "walkNetwork": 195.5
+  },
+  {
+   "a": "62",
+   "b": "79",
+   "centroid": 158.9,
+   "edge": 99.5,
+   "walkNetwork": 164.8
+  },
+  {
+   "a": "62",
+   "b": "81",
+   "centroid": 339.4,
+   "edge": 248.9,
+   "walkNetwork": 380.7
+  },
+  {
+   "a": "62",
+   "b": "82",
+   "centroid": 404.1,
+   "edge": 354,
+   "walkNetwork": 516.6
+  },
+  {
+   "a": "62",
+   "b": "83",
+   "centroid": 379,
+   "edge": 314,
+   "walkNetwork": 425
+  },
+  {
+   "a": "62",
+   "b": "84",
+   "centroid": 313.8,
+   "edge": 248.5,
+   "walkNetwork": 304.4
+  },
+  {
+   "a": "62",
+   "b": "85",
+   "centroid": 316.3,
+   "edge": 267,
+   "walkNetwork": 362.7
+  },
+  {
+   "a": "62",
+   "b": "86",
+   "centroid": 415.1,
+   "edge": 370.1,
+   "walkNetwork": 428.9
+  },
+  {
+   "a": "62",
+   "b": "88",
+   "centroid": 439.9,
+   "edge": 386.7,
+   "walkNetwork": 475.7
+  },
+  {
+   "a": "62",
+   "b": "89",
+   "centroid": 446.2,
+   "edge": 391.9,
+   "walkNetwork": 540.1
+  },
+  {
+   "a": "62",
+   "b": "90",
+   "centroid": 627.8,
+   "edge": 564.3,
+   "walkNetwork": 710.7
+  },
+  {
+   "a": "62",
+   "b": "91",
+   "centroid": 669.5,
+   "edge": 608.7,
+   "walkNetwork": 753.4
+  },
+  {
+   "a": "62",
+   "b": "92",
+   "centroid": 565.9,
+   "edge": 504.5,
+   "walkNetwork": 640.1
+  },
+  {
+   "a": "62",
+   "b": "93",
+   "centroid": 557.4,
+   "edge": 495.9,
+   "walkNetwork": 663.4
+  },
+  {
+   "a": "62",
+   "b": "95",
+   "centroid": 479.3,
+   "edge": 423.2,
+   "walkNetwork": 498.5
+  },
+  {
+   "a": "62",
+   "b": "96",
+   "centroid": 610.2,
+   "edge": 556.1,
+   "walkNetwork": 690.5
+  },
+  {
+   "a": "62",
+   "b": "98",
+   "centroid": 605.3,
+   "edge": 554.2,
+   "walkNetwork": 698.1
+  },
+  {
+   "a": "62",
+   "b": "seven",
+   "centroid": 517.6,
+   "edge": 473.3,
+   "walkNetwork": 548.8
+  },
+  {
+   "a": "62",
+   "b": "97",
+   "centroid": 648.9,
+   "edge": 598.3,
+   "walkNetwork": 737.5
+  },
+  {
+   "a": "62",
+   "b": "ipc",
+   "centroid": 223.6,
+   "edge": 180,
+   "walkNetwork": 289.3
+  },
+  {
+   "a": "62",
+   "b": "u1",
+   "centroid": 549.6,
+   "edge": 487.8,
+   "walkNetwork": 701.8
+  },
+  {
+   "a": "62",
+   "b": "u2",
+   "centroid": 543.9,
+   "edge": 491.6,
+   "walkNetwork": 682.7
+  },
+  {
+   "a": "62",
+   "b": "94",
+   "centroid": 532.5,
+   "edge": 423.6,
+   "walkNetwork": 598.2
+  },
+  {
+   "a": "63",
+   "b": "64",
+   "centroid": 65.7,
+   "edge": 11.8,
+   "walkNetwork": 178.5
+  },
+  {
+   "a": "63",
+   "b": "65",
+   "centroid": 76.2,
+   "edge": 9.8,
+   "walkNetwork": 204.1
+  },
+  {
+   "a": "63",
+   "b": "66",
+   "centroid": 62.5,
+   "edge": 10.6,
+   "walkNetwork": 231
+  },
+  {
+   "a": "63",
+   "b": "67",
+   "centroid": 71.7,
+   "edge": 14.6,
+   "walkNetwork": 264.9
+  },
+  {
+   "a": "63",
+   "b": "68",
+   "centroid": 82.2,
+   "edge": 31.1,
+   "walkNetwork": 280
+  },
+  {
+   "a": "63",
+   "b": "69",
+   "centroid": 105.8,
+   "edge": 63.8,
+   "walkNetwork": 283.8
+  },
+  {
+   "a": "63",
+   "b": "72",
+   "centroid": 174.1,
+   "edge": 93.9,
+   "walkNetwork": 239.7
+  },
+  {
+   "a": "63",
+   "b": "71",
+   "centroid": 203.5,
+   "edge": 150,
+   "walkNetwork": 373.8
+  },
+  {
+   "a": "63",
+   "b": "73",
+   "centroid": 224.6,
+   "edge": 182.4,
+   "walkNetwork": 350.5
+  },
+  {
+   "a": "63",
+   "b": "75",
+   "centroid": 180.7,
+   "edge": 134.4,
+   "walkNetwork": 290.7
+  },
+  {
+   "a": "63",
+   "b": "76",
+   "centroid": 171.8,
+   "edge": 120.6,
+   "walkNetwork": 294
+  },
+  {
+   "a": "63",
+   "b": "77",
+   "centroid": 160.9,
+   "edge": 112.2,
+   "walkNetwork": 265.1
+  },
+  {
+   "a": "63",
+   "b": "78A",
+   "centroid": 159.2,
+   "edge": 102.5,
+   "walkNetwork": 254.7
+  },
+  {
+   "a": "63",
+   "b": "78B",
+   "centroid": 126.9,
+   "edge": 54.1,
+   "walkNetwork": 239.7
+  },
+  {
+   "a": "63",
+   "b": "79",
+   "centroid": 120.2,
+   "edge": 59.2,
+   "walkNetwork": 209
+  },
+  {
+   "a": "63",
+   "b": "81",
+   "centroid": 282.8,
+   "edge": 206.6,
+   "walkNetwork": 424.9
+  },
+  {
+   "a": "63",
+   "b": "82",
+   "centroid": 350,
+   "edge": 312.2,
+   "walkNetwork": 560.8
+  },
+  {
+   "a": "63",
+   "b": "83",
+   "centroid": 328.8,
+   "edge": 272.2,
+   "walkNetwork": 469.1
+  },
+  {
+   "a": "63",
+   "b": "84",
+   "centroid": 262.9,
+   "edge": 206.7,
+   "walkNetwork": 348.6
+  },
+  {
+   "a": "63",
+   "b": "85",
+   "centroid": 261.7,
+   "edge": 224.8,
+   "walkNetwork": 406.9
+  },
+  {
+   "a": "63",
+   "b": "86",
+   "centroid": 368.9,
+   "edge": 329.1,
+   "walkNetwork": 473.1
+  },
+  {
+   "a": "63",
+   "b": "88",
+   "centroid": 393.7,
+   "edge": 345.3,
+   "walkNetwork": 519.8
+  },
+  {
+   "a": "63",
+   "b": "89",
+   "centroid": 392.3,
+   "edge": 350.1,
+   "walkNetwork": 584.3
+  },
+  {
+   "a": "63",
+   "b": "90",
+   "centroid": 582,
+   "edge": 523.4,
+   "walkNetwork": 754.9
+  },
+  {
+   "a": "63",
+   "b": "91",
+   "centroid": 624.9,
+   "edge": 568.2,
+   "walkNetwork": 797.6
+  },
+  {
+   "a": "63",
+   "b": "92",
+   "centroid": 522,
+   "edge": 463.8,
+   "walkNetwork": 684.3
+  },
+  {
+   "a": "63",
+   "b": "93",
+   "centroid": 515.3,
+   "edge": 455.8,
+   "walkNetwork": 707.5
+  },
+  {
+   "a": "63",
+   "b": "95",
+   "centroid": 432.8,
+   "edge": 382,
+   "walkNetwork": 542.7
+  },
+  {
+   "a": "63",
+   "b": "96",
+   "centroid": 569,
+   "edge": 516.6,
+   "walkNetwork": 734.6
+  },
+  {
+   "a": "63",
+   "b": "98",
+   "centroid": 567.1,
+   "edge": 515.5,
+   "walkNetwork": 742.2
+  },
+  {
+   "a": "63",
+   "b": "seven",
+   "centroid": 472.2,
+   "edge": 432.4,
+   "walkNetwork": 593
+  },
+  {
+   "a": "63",
+   "b": "97",
+   "centroid": 608.5,
+   "edge": 558.8,
+   "walkNetwork": 781.7
+  },
+  {
+   "a": "63",
+   "b": "ipc",
+   "centroid": 184.9,
+   "edge": 127.4,
+   "walkNetwork": 230.9
+  },
+  {
+   "a": "63",
+   "b": "u1",
+   "centroid": 511.3,
+   "edge": 449.1,
+   "walkNetwork": 746
+  },
+  {
+   "a": "63",
+   "b": "u2",
+   "centroid": 503.1,
+   "edge": 451.9,
+   "walkNetwork": 726.9
+  },
+  {
+   "a": "63",
+   "b": "94",
+   "centroid": 482,
+   "edge": 382,
+   "walkNetwork": 642.4
+  },
+  {
+   "a": "64",
+   "b": "65",
+   "centroid": 37.7,
+   "edge": 3.2,
+   "walkNetwork": 25.6
+  },
+  {
+   "a": "64",
+   "b": "66",
+   "centroid": 50.1,
+   "edge": 21.5,
+   "walkNetwork": 52.5
+  },
+  {
+   "a": "64",
+   "b": "67",
+   "centroid": 81.8,
+   "edge": 54.4,
+   "walkNetwork": 86.5
+  },
+  {
+   "a": "64",
+   "b": "68",
+   "centroid": 99.1,
+   "edge": 72.6,
+   "walkNetwork": 101.6
+  },
+  {
+   "a": "64",
+   "b": "69",
+   "centroid": 127.8,
+   "edge": 105.8,
+   "walkNetwork": 105.4
+  },
+  {
+   "a": "64",
+   "b": "72",
+   "centroid": 108.4,
+   "edge": 64.8,
+   "walkNetwork": 135.5
+  },
+  {
+   "a": "64",
+   "b": "71",
+   "centroid": 139.3,
+   "edge": 118.8,
+   "walkNetwork": 269.6
+  },
+  {
+   "a": "64",
+   "b": "73",
+   "centroid": 168,
+   "edge": 149.9,
+   "walkNetwork": 246.3
+  },
+  {
+   "a": "64",
+   "b": "75",
+   "centroid": 122.2,
+   "edge": 102.3,
+   "walkNetwork": 186.5
+  },
+  {
+   "a": "64",
+   "b": "76",
+   "centroid": 151.2,
+   "edge": 111.5,
+   "walkNetwork": 189.8
+  },
+  {
+   "a": "64",
+   "b": "77",
+   "centroid": 119.7,
+   "edge": 75.5,
+   "walkNetwork": 160.9
+  },
+  {
+   "a": "64",
+   "b": "78A",
+   "centroid": 99,
+   "edge": 70.9,
+   "walkNetwork": 150.5
+  },
+  {
+   "a": "64",
+   "b": "78B",
+   "centroid": 61.1,
+   "edge": 23.8,
+   "walkNetwork": 135.5
+  },
+  {
+   "a": "64",
+   "b": "79",
+   "centroid": 58.6,
+   "edge": 27.9,
+   "walkNetwork": 104.8
+  },
+  {
+   "a": "64",
+   "b": "81",
+   "centroid": 245,
+   "edge": 173.1,
+   "walkNetwork": 320.7
+  },
+  {
+   "a": "64",
+   "b": "82",
+   "centroid": 306.4,
+   "edge": 275.8,
+   "walkNetwork": 456.6
+  },
+  {
+   "a": "64",
+   "b": "83",
+   "centroid": 279.2,
+   "edge": 237.2,
+   "walkNetwork": 364.9
+  },
+  {
+   "a": "64",
+   "b": "84",
+   "centroid": 214.5,
+   "edge": 170.8,
+   "walkNetwork": 244.4
+  },
+  {
+   "a": "64",
+   "b": "85",
+   "centroid": 219.7,
+   "edge": 188,
+   "walkNetwork": 302.7
+  },
+  {
+   "a": "64",
+   "b": "86",
+   "centroid": 314.5,
+   "edge": 296.8,
+   "walkNetwork": 368.9
+  },
+  {
+   "a": "64",
+   "b": "88",
+   "centroid": 339.3,
+   "edge": 312.4,
+   "walkNetwork": 415.6
+  },
+  {
+   "a": "64",
+   "b": "89",
+   "centroid": 348,
+   "edge": 314.1,
+   "walkNetwork": 480.1
+  },
+  {
+   "a": "64",
+   "b": "90",
+   "centroid": 527.2,
+   "edge": 491.8,
+   "walkNetwork": 650.7
+  },
+  {
+   "a": "64",
+   "b": "91",
+   "centroid": 569.1,
+   "edge": 536.8,
+   "walkNetwork": 693.4
+  },
+  {
+   "a": "64",
+   "b": "92",
+   "centroid": 465.6,
+   "edge": 432.5,
+   "walkNetwork": 580.1
+  },
+  {
+   "a": "64",
+   "b": "93",
+   "centroid": 457.4,
+   "edge": 424.4,
+   "walkNetwork": 603.3
+  },
+  {
+   "a": "64",
+   "b": "95",
+   "centroid": 378.7,
+   "edge": 349,
+   "walkNetwork": 438.5
+  },
+  {
+   "a": "64",
+   "b": "96",
+   "centroid": 510.5,
+   "edge": 485.3,
+   "walkNetwork": 630.4
+  },
+  {
+   "a": "64",
+   "b": "98",
+   "centroid": 506.7,
+   "edge": 484.4,
+   "walkNetwork": 638
+  },
+  {
+   "a": "64",
+   "b": "seven",
+   "centroid": 417,
+   "edge": 400.8,
+   "walkNetwork": 488.7
+  },
+  {
+   "a": "64",
+   "b": "97",
+   "centroid": 549.4,
+   "edge": 527.5,
+   "walkNetwork": 677.5
+  },
+  {
+   "a": "64",
+   "b": "ipc",
+   "centroid": 236.2,
+   "edge": 201.1,
+   "walkNetwork": 229.2
+  },
+  {
+   "a": "64",
+   "b": "u1",
+   "centroid": 450.9,
+   "edge": 418,
+   "walkNetwork": 641.8
+  },
+  {
+   "a": "64",
+   "b": "u2",
+   "centroid": 444.2,
+   "edge": 420.5,
+   "walkNetwork": 622.7
+  },
+  {
+   "a": "64",
+   "b": "94",
+   "centroid": 432.5,
+   "edge": 347.2,
+   "walkNetwork": 538.2
+  },
+  {
+   "a": "65",
+   "b": "66",
+   "centroid": 23.8,
+   "edge": 2.9,
+   "walkNetwork": 26.9
+  },
+  {
+   "a": "65",
+   "b": "67",
+   "centroid": 54.6,
+   "edge": 31.1,
+   "walkNetwork": 60.8
+  },
+  {
+   "a": "65",
+   "b": "68",
+   "centroid": 71.7,
+   "edge": 49.6,
+   "walkNetwork": 75.9
+  },
+  {
+   "a": "65",
+   "b": "69",
+   "centroid": 99.4,
+   "edge": 80.9,
+   "walkNetwork": 79.7
+  },
+  {
+   "a": "65",
+   "b": "72",
+   "centroid": 112.7,
+   "edge": 61.9,
+   "walkNetwork": 161.1
+  },
+  {
+   "a": "65",
+   "b": "71",
+   "centroid": 153.1,
+   "edge": 129.2,
+   "walkNetwork": 295.2
+  },
+  {
+   "a": "65",
+   "b": "73",
+   "centroid": 192.1,
+   "edge": 168.9,
+   "walkNetwork": 272
+  },
+  {
+   "a": "65",
+   "b": "75",
+   "centroid": 146.1,
+   "edge": 123.8,
+   "walkNetwork": 212.1
+  },
+  {
+   "a": "65",
+   "b": "76",
+   "centroid": 188.6,
+   "edge": 157.6,
+   "walkNetwork": 215.4
+  },
+  {
+   "a": "65",
+   "b": "77",
+   "centroid": 154,
+   "edge": 106.8,
+   "walkNetwork": 186.5
+  },
+  {
+   "a": "65",
+   "b": "78A",
+   "centroid": 122.1,
+   "edge": 91.6,
+   "walkNetwork": 176.1
+  },
+  {
+   "a": "65",
+   "b": "78B",
+   "centroid": 71,
+   "edge": 30,
+   "walkNetwork": 161.1
+  },
+  {
+   "a": "65",
+   "b": "79",
+   "centroid": 83.5,
+   "edge": 46.7,
+   "walkNetwork": 130.4
+  },
+  {
+   "a": "65",
+   "b": "81",
+   "centroid": 278.4,
+   "edge": 212.4,
+   "walkNetwork": 346.3
+  },
+  {
+   "a": "65",
+   "b": "82",
+   "centroid": 336.9,
+   "edge": 304.4,
+   "walkNetwork": 482.2
+  },
+  {
+   "a": "65",
+   "b": "83",
+   "centroid": 306.9,
+   "edge": 263.1,
+   "walkNetwork": 390.6
+  },
+  {
+   "a": "65",
+   "b": "84",
+   "centroid": 243.7,
+   "edge": 199.1,
+   "walkNetwork": 270
+  },
+  {
+   "a": "65",
+   "b": "85",
+   "centroid": 251.8,
+   "edge": 220.7,
+   "walkNetwork": 328.3
+  },
+  {
+   "a": "65",
+   "b": "86",
+   "centroid": 338.3,
+   "edge": 314.4,
+   "walkNetwork": 394.5
+  },
+  {
+   "a": "65",
+   "b": "88",
+   "centroid": 362.9,
+   "edge": 331.5,
+   "walkNetwork": 441.2
+  },
+  {
+   "a": "65",
+   "b": "89",
+   "centroid": 378,
+   "edge": 341.7,
+   "walkNetwork": 505.7
+  },
+  {
+   "a": "65",
+   "b": "90",
+   "centroid": 549.6,
+   "edge": 508.1,
+   "walkNetwork": 676.3
+  },
+  {
+   "a": "65",
+   "b": "91",
+   "centroid": 590.3,
+   "edge": 550.9,
+   "walkNetwork": 719
+  },
+  {
+   "a": "65",
+   "b": "92",
+   "centroid": 486.6,
+   "edge": 447.4,
+   "walkNetwork": 605.7
+  },
+  {
+   "a": "65",
+   "b": "93",
+   "centroid": 477,
+   "edge": 437.7,
+   "walkNetwork": 628.9
+  },
+  {
+   "a": "65",
+   "b": "95",
+   "centroid": 402.3,
+   "edge": 367.6,
+   "walkNetwork": 464.1
+  },
+  {
+   "a": "65",
+   "b": "96",
+   "centroid": 529.2,
+   "edge": 496.4,
+   "walkNetwork": 656
+  },
+  {
+   "a": "65",
+   "b": "98",
+   "centroid": 523.1,
+   "edge": 493.6,
+   "walkNetwork": 663.7
+  },
+  {
+   "a": "65",
+   "b": "seven",
+   "centroid": 439.4,
+   "edge": 417.1,
+   "walkNetwork": 514.4
+  },
+  {
+   "a": "65",
+   "b": "97",
+   "centroid": 567.4,
+   "edge": 538.8,
+   "walkNetwork": 703.1
+  },
+  {
+   "a": "65",
+   "b": "ipc",
+   "centroid": 259.2,
+   "edge": 229,
+   "walkNetwork": 254.8
+  },
+  {
+   "a": "65",
+   "b": "u1",
+   "centroid": 467.4,
+   "edge": 427.3,
+   "walkNetwork": 667.4
+  },
+  {
+   "a": "65",
+   "b": "u2",
+   "centroid": 462.8,
+   "edge": 432.6,
+   "walkNetwork": 648.3
+  },
+  {
+   "a": "65",
+   "b": "94",
+   "centroid": 459.1,
+   "edge": 371.7,
+   "walkNetwork": 563.8
+  },
+  {
+   "a": "66",
+   "b": "67",
+   "centroid": 32.6,
+   "edge": 13.9,
+   "walkNetwork": 34
+  },
+  {
+   "a": "66",
+   "b": "68",
+   "centroid": 50,
+   "edge": 32.7,
+   "walkNetwork": 49.1
+  },
+  {
+   "a": "66",
+   "b": "69",
+   "centroid": 78.6,
+   "edge": 65.2,
+   "walkNetwork": 52.9
+  },
+  {
+   "a": "66",
+   "b": "72",
+   "centroid": 136.6,
+   "edge": 94,
+   "walkNetwork": 188
+  },
+  {
+   "a": "66",
+   "b": "71",
+   "centroid": 176.5,
+   "edge": 158.7,
+   "walkNetwork": 322.1
+  },
+  {
+   "a": "66",
+   "b": "73",
+   "centroid": 213.5,
+   "edge": 195.6,
+   "walkNetwork": 298.8
+  },
+  {
+   "a": "66",
+   "b": "75",
+   "centroid": 167.4,
+   "edge": 149.2,
+   "walkNetwork": 239
+  },
+  {
+   "a": "66",
+   "b": "76",
+   "centroid": 199.1,
+   "edge": 171,
+   "walkNetwork": 242.3
+  },
+  {
+   "a": "66",
+   "b": "77",
+   "centroid": 169.8,
+   "edge": 129.5,
+   "walkNetwork": 213.4
+  },
+  {
+   "a": "66",
+   "b": "78A",
+   "centroid": 143.5,
+   "edge": 117,
+   "walkNetwork": 203
+  },
+  {
+   "a": "66",
+   "b": "78B",
+   "centroid": 94.3,
+   "edge": 59.7,
+   "walkNetwork": 188
+  },
+  {
+   "a": "66",
+   "b": "79",
+   "centroid": 103.9,
+   "edge": 71.7,
+   "walkNetwork": 157.3
+  },
+  {
+   "a": "66",
+   "b": "81",
+   "centroid": 295.1,
+   "edge": 231.9,
+   "walkNetwork": 373.2
+  },
+  {
+   "a": "66",
+   "b": "82",
+   "centroid": 355.7,
+   "edge": 328.8,
+   "walkNetwork": 509.1
+  },
+  {
+   "a": "66",
+   "b": "83",
+   "centroid": 327.2,
+   "edge": 287.9,
+   "walkNetwork": 417.4
+  },
+  {
+   "a": "66",
+   "b": "84",
+   "centroid": 263.2,
+   "edge": 223.3,
+   "walkNetwork": 296.9
+  },
+  {
+   "a": "66",
+   "b": "85",
+   "centroid": 269.5,
+   "edge": 243.3,
+   "walkNetwork": 355.2
+  },
+  {
+   "a": "66",
+   "b": "86",
+   "centroid": 360,
+   "edge": 341.8,
+   "walkNetwork": 421.4
+  },
+  {
+   "a": "66",
+   "b": "88",
+   "centroid": 384.7,
+   "edge": 358.8,
+   "walkNetwork": 468.1
+  },
+  {
+   "a": "66",
+   "b": "89",
+   "centroid": 397.1,
+   "edge": 366.4,
+   "walkNetwork": 532.6
+  },
+  {
+   "a": "66",
+   "b": "90",
+   "centroid": 571.9,
+   "edge": 535.9,
+   "walkNetwork": 703.2
+  },
+  {
+   "a": "66",
+   "b": "91",
+   "centroid": 612.9,
+   "edge": 579.6,
+   "walkNetwork": 745.9
+  },
+  {
+   "a": "66",
+   "b": "92",
+   "centroid": 509.2,
+   "edge": 475.7,
+   "walkNetwork": 632.6
+  },
+  {
+   "a": "66",
+   "b": "93",
+   "centroid": 499.9,
+   "edge": 466.7,
+   "walkNetwork": 655.8
+  },
+  {
+   "a": "66",
+   "b": "95",
+   "centroid": 424.1,
+   "edge": 395.1,
+   "walkNetwork": 491
+  },
+  {
+   "a": "66",
+   "b": "96",
+   "centroid": 552.3,
+   "edge": 526.3,
+   "walkNetwork": 682.9
+  },
+  {
+   "a": "66",
+   "b": "98",
+   "centroid": 546.5,
+   "edge": 524.1,
+   "walkNetwork": 690.5
+  },
+  {
+   "a": "66",
+   "b": "seven",
+   "centroid": 461.7,
+   "edge": 444.9,
+   "walkNetwork": 541.3
+  },
+  {
+   "a": "66",
+   "b": "97",
+   "centroid": 590.6,
+   "edge": 568.6,
+   "walkNetwork": 730
+  },
+  {
+   "a": "66",
+   "b": "ipc",
+   "centroid": 247.4,
+   "edge": 228,
+   "walkNetwork": 281.7
+  },
+  {
+   "a": "66",
+   "b": "u1",
+   "centroid": 490.8,
+   "edge": 457.7,
+   "walkNetwork": 694.3
+  },
+  {
+   "a": "66",
+   "b": "u2",
+   "centroid": 485.9,
+   "edge": 462.1,
+   "walkNetwork": 675.2
+  },
+  {
+   "a": "66",
+   "b": "94",
+   "centroid": 480,
+   "edge": 396.9,
+   "walkNetwork": 590.7
+  },
+  {
+   "a": "67",
+   "b": "68",
+   "centroid": 17.5,
+   "edge": 0,
+   "walkNetwork": 15.1
+  },
+  {
+   "a": "67",
+   "b": "69",
+   "centroid": 46.1,
+   "edge": 32.4,
+   "walkNetwork": 18.9
+  },
+  {
+   "a": "67",
+   "b": "72",
+   "centroid": 165.7,
+   "edge": 121.8,
+   "walkNetwork": 221.9
+  },
+  {
+   "a": "67",
+   "b": "71",
+   "centroid": 207.6,
+   "edge": 190.1,
+   "walkNetwork": 356.1
+  },
+  {
+   "a": "67",
+   "b": "73",
+   "centroid": 246,
+   "edge": 228.1,
+   "walkNetwork": 332.8
+  },
+  {
+   "a": "67",
+   "b": "75",
+   "centroid": 199.9,
+   "edge": 182.1,
+   "walkNetwork": 273
+  },
+  {
+   "a": "67",
+   "b": "76",
+   "centroid": 227.4,
+   "edge": 197.1,
+   "walkNetwork": 276.3
+  },
+  {
+   "a": "67",
+   "b": "77",
+   "centroid": 201.3,
+   "edge": 162.3,
+   "walkNetwork": 247.4
+  },
+  {
+   "a": "67",
+   "b": "78A",
+   "centroid": 176,
+   "edge": 149.9,
+   "walkNetwork": 237
+  },
+  {
+   "a": "67",
+   "b": "78B",
+   "centroid": 125.6,
+   "edge": 91,
+   "walkNetwork": 221.9
+  },
+  {
+   "a": "67",
+   "b": "79",
+   "centroid": 136.5,
+   "edge": 104.5,
+   "walkNetwork": 191.3
+  },
+  {
+   "a": "67",
+   "b": "81",
+   "centroid": 326.7,
+   "edge": 263.1,
+   "walkNetwork": 407.2
+  },
+  {
+   "a": "67",
+   "b": "82",
+   "centroid": 388,
+   "edge": 361.6,
+   "walkNetwork": 543.1
+  },
+  {
+   "a": "67",
+   "b": "83",
+   "centroid": 359.7,
+   "edge": 320.8,
+   "walkNetwork": 451.4
+  },
+  {
+   "a": "67",
+   "b": "84",
+   "centroid": 295.7,
+   "edge": 256.1,
+   "walkNetwork": 330.8
+  },
+  {
+   "a": "67",
+   "b": "85",
+   "centroid": 301.5,
+   "edge": 275.8,
+   "walkNetwork": 389.1
+  },
+  {
+   "a": "67",
+   "b": "86",
+   "centroid": 392.5,
+   "edge": 374.2,
+   "walkNetwork": 455.3
+  },
+  {
+   "a": "67",
+   "b": "88",
+   "centroid": 417.1,
+   "edge": 391.2,
+   "walkNetwork": 502.1
+  },
+  {
+   "a": "67",
+   "b": "89",
+   "centroid": 429.5,
+   "edge": 399.3,
+   "walkNetwork": 566.5
+  },
+  {
+   "a": "67",
+   "b": "90",
+   "centroid": 604.1,
+   "edge": 568.2,
+   "walkNetwork": 737.2
+  },
+  {
+   "a": "67",
+   "b": "91",
+   "centroid": 644.9,
+   "edge": 611.5,
+   "walkNetwork": 779.9
+  },
+  {
+   "a": "67",
+   "b": "92",
+   "centroid": 541.2,
+   "edge": 507.8,
+   "walkNetwork": 666.6
+  },
+  {
+   "a": "67",
+   "b": "93",
+   "centroid": 531.6,
+   "edge": 498.4,
+   "walkNetwork": 689.8
+  },
+  {
+   "a": "67",
+   "b": "95",
+   "centroid": 456.5,
+   "edge": 427.5,
+   "walkNetwork": 524.9
+  },
+  {
+   "a": "67",
+   "b": "96",
+   "centroid": 583.8,
+   "edge": 557.5,
+   "walkNetwork": 716.9
+  },
+  {
+   "a": "67",
+   "b": "98",
+   "centroid": 577.4,
+   "edge": 554.7,
+   "walkNetwork": 724.5
+  },
+  {
+   "a": "67",
+   "b": "seven",
+   "centroid": 493.9,
+   "edge": 477.2,
+   "walkNetwork": 575.2
+  },
+  {
+   "a": "67",
+   "b": "97",
+   "centroid": 622,
+   "edge": 599.8,
+   "walkNetwork": 764
+  },
+  {
+   "a": "67",
+   "b": "ipc",
+   "centroid": 250.5,
+   "edge": 226.9,
+   "walkNetwork": 315.7
+  },
+  {
+   "a": "67",
+   "b": "u1",
+   "centroid": 521.8,
+   "edge": 488.4,
+   "walkNetwork": 728.3
+  },
+  {
+   "a": "67",
+   "b": "u2",
+   "centroid": 517.4,
+   "edge": 493.5,
+   "walkNetwork": 709.1
+  },
+  {
+   "a": "67",
+   "b": "94",
+   "centroid": 512.5,
+   "edge": 429.8,
+   "walkNetwork": 624.7
+  },
+  {
+   "a": "68",
+   "b": "69",
+   "centroid": 28.8,
+   "edge": 16.3,
+   "walkNetwork": 3.8
+  },
+  {
+   "a": "68",
+   "b": "72",
+   "centroid": 181.6,
+   "edge": 138.6,
+   "walkNetwork": 237
+  },
+  {
+   "a": "68",
+   "b": "71",
+   "centroid": 224.2,
+   "edge": 208.3,
+   "walkNetwork": 371.2
+  },
+  {
+   "a": "68",
+   "b": "73",
+   "centroid": 263.4,
+   "edge": 246.9,
+   "walkNetwork": 347.9
+  },
+  {
+   "a": "68",
+   "b": "75",
+   "centroid": 217.3,
+   "edge": 200.8,
+   "walkNetwork": 288.1
+  },
+  {
+   "a": "68",
+   "b": "76",
+   "centroid": 243.3,
+   "edge": 213,
+   "walkNetwork": 291.4
+  },
+  {
+   "a": "68",
+   "b": "77",
+   "centroid": 218.4,
+   "edge": 180.3,
+   "walkNetwork": 262.5
+  },
+  {
+   "a": "68",
+   "b": "78A",
+   "centroid": 193.4,
+   "edge": 168.6,
+   "walkNetwork": 252.1
+  },
+  {
+   "a": "68",
+   "b": "78B",
+   "centroid": 142.5,
+   "edge": 108.9,
+   "walkNetwork": 237
+  },
+  {
+   "a": "68",
+   "b": "79",
+   "centroid": 153.9,
+   "edge": 123.4,
+   "walkNetwork": 206.4
+  },
+  {
+   "a": "68",
+   "b": "81",
+   "centroid": 343.8,
+   "edge": 280.8,
+   "walkNetwork": 422.3
+  },
+  {
+   "a": "68",
+   "b": "82",
+   "centroid": 405.4,
+   "edge": 379.7,
+   "walkNetwork": 558.2
+  },
+  {
+   "a": "68",
+   "b": "83",
+   "centroid": 377.2,
+   "edge": 339.3,
+   "walkNetwork": 466.5
+  },
+  {
+   "a": "68",
+   "b": "84",
+   "centroid": 313.1,
+   "edge": 274.2,
+   "walkNetwork": 345.9
+  },
+  {
+   "a": "68",
+   "b": "85",
+   "centroid": 318.8,
+   "edge": 293.8,
+   "walkNetwork": 404.2
+  },
+  {
+   "a": "68",
+   "b": "86",
+   "centroid": 409.8,
+   "edge": 392.8,
+   "walkNetwork": 470.4
+  },
+  {
+   "a": "68",
+   "b": "88",
+   "centroid": 434.5,
+   "edge": 409.9,
+   "walkNetwork": 517.2
+  },
+  {
+   "a": "68",
+   "b": "89",
+   "centroid": 446.9,
+   "edge": 417.5,
+   "walkNetwork": 581.6
+  },
+  {
+   "a": "68",
+   "b": "90",
+   "centroid": 621.3,
+   "edge": 586.8,
+   "walkNetwork": 752.3
+  },
+  {
+   "a": "68",
+   "b": "91",
+   "centroid": 662,
+   "edge": 629.9,
+   "walkNetwork": 795
+  },
+  {
+   "a": "68",
+   "b": "92",
+   "centroid": 558.3,
+   "edge": 526.3,
+   "walkNetwork": 681.7
+  },
+  {
+   "a": "68",
+   "b": "93",
+   "centroid": 548.6,
+   "edge": 516.7,
+   "walkNetwork": 704.9
+  },
+  {
+   "a": "68",
+   "b": "95",
+   "centroid": 473.8,
+   "edge": 446.1,
+   "walkNetwork": 540
+  },
+  {
+   "a": "68",
+   "b": "96",
+   "centroid": 600.6,
+   "edge": 575.4,
+   "walkNetwork": 732
+  },
+  {
+   "a": "68",
+   "b": "98",
+   "centroid": 593.9,
+   "edge": 572.3,
+   "walkNetwork": 739.6
+  },
+  {
+   "a": "68",
+   "b": "seven",
+   "centroid": 511.1,
+   "edge": 495.8,
+   "walkNetwork": 590.3
+  },
+  {
+   "a": "68",
+   "b": "97",
+   "centroid": 638.7,
+   "edge": 617.8,
+   "walkNetwork": 779.1
+  },
+  {
+   "a": "68",
+   "b": "ipc",
+   "centroid": 254.4,
+   "edge": 229.5,
+   "walkNetwork": 330.8
+  },
+  {
+   "a": "68",
+   "b": "u1",
+   "centroid": 538.3,
+   "edge": 506.1,
+   "walkNetwork": 743.4
+  },
+  {
+   "a": "68",
+   "b": "u2",
+   "centroid": 534.3,
+   "edge": 511.6,
+   "walkNetwork": 724.2
+  },
+  {
+   "a": "68",
+   "b": "94",
+   "centroid": 530,
+   "edge": 448.6,
+   "walkNetwork": 639.8
+  },
+  {
+   "a": "69",
+   "b": "72",
+   "centroid": 206.7,
+   "edge": 165.8,
+   "walkNetwork": 240.8
+  },
+  {
+   "a": "69",
+   "b": "71",
+   "centroid": 250.7,
+   "edge": 237.9,
+   "walkNetwork": 375
+  },
+  {
+   "a": "69",
+   "b": "73",
+   "centroid": 291.5,
+   "edge": 277.9,
+   "walkNetwork": 351.7
+  },
+  {
+   "a": "69",
+   "b": "75",
+   "centroid": 245.4,
+   "edge": 232.7,
+   "walkNetwork": 291.9
+  },
+  {
+   "a": "69",
+   "b": "76",
+   "centroid": 271.1,
+   "edge": 242.6,
+   "walkNetwork": 295.2
+  },
+  {
+   "a": "69",
+   "b": "77",
+   "centroid": 247.1,
+   "edge": 213.8,
+   "walkNetwork": 266.2
+  },
+  {
+   "a": "69",
+   "b": "78A",
+   "centroid": 221.4,
+   "edge": 200.5,
+   "walkNetwork": 255.8
+  },
+  {
+   "a": "69",
+   "b": "78B",
+   "centroid": 169.5,
+   "edge": 137,
+   "walkNetwork": 240.8
+  },
+  {
+   "a": "69",
+   "b": "79",
+   "centroid": 182.3,
+   "edge": 155.5,
+   "walkNetwork": 210.1
+  },
+  {
+   "a": "69",
+   "b": "81",
+   "centroid": 372.5,
+   "edge": 313.3,
+   "walkNetwork": 426
+  },
+  {
+   "a": "69",
+   "b": "82",
+   "centroid": 434.1,
+   "edge": 413,
+   "walkNetwork": 561.9
+  },
+  {
+   "a": "69",
+   "b": "83",
+   "centroid": 405.6,
+   "edge": 371.9,
+   "walkNetwork": 470.3
+  },
+  {
+   "a": "69",
+   "b": "84",
+   "centroid": 341.7,
+   "edge": 307.6,
+   "walkNetwork": 349.7
+  },
+  {
+   "a": "69",
+   "b": "85",
+   "centroid": 347.5,
+   "edge": 327.1,
+   "walkNetwork": 408
+  },
+  {
+   "a": "69",
+   "b": "86",
+   "centroid": 437.7,
+   "edge": 423.5,
+   "walkNetwork": 474.2
+  },
+  {
+   "a": "69",
+   "b": "88",
+   "centroid": 462.3,
+   "edge": 440.6,
+   "walkNetwork": 521
+  },
+  {
+   "a": "69",
+   "b": "89",
+   "centroid": 475.6,
+   "edge": 450.5,
+   "walkNetwork": 585.4
+  },
+  {
+   "a": "69",
+   "b": "90",
+   "centroid": 648.7,
+   "edge": 617.1,
+   "walkNetwork": 756.1
+  },
+  {
+   "a": "69",
+   "b": "91",
+   "centroid": 689.2,
+   "edge": 659.4,
+   "walkNetwork": 798.7
+  },
+  {
+   "a": "69",
+   "b": "92",
+   "centroid": 585.5,
+   "edge": 556.2,
+   "walkNetwork": 685.4
+  },
+  {
+   "a": "69",
+   "b": "93",
+   "centroid": 575.4,
+   "edge": 546.1,
+   "walkNetwork": 708.7
+  },
+  {
+   "a": "69",
+   "b": "95",
+   "centroid": 501.6,
+   "edge": 476.7,
+   "walkNetwork": 543.8
+  },
+  {
+   "a": "69",
+   "b": "96",
+   "centroid": 627.1,
+   "edge": 603.8,
+   "walkNetwork": 735.8
+  },
+  {
+   "a": "69",
+   "b": "98",
+   "centroid": 619.7,
+   "edge": 599.9,
+   "walkNetwork": 743.4
+  },
+  {
+   "a": "69",
+   "b": "seven",
+   "centroid": 538.7,
+   "edge": 526.2,
+   "walkNetwork": 594.1
+  },
+  {
+   "a": "69",
+   "b": "97",
+   "centroid": 664.9,
+   "edge": 646.2,
+   "walkNetwork": 782.8
+  },
+  {
+   "a": "69",
+   "b": "ipc",
+   "centroid": 266.8,
+   "edge": 236.2,
+   "walkNetwork": 334.6
+  },
+  {
+   "a": "69",
+   "b": "u1",
+   "centroid": 564.3,
+   "edge": 533.9,
+   "walkNetwork": 747.1
+  },
+  {
+   "a": "69",
+   "b": "u2",
+   "centroid": 560.8,
+   "edge": 540.5,
+   "walkNetwork": 728
+  },
+  {
+   "a": "69",
+   "b": "94",
+   "centroid": 558.3,
+   "edge": 480.4,
+   "walkNetwork": 643.5
+  },
+  {
+   "a": "72",
+   "b": "71",
+   "centroid": 48.7,
+   "edge": 9.8,
+   "walkNetwork": 207.1
+  },
+  {
+   "a": "72",
+   "b": "73",
+   "centroid": 106.6,
+   "edge": 60.5,
+   "walkNetwork": 183.9
+  },
+  {
+   "a": "72",
+   "b": "75",
+   "centroid": 72.5,
+   "edge": 33.3,
+   "walkNetwork": 124
+  },
+  {
+   "a": "72",
+   "b": "76",
+   "centroid": 179.3,
+   "edge": 148.4,
+   "walkNetwork": 135.6
+  },
+  {
+   "a": "72",
+   "b": "77",
+   "centroid": 123.1,
+   "edge": 75,
+   "walkNetwork": 98.4
+  },
+  {
+   "a": "72",
+   "b": "78A",
+   "centroid": 59.3,
+   "edge": 32.4,
+   "walkNetwork": 88
+  },
+  {
+   "a": "72",
+   "b": "78B",
+   "centroid": 47.3,
+   "edge": 13.7,
+   "walkNetwork": 0
+  },
+  {
+   "a": "72",
+   "b": "79",
+   "centroid": 66.4,
+   "edge": 34,
+   "walkNetwork": 30.7
+  },
+  {
+   "a": "72",
+   "b": "81",
+   "centroid": 219.2,
+   "edge": 153.1,
+   "walkNetwork": 258.2
+  },
+  {
+   "a": "72",
+   "b": "82",
+   "centroid": 260.6,
+   "edge": 202.6,
+   "walkNetwork": 394.1
+  },
+  {
+   "a": "72",
+   "b": "83",
+   "centroid": 221.5,
+   "edge": 159,
+   "walkNetwork": 302.5
+  },
+  {
+   "a": "72",
+   "b": "84",
+   "centroid": 168.3,
+   "edge": 110.1,
+   "walkNetwork": 181.9
+  },
+  {
+   "a": "72",
+   "b": "85",
+   "centroid": 188.5,
+   "edge": 138.7,
+   "walkNetwork": 240.2
+  },
+  {
+   "a": "72",
+   "b": "86",
+   "centroid": 241.3,
+   "edge": 197.1,
+   "walkNetwork": 306.4
+  },
+  {
+   "a": "72",
+   "b": "88",
+   "centroid": 265,
+   "edge": 214.5,
+   "walkNetwork": 353.1
+  },
+  {
+   "a": "72",
+   "b": "89",
+   "centroid": 297.5,
+   "edge": 236.1,
+   "walkNetwork": 417.6
+  },
+  {
+   "a": "72",
+   "b": "90",
+   "centroid": 446.7,
+   "edge": 388.4,
+   "walkNetwork": 588.2
+  },
+  {
+   "a": "72",
+   "b": "91",
+   "centroid": 485.6,
+   "edge": 428.1,
+   "walkNetwork": 630.9
+  },
+  {
+   "a": "72",
+   "b": "92",
+   "centroid": 382.3,
+   "edge": 326.6,
+   "walkNetwork": 517.6
+  },
+  {
+   "a": "72",
+   "b": "93",
+   "centroid": 370.7,
+   "edge": 314.7,
+   "walkNetwork": 540.8
+  },
+  {
+   "a": "72",
+   "b": "95",
+   "centroid": 303.4,
+   "edge": 249.9,
+   "walkNetwork": 376
+  },
+  {
+   "a": "72",
+   "b": "96",
+   "centroid": 421.5,
+   "edge": 370.8,
+   "walkNetwork": 567.9
+  },
+  {
+   "a": "72",
+   "b": "98",
+   "centroid": 413.1,
+   "edge": 366.7,
+   "walkNetwork": 575.5
+  },
+  {
+   "a": "72",
+   "b": "seven",
+   "centroid": 337.8,
+   "edge": 298.4,
+   "walkNetwork": 426.3
+  },
+  {
+   "a": "72",
+   "b": "97",
+   "centroid": 458.8,
+   "edge": 413.3,
+   "walkNetwork": 615
+  },
+  {
+   "a": "72",
+   "b": "ipc",
+   "centroid": 333.8,
+   "edge": 302.2,
+   "walkNetwork": 290.4
+  },
+  {
+   "a": "72",
+   "b": "u1",
+   "centroid": 357.8,
+   "edge": 300.7,
+   "walkNetwork": 579.3
+  },
+  {
+   "a": "72",
+   "b": "u2",
+   "centroid": 355.3,
+   "edge": 308.3,
+   "walkNetwork": 560.2
+  },
+  {
+   "a": "72",
+   "b": "94",
+   "centroid": 366.3,
+   "edge": 259.5,
+   "walkNetwork": 475.7
+  },
+  {
+   "a": "71",
+   "b": "73",
+   "centroid": 61.8,
+   "edge": 38,
+   "walkNetwork": 23.3
+  },
+  {
+   "a": "71",
+   "b": "75",
+   "centroid": 45.2,
+   "edge": 23.9,
+   "walkNetwork": 83.1
+  },
+  {
+   "a": "71",
+   "b": "76",
+   "centroid": 162.9,
+   "edge": 136.5,
+   "walkNetwork": 267.7
+  },
+  {
+   "a": "71",
+   "b": "77",
+   "centroid": 105.8,
+   "edge": 66.5,
+   "walkNetwork": 108.7
+  },
+  {
+   "a": "71",
+   "b": "78A",
+   "centroid": 51,
+   "edge": 24,
+   "walkNetwork": 119.1
+  },
+  {
+   "a": "71",
+   "b": "78B",
+   "centroid": 82.2,
+   "edge": 41.2,
+   "walkNetwork": 207.1
+  },
+  {
+   "a": "71",
+   "b": "79",
+   "centroid": 83.9,
+   "edge": 53.3,
+   "walkNetwork": 176.4
+  },
+  {
+   "a": "71",
+   "b": "81",
+   "centroid": 178.6,
+   "edge": 135.8,
+   "walkNetwork": 153.7
+  },
+  {
+   "a": "71",
+   "b": "82",
+   "centroid": 214,
+   "edge": 179.6,
+   "walkNetwork": 287.6
+  },
+  {
+   "a": "71",
+   "b": "83",
+   "centroid": 173.6,
+   "edge": 136,
+   "walkNetwork": 161.1
+  },
+  {
+   "a": "71",
+   "b": "84",
+   "centroid": 124,
+   "edge": 89.2,
+   "walkNetwork": 52.3
+  },
+  {
+   "a": "71",
+   "b": "85",
+   "centroid": 147.6,
+   "edge": 118,
+   "walkNetwork": 135.7
+  },
+  {
+   "a": "71",
+   "b": "86",
+   "centroid": 192.7,
+   "edge": 175.5,
+   "walkNetwork": 165
+  },
+  {
+   "a": "71",
+   "b": "88",
+   "centroid": 216.5,
+   "edge": 192.8,
+   "walkNetwork": 211.7
+  },
+  {
+   "a": "71",
+   "b": "89",
+   "centroid": 249.9,
+   "edge": 213.1,
+   "walkNetwork": 276.2
+  },
+  {
+   "a": "71",
+   "b": "90",
+   "centroid": 399.5,
+   "edge": 368.3,
+   "walkNetwork": 446.8
+  },
+  {
+   "a": "71",
+   "b": "91",
+   "centroid": 439.1,
+   "edge": 409.4,
+   "walkNetwork": 489.5
+  },
+  {
+   "a": "71",
+   "b": "92",
+   "centroid": 335.5,
+   "edge": 307.1,
+   "walkNetwork": 376.2
+  },
+  {
+   "a": "71",
+   "b": "93",
+   "centroid": 324.8,
+   "edge": 296,
+   "walkNetwork": 399.4
+  },
+  {
+   "a": "71",
+   "b": "95",
+   "centroid": 255.1,
+   "edge": 228.6,
+   "walkNetwork": 234.6
+  },
+  {
+   "a": "71",
+   "b": "96",
+   "centroid": 376.5,
+   "edge": 353.4,
+   "walkNetwork": 426.5
+  },
+  {
+   "a": "71",
+   "b": "98",
+   "centroid": 370,
+   "edge": 350.3,
+   "walkNetwork": 434.1
+  },
+  {
+   "a": "71",
+   "b": "seven",
+   "centroid": 290.1,
+   "edge": 277.6,
+   "walkNetwork": 284.9
+  },
+  {
+   "a": "71",
+   "b": "97",
+   "centroid": 414.4,
+   "edge": 395.8,
+   "walkNetwork": 473.6
+  },
+  {
+   "a": "71",
+   "b": "ipc",
+   "centroid": 344.6,
+   "edge": 317.3,
+   "walkNetwork": 424.5
+  },
+  {
+   "a": "71",
+   "b": "u1",
+   "centroid": 314.3,
+   "edge": 284.1,
+   "walkNetwork": 437.9
+  },
+  {
+   "a": "71",
+   "b": "u2",
+   "centroid": 310.1,
+   "edge": 290.1,
+   "walkNetwork": 418.8
+  },
+  {
+   "a": "71",
+   "b": "94",
+   "centroid": 317.6,
+   "edge": 236.9,
+   "walkNetwork": 334.3
+  },
+  {
+   "a": "73",
+   "b": "75",
+   "centroid": 46.1,
+   "edge": 29.4,
+   "walkNetwork": 59.8
+  },
+  {
+   "a": "73",
+   "b": "76",
+   "centroid": 129.3,
+   "edge": 94.3,
+   "walkNetwork": 244.4
+  },
+  {
+   "a": "73",
+   "b": "77",
+   "centroid": 81.6,
+   "edge": 30.4,
+   "walkNetwork": 85.4
+  },
+  {
+   "a": "73",
+   "b": "78A",
+   "centroid": 70.1,
+   "edge": 45.1,
+   "walkNetwork": 95.9
+  },
+  {
+   "a": "73",
+   "b": "78B",
+   "centroid": 124.3,
+   "edge": 78.4,
+   "walkNetwork": 183.9
+  },
+  {
+   "a": "73",
+   "b": "79",
+   "centroid": 109.9,
+   "edge": 81.3,
+   "walkNetwork": 153.2
+  },
+  {
+   "a": "73",
+   "b": "81",
+   "centroid": 117.4,
+   "edge": 81.3,
+   "walkNetwork": 130.5
+  },
+  {
+   "a": "73",
+   "b": "82",
+   "centroid": 154,
+   "edge": 119.6,
+   "walkNetwork": 264.3
+  },
+  {
+   "a": "73",
+   "b": "83",
+   "centroid": 117,
+   "edge": 76.9,
+   "walkNetwork": 137.8
+  },
+  {
+   "a": "73",
+   "b": "84",
+   "centroid": 62.2,
+   "edge": 26.9,
+   "walkNetwork": 29
+  },
+  {
+   "a": "73",
+   "b": "85",
+   "centroid": 86.6,
+   "edge": 55.3,
+   "walkNetwork": 112.5
+  },
+  {
+   "a": "73",
+   "b": "86",
+   "centroid": 146.6,
+   "edge": 131.5,
+   "walkNetwork": 141.7
+  },
+  {
+   "a": "73",
+   "b": "88",
+   "centroid": 171.4,
+   "edge": 148.1,
+   "walkNetwork": 188.5
+  },
+  {
+   "a": "73",
+   "b": "89",
+   "centroid": 191.8,
+   "edge": 155.8,
+   "walkNetwork": 252.9
+  },
+  {
+   "a": "73",
+   "b": "90",
+   "centroid": 359.3,
+   "edge": 325.7,
+   "walkNetwork": 423.5
+  },
+  {
+   "a": "73",
+   "b": "91",
+   "centroid": 401.3,
+   "edge": 370.6,
+   "walkNetwork": 466.2
+  },
+  {
+   "a": "73",
+   "b": "92",
+   "centroid": 297.9,
+   "edge": 266.1,
+   "walkNetwork": 352.9
+  },
+  {
+   "a": "73",
+   "b": "93",
+   "centroid": 290.7,
+   "edge": 258.6,
+   "walkNetwork": 376.2
+  },
+  {
+   "a": "73",
+   "b": "95",
+   "centroid": 210.8,
+   "edge": 184.7,
+   "walkNetwork": 211.3
+  },
+  {
+   "a": "73",
+   "b": "96",
+   "centroid": 344.4,
+   "edge": 321,
+   "walkNetwork": 403.3
+  },
+  {
+   "a": "73",
+   "b": "98",
+   "centroid": 343.4,
+   "edge": 322.3,
+   "walkNetwork": 410.9
+  },
+  {
+   "a": "73",
+   "b": "seven",
+   "centroid": 249,
+   "edge": 234.7,
+   "walkNetwork": 261.6
+  },
+  {
+   "a": "73",
+   "b": "97",
+   "centroid": 384,
+   "edge": 362.8,
+   "walkNetwork": 450.3
+  },
+  {
+   "a": "73",
+   "b": "ipc",
+   "centroid": 334.9,
+   "edge": 303.2,
+   "walkNetwork": 401.3
+  },
+  {
+   "a": "73",
+   "b": "u1",
+   "centroid": 287.9,
+   "edge": 256.3,
+   "walkNetwork": 414.6
+  },
+  {
+   "a": "73",
+   "b": "u2",
+   "centroid": 278.6,
+   "edge": 255.6,
+   "walkNetwork": 395.5
+  },
+  {
+   "a": "73",
+   "b": "94",
+   "centroid": 267.3,
+   "edge": 185,
+   "walkNetwork": 311
+  },
+  {
+   "a": "75",
+   "b": "76",
+   "centroid": 117.7,
+   "edge": 89.5,
+   "walkNetwork": 184.6
+  },
+  {
+   "a": "75",
+   "b": "77",
+   "centroid": 60.7,
+   "edge": 19.8,
+   "walkNetwork": 25.6
+  },
+  {
+   "a": "75",
+   "b": "78A",
+   "centroid": 24,
+   "edge": 0,
+   "walkNetwork": 36
+  },
+  {
+   "a": "75",
+   "b": "78B",
+   "centroid": 79.6,
+   "edge": 32.4,
+   "walkNetwork": 124
+  },
+  {
+   "a": "75",
+   "b": "79",
+   "centroid": 63.9,
+   "edge": 34.1,
+   "walkNetwork": 93.3
+  },
+  {
+   "a": "75",
+   "b": "81",
+   "centroid": 147.7,
+   "edge": 94,
+   "walkNetwork": 134.2
+  },
+  {
+   "a": "75",
+   "b": "82",
+   "centroid": 195.3,
+   "edge": 164.6,
+   "walkNetwork": 270.1
+  },
+  {
+   "a": "75",
+   "b": "83",
+   "centroid": 161.5,
+   "edge": 123,
+   "walkNetwork": 178.4
+  },
+  {
+   "a": "75",
+   "b": "84",
+   "centroid": 101.2,
+   "edge": 60.6,
+   "walkNetwork": 57.9
+  },
+  {
+   "a": "75",
+   "b": "85",
+   "centroid": 117.4,
+   "edge": 86.2,
+   "walkNetwork": 116.2
+  },
+  {
+   "a": "75",
+   "b": "86",
+   "centroid": 192.7,
+   "edge": 175.5,
+   "walkNetwork": 182.4
+  },
+  {
+   "a": "75",
+   "b": "88",
+   "centroid": 217.4,
+   "edge": 192.5,
+   "walkNetwork": 229.1
+  },
+  {
+   "a": "75",
+   "b": "89",
+   "centroid": 234.8,
+   "edge": 201.7,
+   "walkNetwork": 293.6
+  },
+  {
+   "a": "75",
+   "b": "90",
+   "centroid": 405.1,
+   "edge": 369.8,
+   "walkNetwork": 464.2
+  },
+  {
+   "a": "75",
+   "b": "91",
+   "centroid": 446.9,
+   "edge": 414.2,
+   "walkNetwork": 506.9
+  },
+  {
+   "a": "75",
+   "b": "92",
+   "centroid": 343.4,
+   "edge": 309.9,
+   "walkNetwork": 393.6
+  },
+  {
+   "a": "75",
+   "b": "93",
+   "centroid": 335.5,
+   "edge": 301.8,
+   "walkNetwork": 416.8
+  },
+  {
+   "a": "75",
+   "b": "95",
+   "centroid": 256.9,
+   "edge": 228.8,
+   "walkNetwork": 252
+  },
+  {
+   "a": "75",
+   "b": "96",
+   "centroid": 388.9,
+   "edge": 363.3,
+   "walkNetwork": 443.9
+  },
+  {
+   "a": "75",
+   "b": "98",
+   "centroid": 386.4,
+   "edge": 363.4,
+   "walkNetwork": 451.5
+  },
+  {
+   "a": "75",
+   "b": "seven",
+   "centroid": 294.9,
+   "edge": 278.7,
+   "walkNetwork": 302.3
+  },
+  {
+   "a": "75",
+   "b": "97",
+   "centroid": 428.1,
+   "edge": 405.3,
+   "walkNetwork": 491
+  },
+  {
+   "a": "75",
+   "b": "ipc",
+   "centroid": 305.4,
+   "edge": 274.3,
+   "walkNetwork": 341.4
+  },
+  {
+   "a": "75",
+   "b": "u1",
+   "centroid": 330.7,
+   "edge": 297.1,
+   "walkNetwork": 455.3
+  },
+  {
+   "a": "75",
+   "b": "u2",
+   "centroid": 322.8,
+   "edge": 298.2,
+   "walkNetwork": 436.2
+  },
+  {
+   "a": "75",
+   "b": "94",
+   "centroid": 313.1,
+   "edge": 231.9,
+   "walkNetwork": 351.7
+  },
+  {
+   "a": "76",
+   "b": "77",
+   "centroid": 57.4,
+   "edge": 10.1,
+   "walkNetwork": 159
+  },
+  {
+   "a": "76",
+   "b": "78A",
+   "centroid": 120.7,
+   "edge": 93.1,
+   "walkNetwork": 148.6
+  },
+  {
+   "a": "76",
+   "b": "78B",
+   "centroid": 157,
+   "edge": 110.9,
+   "walkNetwork": 135.6
+  },
+  {
+   "a": "76",
+   "b": "79",
+   "centroid": 125.7,
+   "edge": 103.8,
+   "walkNetwork": 104.9
+  },
+  {
+   "a": "76",
+   "b": "81",
+   "centroid": 119.6,
+   "edge": 40.2,
+   "walkNetwork": 318.8
+  },
+  {
+   "a": "76",
+   "b": "82",
+   "centroid": 191.6,
+   "edge": 153.4,
+   "walkNetwork": 454.7
+  },
+  {
+   "a": "76",
+   "b": "83",
+   "centroid": 184.8,
+   "edge": 129.7,
+   "walkNetwork": 363.1
+  },
+  {
+   "a": "76",
+   "b": "84",
+   "centroid": 125.4,
+   "edge": 70.5,
+   "walkNetwork": 242.5
+  },
+  {
+   "a": "76",
+   "b": "85",
+   "centroid": 108.3,
+   "edge": 68.5,
+   "walkNetwork": 300.8
+  },
+  {
+   "a": "76",
+   "b": "86",
+   "centroid": 235.8,
+   "edge": 197.7,
+   "walkNetwork": 367
+  },
+  {
+   "a": "76",
+   "b": "88",
+   "centroid": 258.4,
+   "edge": 214.7,
+   "walkNetwork": 413.7
+  },
+  {
+   "a": "76",
+   "b": "89",
+   "centroid": 233.4,
+   "edge": 195.1,
+   "walkNetwork": 478.2
+  },
+  {
+   "a": "76",
+   "b": "90",
+   "centroid": 440.1,
+   "edge": 391.7,
+   "walkNetwork": 648.8
+  },
+  {
+   "a": "76",
+   "b": "91",
+   "centroid": 485.1,
+   "edge": 442.8,
+   "walkNetwork": 691.5
+  },
+  {
+   "a": "76",
+   "b": "92",
+   "centroid": 387,
+   "edge": 339.9,
+   "walkNetwork": 578.2
+  },
+  {
+   "a": "76",
+   "b": "93",
+   "centroid": 386,
+   "edge": 339.4,
+   "walkNetwork": 601.4
+  },
+  {
+   "a": "76",
+   "b": "95",
+   "centroid": 294.2,
+   "edge": 247.3,
+   "walkNetwork": 436.6
+  },
+  {
+   "a": "76",
+   "b": "96",
+   "centroid": 440.4,
+   "edge": 405.6,
+   "walkNetwork": 628.5
+  },
+  {
+   "a": "76",
+   "b": "98",
+   "centroid": 446.9,
+   "edge": 410.1,
+   "walkNetwork": 636.1
+  },
+  {
+   "a": "76",
+   "b": "seven",
+   "centroid": 335.2,
+   "edge": 303.4,
+   "walkNetwork": 486.9
+  },
+  {
+   "a": "76",
+   "b": "97",
+   "centroid": 480.8,
+   "edge": 445.2,
+   "walkNetwork": 675.6
+  },
+  {
+   "a": "76",
+   "b": "ipc",
+   "centroid": 215.9,
+   "edge": 169.5,
+   "walkNetwork": 237.4
+  },
+  {
+   "a": "76",
+   "b": "u1",
+   "centroid": 393.8,
+   "edge": 346.3,
+   "walkNetwork": 639.9
+  },
+  {
+   "a": "76",
+   "b": "u2",
+   "centroid": 378.4,
+   "edge": 340.6,
+   "walkNetwork": 620.8
+  },
+  {
+   "a": "76",
+   "b": "94",
+   "centroid": 329.7,
+   "edge": 236.1,
+   "walkNetwork": 536.3
+  },
+  {
+   "a": "77",
+   "b": "78A",
+   "centroid": 63.9,
+   "edge": 19.7,
+   "walkNetwork": 10.4
+  },
+  {
+   "a": "77",
+   "b": "78B",
+   "centroid": 107.3,
+   "edge": 27.6,
+   "walkNetwork": 98.4
+  },
+  {
+   "a": "77",
+   "b": "79",
+   "centroid": 77.6,
+   "edge": 22.4,
+   "walkNetwork": 67.7
+  },
+  {
+   "a": "77",
+   "b": "81",
+   "centroid": 125.4,
+   "edge": 41.3,
+   "walkNetwork": 159.8
+  },
+  {
+   "a": "77",
+   "b": "82",
+   "centroid": 189.4,
+   "edge": 149.7,
+   "walkNetwork": 295.7
+  },
+  {
+   "a": "77",
+   "b": "83",
+   "centroid": 168.7,
+   "edge": 110.5,
+   "walkNetwork": 204.1
+  },
+  {
+   "a": "77",
+   "b": "84",
+   "centroid": 102.9,
+   "edge": 44.4,
+   "walkNetwork": 83.5
+  },
+  {
+   "a": "77",
+   "b": "85",
+   "centroid": 101.4,
+   "edge": 61.6,
+   "walkNetwork": 141.8
+  },
+  {
+   "a": "77",
+   "b": "86",
+   "centroid": 212.6,
+   "edge": 170.6,
+   "walkNetwork": 208
+  },
+  {
+   "a": "77",
+   "b": "88",
+   "centroid": 236.8,
+   "edge": 186.5,
+   "walkNetwork": 254.7
+  },
+  {
+   "a": "77",
+   "b": "89",
+   "centroid": 231.7,
+   "edge": 187.8,
+   "walkNetwork": 319.2
+  },
+  {
+   "a": "77",
+   "b": "90",
+   "centroid": 424.3,
+   "edge": 366.5,
+   "walkNetwork": 489.8
+  },
+  {
+   "a": "77",
+   "b": "91",
+   "centroid": 468,
+   "edge": 414.2,
+   "walkNetwork": 532.5
+  },
+  {
+   "a": "77",
+   "b": "92",
+   "centroid": 366.5,
+   "edge": 309.4,
+   "walkNetwork": 419.2
+  },
+  {
+   "a": "77",
+   "b": "93",
+   "centroid": 362.2,
+   "edge": 304.6,
+   "walkNetwork": 442.4
+  },
+  {
+   "a": "77",
+   "b": "95",
+   "centroid": 275.2,
+   "edge": 222.8,
+   "walkNetwork": 277.6
+  },
+  {
+   "a": "77",
+   "b": "96",
+   "centroid": 416.6,
+   "edge": 369.1,
+   "walkNetwork": 469.5
+  },
+  {
+   "a": "77",
+   "b": "98",
+   "centroid": 418.8,
+   "edge": 372,
+   "walkNetwork": 477.1
+  },
+  {
+   "a": "77",
+   "b": "seven",
+   "centroid": 315.6,
+   "edge": 275.8,
+   "walkNetwork": 327.9
+  },
+  {
+   "a": "77",
+   "b": "97",
+   "centroid": 456.7,
+   "edge": 410.2,
+   "walkNetwork": 516.6
+  },
+  {
+   "a": "77",
+   "b": "ipc",
+   "centroid": 253.2,
+   "edge": 195.9,
+   "walkNetwork": 315.8
+  },
+  {
+   "a": "77",
+   "b": "u1",
+   "centroid": 364,
+   "edge": 307.1,
+   "walkNetwork": 480.9
+  },
+  {
+   "a": "77",
+   "b": "u2",
+   "centroid": 352,
+   "edge": 303.3,
+   "walkNetwork": 461.8
+  },
+  {
+   "a": "77",
+   "b": "94",
+   "centroid": 321.4,
+   "edge": 220.6,
+   "walkNetwork": 377.3
+  },
+  {
+   "a": "78A",
+   "b": "78B",
+   "centroid": 56.3,
+   "edge": 0.2,
+   "walkNetwork": 88
+  },
+  {
+   "a": "78A",
+   "b": "79",
+   "centroid": 40.4,
+   "edge": 1.8,
+   "walkNetwork": 57.3
+  },
+  {
+   "a": "78A",
+   "b": "81",
+   "centroid": 167.6,
+   "edge": 104.1,
+   "walkNetwork": 170.2
+  },
+  {
+   "a": "78A",
+   "b": "82",
+   "centroid": 218.3,
+   "edge": 180.2,
+   "walkNetwork": 306.1
+  },
+  {
+   "a": "78A",
+   "b": "83",
+   "centroid": 185.4,
+   "edge": 138.7,
+   "walkNetwork": 214.5
+  },
+  {
+   "a": "78A",
+   "b": "84",
+   "centroid": 124.1,
+   "edge": 75.7,
+   "walkNetwork": 93.9
+  },
+  {
+   "a": "78A",
+   "b": "85",
+   "centroid": 138,
+   "edge": 100.2,
+   "walkNetwork": 152.2
+  },
+  {
+   "a": "78A",
+   "b": "86",
+   "centroid": 216.5,
+   "edge": 191.1,
+   "walkNetwork": 218.4
+  },
+  {
+   "a": "78A",
+   "b": "88",
+   "centroid": 241.3,
+   "edge": 208.1,
+   "walkNetwork": 265.2
+  },
+  {
+   "a": "78A",
+   "b": "89",
+   "centroid": 258.2,
+   "edge": 217.4,
+   "walkNetwork": 329.6
+  },
+  {
+   "a": "78A",
+   "b": "90",
+   "centroid": 428.7,
+   "edge": 385.3,
+   "walkNetwork": 500.2
+  },
+  {
+   "a": "78A",
+   "b": "91",
+   "centroid": 470.3,
+   "edge": 429.4,
+   "walkNetwork": 542.9
+  },
+  {
+   "a": "78A",
+   "b": "92",
+   "centroid": 366.7,
+   "edge": 325.2,
+   "walkNetwork": 429.6
+  },
+  {
+   "a": "78A",
+   "b": "93",
+   "centroid": 358.4,
+   "edge": 316.9,
+   "walkNetwork": 452.9
+  },
+  {
+   "a": "78A",
+   "b": "95",
+   "centroid": 280.7,
+   "edge": 244.4,
+   "walkNetwork": 288
+  },
+  {
+   "a": "78A",
+   "b": "96",
+   "centroid": 411.6,
+   "edge": 378,
+   "walkNetwork": 479.9
+  },
+  {
+   "a": "78A",
+   "b": "98",
+   "centroid": 408.3,
+   "edge": 377.7,
+   "walkNetwork": 487.6
+  },
+  {
+   "a": "78A",
+   "b": "seven",
+   "centroid": 318.5,
+   "edge": 294.2,
+   "walkNetwork": 338.3
+  },
+  {
+   "a": "78A",
+   "b": "97",
+   "centroid": 450.6,
+   "edge": 420.1,
+   "walkNetwork": 527
+  },
+  {
+   "a": "78A",
+   "b": "ipc",
+   "centroid": 293.6,
+   "edge": 260.5,
+   "walkNetwork": 305.4
+  },
+  {
+   "a": "78A",
+   "b": "u1",
+   "centroid": 352.5,
+   "edge": 311.3,
+   "walkNetwork": 491.3
+  },
+  {
+   "a": "78A",
+   "b": "u2",
+   "centroid": 345.3,
+   "edge": 313,
+   "walkNetwork": 472.2
+  },
+  {
+   "a": "78A",
+   "b": "94",
+   "centroid": 337.1,
+   "edge": 247.7,
+   "walkNetwork": 387.7
+  },
+  {
+   "a": "78B",
+   "b": "79",
+   "centroid": 31.4,
+   "edge": 2.2,
+   "walkNetwork": 30.7
+  },
+  {
+   "a": "78B",
+   "b": "81",
+   "centroid": 222.7,
+   "edge": 131.4,
+   "walkNetwork": 258.2
+  },
+  {
+   "a": "78B",
+   "b": "82",
+   "centroid": 274.6,
+   "edge": 213,
+   "walkNetwork": 394.1
+  },
+  {
+   "a": "78B",
+   "b": "83",
+   "centroid": 240.9,
+   "edge": 171.4,
+   "walkNetwork": 302.5
+  },
+  {
+   "a": "78B",
+   "b": "84",
+   "centroid": 180.4,
+   "edge": 108.3,
+   "walkNetwork": 181.9
+  },
+  {
+   "a": "78B",
+   "b": "85",
+   "centroid": 193.6,
+   "edge": 132,
+   "walkNetwork": 240.2
+  },
+  {
+   "a": "78B",
+   "b": "86",
+   "centroid": 269,
+   "edge": 224.6,
+   "walkNetwork": 306.4
+  },
+  {
+   "a": "78B",
+   "b": "88",
+   "centroid": 293.4,
+   "edge": 241.5,
+   "walkNetwork": 353.1
+  },
+  {
+   "a": "78B",
+   "b": "89",
+   "centroid": 314.3,
+   "edge": 250.1,
+   "walkNetwork": 417.6
+  },
+  {
+   "a": "78B",
+   "b": "90",
+   "centroid": 479.2,
+   "edge": 418.8,
+   "walkNetwork": 588.2
+  },
+  {
+   "a": "78B",
+   "b": "91",
+   "centroid": 519.7,
+   "edge": 462.7,
+   "walkNetwork": 630.9
+  },
+  {
+   "a": "78B",
+   "b": "92",
+   "centroid": 416,
+   "edge": 358.9,
+   "walkNetwork": 517.6
+  },
+  {
+   "a": "78B",
+   "b": "93",
+   "centroid": 406.1,
+   "edge": 349.5,
+   "walkNetwork": 540.8
+  },
+  {
+   "a": "78B",
+   "b": "95",
+   "centroid": 332.7,
+   "edge": 277.8,
+   "walkNetwork": 376
+  },
+  {
+   "a": "78B",
+   "b": "96",
+   "centroid": 458.2,
+   "edge": 408.3,
+   "walkNetwork": 567.9
+  },
+  {
+   "a": "78B",
+   "b": "98",
+   "centroid": 452.2,
+   "edge": 405.8,
+   "walkNetwork": 575.5
+  },
+  {
+   "a": "78B",
+   "b": "seven",
+   "centroid": 369.3,
+   "edge": 327.8,
+   "walkNetwork": 426.3
+  },
+  {
+   "a": "78B",
+   "b": "97",
+   "centroid": 496.4,
+   "edge": 450.6,
+   "walkNetwork": 615
+  },
+  {
+   "a": "78B",
+   "b": "ipc",
+   "centroid": 289.5,
+   "edge": 251.4,
+   "walkNetwork": 290.4
+  },
+  {
+   "a": "78B",
+   "b": "u1",
+   "centroid": 396.5,
+   "edge": 339.5,
+   "walkNetwork": 579.3
+  },
+  {
+   "a": "78B",
+   "b": "u2",
+   "centroid": 391.8,
+   "edge": 344.4,
+   "walkNetwork": 560.2
+  },
+  {
+   "a": "78B",
+   "b": "94",
+   "centroid": 391.4,
+   "edge": 280.1,
+   "walkNetwork": 475.7
+  },
+  {
+   "a": "79",
+   "b": "81",
+   "centroid": 197.5,
+   "edge": 129.2,
+   "walkNetwork": 227.5
+  },
+  {
+   "a": "79",
+   "b": "82",
+   "centroid": 253.7,
+   "edge": 214.5,
+   "walkNetwork": 363.4
+  },
+  {
+   "a": "79",
+   "b": "83",
+   "centroid": 223.4,
+   "edge": 173,
+   "walkNetwork": 271.8
+  },
+  {
+   "a": "79",
+   "b": "84",
+   "centroid": 160.2,
+   "edge": 109.7,
+   "walkNetwork": 151.2
+  },
+  {
+   "a": "79",
+   "b": "85",
+   "centroid": 169.6,
+   "edge": 132.4,
+   "walkNetwork": 209.5
+  },
+  {
+   "a": "79",
+   "b": "86",
+   "centroid": 256.6,
+   "edge": 227.9,
+   "walkNetwork": 275.7
+  },
+  {
+   "a": "79",
+   "b": "88",
+   "centroid": 281.3,
+   "edge": 244.3,
+   "walkNetwork": 322.5
+  },
+  {
+   "a": "79",
+   "b": "89",
+   "centroid": 294.5,
+   "edge": 251.7,
+   "walkNetwork": 386.9
+  },
+  {
+   "a": "79",
+   "b": "90",
+   "centroid": 469,
+   "edge": 422.2,
+   "walkNetwork": 557.5
+  },
+  {
+   "a": "79",
+   "b": "91",
+   "centroid": 510.6,
+   "edge": 467.2,
+   "walkNetwork": 600.2
+  },
+  {
+   "a": "79",
+   "b": "92",
+   "centroid": 407.1,
+   "edge": 362.7,
+   "walkNetwork": 486.9
+  },
+  {
+   "a": "79",
+   "b": "93",
+   "centroid": 398.8,
+   "edge": 355,
+   "walkNetwork": 510.1
+  },
+  {
+   "a": "79",
+   "b": "95",
+   "centroid": 320.7,
+   "edge": 280.9,
+   "walkNetwork": 345.3
+  },
+  {
+   "a": "79",
+   "b": "96",
+   "centroid": 451.9,
+   "edge": 416.7,
+   "walkNetwork": 537.2
+  },
+  {
+   "a": "79",
+   "b": "98",
+   "centroid": 448.3,
+   "edge": 416.7,
+   "walkNetwork": 544.9
+  },
+  {
+   "a": "79",
+   "b": "seven",
+   "centroid": 358.8,
+   "edge": 331.1,
+   "walkNetwork": 395.6
+  },
+  {
+   "a": "79",
+   "b": "97",
+   "centroid": 490.9,
+   "edge": 458.7,
+   "walkNetwork": 584.3
+  },
+  {
+   "a": "79",
+   "b": "ipc",
+   "centroid": 267.9,
+   "edge": 230.9,
+   "walkNetwork": 259.7
+  },
+  {
+   "a": "79",
+   "b": "u1",
+   "centroid": 392.5,
+   "edge": 350.4,
+   "walkNetwork": 548.6
+  },
+  {
+   "a": "79",
+   "b": "u2",
+   "centroid": 385.7,
+   "edge": 351.6,
+   "walkNetwork": 529.5
+  },
+  {
+   "a": "79",
+   "b": "94",
+   "centroid": 376.1,
+   "edge": 281.8,
+   "walkNetwork": 445
+  },
+  {
+   "a": "81",
+   "b": "82",
+   "centroid": 72.5,
+   "edge": 15.8,
+   "walkNetwork": 135.9
+  },
+  {
+   "a": "81",
+   "b": "83",
+   "centroid": 79,
+   "edge": 36.9,
+   "walkNetwork": 248.4
+  },
+  {
+   "a": "81",
+   "b": "84",
+   "centroid": 59.3,
+   "edge": 37,
+   "walkNetwork": 101.5
+  },
+  {
+   "a": "81",
+   "b": "85",
+   "centroid": 31,
+   "edge": 0,
+   "walkNetwork": 18
+  },
+  {
+   "a": "81",
+   "b": "86",
+   "centroid": 133.6,
+   "edge": 80.3,
+   "walkNetwork": 252.4
+  },
+  {
+   "a": "81",
+   "b": "88",
+   "centroid": 151.9,
+   "edge": 94.9,
+   "walkNetwork": 281.5
+  },
+  {
+   "a": "81",
+   "b": "89",
+   "centroid": 113.8,
+   "edge": 57.4,
+   "walkNetwork": 160.4
+  },
+  {
+   "a": "81",
+   "b": "90",
+   "centroid": 323.9,
+   "edge": 255.5,
+   "walkNetwork": 473.8
+  },
+  {
+   "a": "81",
+   "b": "91",
+   "centroid": 369.3,
+   "edge": 308.8,
+   "walkNetwork": 495.9
+  },
+  {
+   "a": "81",
+   "b": "92",
+   "centroid": 275,
+   "edge": 208.9,
+   "walkNetwork": 446
+  },
+  {
+   "a": "81",
+   "b": "93",
+   "centroid": 277.3,
+   "edge": 212,
+   "walkNetwork": 469.2
+  },
+  {
+   "a": "81",
+   "b": "95",
+   "centroid": 183,
+   "edge": 117.4,
+   "walkNetwork": 304.4
+  },
+  {
+   "a": "81",
+   "b": "96",
+   "centroid": 330.5,
+   "edge": 274.8,
+   "walkNetwork": 496.3
+  },
+  {
+   "a": "81",
+   "b": "98",
+   "centroid": 341.8,
+   "edge": 287.8,
+   "walkNetwork": 503.9
+  },
+  {
+   "a": "81",
+   "b": "seven",
+   "centroid": 223.4,
+   "edge": 172.9,
+   "walkNetwork": 354.7
+  },
+  {
+   "a": "81",
+   "b": "97",
+   "centroid": 370.7,
+   "edge": 317.8,
+   "walkNetwork": 543.4
+  },
+  {
+   "a": "81",
+   "b": "ipc",
+   "centroid": 326.9,
+   "edge": 253.3,
+   "walkNetwork": 475.6
+  },
+  {
+   "a": "81",
+   "b": "u1",
+   "centroid": 292.3,
+   "edge": 228.1,
+   "walkNetwork": 507.7
+  },
+  {
+   "a": "81",
+   "b": "u2",
+   "centroid": 272.8,
+   "edge": 217.8,
+   "walkNetwork": 488.6
+  },
+  {
+   "a": "81",
+   "b": "94",
+   "centroid": 210.9,
+   "edge": 97.8,
+   "walkNetwork": 225.3
+  },
+  {
+   "a": "82",
+   "b": "83",
+   "centroid": 47.2,
+   "edge": 7,
+   "walkNetwork": 126.5
+  },
+  {
+   "a": "82",
+   "b": "84",
+   "centroid": 94.2,
+   "edge": 45.3,
+   "walkNetwork": 237.4
+  },
+  {
+   "a": "82",
+   "b": "85",
+   "centroid": 88.3,
+   "edge": 65,
+   "walkNetwork": 153.9
+  },
+  {
+   "a": "82",
+   "b": "86",
+   "centroid": 84.9,
+   "edge": 39.4,
+   "walkNetwork": 122.6
+  },
+  {
+   "a": "82",
+   "b": "88",
+   "centroid": 94.4,
+   "edge": 49.9,
+   "walkNetwork": 145.6
+  },
+  {
+   "a": "82",
+   "b": "89",
+   "centroid": 42.4,
+   "edge": 17.5,
+   "walkNetwork": 24.5
+  },
+  {
+   "a": "82",
+   "b": "90",
+   "centroid": 252.4,
+   "edge": 209.2,
+   "walkNetwork": 337.9
+  },
+  {
+   "a": "82",
+   "b": "91",
+   "centroid": 297.9,
+   "edge": 261.5,
+   "walkNetwork": 360
+  },
+  {
+   "a": "82",
+   "b": "92",
+   "centroid": 206.6,
+   "edge": 160.9,
+   "walkNetwork": 310.1
+  },
+  {
+   "a": "82",
+   "b": "93",
+   "centroid": 211.4,
+   "edge": 163.4,
+   "walkNetwork": 333.3
+  },
+  {
+   "a": "82",
+   "b": "95",
+   "centroid": 117.4,
+   "edge": 68.7,
+   "walkNetwork": 168.5
+  },
+  {
+   "a": "82",
+   "b": "96",
+   "centroid": 263.2,
+   "edge": 226.7,
+   "walkNetwork": 360.4
+  },
+  {
+   "a": "82",
+   "b": "98",
+   "centroid": 277.8,
+   "edge": 239.1,
+   "walkNetwork": 368
+  },
+  {
+   "a": "82",
+   "b": "seven",
+   "centroid": 156,
+   "edge": 124.4,
+   "walkNetwork": 218.8
+  },
+  {
+   "a": "82",
+   "b": "97",
+   "centroid": 302.8,
+   "edge": 269.3,
+   "walkNetwork": 407.5
+  },
+  {
+   "a": "82",
+   "b": "ipc",
+   "centroid": 398.5,
+   "edge": 357.1,
+   "walkNetwork": 611.5
+  },
+  {
+   "a": "82",
+   "b": "u1",
+   "centroid": 232.1,
+   "edge": 180,
+   "walkNetwork": 371.8
+  },
+  {
+   "a": "82",
+   "b": "u2",
+   "centroid": 209.6,
+   "edge": 169.2,
+   "walkNetwork": 352.7
+  },
+  {
+   "a": "82",
+   "b": "94",
+   "centroid": 138.5,
+   "edge": 54.5,
+   "walkNetwork": 89.4
+  },
+  {
+   "a": "83",
+   "b": "84",
+   "centroid": 65.9,
+   "edge": 8.1,
+   "walkNetwork": 147
+  },
+  {
+   "a": "83",
+   "b": "85",
+   "centroid": 76.8,
+   "edge": 30.7,
+   "walkNetwork": 230.4
+  },
+  {
+   "a": "83",
+   "b": "86",
+   "centroid": 54.7,
+   "edge": 14,
+   "walkNetwork": 3.9
+  },
+  {
+   "a": "83",
+   "b": "88",
+   "centroid": 74.5,
+   "edge": 28.2,
+   "walkNetwork": 50.7
+  },
+  {
+   "a": "83",
+   "b": "89",
+   "centroid": 76.5,
+   "edge": 19.8,
+   "walkNetwork": 115.1
+  },
+  {
+   "a": "83",
+   "b": "90",
+   "centroid": 256.7,
+   "edge": 202.9,
+   "walkNetwork": 285.7
+  },
+  {
+   "a": "83",
+   "b": "91",
+   "centroid": 301.2,
+   "edge": 253.4,
+   "walkNetwork": 328.4
+  },
+  {
+   "a": "83",
+   "b": "92",
+   "centroid": 202.2,
+   "edge": 150.9,
+   "walkNetwork": 215.1
+  },
+  {
+   "a": "83",
+   "b": "93",
+   "centroid": 201.8,
+   "edge": 151.1,
+   "walkNetwork": 238.4
+  },
+  {
+   "a": "83",
+   "b": "95",
+   "centroid": 109.4,
+   "edge": 58.1,
+   "walkNetwork": 73.5
+  },
+  {
+   "a": "83",
+   "b": "96",
+   "centroid": 255.9,
+   "edge": 216.7,
+   "walkNetwork": 265.5
+  },
+  {
+   "a": "83",
+   "b": "98",
+   "centroid": 264.6,
+   "edge": 224.4,
+   "walkNetwork": 273.1
+  },
+  {
+   "a": "83",
+   "b": "seven",
+   "centroid": 150.4,
+   "edge": 114.1,
+   "walkNetwork": 123.8
+  },
+  {
+   "a": "83",
+   "b": "97",
+   "centroid": 296.3,
+   "edge": 257.1,
+   "walkNetwork": 312.5
+  },
+  {
+   "a": "83",
+   "b": "ipc",
+   "centroid": 399.2,
+   "edge": 348,
+   "walkNetwork": 519.9
+  },
+  {
+   "a": "83",
+   "b": "u1",
+   "centroid": 213.9,
+   "edge": 162.9,
+   "walkNetwork": 276.8
+  },
+  {
+   "a": "83",
+   "b": "u2",
+   "centroid": 195.6,
+   "edge": 154.2,
+   "walkNetwork": 257.7
+  },
+  {
+   "a": "83",
+   "b": "94",
+   "centroid": 153.5,
+   "edge": 53.3,
+   "walkNetwork": 173.2
+  },
+  {
+   "a": "84",
+   "b": "85",
+   "centroid": 32,
+   "edge": 7.9,
+   "walkNetwork": 83.5
+  },
+  {
+   "a": "84",
+   "b": "86",
+   "centroid": 111.6,
+   "edge": 70.3,
+   "walkNetwork": 150.9
+  },
+  {
+   "a": "84",
+   "b": "88",
+   "centroid": 135.2,
+   "edge": 87,
+   "walkNetwork": 197.6
+  },
+  {
+   "a": "84",
+   "b": "89",
+   "centroid": 134.4,
+   "edge": 83.6,
+   "walkNetwork": 261.9
+  },
+  {
+   "a": "84",
+   "b": "90",
+   "centroid": 321.6,
+   "edge": 266.9,
+   "walkNetwork": 432.7
+  },
+  {
+   "a": "84",
+   "b": "91",
+   "centroid": 365.6,
+   "edge": 316.2,
+   "walkNetwork": 475.4
+  },
+  {
+   "a": "84",
+   "b": "92",
+   "centroid": 264.9,
+   "edge": 212.1,
+   "walkNetwork": 362.1
+  },
+  {
+   "a": "84",
+   "b": "93",
+   "centroid": 262.1,
+   "edge": 210.4,
+   "walkNetwork": 385.3
+  },
+  {
+   "a": "84",
+   "b": "95",
+   "centroid": 172.9,
+   "edge": 122.1,
+   "walkNetwork": 220.5
+  },
+  {
+   "a": "84",
+   "b": "96",
+   "centroid": 316.6,
+   "edge": 276.7,
+   "walkNetwork": 412.4
+  },
+  {
+   "a": "84",
+   "b": "98",
+   "centroid": 321.8,
+   "edge": 280.7,
+   "walkNetwork": 420
+  },
+  {
+   "a": "84",
+   "b": "seven",
+   "centroid": 213.5,
+   "edge": 176.8,
+   "walkNetwork": 270.8
+  },
+  {
+   "a": "84",
+   "b": "97",
+   "centroid": 357,
+   "edge": 316.3,
+   "walkNetwork": 459.5
+  },
+  {
+   "a": "84",
+   "b": "ipc",
+   "centroid": 341.2,
+   "edge": 291.2,
+   "walkNetwork": 399.3
+  },
+  {
+   "a": "84",
+   "b": "u1",
+   "centroid": 268.4,
+   "edge": 216.9,
+   "walkNetwork": 423.8
+  },
+  {
+   "a": "84",
+   "b": "u2",
+   "centroid": 253.6,
+   "edge": 211.5,
+   "walkNetwork": 404.7
+  },
+  {
+   "a": "84",
+   "b": "94",
+   "centroid": 219.2,
+   "edge": 118.4,
+   "walkNetwork": 320.2
+  },
+  {
+   "a": "85",
+   "b": "86",
+   "centroid": 129.5,
+   "edge": 98.7,
+   "walkNetwork": 234.3
+  },
+  {
+   "a": "85",
+   "b": "88",
+   "centroid": 151,
+   "edge": 115.7,
+   "walkNetwork": 281.1
+  },
+  {
+   "a": "85",
+   "b": "89",
+   "centroid": 130.7,
+   "edge": 104.7,
+   "walkNetwork": 178.4
+  },
+  {
+   "a": "85",
+   "b": "90",
+   "centroid": 332,
+   "edge": 293.1,
+   "walkNetwork": 491.9
+  },
+  {
+   "a": "85",
+   "b": "91",
+   "centroid": 376.8,
+   "edge": 343.8,
+   "walkNetwork": 513.9
+  },
+  {
+   "a": "85",
+   "b": "92",
+   "centroid": 278.9,
+   "edge": 240.8,
+   "walkNetwork": 445.5
+  },
+  {
+   "a": "85",
+   "b": "93",
+   "centroid": 278.5,
+   "edge": 240.6,
+   "walkNetwork": 468.8
+  },
+  {
+   "a": "85",
+   "b": "95",
+   "centroid": 186,
+   "edge": 148.4,
+   "walkNetwork": 303.9
+  },
+  {
+   "a": "85",
+   "b": "96",
+   "centroid": 332.7,
+   "edge": 306.6,
+   "walkNetwork": 495.9
+  },
+  {
+   "a": "85",
+   "b": "98",
+   "centroid": 340.7,
+   "edge": 311.9,
+   "walkNetwork": 503.5
+  },
+  {
+   "a": "85",
+   "b": "seven",
+   "centroid": 227,
+   "edge": 204.3,
+   "walkNetwork": 354.2
+  },
+  {
+   "a": "85",
+   "b": "97",
+   "centroid": 373.1,
+   "edge": 346.3,
+   "walkNetwork": 542.9
+  },
+  {
+   "a": "85",
+   "b": "ipc",
+   "centroid": 322.4,
+   "edge": 284.1,
+   "walkNetwork": 457.6
+  },
+  {
+   "a": "85",
+   "b": "u1",
+   "centroid": 288.9,
+   "edge": 248.7,
+   "walkNetwork": 507.2
+  },
+  {
+   "a": "85",
+   "b": "u2",
+   "centroid": 271.9,
+   "edge": 242.1,
+   "walkNetwork": 488.1
+  },
+  {
+   "a": "85",
+   "b": "94",
+   "centroid": 223.4,
+   "edge": 140.8,
+   "walkNetwork": 243.3
+  },
+  {
+   "a": "86",
+   "b": "88",
+   "centroid": 24.8,
+   "edge": 1.4,
+   "walkNetwork": 46.7
+  },
+  {
+   "a": "86",
+   "b": "89",
+   "centroid": 88.6,
+   "edge": 39.6,
+   "walkNetwork": 111.2
+  },
+  {
+   "a": "86",
+   "b": "90",
+   "centroid": 213.2,
+   "edge": 180.2,
+   "walkNetwork": 281.8
+  },
+  {
+   "a": "86",
+   "b": "91",
+   "centroid": 256,
+   "edge": 226.1,
+   "walkNetwork": 324.5
+  },
+  {
+   "a": "86",
+   "b": "92",
+   "centroid": 153.9,
+   "edge": 121.2,
+   "walkNetwork": 211.2
+  },
+  {
+   "a": "86",
+   "b": "93",
+   "centroid": 150.5,
+   "edge": 116.8,
+   "walkNetwork": 234.4
+  },
+  {
+   "a": "86",
+   "b": "95",
+   "centroid": 64.2,
+   "edge": 38,
+   "walkNetwork": 69.6
+  },
+  {
+   "a": "86",
+   "b": "96",
+   "centroid": 205,
+   "edge": 182.8,
+   "walkNetwork": 261.5
+  },
+  {
+   "a": "86",
+   "b": "98",
+   "centroid": 211.3,
+   "edge": 186.5,
+   "walkNetwork": 269.2
+  },
+  {
+   "a": "86",
+   "b": "seven",
+   "centroid": 103.3,
+   "edge": 89.1,
+   "walkNetwork": 119.9
+  },
+  {
+   "a": "86",
+   "b": "97",
+   "centroid": 245.4,
+   "edge": 222.8,
+   "walkNetwork": 308.6
+  },
+  {
+   "a": "86",
+   "b": "ipc",
+   "centroid": 451.4,
+   "edge": 416.5,
+   "walkNetwork": 523.8
+  },
+  {
+   "a": "86",
+   "b": "u1",
+   "centroid": 159.6,
+   "edge": 122.6,
+   "walkNetwork": 272.9
+  },
+  {
+   "a": "86",
+   "b": "u2",
+   "centroid": 142.6,
+   "edge": 117.4,
+   "walkNetwork": 253.8
+  },
+  {
+   "a": "86",
+   "b": "94",
+   "centroid": 125.6,
+   "edge": 40.3,
+   "walkNetwork": 169.3
+  },
+  {
+   "a": "88",
+   "b": "89",
+   "centroid": 86.3,
+   "edge": 44.3,
+   "walkNetwork": 131
+  },
+  {
+   "a": "88",
+   "b": "90",
+   "centroid": 188.4,
+   "edge": 146.3,
+   "walkNetwork": 235.1
+  },
+  {
+   "a": "88",
+   "b": "91",
+   "centroid": 231.4,
+   "edge": 193.6,
+   "walkNetwork": 277.8
+  },
+  {
+   "a": "88",
+   "b": "92",
+   "centroid": 129.8,
+   "edge": 89.1,
+   "walkNetwork": 164.5
+  },
+  {
+   "a": "88",
+   "b": "93",
+   "centroid": 127.6,
+   "edge": 88,
+   "walkNetwork": 187.7
+  },
+  {
+   "a": "88",
+   "b": "95",
+   "centroid": 39.4,
+   "edge": 4.9,
+   "walkNetwork": 22.8
+  },
+  {
+   "a": "88",
+   "b": "96",
+   "centroid": 181.9,
+   "edge": 154.1,
+   "walkNetwork": 214.8
+  },
+  {
+   "a": "88",
+   "b": "98",
+   "centroid": 190.2,
+   "edge": 160.1,
+   "walkNetwork": 222.4
+  },
+  {
+   "a": "88",
+   "b": "seven",
+   "centroid": 78.8,
+   "edge": 55.4,
+   "walkNetwork": 73.1
+  },
+  {
+   "a": "88",
+   "b": "97",
+   "centroid": 222.4,
+   "edge": 193.7,
+   "walkNetwork": 261.9
+  },
+  {
+   "a": "88",
+   "b": "ipc",
+   "centroid": 473.4,
+   "edge": 433.5,
+   "walkNetwork": 570.6
+  },
+  {
+   "a": "88",
+   "b": "u1",
+   "centroid": 140.5,
+   "edge": 98.8,
+   "walkNetwork": 226.2
+  },
+  {
+   "a": "88",
+   "b": "u2",
+   "centroid": 121.2,
+   "edge": 89.9,
+   "walkNetwork": 207
+  },
+  {
+   "a": "88",
+   "b": "94",
+   "centroid": 103.7,
+   "edge": 22.3,
+   "walkNetwork": 124.6
+  },
+  {
+   "a": "89",
+   "b": "90",
+   "centroid": 215.5,
+   "edge": 169.2,
+   "walkNetwork": 313.5
+  },
+  {
+   "a": "89",
+   "b": "91",
+   "centroid": 261,
+   "edge": 222.6,
+   "walkNetwork": 335.5
+  },
+  {
+   "a": "89",
+   "b": "92",
+   "centroid": 175.6,
+   "edge": 124.2,
+   "walkNetwork": 293.5
+  },
+  {
+   "a": "89",
+   "b": "93",
+   "centroid": 184.1,
+   "edge": 130.6,
+   "walkNetwork": 316.7
+  },
+  {
+   "a": "89",
+   "b": "95",
+   "centroid": 94.7,
+   "edge": 42.7,
+   "walkNetwork": 151.9
+  },
+  {
+   "a": "89",
+   "b": "96",
+   "centroid": 232.9,
+   "edge": 190.1,
+   "walkNetwork": 343.8
+  },
+  {
+   "a": "89",
+   "b": "98",
+   "centroid": 251.5,
+   "edge": 208,
+   "walkNetwork": 351.4
+  },
+  {
+   "a": "89",
+   "b": "seven",
+   "centroid": 128.1,
+   "edge": 90.8,
+   "walkNetwork": 202.2
+  },
+  {
+   "a": "89",
+   "b": "97",
+   "centroid": 271.3,
+   "edge": 234.1,
+   "walkNetwork": 390.9
+  },
+  {
+   "a": "89",
+   "b": "ipc",
+   "centroid": 437.5,
+   "edge": 396.1,
+   "walkNetwork": 635
+  },
+  {
+   "a": "89",
+   "b": "u1",
+   "centroid": 210.9,
+   "edge": 153.7,
+   "walkNetwork": 355.2
+  },
+  {
+   "a": "89",
+   "b": "u2",
+   "centroid": 185.7,
+   "edge": 140,
+   "walkNetwork": 336.1
+  },
+  {
+   "a": "89",
+   "b": "94",
+   "centroid": 98.8,
+   "edge": 12.9,
+   "walkNetwork": 64.9
+  },
+  {
+   "a": "90",
+   "b": "91",
+   "centroid": 45.6,
+   "edge": 5.5,
+   "walkNetwork": 47.8
+  },
+  {
+   "a": "90",
+   "b": "92",
+   "centroid": 65.7,
+   "edge": 22.8,
+   "walkNetwork": 89.4
+  },
+  {
+   "a": "90",
+   "b": "93",
+   "centroid": 83.5,
+   "edge": 46.1,
+   "walkNetwork": 112.7
+  },
+  {
+   "a": "90",
+   "b": "95",
+   "centroid": 149.3,
+   "edge": 95.5,
+   "walkNetwork": 212.2
+  },
+  {
+   "a": "90",
+   "b": "96",
+   "centroid": 63.5,
+   "edge": 30.1,
+   "walkNetwork": 139.8
+  },
+  {
+   "a": "90",
+   "b": "98",
+   "centroid": 99.5,
+   "edge": 72.9,
+   "walkNetwork": 147.4
+  },
+  {
+   "a": "90",
+   "b": "seven",
+   "centroid": 110.3,
+   "edge": 75.8,
+   "walkNetwork": 161.9
+  },
+  {
+   "a": "90",
+   "b": "97",
+   "centroid": 77.8,
+   "edge": 45,
+   "walkNetwork": 98.5
+  },
+  {
+   "a": "90",
+   "b": "ipc",
+   "centroid": 650.7,
+   "edge": 605.1,
+   "walkNetwork": 805.6
+  },
+  {
+   "a": "90",
+   "b": "u1",
+   "centroid": 119.5,
+   "edge": 82.8,
+   "walkNetwork": 151.1
+  },
+  {
+   "a": "90",
+   "b": "u2",
+   "centroid": 103.1,
+   "edge": 69.9,
+   "walkNetwork": 132
+  },
+  {
+   "a": "90",
+   "b": "94",
+   "centroid": 118.2,
+   "edge": 24.5,
+   "walkNetwork": 248.5
+  },
+  {
+   "a": "91",
+   "b": "92",
+   "centroid": 103.7,
+   "edge": 58.7,
+   "walkNetwork": 137.3
+  },
+  {
+   "a": "91",
+   "b": "93",
+   "centroid": 115.8,
+   "edge": 67.9,
+   "walkNetwork": 160.5
+  },
+  {
+   "a": "91",
+   "b": "95",
+   "centroid": 192.8,
+   "edge": 146.1,
+   "walkNetwork": 254.9
+  },
+  {
+   "a": "91",
+   "b": "96",
+   "centroid": 74.4,
+   "edge": 24,
+   "walkNetwork": 187.6
+  },
+  {
+   "a": "91",
+   "b": "98",
+   "centroid": 104.2,
+   "edge": 63.9,
+   "walkNetwork": 195.2
+  },
+  {
+   "a": "91",
+   "b": "seven",
+   "centroid": 152.7,
+   "edge": 124.2,
+   "walkNetwork": 204.6
+  },
+  {
+   "a": "91",
+   "b": "97",
+   "centroid": 62.2,
+   "edge": 30,
+   "walkNetwork": 146.3
+  },
+  {
+   "a": "91",
+   "b": "ipc",
+   "centroid": 696.2,
+   "edge": 658.4,
+   "walkNetwork": 848.3
+  },
+  {
+   "a": "91",
+   "b": "u1",
+   "centroid": 142.1,
+   "edge": 90.3,
+   "walkNetwork": 199
+  },
+  {
+   "a": "91",
+   "b": "u2",
+   "centroid": 133.4,
+   "edge": 93.4,
+   "walkNetwork": 179.8
+  },
+  {
+   "a": "91",
+   "b": "94",
+   "centroid": 163.4,
+   "edge": 79,
+   "walkNetwork": 270.6
+  },
+  {
+   "a": "92",
+   "b": "93",
+   "centroid": 23.5,
+   "edge": 6,
+   "walkNetwork": 23.2
+  },
+  {
+   "a": "92",
+   "b": "95",
+   "centroid": 92.9,
+   "edge": 44.9,
+   "walkNetwork": 141.6
+  },
+  {
+   "a": "92",
+   "b": "96",
+   "centroid": 57.3,
+   "edge": 22.5,
+   "walkNetwork": 50.3
+  },
+  {
+   "a": "92",
+   "b": "98",
+   "centroid": 80.8,
+   "edge": 47.8,
+   "walkNetwork": 57.9
+  },
+  {
+   "a": "92",
+   "b": "seven",
+   "centroid": 51.9,
+   "edge": 22.2,
+   "walkNetwork": 91.3
+  },
+  {
+   "a": "92",
+   "b": "97",
+   "centroid": 96.2,
+   "edge": 64.6,
+   "walkNetwork": 116.2
+  },
+  {
+   "a": "92",
+   "b": "ipc",
+   "centroid": 600.8,
+   "edge": 557.6,
+   "walkNetwork": 735
+  },
+  {
+   "a": "92",
+   "b": "u1",
+   "centroid": 67.2,
+   "edge": 43.1,
+   "walkNetwork": 61.7
+  },
+  {
+   "a": "92",
+   "b": "u2",
+   "centroid": 42.6,
+   "edge": 26.5,
+   "walkNetwork": 42.6
+  },
+  {
+   "a": "92",
+   "b": "94",
+   "centroid": 92.8,
+   "edge": 13.8,
+   "walkNetwork": 243.5
+  },
+  {
+   "a": "93",
+   "b": "95",
+   "centroid": 94.5,
+   "edge": 48.7,
+   "walkNetwork": 164.9
+  },
+  {
+   "a": "93",
+   "b": "96",
+   "centroid": 54.5,
+   "edge": 23.4,
+   "walkNetwork": 27.1
+  },
+  {
+   "a": "93",
+   "b": "98",
+   "centroid": 67.4,
+   "edge": 32.1,
+   "walkNetwork": 34.7
+  },
+  {
+   "a": "93",
+   "b": "seven",
+   "centroid": 56.1,
+   "edge": 28,
+   "walkNetwork": 114.6
+  },
+  {
+   "a": "93",
+   "b": "97",
+   "centroid": 94.9,
+   "edge": 63.3,
+   "walkNetwork": 139.4
+  },
+  {
+   "a": "93",
+   "b": "ipc",
+   "centroid": 601,
+   "edge": 558,
+   "walkNetwork": 758.2
+  },
+  {
+   "a": "93",
+   "b": "u1",
+   "centroid": 43.9,
+   "edge": 20,
+   "walkNetwork": 38.5
+  },
+  {
+   "a": "93",
+   "b": "u2",
+   "centroid": 20,
+   "edge": 3.2,
+   "walkNetwork": 19.4
+  },
+  {
+   "a": "93",
+   "b": "94",
+   "centroid": 109.8,
+   "edge": 37.4,
+   "walkNetwork": 266.7
+  },
+  {
+   "a": "95",
+   "b": "96",
+   "centroid": 147.6,
+   "edge": 110.6,
+   "walkNetwork": 192
+  },
+  {
+   "a": "95",
+   "b": "98",
+   "centroid": 160.5,
+   "edge": 126.1,
+   "walkNetwork": 199.6
+  },
+  {
+   "a": "95",
+   "b": "seven",
+   "centroid": 41,
+   "edge": 9.1,
+   "walkNetwork": 50.3
+  },
+  {
+   "a": "95",
+   "b": "97",
+   "centroid": 187.8,
+   "edge": 154,
+   "walkNetwork": 239
+  },
+  {
+   "a": "95",
+   "b": "ipc",
+   "centroid": 508,
+   "edge": 464,
+   "walkNetwork": 593.4
+  },
+  {
+   "a": "95",
+   "b": "u1",
+   "centroid": 116.4,
+   "edge": 75.4,
+   "walkNetwork": 203.3
+  },
+  {
+   "a": "95",
+   "b": "u2",
+   "centroid": 92.5,
+   "edge": 59.3,
+   "walkNetwork": 184.2
+  },
+  {
+   "a": "95",
+   "b": "94",
+   "centroid": 71.2,
+   "edge": 11.5,
+   "walkNetwork": 145.5
+  },
+  {
+   "a": "96",
+   "b": "98",
+   "centroid": 36,
+   "edge": 1.1,
+   "walkNetwork": 7.6
+  },
+  {
+   "a": "96",
+   "b": "seven",
+   "centroid": 107.3,
+   "edge": 87.8,
+   "walkNetwork": 141.7
+  },
+  {
+   "a": "96",
+   "b": "97",
+   "centroid": 40.4,
+   "edge": 20.7,
+   "walkNetwork": 166.5
+  },
+  {
+   "a": "96",
+   "b": "ipc",
+   "centroid": 655.1,
+   "edge": 623.1,
+   "walkNetwork": 785.3
+  },
+  {
+   "a": "96",
+   "b": "u1",
+   "centroid": 68.6,
+   "edge": 23.1,
+   "walkNetwork": 11.4
+  },
+  {
+   "a": "96",
+   "b": "u2",
+   "centroid": 66.4,
+   "edge": 41,
+   "walkNetwork": 7.7
+  },
+  {
+   "a": "96",
+   "b": "94",
+   "centroid": 147.1,
+   "edge": 54,
+   "walkNetwork": 293.8
+  },
+  {
+   "a": "98",
+   "b": "seven",
+   "centroid": 123.4,
+   "edge": 105.1,
+   "walkNetwork": 149.3
+  },
+  {
+   "a": "98",
+   "b": "97",
+   "centroid": 50.3,
+   "edge": 23,
+   "walkNetwork": 174.2
+  },
+  {
+   "a": "98",
+   "b": "ipc",
+   "centroid": 662.6,
+   "edge": 630,
+   "walkNetwork": 793
+  },
+  {
+   "a": "98",
+   "b": "u1",
+   "centroid": 55.8,
+   "edge": 24.3,
+   "walkNetwork": 3.8
+  },
+  {
+   "a": "98",
+   "b": "u2",
+   "centroid": 69,
+   "edge": 44.8,
+   "walkNetwork": 15.4
+  },
+  {
+   "a": "98",
+   "b": "94",
+   "centroid": 173.5,
+   "edge": 91.4,
+   "walkNetwork": 301.5
+  },
+  {
+   "a": "seven",
+   "b": "97",
+   "centroid": 147.3,
+   "edge": 130.7,
+   "walkNetwork": 188.7
+  },
+  {
+   "a": "seven",
+   "b": "ipc",
+   "centroid": 548.9,
+   "edge": 520.4,
+   "walkNetwork": 643.7
+  },
+  {
+   "a": "seven",
+   "b": "u1",
+   "centroid": 86.9,
+   "edge": 58.6,
+   "walkNetwork": 153
+  },
+  {
+   "a": "seven",
+   "b": "u2",
+   "centroid": 59.3,
+   "edge": 41.5,
+   "walkNetwork": 133.9
+  },
+  {
+   "a": "seven",
+   "b": "94",
+   "centroid": 66.3,
+   "edge": 16.1,
+   "walkNetwork": 195.8
+  },
+  {
+   "a": "97",
+   "b": "ipc",
+   "centroid": 695.5,
+   "edge": 664,
+   "walkNetwork": 832.4
+  },
+  {
+   "a": "97",
+   "b": "u1",
+   "centroid": 101.7,
+   "edge": 65.5,
+   "walkNetwork": 177.9
+  },
+  {
+   "a": "97",
+   "b": "u2",
+   "centroid": 105.4,
+   "edge": 81,
+   "walkNetwork": 158.8
+  },
+  {
+   "a": "97",
+   "b": "94",
+   "centroid": 181.8,
+   "edge": 97.2,
+   "walkNetwork": 340.9
+  },
+  {
+   "a": "ipc",
+   "b": "u1",
+   "centroid": 609.6,
+   "edge": 566.6,
+   "walkNetwork": 796.7
+  },
+  {
+   "a": "ipc",
+   "b": "u2",
+   "centroid": 594,
+   "edge": 560.2,
+   "walkNetwork": 777.6
+  },
+  {
+   "a": "ipc",
+   "b": "94",
+   "centroid": 536.2,
+   "edge": 446.8,
+   "walkNetwork": 693.1
+  },
+  {
+   "a": "u1",
+   "b": "u2",
+   "centroid": 28.6,
+   "edge": 4.9,
+   "walkNetwork": 19.1
+  },
+  {
+   "a": "u1",
+   "b": "94",
+   "centroid": 149.2,
+   "edge": 77,
+   "walkNetwork": 305.2
+  },
+  {
+   "a": "u2",
+   "b": "94",
+   "centroid": 120.5,
+   "edge": 57.8,
+   "walkNetwork": 286.1
+  }
+ ],
+ "boundaryArea": 149312.5,
+ "osmSource": {
+  "file": "osm-campus.json",
+  "api": "https://api.openstreetmap.org/api/0.6/map.json (bbox around BOUNDARY + 30 m)",
+  "fetched": "2026-10-29",
+  "licence": "ODbL, © OpenStreetMap contributors"
+ },
+ "issues": [
+  {
+   "sev": "S",
+   "code": "model-sunk",
+   "id": "11",
+   "detail": "lowest point -3.3 m"
+  },
+  {
+   "sev": "S",
+   "code": "unused-model-slots",
+   "id": "11",
+   "detail": "72 empty instance slots, 0 empty meshes (draw nothing, cost a little)"
+  },
+  {
+   "sev": "S",
+   "code": "unused-model-slots",
+   "id": "41",
+   "detail": "18 empty instance slots, 0 empty meshes (draw nothing, cost a little)"
+  },
+  {
+   "sev": "S",
+   "code": "route-start-far",
+   "id": "42",
+   "detail": "nearest walking-network point is 26.7 m from the building edge"
+  },
+  {
+   "sev": "S",
+   "code": "unused-model-slots",
+   "id": "47",
+   "detail": "120 empty instance slots, 0 empty meshes (draw nothing, cost a little)"
+  },
+  {
+   "sev": "S",
+   "code": "model-beyond-footprint",
+   "id": "52",
+   "detail": "model reaches 6.3 m outside the footprint box (extensions, canopies or misplaced parts)"
+  },
+  {
+   "sev": "S",
+   "code": "not-in-osm",
+   "id": "52",
+   "detail": "no overlapping OpenStreetMap building (footprint source unknown or OSM missing it)"
+  },
+  {
+   "sev": "S",
+   "code": "unused-model-slots",
+   "id": "69",
+   "detail": "5 empty instance slots, 0 empty meshes (draw nothing, cost a little)"
+  },
+  {
+   "sev": "S",
+   "code": "route-start-far",
+   "id": "72",
+   "detail": "nearest walking-network point is 51.9 m from the building edge"
+  },
+  {
+   "sev": "S",
+   "code": "not-in-osm",
+   "id": "71",
+   "detail": "no overlapping OpenStreetMap building (footprint source unknown or OSM missing it)"
+  },
+  {
+   "sev": "S",
+   "code": "route-start-far",
+   "id": "71",
+   "detail": "nearest walking-network point is 52 m from the building edge"
+  },
+  {
+   "sev": "S",
+   "code": "levels-differ",
+   "id": "78B",
+   "detail": "map 10 floors, OSM building:levels=9"
+  },
+  {
+   "sev": "S",
+   "code": "model-beyond-footprint",
+   "id": "79",
+   "detail": "model reaches 13 m outside the footprint box (extensions, canopies or misplaced parts)"
+  },
+  {
+   "sev": "S",
+   "code": "model-beyond-footprint",
+   "id": "91",
+   "detail": "model reaches 259.3 m outside the footprint box (extensions, canopies or misplaced parts)"
+  },
+  {
+   "sev": "S",
+   "code": "unused-model-slots",
+   "id": "91",
+   "detail": "7 empty instance slots, 0 empty meshes (draw nothing, cost a little)"
+  },
+  {
+   "sev": "S",
+   "code": "unused-model-slots",
+   "id": "98",
+   "detail": "20 empty instance slots, 0 empty meshes (draw nothing, cost a little)"
+  },
+  {
+   "sev": "S",
+   "code": "not-in-osm",
+   "id": "98",
+   "detail": "no overlapping OpenStreetMap building (footprint source unknown or OSM missing it)"
+  },
+  {
+   "sev": "S",
+   "code": "outside-campus",
+   "id": "bikeLib",
+   "detail": "centre 13.8198146,100.5138819 outside BOUNDARY"
+  },
+  {
+   "sev": "S",
+   "code": "not-in-osm",
+   "id": "seven",
+   "detail": "no overlapping OpenStreetMap building (footprint source unknown or OSM missing it)"
+  },
+  {
+   "sev": "S",
+   "code": "not-in-osm",
+   "id": "97",
+   "detail": "no overlapping OpenStreetMap building (footprint source unknown or OSM missing it)"
+  },
+  {
+   "sev": "S",
+   "code": "osm-area-differs",
+   "id": "ipc",
+   "detail": "area 1.43× OSM way 158475015"
+  },
+  {
+   "sev": "S",
+   "code": "route-start-far",
+   "id": "u2",
+   "detail": "nearest walking-network point is 29.2 m from the building edge"
+  },
+  {
+   "sev": "S",
+   "code": "height-per-floor",
+   "id": "94",
+   "detail": "11 m / 1 floors = 11 m per floor"
+  },
+  {
+   "sev": "S",
+   "code": "osm-building-missing-from-map",
+   "id": "osm:986219917",
+   "detail": "โรงอาหาร yes 76.7 m² at -192.4,-280.8"
+  },
+  {
+   "sev": "S",
+   "code": "footprints-overlap",
+   "id": "43×44",
+   "detail": "14.3 m² (7% of the smaller)"
+  },
+  {
+   "sev": "S",
+   "code": "road-crosses-building",
+   "id": "81",
+   "detail": "road #16 (s) segment 0"
+  },
+  {
+   "sev": "S",
+   "code": "road-crosses-building",
+   "id": "44",
+   "detail": "road #39 (f) segment 1"
+  },
+  {
+   "sev": "S",
+   "code": "road-crosses-building",
+   "id": "47",
+   "detail": "road #39 (f) segment 0"
+  },
+  {
+   "sev": "S",
+   "code": "road-crosses-building",
+   "id": "21",
+   "detail": "road #41 (f) segment 2"
+  },
+  {
+   "sev": "S",
+   "code": "road-crosses-building",
+   "id": "22",
+   "detail": "road #41 (f) segment 1"
+  },
+  {
+   "sev": "S",
+   "code": "walk-network-inside-building",
+   "id": "21",
+   "detail": "6 routing points inside the footprint"
+  },
+  {
+   "sev": "S",
+   "code": "walk-network-inside-building",
+   "id": "22",
+   "detail": "8 routing points inside the footprint"
+  },
+  {
+   "sev": "S",
+   "code": "walk-network-inside-building",
+   "id": "44",
+   "detail": "3 routing points inside the footprint"
+  },
+  {
+   "sev": "S",
+   "code": "walk-network-inside-building",
+   "id": "47",
+   "detail": "8 routing points inside the footprint"
+  },
+  {
+   "sev": "S",
+   "code": "walk-network-inside-building",
+   "id": "81",
+   "detail": "4 routing points inside the footprint"
+  },
+  {
+   "sev": "S",
+   "code": "long-detour",
+   "id": "96→97",
+   "detail": "walk 166.5 m vs straight 40.4 m"
+  }
+ ]
+}

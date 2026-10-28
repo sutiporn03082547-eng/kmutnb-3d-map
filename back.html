@@ -130,7 +130,7 @@ body.hide-map-labels .pin:not(.sel),body.hide-map-labels .rl{display:none!import
 body.side-open .map-label-toggle{display:none;}
 @media (max-width:760px){.map-label-toggle{left:12px;transform:none;bottom:calc(16px + env(safe-area-inset-bottom,0px));padding:8px 12px;font-size:12px;}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;}}
-</style>
+#list li > button.active{outline:2px solid #ff8a2b;outline-offset:-2px}</style>
 </head>
 <body>
 <canvas id="c" tabindex="0" aria-label="แผนที่สามมิติย่านหลังมหาวิทยาลัย"></canvas>
@@ -623,22 +623,33 @@ openChip.onclick=()=>{openOnly=!openOnly;openChip.setAttribute("aria-pressed",op
 Object.entries(CATS).forEach(([k,c])=>{if(!D.P.some(p=>p.c===k))return;const b=document.createElement("button");b.type="button";b.className="chip";b.setAttribute("aria-pressed","true");
   b.innerHTML=`<i>${c.ic}</i>${c.th}`;b.onclick=()=>{on[k]=!on[k];b.setAttribute("aria-pressed",on[k]);refresh();};catsEl.appendChild(b);});
 const norm=s=>s.toLowerCase().replace(/\s+/g,"").replace(/เซเว่น|seven|711/g,"7-11").replace(/7-eleven/g,"7-11");
+let listOrder=[],listActive=0;
 function matches(p,qq){if(!qq)return true;return norm(p.n+" "+CATS[p.c].th+" "+p.note.join(" ")).includes(qq);}
 function refresh(){
   const qq=norm(q.value.trim());list.innerHTML="";let n=0;
   const rows=pins.map(pn=>{const st=status(pn.p);const vis=on[pn.cat]&&(!openOnly||(st&&st.open))&&matches(pn.p,qq);
     pn.el.hidden=!(on[pn.cat]&&(!openOnly||(st&&st.open)));pn.el.classList.toggle("dim",!!qq&&!vis);pn.el.classList.toggle("closed",!!st&&!st.open);pn.match=!!qq&&vis;
     return{pn,st,vis};}).filter(r=>r.vis);
-  const order=Object.keys(CATS);rows.sort((a,b)=>order.indexOf(a.pn.cat)-order.indexOf(b.pn.cat)||a.pn.p.n.localeCompare(b.pn.p.n,"th"));
+  /* audit: rank by how the name matched (exact, starts with, contains, then category/notes only); category and name order break ties.
+     Enter used to open the first match in data order, which was not the first row shown. */
+  const rank=pn=>{if(!qq)return 0;const nm=norm(pn.p.n);return nm===qq?0:nm.startsWith(qq)?1:nm.includes(qq)?2:3;};
+  const order=Object.keys(CATS);rows.sort((a,b)=>rank(a.pn)-rank(b.pn)||order.indexOf(a.pn.cat)-order.indexOf(b.pn.cat)||a.pn.p.n.localeCompare(b.pn.p.n,"th"));
+  listOrder=rows.map(r=>r.pn);listActive=0;
   rows.forEach(({pn,st})=>{const li=document.createElement("li"),b=document.createElement("button");b.type="button";b.style.setProperty("--c",CATS[pn.cat].c);
     b.innerHTML=`<span class="ic">${CATS[pn.cat].ic}</span><span class="t"></span><span class="st ${st&&st.open?"on":""}">${st?(st.open?"เปิดอยู่":"ปิดอยู่"):""}</span>`;
     b.querySelector(".t").textContent=pn.p.n;b.onclick=()=>{select(pn.i,true);if(innerWidth<=760)setSide(false);};li.appendChild(b);list.appendChild(li);n++;});
+  if(qq)markListActive();
   if(!n){const li=document.createElement("li");li.className="empty";li.textContent="ไม่พบร้านที่ตรงกับเงื่อนไข";list.appendChild(li);}
   document.getElementById("listLbl").textContent="รายชื่อร้านและหอพัก ("+n+")";
   groupPins();
 }
 q.addEventListener("input",refresh);
-q.addEventListener("keydown",e=>{if(e.key==="Enter"){const f=pins.find(p=>p.match);if(f)select(f.i,true);}});
+function markListActive(){const items=[...list.querySelectorAll("li > button")];items.forEach((b,i)=>{b.classList.toggle("active",i===listActive);b.setAttribute("aria-selected",String(i===listActive));});if(items[listActive])items[listActive].scrollIntoView({block:"nearest"});}
+/* keyboard: ArrowDown/ArrowUp move through the list, Enter opens the highlighted row (the best match by default), Escape clears */
+q.addEventListener("keydown",e=>{
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){if(!listOrder.length)return;e.preventDefault();listActive=(listActive+(e.key==="ArrowDown"?1:-1)+listOrder.length)%listOrder.length;markListActive();return;}
+  if(e.key==="Escape"){if(q.value){q.value="";refresh();}else q.blur();return;}
+  if(e.key==="Enter"&&q.value.trim()){const f=listOrder[listActive];if(f)select(f.i,true);}});
 function setSide(o){side.classList.toggle("open",o);document.body.classList.toggle("side-open",o&&innerWidth<=760);const mb=document.getElementById("menuBtn");mb.setAttribute("aria-expanded",o);mb.textContent=o?"พับ":"เมนู";}
 document.getElementById("menuBtn").onclick=()=>setSide(!side.classList.contains("open"));
 q.addEventListener("focus",()=>{if(innerWidth<=760)setSide(true);});

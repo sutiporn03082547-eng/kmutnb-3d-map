@@ -12447,6 +12447,42 @@ const a={version:172,building:'63',sideFrameBeams:beams,sideSolidSlabs:solidSlab
    if(o.geometry.type!=='BoxGeometry'||!p||p.width!==1||p.height!==1||p.depth!==1)return;if(!o.matrixWorld.equals(I))return;
    o.visible=false;out.push({building:b.id,color:o.material&&o.material.color&&o.material.color.getHexString()});});});})();
 </script>
+<script>/* back-expand 2026-10-29: the area behind campus as light context, in the same local metres as this map, so the view continues past
+   the campus edge without a seam. Loaded after the map is up (back-context.json, ~75 KB gzipped) and merged into four meshes:
+   building boxes (fitted to Microsoft ML footprints), extra footprints (OSM / Microsoft, unknown heights drawn as 2 storeys), roads, canals.
+   Not clickable here; shops, dorms and details stay in back.html. Boxes whose centre falls inside a building of this map are skipped. */
+(function(){if(typeof scene==='undefined'||typeof ALL==='undefined')return;
+ const inP=(x,z,p)=>{let c=false;for(let i=0,j=p.length-1;i<p.length;j=i++){const[xi,zi]=p[i],[xj,zj]=p[j];if(((zi>z)!==(zj>z))&&(x<(xj-xi)*(z-zi)/(zj-zi)+xi))c=!c;}return c;};
+ const own=ALL.filter(b=>b.p).map(b=>b.p.map(([x,z])=>[x+(b.dx||0),z+(b.dz||0)]));
+ const wall=new THREE.Color('#dcd6ca'),roof=new THREE.Color('#bdb7ab'),mats={b:new THREE.MeshLambertMaterial({vertexColors:true}),r:new THREE.MeshLambertMaterial({color:'#9a9da1'}),w:new THREE.MeshLambertMaterial({color:'#6fa3bd'})};
+ function build(C){const g=new THREE.Group();g.name='back-context';
+  const P=[],N=[],K=[];const tri=(a,b,c,col)=>{const ux=b[0]-a[0],uy=b[1]-a[1],uz=b[2]-a[2],vx=c[0]-a[0],vy=c[1]-a[1],vz=c[2]-a[2];let nx=uy*vz-uz*vy,ny=uz*vx-ux*vz,nz=ux*vy-uy*vx;const l=Math.hypot(nx,ny,nz)||1;
+    for(const p of [a,b,c]){P.push(p[0],p[1],p[2]);N.push(nx/l,ny/l,nz/l);K.push(col.r,col.g,col.b);}};
+  const prism=(pts,h)=>{const y0=.2,y1=y0+h;for(let i=0;i<pts.length;i++){const[a0,b0]=pts[i],[a1,b1]=pts[(i+1)%pts.length];tri([a0,y0,b0],[a1,y0,b1],[a1,y1,b1],wall);tri([a0,y0,b0],[a1,y1,b1],[a0,y1,b0],wall);}
+    const sh=new THREE.Shape(pts.map(([x,z])=>new THREE.Vector2(x,z))),tr=THREE.ShapeUtils.triangulateShape(sh.getPoints(),[]),pp=sh.getPoints();tr.forEach(([i,j,k])=>tri([pp[i].x,y1,pp[i].y],[pp[k].x,y1,pp[k].y],[pp[j].x,y1,pp[j].y],roof));};
+  let skipped=0;
+  C.boxes.forEach(([x,z,w,d,a,fl])=>{if(own.some(p=>inP(x,z,p))){skipped++;return;}const ux=Math.cos(a),uz=Math.sin(a),nx=-uz,nz=ux;
+   const pts=[[-1,-1],[1,-1],[1,1],[-1,1]].map(([s,t])=>[x+s*ux*w/2+t*nx*d/2,z+s*uz*w/2+t*nz*d/2]);prism(pts,Math.max(1,fl)*3.1);});
+  C.polys.forEach(([lv,pts])=>{const c=pts.reduce((s,q)=>[s[0]+q[0]/pts.length,s[1]+q[1]/pts.length],[0,0]);if(own.some(p=>inP(c[0],c[1],p))){skipped++;return;}prism(pts,lv?lv*3.1:6.2);});
+  const bg=new THREE.BufferGeometry();bg.setAttribute('position',new THREE.Float32BufferAttribute(P,3));bg.setAttribute('normal',new THREE.Float32BufferAttribute(N,3));bg.setAttribute('color',new THREE.Float32BufferAttribute(K,3));
+  g.add(new THREE.Mesh(bg,mats.b));
+  const strip=(list,y,mat)=>{const Q=[];list.forEach(([w,pts])=>{for(let i=0;i<pts.length-1;i++){const[a,b]=[pts[i],pts[i+1]],L=Math.hypot(b[0]-a[0],b[1]-a[1]);if(L<.01)continue;const nx=-(b[1]-a[1])/L*w/2,nz=(b[0]-a[0])/L*w/2;
+    Q.push(a[0]+nx,y,a[1]+nz, b[0]+nx,y,b[1]+nz, b[0]-nx,y,b[1]-nz, a[0]+nx,y,a[1]+nz, b[0]-nx,y,b[1]-nz, a[0]-nx,y,a[1]-nz);}});
+   const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(Q,3));geo.computeVertexNormals();const m=new THREE.Mesh(geo,mat);m.material.side=THREE.DoubleSide;g.add(m);};
+  strip(C.water,.08,mats.w);strip(C.roads,.12,mats.r);
+  scene.add(g);window.__backContext={boxes:C.boxes.length,polys:C.polys.length,roads:C.roads.length,skipped,triangles:P.length/9};if(window.__plDirty)window.__plDirty();}
+ if(typeof applyMode==='function'){const prev=applyMode;applyMode=function(){prev.apply(this,arguments);const n=typeof mode!=='undefined'&&mode==='night';mats.b.color.set(n?'#6b7078':'#ffffff');mats.r.color.set(n?'#3a3f46':'#9a9da1');mats.w.color.set(n?'#2c4a5a':'#6fa3bd');};}
+ const go=()=>fetch('back-context.json').then(r=>r.ok?r.json():null).then(C=>{if(C)build(C);}).catch(e=>console.warn('back-context',e));
+ const later=()=>(window.requestIdleCallback||setTimeout)(go,{timeout:2500});
+ if(document.readyState==='complete')setTimeout(later,1200);else addEventListener('load',()=>setTimeout(later,1200));
+})();
+/* camera handover with back.html: links carry #cam=targetX,targetZ,posX,posY,posZ so the view continues across the two pages */
+(function(){const camStr=()=>[controls.target.x,controls.target.z,camera.position.x,camera.position.y,camera.position.z].map(v=>v.toFixed(1)).join(',');
+ document.querySelectorAll('a[href="back.html"]').forEach(a=>a.addEventListener('click',()=>{a.href='back.html#cam='+camStr();}));
+ const m=/cam=(-?[\d.]+),(-?[\d.]+),(-?[\d.]+),(-?[\d.]+),(-?[\d.]+)/.exec(location.hash);
+ if(m){const v=m.slice(1).map(Number);const apply=()=>{if(typeof fly!=='undefined')fly=null;controls.target.set(v[0],0,v[1]);camera.position.set(v[2],v[3],v[4]);controls.update();if(window.__plDirty)window.__plDirty();};
+  if(document.readyState==='complete')setTimeout(apply,600);else addEventListener('load',()=>setTimeout(apply,600));}})();
+</script>
 <script>/* perf-v107 — smoother rendering without changing what is drawn.
    1) Static batching: after the scene is built, meshes that share a parent and a material are merged into one mesh
       (one draw call instead of hundreds). Originals stay in the scene, hidden, so clicking/picking buildings,

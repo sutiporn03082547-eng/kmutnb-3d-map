@@ -1,0 +1,96 @@
+{
+ "base": "http://127.0.0.1:18937/repo/",
+ "date": "2026-10-28T18:44:51.943Z",
+ "total": 14,
+ "passed": 14,
+ "results": [
+  {
+   "name": "no dorm shows opening status",
+   "pass": true,
+   "got": "0 of 157"
+  },
+  {
+   "name": "dorm card shows no hours table",
+   "pass": true,
+   "got": {
+    "rows": 0,
+    "hidden": true
+   }
+  },
+  {
+   "name": "dorm hours data kept in the data (field not deleted)",
+   "pass": true,
+   "got": 54
+  },
+  {
+   "name": "shop card still shows its hours",
+   "pass": true,
+   "got": {
+    "rows": 7,
+    "hidden": false
+   }
+  },
+  {
+   "name": "shops with hours still have a status",
+   "pass": true,
+   "got": 323
+  },
+  {
+   "name": "added footprints are valid polygons",
+   "pass": true,
+   "got": 0
+  },
+  {
+   "name": "Microsoft footprints never carry a floor count",
+   "pass": true,
+   "got": 0
+  },
+  {
+   "name": "added-building card states source and height status",
+   "pass": true,
+   "got": "รูปทรงจาก OpenStreetMapความสูงไม่ทราบ · แสดง 2 ชั้นแทน"
+  },
+  {
+   "name": "added buildings drawn",
+   "pass": true,
+   "got": 8408
+  },
+  {
+   "name": "no page errors (back.html)",
+   "pass": true,
+   "got": []
+  },
+  {
+   "name": "index.html loads the back-area context layer",
+   "pass": true,
+   "got": {
+    "boxes": 3564,
+    "polys": 587,
+    "roads": 644,
+    "skipped": 0,
+    "triangles": 42588
+   }
+  },
+  {
+   "name": "context boxes never duplicate a campus building",
+   "pass": true,
+   "got": 0
+  },
+  {
+   "name": "no page errors (index.html)",
+   "pass": true,
+   "got": []
+  },
+  {
+   "name": "back.html opens at the camera passed from index.html",
+   "pass": true,
+   "got": [
+    300,
+    -300,
+    350,
+    400,
+    -100
+   ]
+  }
+ ]
+}

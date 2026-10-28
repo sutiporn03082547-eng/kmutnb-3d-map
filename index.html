@@ -450,6 +450,148 @@ document.addEventListener('DOMContentLoaded',()=>{
  }
 })();
 </script>
+<script>/* perf-lab — separate fast build (not the public site). Draws the same map, with less work per frame.
+   1) Matrices: an object's matrix is recomposed only when its position/rotation/scale actually changed
+      (three.js otherwise recomposes and re-multiplies all ~10k objects every frame).
+   2) Phones: pixel ratio capped at 1.5 (adaptive down to 1 if frames stay slow), shadow map 2048 instead of 4096.
+   3) Shared materials: materials that are identical in day, evening and night are merged into one, so the
+      perf-v107 batching can join more meshes (fewer draw calls).
+   4) window.__plDirty(): anything that changes the picture without moving the camera asks for a new frame;
+      texture/material updates and changed transforms do this automatically. */
+(function(){
+ 'use strict';
+ if(!window.THREE)return;
+ const PL=window.__pl={composed:0,merged:0,matsBefore:0,matsAfter:0,pr:0,dirty:1};
+ window.__plDirty=()=>{PL.dirty=1;};
+
+ /* 1) recompose only on change */
+ const O=THREE.Object3D.prototype,compose=O.updateMatrix;
+ O.updateMatrix=function(){
+  const p=this.position,q=this.quaternion,s=this.scale;let c=this.__mc;
+  if(c!==undefined&&c[0]===p.x&&c[1]===p.y&&c[2]===p.z&&c[3]===q._x&&c[4]===q._y&&c[5]===q._z&&c[6]===q._w&&c[7]===s.x&&c[8]===s.y&&c[9]===s.z)return;
+  if(c===undefined)c=this.__mc=new Float64Array(10);
+  c[0]=p.x;c[1]=p.y;c[2]=p.z;c[3]=q._x;c[4]=q._y;c[5]=q._z;c[6]=q._w;c[7]=s.x;c[8]=s.y;c[9]=s.z;
+  PL.composed++;compose.call(this);
+ };
+ /* 1b) quiet subtrees: a child whose whole subtree has not changed lately is skipped by updateMatrixWorld.
+     Each sleeping subtree (quiet for 20 frames) is still re-checked every 16 frames, every frame for a moment after a click/key,
+     when its parent moves (force), and as soon as something is added under it. */
+ let tick=0,wakeAll=0;PL.wake=()=>{wakeAll=3;};
+ ['pointerdown','pointerup','click','keydown','wheel'].forEach(e=>addEventListener(e,()=>{wakeAll=3;},{passive:true,capture:true}));
+ const add=O.add;O.add=function(){for(let p=this;p;p=p.parent)p.__q=0;return add.apply(this,arguments);};
+ O.updateMatrixWorld=function(force){
+  if(this.matrixAutoUpdate)this.updateMatrix();
+  if(this.matrixWorldNeedsUpdate||force){
+   if(this.parent===null)this.matrixWorld.copy(this.matrix);else this.matrixWorld.multiplyMatrices(this.parent.matrixWorld,this.matrix);
+   this.matrixWorldNeedsUpdate=false;force=true;
+  }
+  const ch=this.children;
+  for(let i=0,l=ch.length;i<l;i++){const c=ch[i];
+   if(!force&&c.__q>20&&wakeAll===0&&((c.id+tick)&15)!==0)continue;
+   const before=PL.composed;c.updateMatrixWorld(force);
+   if(PL.composed===before&&!force)c.__q=(c.__q|0)+1;else c.__q=0;
+  }
+ };
+ const sceneUMW=THREE.Scene.prototype.updateMatrixWorld;
+ if(sceneUMW&&sceneUMW!==O.updateMatrixWorld)PL.sceneOwnUMW=true;
+ PL.tick=()=>{tick++;if(wakeAll>0)wakeAll--;};
+ for(const C of [THREE.Texture,THREE.Material]){
+  const d=Object.getOwnPropertyDescriptor(C.prototype,'needsUpdate');
+  try{if(d&&d.set&&d.configurable)Object.defineProperty(C.prototype,'needsUpdate',{configurable:true,get:d.get,set(v){PL.dirty=1;d.set.call(this,v);}});}catch(e){}
+ }
+
+ /* 2) phones: lighter pixel ratio and shadow map */
+ const phone=matchMedia('(pointer:coarse)').matches||/Android|iPhone|iPad|Mobi/.test(navigator.userAgent);
+ PL.phone=phone;
+ let main=null;const Base=THREE.WebGLRenderer;
+ function Renderer(params){const r=new Base(params);
+  if(!main){main=r;const setPR=r.setPixelRatio;r.setPixelRatio=function(v){if(phone)v=Math.min(v,PL.cap||1.5);PL.pr=v;return setPR.call(this,v);};}
+  return r;}
+ Renderer.prototype=Base.prototype;THREE.WebGLRenderer=Renderer;
+ /* adaptive: if the median frame stays slow for 2 s while moving, step the pixel ratio down (1.5 → 1.25 → 1) */
+ const ft=[];let lastT=0,lastStep=0;
+ PL.frame=function(t,moving){
+  if(!phone||!main)return;
+  if(!moving){lastT=0;return;}
+  if(lastT){ft.push(t-lastT);if(ft.length>120)ft.shift();}lastT=t;
+  if(ft.length<120||t-lastStep<2500)return;
+  const m=ft.slice().sort((a,b)=>a-b)[60];
+  const cur=main.getPixelRatio();
+  if(m>40&&cur>1){PL.cap=Math.max(1,cur-.25);main.setPixelRatio(PL.cap);ft.length=0;lastStep=t;}
+ };
+
+ /* 3) merge materials that look the same in every light mode (before perf-v107 batches the scene) */
+ function sig(m){
+  const o=[m.type,m.side,m.transparent,m.opacity,m.vertexColors,m.flatShading,m.depthWrite,m.depthTest,m.polygonOffset,m.polygonOffsetFactor,
+   m.polygonOffsetUnits,m.alphaTest,m.fog,m.toneMapped,m.wireframe,m.blending,m.colorWrite,m.visible,m.dithering,m.roughness,m.metalness,
+   m.emissiveIntensity,m.shininess,m.reflectivity,m.envMapIntensity,m.lightMapIntensity,m.aoMapIntensity,m.normalScale&&m.normalScale.x,m.bumpScale];
+  for(const k of ['color','emissive','specular'])o.push(m[k]?m[k].getHex():'');
+  for(const k of ['map','emissiveMap','alphaMap','normalMap','envMap','lightMap','aoMap','roughnessMap','metalnessMap','bumpMap','displacementMap','specularMap'])o.push(m[k]?m[k].uuid:'');
+  return o.join('|');
+ }
+ function mergeMaterials(){
+  if(typeof scene==='undefined')return;
+  const t0=performance.now(),mats=new Map();
+  scene.traverse(o=>{if(!o.isMesh||Array.isArray(o.material)||!o.material)return;const m=o.material;
+   if(m.isShaderMaterial||m.transparent||m.onBeforeCompile!==THREE.Material.prototype.onBeforeCompile||m.userData.noMerge)return;
+   if(o===window.halo||o.userData.noMerge)return;
+   let l=mats.get(m);if(!l){l=[];mats.set(m,l);}l.push(o);});
+  PL.matsBefore=mats.size;
+  const buttons=[...document.querySelectorAll('[data-light]')],pressed=buttons.find(b=>b.getAttribute('aria-pressed')==='true');
+  const keys=new Map();mats.forEach((_,m)=>keys.set(m,[]));
+  const modes=buttons.length?buttons:[null];
+  for(const b of modes){if(b)b.click();mats.forEach((_,m)=>keys.get(m).push(sig(m)));}
+  if(pressed)pressed.click();
+  const canon=new Map();let merged=0;
+  /* three r128 caches the shader on the material: only share between meshes that need the same shader variant */
+  const kind=o=>(o.isInstancedMesh?'I'+(o.instanceColor?'c':''):'M')+(o.isSkinnedMesh?'s':'')+(o.geometry.attributes.tangent?'t':'')+(o.geometry.attributes.color?'v':'')+(Object.keys(o.geometry.morphAttributes||{}).length?'m':'');
+  mats.forEach((users,m)=>{const kinds=new Set(users.map(kind));if(kinds.size>1)return;
+   const k=keys.get(m).join('#')+'#'+[...kinds][0];const c=canon.get(k);
+   if(!c){canon.set(k,m);return;}
+   users.forEach(o=>{o.material=c;});merged++;});
+  PL.merged=merged;PL.matsAfter=canon.size;PL.mergeMs=Math.round(performance.now()-t0);PL.dirty=1;
+ }
+ function phoneShadow(){
+  if(!phone||typeof sun==='undefined'||!sun.shadow)return;
+  if(sun.shadow.mapSize.x>2048){sun.shadow.mapSize.set(2048,2048);if(sun.shadow.map){sun.shadow.map.dispose();sun.shadow.map=null;}
+   if(renderer&&renderer.shadowMap)renderer.shadowMap.needsUpdate=true;}
+ }
+ /* 5) culling: instanced meshes (trees, windows, posts…) were drawn even off screen (frustumCulled=false, because
+     three r128 only knows the sphere of one instance). Give each one a sphere around all its instances and cull it.
+     Objects smaller than ~1.2 px on screen are skipped too (main view only; shadows still use them). */
+ const F=THREE.Frustum.prototype,S=new THREE.Sphere(),m4=new THREE.Matrix4(),v3=new THREE.Vector3();
+ function instSphere(o){
+  const g=o.geometry;if(!g.boundingSphere)g.computeBoundingSphere();const gs=g.boundingSphere,n=o.count,a=o.instanceMatrix.array;
+  const gx=gs.center.x,gy=gs.center.y,gz=gs.center.z,P=new Float64Array(n*4);let sx=0,sy=0,sz=0;
+  for(let i=0,k=0;i<n;i++,k+=16){
+   const x=a[k]*gx+a[k+4]*gy+a[k+8]*gz+a[k+12],y=a[k+1]*gx+a[k+5]*gy+a[k+9]*gz+a[k+13],z=a[k+2]*gx+a[k+6]*gy+a[k+10]*gz+a[k+14];
+   const s=Math.sqrt(Math.max(a[k]*a[k]+a[k+1]*a[k+1]+a[k+2]*a[k+2],a[k+4]*a[k+4]+a[k+5]*a[k+5]+a[k+6]*a[k+6],a[k+8]*a[k+8]+a[k+9]*a[k+9]+a[k+10]*a[k+10]));
+   P[i*4]=x;P[i*4+1]=y;P[i*4+2]=z;P[i*4+3]=gs.radius*s;sx+=x;sy+=y;sz+=z;}
+  const c=n?new THREE.Vector3(sx/n,sy/n,sz/n):new THREE.Vector3();let r=0;
+  for(let i=0;i<n;i++)r=Math.max(r,Math.hypot(P[i*4]-c.x,P[i*4+1]-c.y,P[i*4+2]-c.z)+P[i*4+3]);
+  o.__ibs=new THREE.Sphere(c,r);o.__ibsV=o.instanceMatrix.version;o.__ibsN=n;
+ }
+ PL.minPx=1.2;PL.culled=0;
+ F.intersectsObject=function(o){
+  if(o.isInstancedMesh){if(o.__ibsV!==o.instanceMatrix.version||o.__ibsN!==o.count)instSphere(o);S.copy(o.__ibs);}
+  else{const g=o.geometry;if(g.boundingSphere===null)g.computeBoundingSphere();S.copy(g.boundingSphere);}
+  S.applyMatrix4(o.matrixWorld);
+  if(!this.intersectsSphere(S))return false;
+  if(PL.cam&&!PL.inShadow){const d=S.center.distanceTo(PL.cam.position);if(d>S.radius&&S.radius*PL.k<PL.minPx*d){PL.culled++;return false;}}
+  return true;
+ };
+ function setupCulling(){
+  if(typeof scene==='undefined'||typeof camera==='undefined')return;
+  let n=0;scene.traverse(o=>{if(o.isInstancedMesh&&!o.frustumCulled&&!o.userData.noCull){o.frustumCulled=true;instSphere(o);n++;}});PL.instCulled=n;
+  const sm=renderer.shadowMap,r0=sm.render;sm.render=function(){PL.inShadow=true;try{return r0.apply(this,arguments);}finally{PL.inShadow=false;}};
+  const upd=()=>{PL.k=innerHeight/2/Math.tan(camera.fov*Math.PI/360);};upd();addEventListener('resize',upd);
+  PL.cam=camera;PL.dirty=1;
+ }
+ function go(){try{setupCulling();}catch(e){console.warn('perf-lab cull',e);}try{phoneShadow();}catch(e){console.warn('perf-lab shadow',e);}try{mergeMaterials();}catch(e){console.warn('perf-lab merge',e);}}
+ /* run from the end of the page (perf-v107 block), before the first frame: hidden originals are then never uploaded to the GPU */
+ window.__plGo=go;
+})();
+</script>
 <script>/* polygon-clipping 0.15.7 (MIT, github.com/mfogel/polygon-clipping) */
 !function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(t="undefined"!=typeof globalThis?globalThis:t||self).polygonClipping=e()}(this,(function(){"use strict";
 /**
@@ -5876,6 +6018,28 @@ function blocked(x,z){if(!inPoly(x,z,BOUNDARY))return true;if(inPoly(x,z,CANAL))
   if(inPoly(x,z,GREEN[1].p)||inPoly(x,z,PARKING[0]))return true;return nearRoad(x,z,1.2);}
 /* Clip the full footprint of existing paving tiles; keep their original centre lines. */
 const campusWalkAudit={tiles:0,clipped:0,removed:0,errors:0};
+/* perf-lab: exact fast path for walk tiles. A tile that lies strictly inside the campus boundary and strictly apart
+   from every nearby mask (no edge crossing or touching, no vertex inside the other) keeps its whole area, so the
+   polygon clipping below would only confirm "intact". Anything closer than that still goes through polygon clipping. */
+function plSegHit(a,b,c,d){
+ if(Math.max(a[0],b[0])<Math.min(c[0],d[0])-1e-7||Math.max(c[0],d[0])<Math.min(a[0],b[0])-1e-7||Math.max(a[1],b[1])<Math.min(c[1],d[1])-1e-7||Math.max(c[1],d[1])<Math.min(a[1],b[1])-1e-7)return false;
+ const o=(p,q,r)=>(q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0]);
+ const d1=o(c,d,a),d2=o(c,d,b),d3=o(a,b,c),d4=o(a,b,d),e=1e-9;
+ if(Math.abs(d1)<e||Math.abs(d2)<e||Math.abs(d3)<e||Math.abs(d4)<e)return true;
+ return (d1>0)!==(d2>0)&&(d3>0)!==(d4>0);}
+function plEdgesHit(A,B,bb){for(let i=0;i<A.length;i++){const a=A[i],b=A[(i+1)%A.length];
+  for(let j=0;j<B.length;j++){const c=B[j],d=B[(j+1)%B.length];
+   if(bb&&((c[0]<bb[0]&&d[0]<bb[0])||(c[0]>bb[2]&&d[0]>bb[2])||(c[1]<bb[1]&&d[1]<bb[1])||(c[1]>bb[3]&&d[1]>bb[3])))continue;
+   if(plSegHit(a,b,c,d))return true;}}return false;}
+function plTileClear(corners,b,nearby){
+ /* with no edge crossing or touching, one point decides inside/outside for the whole tile */
+ if(plEdgesHit(corners,BOUNDARY,b))return false;
+ if(!inPoly(corners[0][0],corners[0][1],BOUNDARY))return false;
+ for(const m of nearby){const P=m.p;
+  if(plEdgesHit(corners,P,null))return false;
+  if(inPoly(corners[0][0],corners[0][1],P))return false;
+  if(inPoly(P[0][0],P[0][1],corners))return false;}
+ return true;}
 function clipCampusWalkTiles(tiles,width,G,material){
  const PC=window.polygonClipping;if(!PC)return tiles;
  const bounds=p=>[Math.min(...p.map(v=>v[0])),Math.min(...p.map(v=>v[1])),Math.max(...p.map(v=>v[0])),Math.max(...p.map(v=>v[1]))];
@@ -5891,6 +6055,7 @@ function clipCampusWalkTiles(tiles,width,G,material){
   campusWalkAudit.tiles++;
   const corners=[[-.54,-width/2],[.54,-width/2],[.54,width/2],[-.54,width/2]].map(([u,v])=>[p.x+p.tx*u+p.nx*v,p.z+p.tz*u+p.nz*v]),b=bounds(corners);
   const nearby=indexed.filter(m=>m.b[0]<b[2]&&m.b[2]>b[0]&&m.b[1]<b[3]&&m.b[3]>b[1]);
+  if(plTileClear(corners,b,nearby)){intact.push(p);return;}
   try{
    const inside=PC.intersection([corners],[BOUNDARY]),result=nearby.length?PC.difference(inside,...nearby.map(m=>[m.p])):inside;
    const remaining=result.reduce((s,poly)=>s+area(poly[0])-poly.slice(1).reduce((a,h)=>a+area(h),0),0);
@@ -5981,10 +6146,24 @@ for(let i=treeSpots.length-1;i>=0;i--)if(inPoly(treeSpots[i][0],treeSpots[i][1],
 (function(){
   const G=new THREE.Group();G.name="notes1013";
   const L=(c,o)=>new THREE.MeshLambertMaterial(Object.assign({color:c},o||{}));
-  const roadD=(x,z)=>{let best=1e9;for(const[t,pts]of ROADS){if(t==="f"||!Array.isArray(pts))continue;const hw=t==="r"?3.5:2.5;for(let i=0;i<pts.length-1;i++){const[x1,z1]=pts[i],[x2,z2]=pts[i+1];const dx=x2-x1,dz=z2-z1,L2=dx*dx+dz*dz||1;let u=((x-x1)*dx+(z-z1)*dz)/L2;u=Math.max(0,Math.min(1,u));best=Math.min(best,Math.hypot(x1+dx*u-x,z1+dz*u-z)-hw);}}
+  const roadDFull=(x,z)=>{let best=1e9;for(const[t,pts]of ROADS){if(t==="f"||!Array.isArray(pts))continue;const hw=t==="r"?3.5:2.5;for(let i=0;i<pts.length-1;i++){const[x1,z1]=pts[i],[x2,z2]=pts[i+1];const dx=x2-x1,dz=z2-z1,L2=dx*dx+dz*dz||1;let u=((x-x1)*dx+(z-z1)*dz)/L2;u=Math.max(0,Math.min(1,u));best=Math.min(best,Math.hypot(x1+dx*u-x,z1+dz*u-z)-hw);}}
     for(const pts of MAINROAD)for(let i=0;i<pts.length-1;i++){const[x1,z1]=pts[i],[x2,z2]=pts[i+1];const dx=x2-x1,dz=z2-z1,L2=dx*dx+dz*dz||1;let u=((x-x1)*dx+(z-z1)*dz)/L2;u=Math.max(0,Math.min(1,u));best=Math.min(best,Math.hypot(x1+dx*u-x,z1+dz*u-z)-9);}return best;};
+  /* perf-lab: same value as roadDFull, using a 20 m grid of road segments. A segment outside the 3x3 cells around
+     the point is at least 20 m away (value >= 20-9 = 11), so any result below 11 is exact; otherwise scan everything. */
+  const RDG=(()=>{const cs=20,g=new Map(),segs=[];
+    for(const[t,pts]of ROADS){if(t==="f"||!Array.isArray(pts))continue;const hw=t==="r"?3.5:2.5;for(let i=0;i<pts.length-1;i++)segs.push([pts[i],pts[i+1],hw]);}
+    for(const pts of MAINROAD)for(let i=0;i<pts.length-1;i++)segs.push([pts[i],pts[i+1],9]);
+    segs.forEach((sg,k)=>{const[a,b]=sg;for(let cx=Math.floor(Math.min(a[0],b[0])/cs);cx<=Math.floor(Math.max(a[0],b[0])/cs);cx++)for(let cz=Math.floor(Math.min(a[1],b[1])/cs);cz<=Math.floor(Math.max(a[1],b[1])/cs);cz++){const key=cx+","+cz;let l=g.get(key);if(!l)g.set(key,l=[]);l.push(k);}});
+    return{cs,g,segs};})();
+  const roadD=(x,z)=>{const{cs,g,segs}=RDG,cx=Math.floor(x/cs),cz=Math.floor(z/cs);let best=1e9;
+    for(let a=-1;a<=1;a++)for(let b=-1;b<=1;b++){const l=g.get((cx+a)+","+(cz+b));if(!l)continue;
+      for(const k of l){const[[x1,z1],[x2,z2],hw]=segs[k];const dx=x2-x1,dz=z2-z1,L2=dx*dx+dz*dz||1;let u=((x-x1)*dx+(z-z1)*dz)/L2;u=Math.max(0,Math.min(1,u));best=Math.min(best,Math.hypot(x1+dx*u-x,z1+dz*u-z)-hw);}}
+    return best<11?best:roadDFull(x,z);};
   const SHED=[[16,-8],[13,-2],[-109,-75],[-105,-82],[17,-10]];
-  const inB=(x,z)=>BLD.some(b=>b.p&&b.kind!=="bridge"&&inPoly(x,z,b.p))||inPoly(x,z,CANAL)||inPoly(x,z,SHED);
+  /* perf-lab: bounding box first (a point outside the box cannot be inside the polygon) */
+  let inBB=null;const bbOf=p=>{let a=1e9,b=1e9,c=-1e9,d=-1e9;for(const[x,z]of p){if(x<a)a=x;if(z<b)b=z;if(x>c)c=x;if(z>d)d=z;}return[a,b,c,d];};
+  const inB=(x,z)=>{if(!inBB)inBB=BLD.filter(b=>b.p&&b.kind!=="bridge").map(b=>[b.p,bbOf(b.p)]);
+    for(const[p,q]of inBB)if(x>=q[0]&&x<=q[2]&&z>=q[1]&&z<=q[3]&&inPoly(x,z,p))return true;return inPoly(x,z,CANAL)||inPoly(x,z,SHED);};
   const bridge=BLD.find(b=>b.kind==="bridge");
   function pieces(pts,step,w){const out=[];for(let i=0;i<pts.length-1;i++){const[x1,z1]=pts[i],[x2,z2]=pts[i+1];const Lg=Math.hypot(x2-x1,z2-z1);if(Lg<0.01)continue;const tx=(x2-x1)/Lg,tz=(z2-z1)/Lg;
       for(let d=step/2;d<Lg;d+=step){const x=x1+tx*d,z=z1+tz*d;if(roadD(x,z)<w/2+0.1||inB(x,z)||inPoly(x,z,ZONE_BLUE)||inPoly(x,z,ZONE_GREEN)||!inPoly(x,z,BOUNDARY)||inPoly(x,z,STADIUM.outer)||inPoly(x,z,LOT52_GATE))continue;out.push({x,z,tx,tz,nx:-tz,nz:tx,r:-Math.atan2(tz,tx),onBridge:bridge&&inPoly(x,z,bridge.p)});}}return out;}
@@ -6603,6 +6782,9 @@ addEventListener("resize",resize);resize();
 const v=new THREE.Vector3(),needle=document.getElementById("needle");
 function screen(pos){v.copy(pos).project(camera);if(v.z>1)return null;return[(v.x*.5+.5)*innerWidth,(-v.y*.5+.5)*innerHeight];}
 const lp=new THREE.Vector3();
+/* perf-lab: render on demand — a frame is drawn when the camera moved, something animates, the user just interacted, or something asked for it (window.__plDirty); otherwise at least once a second */
+let plKey="",plLast=0,plInput=0;const PLS=window.__pl||{dirty:1,composed:0};
+["pointerdown","pointermove","pointerup","wheel","keydown","touchstart","touchmove","click"].forEach(e=>addEventListener(e,()=>{plInput=performance.now();},{passive:true,capture:true}));
 function frame(now){
   if(fly){const k=Math.min(1,(now-fly.t0)/fly.dur),e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;controls.target.lerpVectors(fly.fT,fly.tT,e);camera.position.lerpVectors(fly.fP,fly.tP,e);if(k>=1)fly=null;}
   controls.update();
@@ -6612,6 +6794,12 @@ function frame(now){
     const cd=camera.position.distanceTo(controls.target),nn=Math.min(Math.max(cd*0.04,0.5),60);
     if(Math.abs(camera.near-nn)>nn*0.02){camera.near=nn;camera.updateProjectionMatrix();}
     if(window.__surfaceLOD)window.__surfaceLOD(cd);}
+  {const p=camera.position,q=camera.quaternion,key=p.x+","+p.y+","+p.z+","+q._x+","+q._y+","+q._z+","+q._w+","+camera.near+","+camera.aspect+","+camera.zoom;
+   const moving=key!==plKey;plKey=key;if(PLS.tick)PLS.tick();if(PLS.frame)try{PLS.frame(now,moving);}catch(e){PLS.err=String(e&&e.stack||e).slice(0,400);}
+   let dirty=moving||fly||halo.visible||nav.from||nav.dots||PLS.dirty||now-plInput<1200||renderer.shadowMap.needsUpdate||now-plLast>1000;
+   if(!dirty){const c=PLS.composed;scene.updateMatrixWorld();dirty=PLS.composed!==c;}
+   if(!dirty){requestAnimationFrame(frame);return;}
+   PLS.dirty=0;plLast=now;PLS.renders=(PLS.renders||0)+1;}
   renderer.render(scene,camera);
   /* labels: always show number; show name when close, then drop names that collide */
   const dist=camera.position.distanceTo(controls.target);
@@ -12562,7 +12750,9 @@ const a={version:172,building:'63',sideFrameBeams:beams,sideSolidSlabs:solidSlab
   });
  }
  function go(){throttleMirrors();batchScene();}
- if(document.readyState==='complete')setTimeout(go,1200);else addEventListener('load',()=>setTimeout(go,1200));
+ /* perf-lab: the scene is complete when this last script runs, so batch now, before the first frame is drawn */
+ try{if(window.__plGo)window.__plGo();}catch(e){console.warn('perf-lab',e);}
+ go();
 })();
 </script>
 

@@ -289,6 +289,148 @@ body.side-open .map-label-toggle{display:none;}
  }
 })();
 </script>
+<script>/* perf-lab — separate fast build (not the public site). Draws the same map, with less work per frame.
+   1) Matrices: an object's matrix is recomposed only when its position/rotation/scale actually changed
+      (three.js otherwise recomposes and re-multiplies all ~10k objects every frame).
+   2) Phones: pixel ratio capped at 1.5 (adaptive down to 1 if frames stay slow), shadow map 2048 instead of 4096.
+   3) Shared materials: materials that are identical in day, evening and night are merged into one, so the
+      perf-v107 batching can join more meshes (fewer draw calls).
+   4) window.__plDirty(): anything that changes the picture without moving the camera asks for a new frame;
+      texture/material updates and changed transforms do this automatically. */
+(function(){
+ 'use strict';
+ if(!window.THREE)return;
+ const PL=window.__pl={composed:0,merged:0,matsBefore:0,matsAfter:0,pr:0,dirty:1};
+ window.__plDirty=()=>{PL.dirty=1;};
+
+ /* 1) recompose only on change */
+ const O=THREE.Object3D.prototype,compose=O.updateMatrix;
+ O.updateMatrix=function(){
+  const p=this.position,q=this.quaternion,s=this.scale;let c=this.__mc;
+  if(c!==undefined&&c[0]===p.x&&c[1]===p.y&&c[2]===p.z&&c[3]===q._x&&c[4]===q._y&&c[5]===q._z&&c[6]===q._w&&c[7]===s.x&&c[8]===s.y&&c[9]===s.z)return;
+  if(c===undefined)c=this.__mc=new Float64Array(10);
+  c[0]=p.x;c[1]=p.y;c[2]=p.z;c[3]=q._x;c[4]=q._y;c[5]=q._z;c[6]=q._w;c[7]=s.x;c[8]=s.y;c[9]=s.z;
+  PL.composed++;compose.call(this);
+ };
+ /* 1b) quiet subtrees: a child whose whole subtree has not changed lately is skipped by updateMatrixWorld.
+     Each sleeping subtree (quiet for 20 frames) is still re-checked every 16 frames, every frame for a moment after a click/key,
+     when its parent moves (force), and as soon as something is added under it. */
+ let tick=0,wakeAll=0;PL.wake=()=>{wakeAll=3;};
+ ['pointerdown','pointerup','click','keydown','wheel'].forEach(e=>addEventListener(e,()=>{wakeAll=3;},{passive:true,capture:true}));
+ const add=O.add;O.add=function(){for(let p=this;p;p=p.parent)p.__q=0;return add.apply(this,arguments);};
+ O.updateMatrixWorld=function(force){
+  if(this.matrixAutoUpdate)this.updateMatrix();
+  if(this.matrixWorldNeedsUpdate||force){
+   if(this.parent===null)this.matrixWorld.copy(this.matrix);else this.matrixWorld.multiplyMatrices(this.parent.matrixWorld,this.matrix);
+   this.matrixWorldNeedsUpdate=false;force=true;
+  }
+  const ch=this.children;
+  for(let i=0,l=ch.length;i<l;i++){const c=ch[i];
+   if(!force&&c.__q>20&&wakeAll===0&&((c.id+tick)&15)!==0)continue;
+   const before=PL.composed;c.updateMatrixWorld(force);
+   if(PL.composed===before&&!force)c.__q=(c.__q|0)+1;else c.__q=0;
+  }
+ };
+ const sceneUMW=THREE.Scene.prototype.updateMatrixWorld;
+ if(sceneUMW&&sceneUMW!==O.updateMatrixWorld)PL.sceneOwnUMW=true;
+ PL.tick=()=>{tick++;if(wakeAll>0)wakeAll--;};
+ for(const C of [THREE.Texture,THREE.Material]){
+  const d=Object.getOwnPropertyDescriptor(C.prototype,'needsUpdate');
+  try{if(d&&d.set&&d.configurable)Object.defineProperty(C.prototype,'needsUpdate',{configurable:true,get:d.get,set(v){PL.dirty=1;d.set.call(this,v);}});}catch(e){}
+ }
+
+ /* 2) phones: lighter pixel ratio and shadow map */
+ const phone=matchMedia('(pointer:coarse)').matches||/Android|iPhone|iPad|Mobi/.test(navigator.userAgent);
+ PL.phone=phone;
+ let main=null;const Base=THREE.WebGLRenderer;
+ function Renderer(params){const r=new Base(params);
+  if(!main){main=r;const setPR=r.setPixelRatio;r.setPixelRatio=function(v){if(phone)v=Math.min(v,PL.cap||1.5);PL.pr=v;return setPR.call(this,v);};}
+  return r;}
+ Renderer.prototype=Base.prototype;THREE.WebGLRenderer=Renderer;
+ /* adaptive: if the median frame stays slow for 2 s while moving, step the pixel ratio down (1.5 → 1.25 → 1) */
+ const ft=[];let lastT=0,lastStep=0;
+ PL.frame=function(t,moving){
+  if(!phone||!main)return;
+  if(!moving){lastT=0;return;}
+  if(lastT){ft.push(t-lastT);if(ft.length>120)ft.shift();}lastT=t;
+  if(ft.length<120||t-lastStep<2500)return;
+  const m=ft.slice().sort((a,b)=>a-b)[60];
+  const cur=main.getPixelRatio();
+  if(m>40&&cur>1){PL.cap=Math.max(1,cur-.25);main.setPixelRatio(PL.cap);ft.length=0;lastStep=t;}
+ };
+
+ /* 3) merge materials that look the same in every light mode (before perf-v107 batches the scene) */
+ function sig(m){
+  const o=[m.type,m.side,m.transparent,m.opacity,m.vertexColors,m.flatShading,m.depthWrite,m.depthTest,m.polygonOffset,m.polygonOffsetFactor,
+   m.polygonOffsetUnits,m.alphaTest,m.fog,m.toneMapped,m.wireframe,m.blending,m.colorWrite,m.visible,m.dithering,m.roughness,m.metalness,
+   m.emissiveIntensity,m.shininess,m.reflectivity,m.envMapIntensity,m.lightMapIntensity,m.aoMapIntensity,m.normalScale&&m.normalScale.x,m.bumpScale];
+  for(const k of ['color','emissive','specular'])o.push(m[k]?m[k].getHex():'');
+  for(const k of ['map','emissiveMap','alphaMap','normalMap','envMap','lightMap','aoMap','roughnessMap','metalnessMap','bumpMap','displacementMap','specularMap'])o.push(m[k]?m[k].uuid:'');
+  return o.join('|');
+ }
+ function mergeMaterials(){
+  if(typeof scene==='undefined')return;
+  const t0=performance.now(),mats=new Map();
+  scene.traverse(o=>{if(!o.isMesh||Array.isArray(o.material)||!o.material)return;const m=o.material;
+   if(m.isShaderMaterial||m.transparent||m.onBeforeCompile!==THREE.Material.prototype.onBeforeCompile||m.userData.noMerge)return;
+   if(o===window.halo||o.userData.noMerge)return;
+   let l=mats.get(m);if(!l){l=[];mats.set(m,l);}l.push(o);});
+  PL.matsBefore=mats.size;
+  const buttons=[...document.querySelectorAll('[data-light]')],pressed=buttons.find(b=>b.getAttribute('aria-pressed')==='true');
+  const keys=new Map();mats.forEach((_,m)=>keys.set(m,[]));
+  const modes=buttons.length?buttons:[null];
+  for(const b of modes){if(b)b.click();mats.forEach((_,m)=>keys.get(m).push(sig(m)));}
+  if(pressed)pressed.click();
+  const canon=new Map();let merged=0;
+  /* three r128 caches the shader on the material: only share between meshes that need the same shader variant */
+  const kind=o=>(o.isInstancedMesh?'I'+(o.instanceColor?'c':''):'M')+(o.isSkinnedMesh?'s':'')+(o.geometry.attributes.tangent?'t':'')+(o.geometry.attributes.color?'v':'')+(Object.keys(o.geometry.morphAttributes||{}).length?'m':'');
+  mats.forEach((users,m)=>{const kinds=new Set(users.map(kind));if(kinds.size>1)return;
+   const k=keys.get(m).join('#')+'#'+[...kinds][0];const c=canon.get(k);
+   if(!c){canon.set(k,m);return;}
+   users.forEach(o=>{o.material=c;});merged++;});
+  PL.merged=merged;PL.matsAfter=canon.size;PL.mergeMs=Math.round(performance.now()-t0);PL.dirty=1;
+ }
+ function phoneShadow(){
+  if(!phone||typeof sun==='undefined'||!sun.shadow)return;
+  if(sun.shadow.mapSize.x>2048){sun.shadow.mapSize.set(2048,2048);if(sun.shadow.map){sun.shadow.map.dispose();sun.shadow.map=null;}
+   if(renderer&&renderer.shadowMap)renderer.shadowMap.needsUpdate=true;}
+ }
+ /* 5) culling: instanced meshes (trees, windows, posts…) were drawn even off screen (frustumCulled=false, because
+     three r128 only knows the sphere of one instance). Give each one a sphere around all its instances and cull it.
+     Objects smaller than ~1.2 px on screen are skipped too (main view only; shadows still use them). */
+ const F=THREE.Frustum.prototype,S=new THREE.Sphere(),m4=new THREE.Matrix4(),v3=new THREE.Vector3();
+ function instSphere(o){
+  const g=o.geometry;if(!g.boundingSphere)g.computeBoundingSphere();const gs=g.boundingSphere,n=o.count,a=o.instanceMatrix.array;
+  const gx=gs.center.x,gy=gs.center.y,gz=gs.center.z,P=new Float64Array(n*4);let sx=0,sy=0,sz=0;
+  for(let i=0,k=0;i<n;i++,k+=16){
+   const x=a[k]*gx+a[k+4]*gy+a[k+8]*gz+a[k+12],y=a[k+1]*gx+a[k+5]*gy+a[k+9]*gz+a[k+13],z=a[k+2]*gx+a[k+6]*gy+a[k+10]*gz+a[k+14];
+   const s=Math.sqrt(Math.max(a[k]*a[k]+a[k+1]*a[k+1]+a[k+2]*a[k+2],a[k+4]*a[k+4]+a[k+5]*a[k+5]+a[k+6]*a[k+6],a[k+8]*a[k+8]+a[k+9]*a[k+9]+a[k+10]*a[k+10]));
+   P[i*4]=x;P[i*4+1]=y;P[i*4+2]=z;P[i*4+3]=gs.radius*s;sx+=x;sy+=y;sz+=z;}
+  const c=n?new THREE.Vector3(sx/n,sy/n,sz/n):new THREE.Vector3();let r=0;
+  for(let i=0;i<n;i++)r=Math.max(r,Math.hypot(P[i*4]-c.x,P[i*4+1]-c.y,P[i*4+2]-c.z)+P[i*4+3]);
+  o.__ibs=new THREE.Sphere(c,r);o.__ibsV=o.instanceMatrix.version;o.__ibsN=n;
+ }
+ PL.minPx=1.2;PL.culled=0;
+ F.intersectsObject=function(o){
+  if(o.isInstancedMesh){if(o.__ibsV!==o.instanceMatrix.version||o.__ibsN!==o.count)instSphere(o);S.copy(o.__ibs);}
+  else{const g=o.geometry;if(g.boundingSphere===null)g.computeBoundingSphere();S.copy(g.boundingSphere);}
+  S.applyMatrix4(o.matrixWorld);
+  if(!this.intersectsSphere(S))return false;
+  if(PL.cam&&!PL.inShadow){const d=S.center.distanceTo(PL.cam.position);if(d>S.radius&&S.radius*PL.k<PL.minPx*d){PL.culled++;return false;}}
+  return true;
+ };
+ function setupCulling(){
+  if(typeof scene==='undefined'||typeof camera==='undefined')return;
+  let n=0;scene.traverse(o=>{if(o.isInstancedMesh&&!o.frustumCulled&&!o.userData.noCull){o.frustumCulled=true;instSphere(o);n++;}});PL.instCulled=n;
+  const sm=renderer.shadowMap,r0=sm.render;sm.render=function(){PL.inShadow=true;try{return r0.apply(this,arguments);}finally{PL.inShadow=false;}};
+  const upd=()=>{PL.k=innerHeight/2/Math.tan(camera.fov*Math.PI/360);};upd();addEventListener('resize',upd);
+  PL.cam=camera;PL.dirty=1;
+ }
+ function go(){try{setupCulling();}catch(e){console.warn('perf-lab cull',e);}try{phoneShadow();}catch(e){console.warn('perf-lab shadow',e);}try{mergeMaterials();}catch(e){console.warn('perf-lab merge',e);}}
+ /* run from the end of the page (perf-v107 block), before the first frame: hidden originals are then never uploaded to the GPU */
+ window.__plGo=go;
+})();
+</script>
 
 
 
@@ -584,13 +726,27 @@ wallMats.osm=osmMat;
 const OSMB=D.osmd.map(([n,lv,p])=>{const m=rotX(new THREE.Mesh(new THREE.ExtrudeGeometry(shape(p),{depth:lv*3.1,bevelEnabled:false}),[new THREE.MeshLambertMaterial({color:"#a3a8ad"}),osmMat]));
   m.castShadow=true;m.receiveShadow=true;scene.add(m);return{n,m};});
 
+/* perf-lab: same font size as `while(measureText(t).width>limit&&s>min){s-=2}`, found with ~3 measurements instead of
+   one per 2 px step (measuring Thai text is slow): estimate from the first width, then confirm with real measurements. */
+let plFontGen=0;const plFitCache=new Map();try{document.fonts.addEventListener('loadingdone',()=>{plFontGen++;});}catch(e){}
+/* the second draw after fonts.ready gets the cached size unless a web font finished loading in between */
+function plFit(x,text,limit,start,min,font){
+  const key=plFontGen+'|'+font(start)+'|'+limit+'|'+min+'|'+text;const hit=plFitCache.get(key);if(hit!==undefined){x.font=font(hit);return hit;}
+  const r=plFitRaw(x,text,limit,start,min,font);plFitCache.set(key,r);return r;}
+function plFitRaw(x,text,limit,start,min,font){
+  let s=start;x.font=font(s);const w0=x.measureText(text).width;if(w0<=limit||s<=min)return s;
+  const stop=start-2*Math.ceil((start-min)/2);
+  s=Math.max(stop,start-2*Math.max(1,Math.floor((start-start*limit/w0)/2)));
+  while(s+2<start){x.font=font(s+2);if(x.measureText(text).width<=limit)s+=2;else break;}
+  x.font=font(s);while(s>min&&x.measureText(text).width>limit){s-=2;x.font=font(s);}
+  return s;}
 /* ---- name boards on the POI buildings ---- */
 function makeSigns(){SIGNS.forEach(b=>{if(window.__customStorefronts?.has(b.i))return;const p=D.P[b.poi];if(!p)return;const cat=CATS[p.c];
   const big=b.t==="dm",W=big?Math.min(b.w*0.8,12):Math.min(b.w-0.5,6),Hh=big?1.9:1.1;
   const cv=document.createElement("canvas");cv.width=512;cv.height=Math.round(512*Hh/W);const x=cv.getContext("2d");
   x.fillStyle=b.t==="bar"?"#17121f":big?"#ffffff":cat.c;x.fillRect(0,0,cv.width,cv.height);
   const name=p.n.replace(/\s*\(.*\)$/,"");let fs=Math.min(cv.height*0.62,90);x.font=`600 ${fs}px Anuphan, sans-serif`;
-  while(x.measureText(name).width>cv.width*0.9&&fs>14){fs-=2;x.font=`600 ${fs}px Anuphan, sans-serif`;}
+  fs=plFit(x,name,cv.width*0.9,fs,14,v=>`600 ${v}px Anuphan, sans-serif`);
   x.fillStyle=b.t==="bar"?"#e9b8ff":big?"#1d2a3a":"#10151d";x.textAlign="center";x.textBaseline="middle";
   if(b.t==="bar"){x.shadowColor="#c47bff";x.shadowBlur=18;}x.fillText(name,cv.width/2,cv.height/2+fs*0.05);
   const t=new THREE.CanvasTexture(cv);t.anisotropy=4;
@@ -782,8 +938,58 @@ function resize(){renderer.setSize(innerWidth,innerHeight,false);camera.aspect=i
 addEventListener("resize",resize);resize();
 const v=new THREE.Vector3(),needle=document.getElementById("needle");
 function screen(pos){v.copy(pos).project(camera);if(v.z>1)return null;return[(v.x*.5+.5)*innerWidth,(-v.y*.5+.5)*innerHeight];}
-const place=(el,s)=>{if(!s||s[0]<-80||s[0]>innerWidth+80||s[1]<-40||s[1]>innerHeight+40){el.style.visibility="hidden";return false;}el.style.visibility="";el.style.transform=`translate(${s[0]|0}px,${s[1]|0}px) translate(-50%,-100%)`;return true;};
+/* perf-lab: same output, but a style is written only when it changes (613 pins) */
+const place=(el,s)=>{if(!s||s[0]<-80||s[0]>innerWidth+80||s[1]<-40||s[1]>innerHeight+40){if(el.__v!=="hidden"||el.style.visibility!=="hidden"){el.style.visibility="hidden";el.__v="hidden";}return false;}if(el.__v!==""||el.style.visibility!==""){el.style.visibility="";el.__v="";}const t=`translate(${s[0]|0}px,${s[1]|0}px) translate(-50%,-100%)`;if(el.__t!==t||el.style.transform!==t){el.style.transform=t;el.__t=t;}return true;};
+/* perf-lab: the ~600 pins are drawn on one canvas instead of moving ~600 DOM buttons every frame (each move costs a
+   style recalculation per button; ~20-30 ms a frame on a phone). Each pin's picture is drawn once per state from the real
+   button's own layout and styles (sizes, offsets, colours, fonts), cached, and stamped with drawImage. The buttons stay
+   in the page, transparent, for clicks, hover and screen readers; they are moved only when the camera is still. */
+const PLP=(()=>{
+  const cv=document.createElement("canvas");cv.setAttribute("aria-hidden","true");cv.style.cssText="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none";
+  labels.insertBefore(cv,labels.firstChild);
+  const css=document.createElement("style");css.textContent="#labels .pin{opacity:0!important}";document.head.append(css);
+  const ctx=cv.getContext("2d");let dpr=0,cw=0,ch=0,hover=null;const PAD=10;
+  labels.addEventListener("pointerover",e=>{const p=e.target.closest&&e.target.closest(".pin");if(p&&p!==hover){hover=p;PLS.dirty=1;}});
+  labels.addEventListener("pointerout",e=>{const p=e.target.closest&&e.target.closest(".pin");if(p&&p===hover&&!p.contains(e.relatedTarget)){hover=null;PLS.dirty=1;}});
+  const rr=(c,x,y,w,h,r)=>{r=Math.min(r,w/2,h/2);c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath();};
+  const shadowOf=v=>{const m=/(rgba?\([^)]*\)|#[0-9a-f]+)\s+(-?[\d.]+)px\s+(-?[\d.]+)px\s+([\d.]+)px/i.exec(v||"");return m?{c:m[1],x:+m[2],y:+m[3],b:+m[4]}:null;};
+  function sprite(pn){
+    const el=pn.el,gc=el.children[2],key=el.className+"|"+(el===hover?"h":"")+"|"+gc.textContent+"|"+document.body.classList.contains("hide-map-labels")+"|"+(innerWidth<=760)+"|"+dpr;
+    const cache=pn.__spr||(pn.__spr=new Map());let sp=cache.get(key);if(sp!==undefined)return sp;
+    const w=el.offsetWidth,h=el.offsetHeight;if(!w||!h){cache.set(key,null);return null;}
+    const cs=getComputedStyle(el),ic=el.children[0],nm=el.children[1],ics=getComputedStyle(ic),nms=getComputedStyle(nm),gcs=getComputedStyle(gc);
+    const c=document.createElement("canvas");c.width=Math.ceil((w+PAD*2)*dpr);c.height=Math.ceil((h+5+PAD*2)*dpr);const x=c.getContext("2d");x.scale(dpr,dpr);x.translate(PAD,PAD);
+    const bg=cs.backgroundColor,sh=shadowOf(cs.boxShadow);
+    if(sh){x.shadowColor=sh.c;x.shadowOffsetX=sh.x*dpr;x.shadowOffsetY=sh.y*dpr;x.shadowBlur=sh.b*dpr;}
+    x.fillStyle=bg;rr(x,0,0,w,h,h/2);x.fill();x.shadowColor="transparent";
+    x.beginPath();x.moveTo(w/2-5,h);x.lineTo(w/2+5,h);x.lineTo(w/2,h+5);x.closePath();x.fill();
+    if(ic.offsetWidth){x.save();if(ics.filter&&ics.filter!=="none")x.filter=ics.filter;x.globalAlpha=+ics.opacity;
+      x.fillStyle=ics.backgroundColor;x.beginPath();x.arc(ic.offsetLeft+ic.offsetWidth/2,ic.offsetTop+ic.offsetHeight/2,ic.offsetWidth/2,0,Math.PI*2);x.fill();
+      x.font=ics.font;x.fillStyle=ics.color;x.textAlign="center";x.textBaseline="middle";x.fillText(ic.textContent,ic.offsetLeft+ic.offsetWidth/2,ic.offsetTop+ic.offsetHeight/2+.5);x.restore();}
+    if(nm.offsetWidth){x.font=nms.font;x.fillStyle=nms.color;x.textAlign="left";x.textBaseline="middle";x.fillText(nm.textContent,nm.offsetLeft+parseFloat(nms.paddingLeft||0),nm.offsetTop+nm.offsetHeight/2+.5);}
+    if(gc.offsetWidth){x.fillStyle=gcs.backgroundColor;rr(x,gc.offsetLeft,gc.offsetTop,gc.offsetWidth,gc.offsetHeight,gc.offsetHeight/2);x.fill();
+      x.font=gcs.font;x.fillStyle=gcs.color;x.textAlign="center";x.textBaseline="middle";x.fillText(gc.textContent,gc.offsetLeft+gc.offsetWidth/2,gc.offsetTop+gc.offsetHeight/2+.5);}
+    if(cs.outlineStyle!=="none"&&parseFloat(cs.outlineWidth)>0){const lw=parseFloat(cs.outlineWidth),o=parseFloat(cs.outlineOffset)||0;x.lineWidth=lw;x.strokeStyle=cs.outlineColor;rr(x,-o-lw/2,-o-lw/2,w+2*o+lw,h+2*o+lw,h/2+o+lw/2);x.stroke();}
+    sp={c,w,h,a:el.classList.contains("dim")?.18:1};cache.set(key,sp);return sp;}
+  return{
+    /* same on-screen test as place(); the button itself is only moved when sync (camera still) */
+    place(pn,s,sync){const on=!!s&&!(s[0]<-80||s[0]>innerWidth+80||s[1]<-40||s[1]>innerHeight+40);pn.__s=on?s:null;if(sync)place(pn.el,s);return on;},
+    draw(list){
+      const d=window.devicePixelRatio||1,W=innerWidth,H=innerHeight;
+      if(d!==dpr||W!==cw||H!==ch){dpr=d;cw=W;ch=H;cv.width=Math.round(W*d);cv.height=Math.round(H*d);}
+      ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,cv.width,cv.height);ctx.setTransform(dpr,0,0,dpr,0,0);
+      let top=[];
+      for(const pn of list){const el=pn.el;if(el.hidden||!pn.__s||el.classList.contains("gh"))continue;
+        if(el===hover||el.classList.contains("sel")){top.push(pn);continue;}stamp(pn);}
+      top.sort((a,b)=>(a.el===hover)-(b.el===hover)).forEach(stamp);
+      function stamp(pn){const sp=sprite(pn);if(!sp)return;const s=pn.__s;ctx.globalAlpha=sp.a;
+        ctx.drawImage(sp.c,(s[0]|0)-sp.w/2-PAD,(s[1]|0)-sp.h-PAD,sp.c.width/dpr,sp.c.height/dpr);}
+      ctx.globalAlpha=1;}};
+})();
 let lastStatus=0;
+/* perf-lab: render on demand — a frame is drawn when the camera moved, something animates, the user just interacted, or something asked for it (window.__plDirty); otherwise at least once a second */
+let plKey="",plLast=0,plInput=0;const PLS=window.__pl||{dirty:1,composed:0};
+["pointerdown","pointermove","pointerup","wheel","keydown","touchstart","touchmove","click"].forEach(e=>addEventListener(e,()=>{plInput=performance.now();},{passive:true,capture:true}));
 function frame(now){
   if(fly){const k=Math.min(1,(now-fly.t0)/fly.dur),e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;controls.target.lerpVectors(fly.fT,fly.tT,e);camera.position.lerpVectors(fly.fP,fly.tP,e);if(k>=1)fly=null;}
   controls.update();halo.material.opacity=0.55+0.35*Math.sin(now/280);
@@ -792,16 +998,24 @@ function frame(now){
     if(Math.abs(camera.near-nn)>nn*0.02){camera.near=nn;camera.updateProjectionMatrix();}
     if(window.__surfaceLOD)window.__surfaceLOD(cd);
     if(M.line)M.line.visible=cd<450;}
+  if(now-lastStatus>60000){lastStatus=now;refresh();PLS.dirty=1;}
+  {const p=camera.position,q=camera.quaternion,mp=me.pos,key=p.x+","+p.y+","+p.z+","+q._x+","+q._y+","+q._z+","+q._w+","+camera.near+","+camera.aspect+","+camera.zoom+(mp?","+mp.x+","+mp.z:"");
+   const moving=key!==plKey;plKey=key;PLS.moving=moving;if(PLS.tick)PLS.tick();if(PLS.frame)try{PLS.frame(now,moving);}catch(e){PLS.err=String(e&&e.stack||e).slice(0,400);}
+   let dirty=moving||fly||halo.visible||PLS.dirty||now-plInput<1200||renderer.shadowMap.needsUpdate||now-plLast>1000;
+   if(!dirty){const c=PLS.composed;scene.updateMatrixWorld();dirty=PLS.composed!==c;}
+   if(!dirty){requestAnimationFrame(frame);return;}
+   PLS.dirty=0;plLast=now;PLS.renders=(PLS.renders||0)+1;}
   renderer.render(scene,camera);
-  if(now-lastStatus>60000){lastStatus=now;refresh();}
   const dist=camera.position.distanceTo(controls.target);
   const items=[];
-  pins.forEach(pn=>{if(pn.el.hidden||pn.el.classList.contains("gh"))return;const s=screen(pn.pos);if(!place(pn.el,s))return;
+  const plSync=!PLS.moving;
+  pins.forEach(pn=>{if(pn.el.hidden||pn.el.classList.contains("gh"))return;const s=screen(pn.pos);if(!PLP.place(pn,s,plSync))return;
     const want=pn.i===selId||pn.match||(pn.grp&&pn.grp.some(o=>o.match||o.i===selId))||(dist<(innerWidth<=760?380:700)&&camera.position.distanceTo(pn.pos)<(innerWidth<=760?520:900));items.push({pn,s,want,pri:pn.i===selId?0:pn.match?1:2});});
   items.sort((a,b)=>a.pri-b.pri||a.s[1]-b.s[1]);const boxes=[];
   items.forEach(it=>{let show=it.want;if(show){const w=30+it.pn.p.n.length*5.6+(it.pn.el.classList.contains("grp")?24:0),box=[it.s[0]-w/2,it.s[1]-24,it.s[0]+w/2,it.s[1]];
       if(it.pri===2&&boxes.some(o=>box[0]<o[2]&&box[2]>o[0]&&box[1]<o[3]&&box[3]>o[1]))show=false;else boxes.push(box);}
     it.pn.el.classList.toggle("named",show);});
+  PLP.draw(pins);
   RL.forEach(r=>{if(dist>1500){r.el.style.visibility="hidden";return;}const s=screen(r.pos);if(!place(r.el,s))return;
     const box=[s[0]-r.w/2,s[1]-14,s[0]+r.w/2,s[1]];if(boxes.some(o=>box[0]<o[2]&&box[2]>o[0]&&box[1]<o[3]&&box[3]>o[1]))r.el.style.visibility="hidden";else boxes.push(box);});
   place(campusPin,screen(campusPos));
@@ -837,10 +1051,10 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
           const colors=['#ed7c2c','#149a65','#d83431'];colors.forEach((color,i)=>{x.fillStyle=color;x.fillRect(0,10+i*18,c.width,14);});
           x.fillStyle='#faf9ed';x.fillRect(350,0,324,c.height);x.textAlign='center';x.textBaseline='middle';x.fillStyle='#dc3b30';x.font=`900 ${c.height*.7}px Arial`;x.fillText('7',512,c.height*.44);x.fillStyle='#147d54';x.font=`800 ${c.height*.15}px Arial`;x.fillText('ELEVEN',512,c.height*.83);
         }else{
-          x.fillStyle=fg;x.textAlign='center';x.textBaseline='middle';let size=Math.min(c.height*.57,120);x.font=`700 ${size}px Anuphan,sans-serif`;while(x.measureText(text).width>960&&size>16){size-=2;x.font=`700 ${size}px Anuphan,sans-serif`;}x.fillText(text,512,c.height*.5);
+          x.fillStyle=fg;x.textAlign='center';x.textBaseline='middle';let size=Math.min(c.height*.57,120);x.font=`700 ${size}px Anuphan,sans-serif`;size=plFit(x,text,960,size,16,v=>`700 ${v}px Anuphan,sans-serif`);x.fillText(text,512,c.height*.5);
           if(kind==='mixue'){x.fillStyle='#fff';x.fillRect(20,c.height-10,984,3);}
         }t.needsUpdate=true;
-      };draw();textDraws.push(draw);
+      };/* perf-lab: while the web font is still loading, draw once when it is ready instead of twice */if(document.fonts&&document.fonts.status==='loading')document.fonts.ready.then(draw);else draw();textDraws.push(draw);
       const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshLambertMaterial({map:t,side:THREE.DoubleSide}));mesh.position.copy(point(u,v,y));mesh.rotation.y=Math.atan2(nx,nz);mesh.name='individual-shop-fascia';mesh.userData.poi=b.poi;group.add(mesh);
     }
     return {box,label,point,normal:[nx,nz],ux,uz};
@@ -924,7 +1138,7 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
           worldBox(.20,7.3,.20,'#939b92',px,3.65,pz,0);worldBox(1.25,.09,.11,'#535f5e',px,6.8,pz,r);wirePositions.push([px,7,pz]);
           if(!roadLabels.has(name)){
             const cv=document.createElement('canvas');cv.width=768;cv.height=160;const ctx=cv.getContext('2d'),t=new THREE.CanvasTexture(cv);
-            const draw=()=>{ctx.fillStyle='#285b52';ctx.fillRect(0,0,768,160);ctx.strokeStyle='#dae2d0';ctx.lineWidth=6;ctx.strokeRect(8,8,752,144);ctx.fillStyle='#f0eee1';ctx.font='600 58px Anuphan,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(name,384,80,716);t.needsUpdate=true;};draw();textDraws.push(draw);
+            const draw=()=>{ctx.fillStyle='#285b52';ctx.fillRect(0,0,768,160);ctx.strokeStyle='#dae2d0';ctx.lineWidth=6;ctx.strokeRect(8,8,752,144);ctx.fillStyle='#f0eee1';ctx.font='600 58px Anuphan,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(name,384,80,716);t.needsUpdate=true;};/* perf-lab: while the web font is still loading, draw once when it is ready instead of twice */if(document.fonts&&document.fonts.status==='loading')document.fonts.ready.then(draw);else draw();textDraws.push(draw);
             const sign=new THREE.Mesh(new THREE.PlaneGeometry(3.4,.72),new THREE.MeshLambertMaterial({map:t,side:THREE.DoubleSide}));sign.position.set(px,3.2,pz);sign.rotation.y=Math.atan2(nx,nz);group.add(sign);roadLabels.add(name);
           }
         }
@@ -2845,7 +3059,9 @@ b.addEventListener('click',()=>{v=!v;try{localStorage.setItem('kmutnb-back-label
   });
  }
  function go(){throttleMirrors();batchScene();}
- if(document.readyState==='complete')setTimeout(go,1200);else addEventListener('load',()=>setTimeout(go,1200));
+ /* perf-lab: the scene is complete when this last script runs, so batch now, before the first frame is drawn */
+ try{if(window.__plGo)window.__plGo();}catch(e){console.warn('perf-lab',e);}
+ go();
 })();
 </script>
 

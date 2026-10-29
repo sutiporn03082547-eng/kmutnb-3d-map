@@ -1,8 +1,8 @@
 {
  "url": "http://127.0.0.1:8093/back.html",
- "date": "2026-10-29T15:27:24.948Z",
- "total": 677,
- "passed": 677,
+ "date": "2026-10-29T16:00:12.005Z",
+ "total": 747,
+ "passed": 747,
  "failed": 0,
  "results": [
   {
@@ -3069,6 +3069,356 @@
    "name": "name \"โรงเรียนวัดมัชฌันติการาม\" → first row",
    "pass": true,
    "got": "โรงเรียนวัดมัชฌันติการาม"
+  },
+  {
+   "name": "name \"Tomi House พระนครเหนือ\" → first row",
+   "pass": true,
+   "got": "Tomi House พระนครเหนือ"
+  },
+  {
+   "name": "name \"Siricharm\" → first row",
+   "pass": true,
+   "got": "Siricharm"
+  },
+  {
+   "name": "name \"เตี๋ยวต้า เตี๋ยวเส้นคลุก เตี๋ย\" → first row",
+   "pass": true,
+   "got": "เตี๋ยวต้า เตี๋ยวเส้นคลุก เตี๋ยวต้มยำ"
+  },
+  {
+   "name": "name \"เปากะปัง\" → first row",
+   "pass": true,
+   "got": "เปากะปัง"
+  },
+  {
+   "name": "name \"อาหวังหม่าล่าทอด วงศ์สว่าง11\" → first row",
+   "pass": true,
+   "got": "อาหวังหม่าล่าทอด วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"หมูทอด ไก่ทอด พริกไทยดำ\" → first row",
+   "pass": true,
+   "got": "หมูทอด ไก่ทอด พริกไทยดำ"
+  },
+  {
+   "name": "name \"หมูปิ้ง ไก่ปิ้ง ข้าวแกงกะหรี่ญ\" → first row",
+   "pass": true,
+   "got": "หมูปิ้ง ไก่ปิ้ง ข้าวแกงกะหรี่ญี่ปุ่น วงศ์สว่าง11"
+  },
+  {
+   "name": "name \"ผัดไท หอยทอด กร& เก้า\" → first row",
+   "pass": true,
+   "got": "ผัดไท หอยทอด กร& เก้า"
+  },
+  {
+   "name": "name \"หม่าล่า99\" → first row",
+   "pass": true,
+   "got": "หม่าล่า99"
+  },
+  {
+   "name": "name \"โรงเตี๊ยม พระราม 7 ก๋วยเตี๋ยวห\" → first row",
+   "pass": true,
+   "got": "โรงเตี๊ยม พระราม 7 ก๋วยเตี๋ยวหมูต้มยำ"
+  },
+  {
+   "name": "name \"ชูรสนม Churodnom\" → first row",
+   "pass": true,
+   "got": "ชูรสนม Churodnom"
+  },
+  {
+   "name": "name \"ร้านส้มตำเจ๊แตง\" → first row",
+   "pass": true,
+   "got": "ร้านส้มตำเจ๊แตง"
+  },
+  {
+   "name": "name \"อิ๊คคิว ซัง ไก่ทอด ไก่ทอดหาดให\" → first row",
+   "pass": true,
+   "got": "อิ๊คคิว ซัง ไก่ทอด ไก่ทอดหาดใหญ่"
+  },
+  {
+   "name": "name \"ส้มตำภูไท\" → first row",
+   "pass": true,
+   "got": "ส้มตำภูไท"
+  },
+  {
+   "name": "name \"Chickup\" → first row",
+   "pass": true,
+   "got": "Chickup"
+  },
+  {
+   "name": "name \"ต.โภชนาวัดดงมูลเหล็ก\" → first row",
+   "pass": true,
+   "got": "ต.โภชนาวัดดงมูลเหล็ก"
+  },
+  {
+   "name": "name \"สวนบ้านบ้าน\" → first row",
+   "pass": true,
+   "got": "สวนบ้านบ้าน"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวเย็นตาโฟ\" → first row",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวเย็นตาโฟ"
+  },
+  {
+   "name": "name \"ร้านตระกูลน้ำพริก ร้านอาหาร\" → first row",
+   "pass": true,
+   "got": "ร้านตระกูลน้ำพริก ร้านอาหาร"
+  },
+  {
+   "name": "name \"ร้านข้าวแกงป้าเลื่อน\" → first row",
+   "pass": true,
+   "got": "ร้านข้าวแกงป้าเลื่อน"
+  },
+  {
+   "name": "name \"ครัวบ้านพ่อ\" → first row",
+   "pass": true,
+   "got": "ครัวบ้านพ่อ"
+  },
+  {
+   "name": "name \"ก๋วยเตี๋ยวเรือริมสวน\" → first row",
+   "pass": true,
+   "got": "ก๋วยเตี๋ยวเรือริมสวน"
+  },
+  {
+   "name": "name \"ไพลินก๋วยเตี๋ยวเรืออยุธยา by ค\" → first row",
+   "pass": true,
+   "got": "ไพลินก๋วยเตี๋ยวเรืออยุธยา by คุณยุ้ย"
+  },
+  {
+   "name": "name \"หม่าล่าทอดสาขา2 หลังมจพ.\" → first row",
+   "pass": true,
+   "got": "หม่าล่าทอดสาขา2 หลังมจพ."
+  },
+  {
+   "name": "name \"อาคิมต้มเลือดหมู\" → first row",
+   "pass": true,
+   "got": "อาคิมต้มเลือดหมู"
+  },
+  {
+   "name": "name \"ทะเลถัง มาม่าหม้อไฟ By พี่แต้ว\" → first row",
+   "pass": true,
+   "got": "ทะเลถัง มาม่าหม้อไฟ By พี่แต้ว&พี่ชัย"
+  },
+  {
+   "name": "name \"NATA Smoothie\" → first row",
+   "pass": true,
+   "got": "NATA Smoothie"
+  },
+  {
+   "name": "name \"ร้านกาแฟพันธุ์ไทย CPAC พระราม7\" → first row",
+   "pass": true,
+   "got": "ร้านกาแฟพันธุ์ไทย CPAC พระราม7"
+  },
+  {
+   "name": "name \"Café Amazon CPAC\" → first row",
+   "pass": true,
+   "got": "Café Amazon CPAC"
+  },
+  {
+   "name": "name \"JuicePop : Smoothie ผลไม้ปั่น\" → first row",
+   "pass": true,
+   "got": "JuicePop : Smoothie ผลไม้ปั่น"
+  },
+  {
+   "name": "name \"เด็กชา สาขาหลังมจพ. dek-cha km\" → first row",
+   "pass": true,
+   "got": "เด็กชา สาขาหลังมจพ. dek-cha kmutnb (หน้าเบลส ซัลชา)"
+  },
+  {
+   "name": "name \"Heart & Heal - Cafe' & Space\" → first row",
+   "pass": true,
+   "got": "Heart & Heal - Cafe' & Space"
+  },
+  {
+   "name": "name \"JAMU\" → first row",
+   "pass": true,
+   "got": "JAMU"
+  },
+  {
+   "name": "name \"Koffeechef\" → first row",
+   "pass": true,
+   "got": "Koffeechef"
+  },
+  {
+   "name": "name \"PJ มะพร้าวปั่นนมสด วงศ์สว่าง ซ\" → first row",
+   "pass": true,
+   "got": "PJ มะพร้าวปั่นนมสด วงศ์สว่าง ซ. 4"
+  },
+  {
+   "name": "name \"Libra House Bar\" → first row",
+   "pass": true,
+   "got": "Libra House Bar"
+  },
+  {
+   "name": "name \"พฤกษ์พิบูล อพาร์ทเม้นท์\" → first row",
+   "pass": true,
+   "got": "พฤกษ์พิบูล อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"The Live 59\" → first row",
+   "pass": true,
+   "got": "The Live 59"
+  },
+  {
+   "name": "name \"S & P Copy\" → first row",
+   "pass": true,
+   "got": "S & P Copy"
+  },
+  {
+   "name": "name \"ศูนย์ถ่ายเอกสาร มิสเตอร์. ก็อป\" → first row",
+   "pass": true,
+   "got": "ศูนย์ถ่ายเอกสาร มิสเตอร์. ก็อปปี้"
+  },
+  {
+   "name": "name \"ก๊อปปี้ เวิลด์ เอ็กซ์เพรส ม.พร\" → first row",
+   "pass": true,
+   "got": "ก๊อปปี้ เวิลด์ เอ็กซ์เพรส ม.พระจอมเกล้าพระนครเหนือ Copy World Express"
+  },
+  {
+   "name": "name \"MB Copy พระราม7 เข้าเล่มวิทยาน\" → first row",
+   "pass": true,
+   "got": "MB Copy พระราม7 เข้าเล่มวิทยานิพนธ์ สันกาว ปริ๊นแบบA2-Ao ราคาถูก"
+  },
+  {
+   "name": "name \"ร้านแม็ทช์พอยท์\" → first row",
+   "pass": true,
+   "got": "ร้านแม็ทช์พอยท์"
+  },
+  {
+   "name": "name \"แสงทองเภสัช\" → first row",
+   "pass": true,
+   "got": "แสงทองเภสัช"
+  },
+  {
+   "name": "name \"พี่บ่าวหลังสวน ใบกระท่อมชุมพร \" → first row",
+   "pass": true,
+   "got": "พี่บ่าวหลังสวน ใบกระท่อมชุมพร สาขาวงศ์สว่าง"
+  },
+  {
+   "name": "name \"Vshop\" → first row",
+   "pass": true,
+   "got": "Vshop"
+  },
+  {
+   "name": "name \"นครนนท์การแว่น NKN officials\" → first row",
+   "pass": true,
+   "got": "นครนนท์การแว่น NKN officials"
+  },
+  {
+   "name": "name \"Pajamas Body Care\" → first row",
+   "pass": true,
+   "got": "Pajamas Body Care"
+  },
+  {
+   "name": "name \"ปอยซาลอน\" → first row",
+   "pass": true,
+   "got": "ปอยซาลอน"
+  },
+  {
+   "name": "name \"GREEN GROVE\" → first row",
+   "pass": true,
+   "got": "GREEN GROVE"
+  },
+  {
+   "name": "name \"เลิศเลอล่ะ\" → first row",
+   "pass": true,
+   "got": "เลิศเลอล่ะ"
+  },
+  {
+   "name": "name \"MONIKA CLINIC\" → first row",
+   "pass": true,
+   "got": "MONIKA CLINIC"
+  },
+  {
+   "name": "name \"Tooth place dental clinic\" → first row",
+   "pass": true,
+   "got": "Tooth place dental clinic"
+  },
+  {
+   "name": "name \"จิราพรรณ\" → first row",
+   "pass": true,
+   "got": "จิราพรรณ"
+  },
+  {
+   "name": "name \"ร้านทำผม Pit Barber Vintage\" → first row",
+   "pass": true,
+   "got": "ร้านทำผม Pit Barber Vintage"
+  },
+  {
+   "name": "name \"รุ่งเรืองการช่าง ออโต้\" → first row",
+   "pass": true,
+   "got": "รุ่งเรืองการช่าง ออโต้"
+  },
+  {
+   "name": "name \"MALILA Eyelash studio - ต่อขนต\" → first row",
+   "pass": true,
+   "got": "MALILA Eyelash studio - ต่อขนตา ลิฟติ้งขนตา&คิ้ว หลังมจพ. วงศ์สว่าง ติวานนท์ งามวงศ์วาน"
+  },
+  {
+   "name": "name \"ssk sport\" → first row",
+   "pass": true,
+   "got": "ssk sport"
+  },
+  {
+   "name": "name \"บ้านหมอนัท รักษาสัตว์\" → first row",
+   "pass": true,
+   "got": "บ้านหมอนัท รักษาสัตว์"
+  },
+  {
+   "name": "name \"Findeverything\" → first row",
+   "pass": true,
+   "got": "Findeverything"
+  },
+  {
+   "name": "name \"ATM ธนาคารไทยพาณิชย์\" → first row",
+   "pass": true,
+   "got": "ATM ธนาคารไทยพาณิชย์"
+  },
+  {
+   "name": "name \"ATM Bangkok Bank (7-Eleven ซ.ว\" → first row",
+   "pass": true,
+   "got": "ATM Bangkok Bank (7-Eleven ซ.วงศ์สว่าง 11)"
+  },
+  {
+   "name": "name \"ATM ออมสิน @ Sign อพาร์ทเม้นท์\" → first row",
+   "pass": true,
+   "got": "ATM ออมสิน @ Sign อพาร์ทเม้นท์"
+  },
+  {
+   "name": "name \"ATM KTB ธนาคารกรุงไทย\" → first row",
+   "pass": true,
+   "got": "ATM KTB ธนาคารกรุงไทย"
+  },
+  {
+   "name": "name \"ATM ธนาคารไทยพาณิชย์ สถาบันเทค\" → first row",
+   "pass": true,
+   "got": "ATM ธนาคารไทยพาณิชย์ สถาบันเทคโนฯ พระนครเหนือ เครื่อง 1"
+  },
+  {
+   "name": "name \"ATM Government Housing Bank\" → first row",
+   "pass": true,
+   "got": "ATM Government Housing Bank"
+  },
+  {
+   "name": "name \"ATM ธนาคารไทยพาณิชย์ : 7-11 ตล\" → first row",
+   "pass": true,
+   "got": "ATM ธนาคารไทยพาณิชย์ : 7-11 ตลาดสดพระราม 7"
+  },
+  {
+   "name": "name \"ATM Bangkok Bank (7-Eleven ถ.พ\" → first row",
+   "pass": true,
+   "got": "ATM Bangkok Bank (7-Eleven ถ.พิบูลสงคราม)"
+  },
+  {
+   "name": "name \"Krung Thai Bank Cash Deposit M\" → first row",
+   "pass": true,
+   "got": "Krung Thai Bank Cash Deposit Machine (CDM)"
+  },
+  {
+   "name": "name \"ATM ธ.กรุงเทพ อาคาร Vanachai G\" → first row",
+   "pass": true,
+   "got": "ATM ธ.กรุงเทพ อาคาร Vanachai Group"
   },
   {
    "name": "name \"ประตูหลัง มจพ.\" + Enter opens it",

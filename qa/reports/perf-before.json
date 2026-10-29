@@ -1,0 +1,54 @@
+[
+ {
+  "dev": "desktop",
+  "file": "index.html",
+  "run": 0,
+  "objects": 10535,
+  "errors": 0,
+  "firstFrame": 2016,
+  "settled": 4434,
+  "longTasks": 3207,
+  "fps": 46,
+  "worst": 37,
+  "kb": 2542
+ },
+ {
+  "dev": "desktop",
+  "file": "back.html",
+  "run": 0,
+  "objects": 5356,
+  "errors": 0,
+  "firstFrame": 1504,
+  "settled": 4604,
+  "longTasks": 2522,
+  "fps": 62.5,
+  "worst": 30,
+  "kb": 1465
+ },
+ {
+  "dev": "phone",
+  "file": "index.html",
+  "run": 0,
+  "objects": 10535,
+  "errors": 0,
+  "firstFrame": 7161,
+  "settled": 0,
+  "longTasks": 24485,
+  "fps": 10.7,
+  "worst": 152,
+  "kb": 2542
+ },
+ {
+  "dev": "phone",
+  "file": "back.html",
+  "run": 0,
+  "objects": 5356,
+  "errors": 0,
+  "firstFrame": 5990,
+  "settled": 0,
+  "longTasks": 34598,
+  "fps": 12.7,
+  "worst": 182,
+  "kb": 1465
+ }
+]

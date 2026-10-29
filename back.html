@@ -131,6 +131,8 @@ body.side-open .map-label-toggle{display:none;}
 @media (max-width:760px){.map-label-toggle{left:12px;transform:none;bottom:calc(16px + env(safe-area-inset-bottom,0px));padding:8px 12px;font-size:12px;}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;}}
 #list li > button.active{outline:2px solid #ff8a2b;outline-offset:-2px}</style>
+<style>/* 2026-10-29: the "ดูจุดสังเกต" landmark buttons are hidden from the menu (owner: too many). The bar is kept in the page,
+   other scripts still attach to it; shops stay reachable by search, list and pins. */ .landmark-views{display:none!important}</style>
 </head>
 <body>
 <canvas id="c" tabindex="0" aria-label="แผนที่สามมิติย่านหลังมหาวิทยาลัย"></canvas>

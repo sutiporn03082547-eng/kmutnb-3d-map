@@ -1,0 +1,293 @@
+﻿code,id,detail
+no-footprint,B0,shown as see-through placeholder at the shop pin
+no-footprint,B137,shown as see-through placeholder
+no-footprint,B172,shown as see-through placeholder
+no-footprint,B396,shown as see-through placeholder
+no-footprint,B445,shown as see-through placeholder at the shop pin
+no-footprint,B447,shown as see-through placeholder at the shop pin
+no-footprint,B456,shown as see-through placeholder
+footprint-differs,B556,IoU 0.494 with m626
+position-offset,B556,centroid 2.59 m from m626
+size-differs,B556,area ratio 0.497 vs m626
+no-footprint,B583,shown as see-through placeholder
+no-footprint,B775,shown as see-through placeholder at the shop pin
+no-footprint,B776,shown as see-through placeholder
+no-footprint,B777,shown as see-through placeholder at the shop pin
+no-footprint,B981,shown as see-through placeholder
+no-footprint,B992,shown as see-through placeholder
+no-footprint,B1440,shown as see-through placeholder
+no-footprint,B1444,shown as see-through placeholder at the shop pin
+no-footprint,B1445,shown as see-through placeholder at the shop pin
+no-footprint,B1451,shown as see-through placeholder
+no-footprint,B1452,shown as see-through placeholder
+no-footprint,B1572,shown as see-through placeholder at the shop pin
+footprint-differs,B1574,IoU 0.31 with m1724
+size-differs,B1574,area ratio 0.311 vs m1724
+no-footprint,B1640,shown as see-through placeholder
+no-footprint,B1641,shown as see-through placeholder
+no-footprint,B1642,shown as see-through placeholder
+position-offset,B1650,centroid 2.15 m from m1783
+footprint-differs,B1690,IoU 0.179 with m1826
+position-offset,B1690,centroid 5.7 m from m1826
+size-differs,B1690,area ratio 0.388 vs m1826
+position-offset,B1756,centroid 8.96 m from m1896
+size-differs,B1756,area ratio 0.694 vs m1896
+no-footprint,B1796,shown as see-through placeholder
+no-footprint,B1892,shown as see-through placeholder
+no-footprint,B1893,shown as see-through placeholder at the shop pin
+no-footprint,B1894,shown as see-through placeholder
+no-footprint,B1895,shown as see-through placeholder
+no-footprint,B1896,shown as see-through placeholder
+no-footprint,B1897,shown as see-through placeholder
+no-footprint,B1898,shown as see-through placeholder at the shop pin
+no-footprint,B1899,shown as see-through placeholder
+footprint-differs,B1910,IoU 0.444 with m2045
+position-offset,B1910,centroid 3.12 m from m2045
+size-differs,B1910,area ratio 0.445 vs m2045
+no-footprint,B1912,shown as see-through placeholder at the shop pin
+no-footprint,B2035,shown as see-through placeholder
+no-footprint,B2135,shown as see-through placeholder
+no-footprint,B2182,shown as see-through placeholder at the shop pin
+no-footprint,B2227,shown as see-through placeholder at the shop pin
+no-footprint,B2230,shown as see-through placeholder
+footprint-differs,B2487,IoU 0.188 with m2621
+position-offset,B2487,centroid 5.17 m from m2621
+size-differs,B2487,area ratio 0.188 vs m2621
+no-footprint,B2489,shown as see-through placeholder at the shop pin
+no-footprint,B2504,shown as see-through placeholder
+no-footprint,B2518,shown as see-through placeholder
+no-footprint,B2568,shown as see-through placeholder
+no-footprint,B2589,shown as see-through placeholder
+footprint-differs,B2931,IoU 0.486 with m3088
+position-offset,B2931,centroid 2.21 m from m3088
+size-differs,B2931,area ratio 0.491 vs m3088
+no-footprint,B3140,shown as see-through placeholder
+no-footprint,B3192,shown as see-through placeholder at the shop pin
+no-footprint,B3193,shown as see-through placeholder
+no-footprint,B3415,shown as see-through placeholder at the shop pin
+position-offset,B3447,centroid 2.96 m from m3615
+no-footprint,B3482,shown as see-through placeholder at the shop pin
+no-footprint,B3483,shown as see-through placeholder at the shop pin
+no-footprint,B3484,shown as see-through placeholder at the shop pin
+no-footprint,B3485,shown as see-through placeholder at the shop pin
+no-footprint,B3486,shown as see-through placeholder at the shop pin
+no-footprint,B3487,shown as see-through placeholder at the shop pin
+no-footprint,B3488,shown as see-through placeholder at the shop pin
+no-footprint,B3489,shown as see-through placeholder at the shop pin
+no-footprint,B3490,shown as see-through placeholder at the shop pin
+no-footprint,B3491,shown as see-through placeholder at the shop pin
+no-footprint,B3492,shown as see-through placeholder at the shop pin
+no-footprint,B3493,shown as see-through placeholder at the shop pin
+no-footprint,B3494,shown as see-through placeholder at the shop pin
+no-footprint,B3495,shown as see-through placeholder at the shop pin
+no-footprint,B3496,shown as see-through placeholder at the shop pin
+no-footprint,B3497,shown as see-through placeholder at the shop pin
+no-footprint,B3498,shown as see-through placeholder at the shop pin
+no-footprint,B3499,shown as see-through placeholder at the shop pin
+no-footprint,B3500,shown as see-through placeholder at the shop pin
+no-footprint,B3501,shown as see-through placeholder at the shop pin
+no-footprint,B3502,shown as see-through placeholder at the shop pin
+no-footprint,B3503,shown as see-through placeholder at the shop pin
+no-footprint,B3504,shown as see-through placeholder at the shop pin
+no-footprint,B3505,shown as see-through placeholder at the shop pin
+no-footprint,B3506,shown as see-through placeholder at the shop pin
+no-footprint,B3507,shown as see-through placeholder at the shop pin
+no-footprint,B3508,shown as see-through placeholder at the shop pin
+no-footprint,B3509,shown as see-through placeholder at the shop pin
+no-footprint,B3510,shown as see-through placeholder at the shop pin
+no-footprint,B3511,shown as see-through placeholder at the shop pin
+no-footprint,B3512,shown as see-through placeholder at the shop pin
+no-footprint,B3513,shown as see-through placeholder at the shop pin
+no-footprint,B3514,shown as see-through placeholder at the shop pin
+no-footprint,B3515,shown as see-through placeholder at the shop pin
+no-footprint,B3517,shown as see-through placeholder at the shop pin
+no-footprint,B3518,shown as see-through placeholder at the shop pin
+no-footprint,B3519,shown as see-through placeholder at the shop pin
+no-footprint,B3520,shown as see-through placeholder at the shop pin
+no-footprint,B3521,shown as see-through placeholder at the shop pin
+no-footprint,B3522,shown as see-through placeholder at the shop pin
+no-footprint,B3523,shown as see-through placeholder at the shop pin
+no-footprint,B3524,shown as see-through placeholder at the shop pin
+no-footprint,B3525,shown as see-through placeholder at the shop pin
+no-footprint,B3526,shown as see-through placeholder at the shop pin
+no-footprint,B3528,shown as see-through placeholder at the shop pin
+no-footprint,B3529,shown as see-through placeholder at the shop pin
+no-footprint,B3530,shown as see-through placeholder at the shop pin
+no-footprint,B3531,shown as see-through placeholder at the shop pin
+no-footprint,B3532,shown as see-through placeholder at the shop pin
+no-footprint,B3533,shown as see-through placeholder at the shop pin
+no-footprint,B3534,shown as see-through placeholder at the shop pin
+no-footprint,B3535,shown as see-through placeholder at the shop pin
+no-footprint,B3536,shown as see-through placeholder at the shop pin
+no-footprint,B3537,shown as see-through placeholder at the shop pin
+no-footprint,B3538,shown as see-through placeholder at the shop pin
+no-footprint,B3539,shown as see-through placeholder at the shop pin
+no-footprint,B3540,shown as see-through placeholder at the shop pin
+no-footprint,B3541,shown as see-through placeholder at the shop pin
+no-footprint,B3543,shown as see-through placeholder at the shop pin
+no-footprint,B3544,shown as see-through placeholder at the shop pin
+no-footprint,B3546,shown as see-through placeholder at the shop pin
+no-footprint,B3547,shown as see-through placeholder at the shop pin
+no-footprint,B3548,shown as see-through placeholder at the shop pin
+no-footprint,B3549,shown as see-through placeholder at the shop pin
+no-footprint,B3550,shown as see-through placeholder at the shop pin
+no-footprint,B3551,shown as see-through placeholder at the shop pin
+no-footprint,B3552,shown as see-through placeholder at the shop pin
+no-footprint,B3553,shown as see-through placeholder at the shop pin
+no-footprint,B3554,shown as see-through placeholder at the shop pin
+no-footprint,B3555,shown as see-through placeholder at the shop pin
+no-footprint,B3556,shown as see-through placeholder at the shop pin
+no-footprint,B3557,shown as see-through placeholder at the shop pin
+no-footprint,B3558,shown as see-through placeholder at the shop pin
+no-footprint,B3560,shown as see-through placeholder at the shop pin
+no-footprint,B3561,shown as see-through placeholder at the shop pin
+no-footprint,B3563,shown as see-through placeholder at the shop pin
+split-outline-differs,B557,units together IoU 0.494 with m626
+split-outline-differs,"B773,B774",units together IoU 0.392 with m875
+split-outline-differs,"B1441,B1442,B1443,B1446,B1447,B1448",units together IoU 0.355 with m1599
+split-outline-differs,"B1573,B1575",units together IoU 0.499 with m1724
+split-outline-differs,"B1752,B1753,B1754,B1755",units together IoU 0.302 with m1896
+split-outline-differs,B1911,units together IoU 0.328 with m2045
+split-outline-differs,B2930,units together IoU 0.484 with m3088
+buildings-overlap,B79xB943,10.0 m2 (4% of the smaller)
+buildings-overlap,B134xB3120,2.8 m2 (4% of the smaller)
+buildings-overlap,B193xB310,2.6 m2 (0% of the smaller)
+buildings-overlap,B196xB2025,1.1 m2 (2% of the smaller)
+buildings-overlap,B202xB2303,1.2 m2 (2% of the smaller)
+buildings-overlap,B210xB1557,1.5 m2 (4% of the smaller)
+buildings-overlap,B220xB414,19.1 m2 (91% of the smaller)
+buildings-overlap,B237xB1733,5.8 m2 (2% of the smaller)
+buildings-overlap,B307xB1153,8.3 m2 (14% of the smaller)
+buildings-overlap,B310xB2974,28.8 m2 (71% of the smaller)
+buildings-overlap,B313xB2459,1.1 m2 (3% of the smaller)
+buildings-overlap,B340xB1862,2.6 m2 (4% of the smaller)
+buildings-overlap,B340xB1861,11.7 m2 (19% of the smaller)
+buildings-overlap,B359xB827,54.0 m2 (90% of the smaller)
+buildings-overlap,B360xB2367,9.7 m2 (10% of the smaller)
+buildings-overlap,B384xB3194,2.1 m2 (3% of the smaller)
+buildings-overlap,B384xB3191,23.4 m2 (33% of the smaller)
+buildings-overlap,B384xB3190,13.9 m2 (19% of the smaller)
+buildings-overlap,B389xB3389,2.1 m2 (1% of the smaller)
+buildings-overlap,B389xB1875,1.1 m2 (1% of the smaller)
+buildings-overlap,B419xB648,3.1 m2 (3% of the smaller)
+buildings-overlap,B471xB797,1.3 m2 (3% of the smaller)
+buildings-overlap,B559xB1544,5.1 m2 (8% of the smaller)
+buildings-overlap,B582xB893,1.6 m2 (1% of the smaller)
+buildings-overlap,B614xB2871,6.5 m2 (3% of the smaller)
+buildings-overlap,B660xB1622,2.8 m2 (3% of the smaller)
+buildings-overlap,B685xB2390,1.2 m2 (3% of the smaller)
+buildings-overlap,B773xB1164,12.0 m2 (24% of the smaller)
+buildings-overlap,B773xB1165,10.6 m2 (21% of the smaller)
+buildings-overlap,B774xB1165,20.1 m2 (40% of the smaller)
+buildings-overlap,B778xB3252,2.2 m2 (3% of the smaller)
+buildings-overlap,B813xB837,2.2 m2 (2% of the smaller)
+buildings-overlap,B818xB2208,2.0 m2 (1% of the smaller)
+buildings-overlap,B843xB2211,4.1 m2 (1% of the smaller)
+buildings-overlap,B854xB3345,1.4 m2 (2% of the smaller)
+buildings-overlap,B876xB1373,1.1 m2 (3% of the smaller)
+buildings-overlap,B894xB3039,3.2 m2 (2% of the smaller)
+buildings-overlap,B971xB1871,1.6 m2 (1% of the smaller)
+buildings-overlap,B978xB1653,4.2 m2 (5% of the smaller)
+buildings-overlap,B1030xB1866,3.9 m2 (7% of the smaller)
+buildings-overlap,B1031xB1866,5.0 m2 (9% of the smaller)
+buildings-overlap,B1034xB1978,1.7 m2 (2% of the smaller)
+buildings-overlap,B1042xB1938,1.9 m2 (7% of the smaller)
+buildings-overlap,B1046xB1047,3.5 m2 (2% of the smaller)
+buildings-overlap,B1047xB1061,4.8 m2 (6% of the smaller)
+buildings-overlap,B1073xB3383,4.0 m2 (17% of the smaller)
+buildings-overlap,B1078xB1224,2.1 m2 (0% of the smaller)
+buildings-overlap,B1079xB1902,2.1 m2 (3% of the smaller)
+buildings-overlap,B1130xB1664,2.6 m2 (1% of the smaller)
+buildings-overlap,B1141xB3447,11.3 m2 (4% of the smaller)
+buildings-overlap,B1166xB1612,14.9 m2 (30% of the smaller)
+buildings-overlap,B1168xB2949,2.1 m2 (3% of the smaller)
+buildings-overlap,B1173xB1300,2.2 m2 (0% of the smaller)
+buildings-overlap,B1237xX16,22.7 m2 (100% of the smaller)
+buildings-overlap,B1292xB2753,18.1 m2 (31% of the smaller)
+buildings-overlap,B1293xB2753,5.8 m2 (10% of the smaller)
+buildings-overlap,B1396xB2181,1.6 m2 (3% of the smaller)
+buildings-overlap,B1430xB1490,1.2 m2 (2% of the smaller)
+buildings-overlap,B1446xB3237,1.6 m2 (4% of the smaller)
+buildings-overlap,B1459xB2580,1.5 m2 (2% of the smaller)
+buildings-overlap,B1461xB2651,2.3 m2 (4% of the smaller)
+buildings-overlap,B1536xB2231,7.8 m2 (12% of the smaller)
+buildings-overlap,B1579xB2889,1.3 m2 (2% of the smaller)
+buildings-overlap,B1595xB1891,1.5 m2 (2% of the smaller)
+buildings-overlap,B1631xB2785,2.4 m2 (2% of the smaller)
+buildings-overlap,B1639xB1643,12.2 m2 (13% of the smaller)
+buildings-overlap,B1654xB3447,11.9 m2 (33% of the smaller)
+buildings-overlap,B1698xB3049,1.3 m2 (2% of the smaller)
+buildings-overlap,B1710xB2349,4.6 m2 (2% of the smaller)
+buildings-overlap,B1720xB3402,13.7 m2 (21% of the smaller)
+buildings-overlap,B1836xX563,10.1 m2 (13% of the smaller)
+buildings-overlap,B1865xB3072,4.2 m2 (17% of the smaller)
+buildings-overlap,B1865xB3071,2.8 m2 (11% of the smaller)
+buildings-overlap,B1941xB3263,36.0 m2 (15% of the smaller)
+buildings-overlap,B2070xB2404,1.7 m2 (2% of the smaller)
+buildings-overlap,B2096xB2398,1.3 m2 (1% of the smaller)
+buildings-overlap,B2186xB2960,3.3 m2 (5% of the smaller)
+buildings-overlap,B2340xB3263,13.5 m2 (4% of the smaller)
+buildings-overlap,B2400xB2632,2.7 m2 (2% of the smaller)
+buildings-overlap,B2517xB3408,1.8 m2 (1% of the smaller)
+buildings-overlap,B2524xB3109,1.9 m2 (1% of the smaller)
+buildings-overlap,B2678xB3343,4.7 m2 (8% of the smaller)
+buildings-overlap,B2768xB3213,1.9 m2 (3% of the smaller)
+buildings-overlap,B2825xB3479,22.1 m2 (31% of the smaller)
+buildings-overlap,B2826xB3479,6.2 m2 (9% of the smaller)
+buildings-overlap,B2834xB3479,60.8 m2 (15% of the smaller)
+buildings-overlap,B2904xB2920,3.0 m2 (11% of the smaller)
+buildings-overlap,B3220xB3299,1.2 m2 (1% of the smaller)
+buildings-overlap,X1xX300,1613.4 m2 (73% of the smaller)
+buildings-overlap,X1xX206,494.5 m2 (99% of the smaller)
+buildings-overlap,X24xX227,3.5 m2 (7% of the smaller)
+buildings-overlap,X149xX489,2.8 m2 (2% of the smaller)
+buildings-overlap,X161xX342,2.7 m2 (3% of the smaller)
+buildings-overlap,X179xX441,1.0 m2 (1% of the smaller)
+buildings-overlap,X271xX333,4.7 m2 (1% of the smaller)
+buildings-overlap,X485xX566,7.5 m2 (30% of the smaller)
+road-through-building,X131,road #4 (rl) runs 8.0 m inside
+road-through-building,B692,road #7 (rl) runs 6.0 m inside
+road-through-building,B1964,road #10 (rl ซอยสิริลักษณ์) runs 12.9 m inside
+road-through-building,X319,road #13 (rl) runs 4.7 m inside
+road-through-building,B814,road #14 (rl ซอยวงศ์สว่าง 11) runs 7.0 m inside
+road-through-building,B2872,road #14 (rl ซอยวงศ์สว่าง 11) runs 11.7 m inside
+road-through-building,B463,road #19 (rl) runs 3.1 m inside
+road-through-building,X497,road #21 (rl) runs 8.3 m inside
+road-through-building,B1341,road #35 (ph) runs 7.6 m inside
+road-through-building,B1981,road #36 (ph) runs 6.3 m inside
+road-through-building,B343,road #37 (se) runs 12.5 m inside
+road-through-building,X328,road #37 (se) runs 13.1 m inside
+road-through-building,B1239,road #39 (se) runs 8.2 m inside
+road-through-building,X446,road #45 (rl) runs 6.4 m inside
+road-through-building,X565,road #51 (rl) runs 12.5 m inside
+road-through-building,X563,road #52 (rl) runs 16.3 m inside
+road-through-building,X42,road #57 (se) runs 3.1 m inside
+road-through-building,X204,road #57 (se) runs 11.2 m inside
+road-through-building,B3332,road #70 (rl) runs 16.9 m inside
+road-through-building,B3251,road #71 (se) runs 3.1 m inside
+road-through-building,B1441,road #77 (rl) runs 4.8 m inside
+road-through-building,B1442,road #77 (rl) runs 4.8 m inside
+road-through-building,B1443,road #77 (rl) runs 4.8 m inside
+road-through-building,X31,road #79 (rl) runs 7.3 m inside
+road-through-building,B2232,road #82 (ph) runs 4.5 m inside
+road-through-building,B2231,road #82 (ph) runs 4.5 m inside
+road-through-building,B413,road #82 (ph) runs 16.5 m inside
+road-through-building,B891,road #82 (ph) runs 7.5 m inside
+road-through-building,B2208,road #84 (rl) runs 9.0 m inside
+road-through-building,B506,road #88 (ph) runs 4.6 m inside
+road-through-building,B990,road #89 (ph) runs 5.5 m inside
+road-through-building,B1867,road #89 (ph) runs 8.6 m inside
+road-through-building,B1178,road #90 (rl) runs 9.4 m inside
+road-through-building,B2938,road #93 (ph) runs 10.8 m inside
+road-through-building,B2326,road #99 (rl) runs 19.3 m inside
+road-through-building,B2977,road #105 (rl) runs 14.8 m inside
+road-through-building,X493,road #121 (rl) runs 5.1 m inside
+road-through-building,B930,road #123 (rl) runs 8.7 m inside
+road-through-building,B2600,road #126 (rl) runs 14.9 m inside
+road-through-building,B3163,road #127 (rl) runs 21.0 m inside
+road-through-building,X547,road #133 (rl) runs 3.3 m inside
+road-through-building,B1836,road #133 (rl) runs 16.7 m inside
+road-through-building,X556,road #146 (rl ซอยพิบูลสงคราม 22 แยก 11) runs 13.7 m inside
+road-through-building,X130,road #146 (rl ซอยพิบูลสงคราม 22 แยก 11) runs 15.7 m inside
+road-through-building,X511,road #147 (rl) runs 11.9 m inside
+sunk,campus 11,lowest point -3.3 m

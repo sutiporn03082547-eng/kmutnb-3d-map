@@ -1,0 +1,50 @@
+{
+ "boxes": 3564,
+ "kinds": {
+  "G": 122,
+  "M": 2436,
+  "S": 578,
+  "P": 407,
+  "F": 21
+ },
+ "added_footprints": 582,
+ "levels": {
+  "UNVERIFIED": 122,
+  "ESTIMATED": 4021,
+  "VERIFIED": 3
+ },
+ "iou": {
+  "n": 2858,
+  "min": 0.179,
+  "median": 0.989,
+  "p05": 0.967
+ },
+ "offset_m": {
+  "median": 0.03,
+  "p95": 0.26,
+  "max": 8.96
+ },
+ "area_ratio": {
+  "p05": 0.996,
+  "median": 1.005,
+  "p95": 1.027
+ },
+ "split_groups": 142,
+ "split_union_iou_median": 0.975,
+ "overlaps": 96,
+ "overlaps_over_10pct": 28,
+ "road_crossings": 45,
+ "issues": {
+  "no-footprint": 122,
+  "footprint-differs": 6,
+  "position-offset": 8,
+  "size-differs": 7,
+  "split-outline-differs": 7,
+  "buildings-overlap": 96,
+  "road-through-building": 45,
+  "sunk": 1
+ },
+ "page": {
+  "errors": []
+ }
+}

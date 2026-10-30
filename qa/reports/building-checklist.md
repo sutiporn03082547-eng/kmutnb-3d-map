@@ -5,10 +5,9 @@
 | 79 | 2 | E | Y | N | N | ? | N | N | - | N | Y | floor count; parts and roof; facade | 55 | 40 | issue |  |
 | seven | 1 | E | N | N | N | ? | N | N | - | N | Y | floor count; parts and roof; facade | 42 | 45 | issue |  |
 | 66 | 2 | E | Y | N | N | ? | N | N | - | N | Y | floor count; parts and roof; facade | 55 | 50 | issue |  |
+| 67 | 2 | E | Y | N | N | ? | N | N | - | N | Y | floor count; parts and roof; facade | 55 | 50 | issue |  |
+| 68 | 2 | E | Y | N | N | ? | N | N | - | N | Y | floor count; parts and roof; facade | 55 | 50 | issue |  |
 | 90 | 6 | E | Y | N | Y | ? | N | N | - | Y | Y | floor count; parts and roof | 90 | 50 | issue |  |
-| 67 | 2 | E | Y | N | N | ? | ? | N | - | N | Y | floor count; parts and roof; facade | 55 | 60 | issue |  |
-| 68 | 2 | E | Y | N | N | ? | ? | N | - | N | Y | floor count; parts and roof; facade | 55 | 60 | issue |  |
-| 95 | 4 | E | Y | N | N | ? | ? | N | - | N | Y | floor count; parts and roof; facade | 55 | 60 | issue |  |
 | 43 | 9 | E | Y | N | Y | ? | ? | N | - | Y | Y | floor count; parts and roof | 90 | 60 | issue |  |
 | 98 | 3 | E | ? | Y | N | ? | Y | Y | - | N | ? | floor count; facade | 30 | 70 | ok |  |
 | 94 | 1 | E | Y | ? | N | ? | ? | N | - | N | Y | floor count; parts and roof; facade | 35 | 75 | not reviewed |  |
@@ -37,6 +36,7 @@
 | 69 | 3 | E | Y | Y | N | ? | Y | Y | - | N | Y | floor count; facade | 55 | 100 | ok |  |
 | 72 | 6 | E | Y | Y | N | ? | Y | Y | - | N | Y | floor count; facade | 55 | 100 | ok |  |
 | 86 | 13 | E | Y | Y | N | ? | Y | Y | - | N | Y | floor count; facade | 55 | 100 | ok |  |
+| 95 | 4 | E | Y | Y | N | ? | Y | Y | - | N | Y | floor count; facade | 55 | 100 | ok |  |
 | u2 | 3 | E | Y | Y | N | ? | Y | Y | - | N | Y | floor count; facade | 55 | 100 | ok |  |
 | 75 | 15 | V | Y | Y | Y | Y | Y | Y | - | N | Y | facade | 80 | 100 | ok |  |
 | 78B | 10 | E | Y | Y | Y | N | Y | Y | - | N | Y | floor count; facade | 80 | 100 | ok |  |

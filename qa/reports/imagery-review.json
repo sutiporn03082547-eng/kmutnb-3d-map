@@ -1,54 +1,208 @@
 {
- "about": "Manual comparison of each campus building with Esri World Imagery z19 (side-by-side sheets from qa/campus-tops.mjs + qa/campus_audit_imagery.py), 2026-10-30. A person's reading of the imagery, not a measurement. Tall buildings lean on the imagery (off-nadir), so roofs of buildings over ~25 m appear shifted north-east of their footprint. status: ok = model parts and roof agree with imagery; fixed = disagreed and was rebuilt in qa/rebuild; issue = disagrees, not fixed (reason given); uncertain = imagery cannot settle it.",
+ "about": "Manual comparison of each campus building with Esri World Imagery z19 (side-by-side sheets from qa/campus-tops.mjs + qa/campus_audit_imagery.py), 2026-10-30. A person's reading of the imagery, not a measurement. Tall buildings lean on the imagery (off-nadir), so roofs of buildings over ~25 m appear shifted north-east of their footprint. status: ok = model parts and roof agree with imagery; fixed = disagreed and was rebuilt in qa/rebuild; issue = disagrees, not fixed (reason given); uncertain = imagery cannot settle it. Update 2026-10-30: the imagery read here is Esri World Imagery captured 2026-03-05 (WorldView-2, 0.5 m), the newest available; the previous capture is 2025-01-19 (WV02) and before that 2023-01-26 (WV03), compared with qa/imagery_timeline.py (Esri Wayback archive).",
  "review": {
-  "11": ["ok", "flat roof with rooftop structures; one block"],
-  "13": ["ok", "single block"],
-  "21": ["ok", "main hall with lower step on the south side, as modelled"],
-  "22": ["uncertain", "strong lean; inside the outline the imagery shows planted/grass surface, possibly a roof garden on a lower part; cannot read the parts"],
-  "23": ["uncertain", "long slab plus a lower irregular part at the north-east notch (gravel roof); the model keeps 12 floors over the whole outline"],
-  "41": ["ok", "long slab with a raised roof box"],
-  "42": ["fixed", "imagery shows a hip roof (light/dark roof planes, ridge on the long axis); model had a flat roof"],
-  "43": ["issue", "narrow building with a bright double line and dark centre along its length (skylight, light well or ridge); not modelled because it cannot be told which"],
-  "44": ["ok", "main block plus narrow east part, as modelled"],
-  "46": ["fixed", "imagery shows a gable roof along the long axis (one plane lit, one shaded); model had a flat roof"],
-  "47": ["uncertain", "south-west third of the outline looks lower (different roof); lean makes it unclear"],
-  "52": ["ok", "wings around an inner court, as modelled"],
-  "62": ["fixed", "imagery shows a large orange hip roof with rib lines; model had a flat white roof"],
-  "63": ["fixed", "two blocks of parallel wings with light wells, a link, raised hip-roof halls; model was one extruded slab"],
-  "64": ["ok", "rectangular block with rooftop clutter on the north-east part"],
-  "65": ["uncertain", "T-shaped outline; the tower roof is dark and leans; the southern stem may be lower"],
-  "66": ["issue", "imagery shows open ground inside the outline (no roof); the imagery may predate the building, existence not confirmed by imagery"],
-  "67": ["issue", "imagery shows open yard inside the outline; existence not confirmed by imagery"],
-  "68": ["issue", "imagery shows open yard inside the outline; existence not confirmed by imagery"],
-  "69": ["ok", "small block"],
-  "71": ["issue", "the roof (white, gable) is about 10 m north-east of the outline, more than lean explains for a 4-storey building; Microsoft footprint agrees with the roof; position needs correcting (not changed: coordinate fix kept separate)"],
-  "72": ["ok", "long block, flat roof"],
-  "73": ["fixed", "imagery shows a red-brown hip roof; the photo shows the overhanging roof at the top; model had a flat roof with a small roof room"],
-  "75": ["ok", "tower"],
-  "76": ["ok", "long block with roof equipment"],
-  "77": ["uncertain", "large block; a lower strip along the south-west side and a notch are visible; not separated in the model"],
-  "78A": ["ok", "tower"],
-  "78B": ["ok", "stepped outline, as modelled"],
-  "79": ["issue", "west part has a white flat roof, east part a grey pitched roof; model is one flat roof"],
-  "81": ["ok", "long block, two levels as modelled"],
-  "82": ["fixed", "two separate blocks with a courtyard between; model was one solid block over both"],
-  "83": ["fixed", "two blocks with a gap; model was one solid block"],
-  "84": ["fixed", "only the north-west part is built; the rest of the outline is an open yard; model filled the whole outline"],
-  "85": ["uncertain", "only the east half of the outline shows a roof; the west half is dark (trees or shadow)"],
-  "86": ["ok", "tower"],
-  "88": ["ok", "block"],
-  "89": ["ok", "block with rooftop structures"],
-  "90": ["issue", "roof has a raised upper volume (casts a shadow) not in the model; size not readable"],
-  "91": ["ok", "block"],
-  "92": ["ok", "slab with rooftop boxes"],
-  "93": ["ok", "slab with rooftop boxes"],
-  "95": ["issue", "imagery shows bare ground/debris inside the outline; existence not confirmed by imagery (may predate or postdate)"],
-  "96": ["ok", "block; roof is planted (roof garden) - not shown in the model's roof colour"],
-  "97": ["issue", "imagery shows trees inside the outline (known since the first audit); position unknown"],
-  "98": ["ok", "block"],
-  "ipc": ["ok", "block with rooftop equipment"],
-  "seven": ["issue", "imagery roof is larger than the outline"],
-  "u1": ["ok", "tower"],
-  "u2": ["ok", "block"]
+  "11": [
+   "ok",
+   "flat roof with rooftop structures; one block"
+  ],
+  "13": [
+   "ok",
+   "single block"
+  ],
+  "21": [
+   "ok",
+   "main hall with lower step on the south side, as modelled"
+  ],
+  "22": [
+   "uncertain",
+   "strong lean; inside the outline the imagery shows planted/grass surface, possibly a roof garden on a lower part; cannot read the parts"
+  ],
+  "23": [
+   "uncertain",
+   "long slab plus a lower irregular part at the north-east notch (gravel roof); the model keeps 12 floors over the whole outline"
+  ],
+  "41": [
+   "ok",
+   "long slab with a raised roof box"
+  ],
+  "42": [
+   "fixed",
+   "imagery shows a hip roof (light/dark roof planes, ridge on the long axis); model had a flat roof"
+  ],
+  "43": [
+   "issue",
+   "narrow building with a bright double line and dark centre along its length (skylight, light well or ridge); not modelled because it cannot be told which"
+  ],
+  "44": [
+   "ok",
+   "main block plus narrow east part, as modelled"
+  ],
+  "46": [
+   "fixed",
+   "imagery shows a gable roof along the long axis (one plane lit, one shaded); model had a flat roof"
+  ],
+  "47": [
+   "uncertain",
+   "south-west third of the outline looks lower (different roof); lean makes it unclear"
+  ],
+  "52": [
+   "ok",
+   "wings around an inner court, as modelled"
+  ],
+  "62": [
+   "fixed",
+   "imagery shows a large orange hip roof with rib lines; model had a flat white roof"
+  ],
+  "63": [
+   "fixed",
+   "two blocks of parallel wings with light wells, a link, raised hip-roof halls; model was one extruded slab"
+  ],
+  "64": [
+   "ok",
+   "rectangular block with rooftop clutter on the north-east part"
+  ],
+  "65": [
+   "uncertain",
+   "T-shaped outline; the tower roof is dark and leans; the southern stem may be lower"
+  ],
+  "66": [
+   "issue",
+   "changed recently: the metal roof seen on 2016-2025 imagery (last 2025-01-19) is gone on 2026-03-05; wall edges still visible. Removed roof, renovation or demolition in progress - needs a site check. The model still shows the old roof (marked on the card)."
+  ],
+  "67": [
+   "issue",
+   "changed recently: the metal roof seen on 2016-2025 imagery (last 2025-01-19) is gone on 2026-03-05; wall edges still visible. Removed roof, renovation or demolition in progress - needs a site check. The model still shows the old roof (marked on the card)."
+  ],
+  "68": [
+   "issue",
+   "changed recently: the metal roof seen on 2016-2025 imagery (last 2025-01-19) is gone on 2026-03-05; wall edges still visible. Removed roof, renovation or demolition in progress - needs a site check. The model still shows the old roof (marked on the card)."
+  ],
+  "69": [
+   "ok",
+   "small block"
+  ],
+  "71": [
+   "issue",
+   "roof is north-east of the outline on every capture; about 4-5 m on 2025-01-19 and about 10 m on 2026-03-05 (different viewing angle), so part of it is lean; a position fix needs a measurement, not changed"
+  ],
+  "72": [
+   "ok",
+   "long block, flat roof"
+  ],
+  "73": [
+   "fixed",
+   "imagery shows a red-brown hip roof; the photo shows the overhanging roof at the top; model had a flat roof with a small roof room"
+  ],
+  "75": [
+   "ok",
+   "tower"
+  ],
+  "76": [
+   "ok",
+   "long block with roof equipment"
+  ],
+  "77": [
+   "uncertain",
+   "large block; a lower strip along the south-west side and a notch are visible; not separated in the model"
+  ],
+  "78A": [
+   "ok",
+   "tower"
+  ],
+  "78B": [
+   "ok",
+   "stepped outline, as modelled"
+  ],
+  "79": [
+   "issue",
+   "west part has a white flat roof, east part a grey pitched roof; model is one flat roof"
+  ],
+  "81": [
+   "ok",
+   "long block, two levels as modelled"
+  ],
+  "82": [
+   "fixed",
+   "two separate blocks with a courtyard between; model was one solid block over both"
+  ],
+  "83": [
+   "fixed",
+   "two blocks with a gap; model was one solid block"
+  ],
+  "84": [
+   "fixed",
+   "only the north-west part is built; the rest of the outline is an open yard; model filled the whole outline"
+  ],
+  "85": [
+   "uncertain",
+   "only the east half of the outline shows a roof; the west half is dark (trees or shadow)"
+  ],
+  "86": [
+   "ok",
+   "tower"
+  ],
+  "88": [
+   "ok",
+   "block"
+  ],
+  "89": [
+   "ok",
+   "block with rooftop structures"
+  ],
+  "90": [
+   "issue",
+   "roof has a raised upper volume (casts a shadow) not in the model; size not readable"
+  ],
+  "91": [
+   "ok",
+   "block"
+  ],
+  "92": [
+   "ok",
+   "slab with rooftop boxes"
+  ],
+  "93": [
+   "ok",
+   "slab with rooftop boxes"
+  ],
+  "95": [
+   "ok",
+   "corrected: a flat concrete roof deck with parapet and a raised part (2020-2026 imagery, newest 2026-03-05); the earlier 'bare ground' reading was wrong"
+  ],
+  "96": [
+   "ok",
+   "block; roof is planted (roof garden) - not shown in the model's roof colour"
+  ],
+  "97": [
+   "issue",
+   "trees inside the outline on every capture 2016-2026-03-05; a small dark building lies just west of it; position unknown"
+  ],
+  "98": [
+   "ok",
+   "block"
+  ],
+  "ipc": [
+   "ok",
+   "block with rooftop equipment"
+  ],
+  "seven": [
+   "issue",
+   "imagery roof is larger than the outline"
+  ],
+  "u1": [
+   "ok",
+   "tower"
+  ],
+  "u2": [
+   "ok",
+   "block"
+  ]
+ },
+ "imagery": {
+  "newest": "2026-03-05 WorldView-2 0.5 m (Esri Wayback releases 2026-06-30 .. 2026-10-29)",
+  "previous": [
+   "2025-01-19 WorldView-2 0.5 m",
+   "2023-01-26 WorldView-3 0.31 m"
+  ]
  }
 }

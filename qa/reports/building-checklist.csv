@@ -1,13 +1,12 @@
 ﻿id,floors,level,1 footprint,2 parts,3 floor src,4 floors OSM,5 roof,6 wings,7 links,8 photo,9 position,10 still estimated,data score,model score,imagery review,changed now,note
-97,5,U,N,N,N,?,?,N,-,N,N,floor count; parts and roof; facade,42,30,issue,,imagery shows trees inside the outline (known since the first audit); position unknown
-71,4,E,N,N,N,?,N,N,-,N,N,floor count; parts and roof; facade,42,40,issue,,"the roof (white, gable) is about 10 m north-east of the outline, more than lean explains for a 4-storey building; Microsoft footprint agrees with the roof; position needs correcting (not changed: coordinate fix kept separate)"
+97,5,U,N,N,N,?,?,N,-,N,N,floor count; parts and roof; facade,42,30,issue,,trees inside the outline on every capture 2016-2026-03-05; a small dark building lies just west of it; position unknown
+71,4,E,N,N,N,?,N,N,-,N,N,floor count; parts and roof; facade,42,40,issue,,"roof is north-east of the outline on every capture; about 4-5 m on 2025-01-19 and about 10 m on 2026-03-05 (different viewing angle), so part of it is lean; a position fix needs a measurement, not changed"
 79,2,E,Y,N,N,?,N,N,-,N,Y,floor count; parts and roof; facade,55,40,issue,,"west part has a white flat roof, east part a grey pitched roof; model is one flat roof"
 seven,1,E,N,N,N,?,N,N,-,N,Y,floor count; parts and roof; facade,42,45,issue,,imagery roof is larger than the outline
-66,2,E,Y,N,N,?,N,N,-,N,Y,floor count; parts and roof; facade,55,50,issue,,"imagery shows open ground inside the outline (no roof); the imagery may predate the building, existence not confirmed by imagery"
+66,2,E,Y,N,N,?,N,N,-,N,Y,floor count; parts and roof; facade,55,50,issue,,"changed recently: the metal roof seen on 2016-2025 imagery (last 2025-01-19) is gone on 2026-03-05; wall edges still visible. Removed roof, renovation or demolition in progress - needs a site check. The model still shows the old roof (marked on the card)."
+67,2,E,Y,N,N,?,N,N,-,N,Y,floor count; parts and roof; facade,55,50,issue,,"changed recently: the metal roof seen on 2016-2025 imagery (last 2025-01-19) is gone on 2026-03-05; wall edges still visible. Removed roof, renovation or demolition in progress - needs a site check. The model still shows the old roof (marked on the card)."
+68,2,E,Y,N,N,?,N,N,-,N,Y,floor count; parts and roof; facade,55,50,issue,,"changed recently: the metal roof seen on 2016-2025 imagery (last 2025-01-19) is gone on 2026-03-05; wall edges still visible. Removed roof, renovation or demolition in progress - needs a site check. The model still shows the old roof (marked on the card)."
 90,6,E,Y,N,Y,?,N,N,-,Y,Y,floor count; parts and roof,90,50,issue,,roof has a raised upper volume (casts a shadow) not in the model; size not readable
-67,2,E,Y,N,N,?,?,N,-,N,Y,floor count; parts and roof; facade,55,60,issue,,imagery shows open yard inside the outline; existence not confirmed by imagery
-68,2,E,Y,N,N,?,?,N,-,N,Y,floor count; parts and roof; facade,55,60,issue,,imagery shows open yard inside the outline; existence not confirmed by imagery
-95,4,E,Y,N,N,?,?,N,-,N,Y,floor count; parts and roof; facade,55,60,issue,,imagery shows bare ground/debris inside the outline; existence not confirmed by imagery (may predate or postdate)
 43,9,E,Y,N,Y,?,?,N,-,Y,Y,floor count; parts and roof,90,60,issue,,"narrow building with a bright double line and dark centre along its length (skylight, light well or ridge); not modelled because it cannot be told which"
 98,3,E,?,Y,N,?,Y,Y,-,N,?,floor count; facade,30,70,ok,,block
 94,1,E,Y,?,N,?,?,N,-,N,Y,floor count; parts and roof; facade,35,75,not reviewed,,
@@ -36,6 +35,7 @@ ipc,6,E,?,Y,N,?,Y,Y,-,N,Y,floor count; facade,42,99,ok,,block with rooftop equip
 69,3,E,Y,Y,N,?,Y,Y,-,N,Y,floor count; facade,55,100,ok,,small block
 72,6,E,Y,Y,N,?,Y,Y,-,N,Y,floor count; facade,55,100,ok,,"long block, flat roof"
 86,13,E,Y,Y,N,?,Y,Y,-,N,Y,floor count; facade,55,100,ok,,tower
+95,4,E,Y,Y,N,?,Y,Y,-,N,Y,floor count; facade,55,100,ok,,"corrected: a flat concrete roof deck with parapet and a raised part (2020-2026 imagery, newest 2026-03-05); the earlier 'bare ground' reading was wrong"
 u2,3,E,Y,Y,N,?,Y,Y,-,N,Y,floor count; facade,55,100,ok,,block
 75,15,V,Y,Y,Y,Y,Y,Y,-,N,Y,facade,80,100,ok,,tower
 78B,10,E,Y,Y,Y,N,Y,Y,-,N,Y,floor count; facade,80,100,ok,,"stepped outline, as modelled"

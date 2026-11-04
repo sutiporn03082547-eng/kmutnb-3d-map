@@ -1,8 +1,8 @@
 {
  "url": "http://127.0.0.1:8093/index.html",
- "date": "2026-10-30T08:34:33.927Z",
- "total": 200,
- "passed": 200,
+ "date": "2026-11-04T08:41:44.794Z",
+ "total": 226,
+ "passed": 226,
  "failed": 0,
  "results": [
   {
@@ -48,7 +48,7 @@
   {
    "name": "empty query lists every visible place",
    "pass": true,
-   "got": "[66,66]"
+   "got": "[79,79]"
   },
   {
    "name": "number \"11\" → first result has number 11",
@@ -851,6 +851,136 @@
    "got": "guard"
   },
   {
+   "name": "th name \"ลานจอดรถยนต์หน้าหอสมุด (ระหว่างอาคาร 46 \" → that place first",
+   "pass": true,
+   "got": "libLot"
+  },
+  {
+   "name": "en name \"Car park in front of the Central Library\" → that place first",
+   "pass": true,
+   "got": "libLot"
+  },
+  {
+   "name": "th name \"ลานจอดรถยนต์ข้างอาคาร 84 (ใกล้ประตูหลัง)\" → that place first",
+   "pass": true,
+   "got": "lot84"
+  },
+  {
+   "name": "en name \"Car park beside building 84, near the ba\" → that place first",
+   "pass": true,
+   "got": "lot84"
+  },
+  {
+   "name": "th name \"ที่จอดมอเตอร์ไซค์ ข้างอาคาร 46 (ฝั่งคลอง\" → that place first",
+   "pass": true,
+   "got": "pkMoto46"
+  },
+  {
+   "name": "en name \"Motorcycle parking beside building 46\" → that place first",
+   "pass": true,
+   "got": "pkMoto46"
+  },
+  {
+   "name": "th name \"ที่จอดมอเตอร์ไซค์ ข้างทางลงที่จอดรถใต้ดิ\" → that place first",
+   "pass": true,
+   "got": "pkMoto23"
+  },
+  {
+   "name": "en name \"Motorcycle parking by the building 23 ra\" → that place first",
+   "pass": true,
+   "got": "pkMoto23"
+  },
+  {
+   "name": "th name \"ที่จอดรถยนต์ใต้ดิน อาคารนวมินทรราชินี (2\" → that place first",
+   "pass": true,
+   "got": "pkUnder23"
+  },
+  {
+   "name": "en name \"Underground car park, building 23\" → that place first",
+   "pass": true,
+   "got": "pkUnder23"
+  },
+  {
+   "name": "th name \"โรงจอดมอเตอร์ไซค์มีหลังคา + จุดชาร์จ (ริ\" → that place first",
+   "pass": true,
+   "got": "pkShed"
+  },
+  {
+   "name": "en name \"Covered motorcycle shed with charging, b\" → that place first",
+   "pass": true,
+   "got": "pkShed"
+  },
+  {
+   "name": "th name \"ที่จอดรถยนต์ริมถนนแนวกำแพง หลังอาคาร 84\" → that place first",
+   "pass": true,
+   "got": "pkRoadW"
+  },
+  {
+   "name": "en name \"Kerbside car parking along the wall behi\" → that place first",
+   "pass": true,
+   "got": "pkRoadW"
+  },
+  {
+   "name": "th name \"ที่จอดรถชั้น 1 อาคาร 40 ปี (77)\" → that place first",
+   "pass": true,
+   "got": "pkB40"
+  },
+  {
+   "name": "en name \"Ground-floor parking, building 77\" → that place first",
+   "pass": true,
+   "got": "pkB40"
+  },
+  {
+   "name": "th name \"ที่จอดรถยนต์ใต้สนามฟุตบอล (อาคาร 94)\" → that place first",
+   "pass": true,
+   "got": "pkStadium"
+  },
+  {
+   "name": "en name \"Car park under the football field\" → that place first",
+   "pass": true,
+   "got": "pkStadium"
+  },
+  {
+   "name": "th name \"ที่จอดมอเตอร์ไซค์หลังโรงอาหาร 98 (หลังคา\" → that place first",
+   "pass": true,
+   "got": "pkBehind98"
+  },
+  {
+   "name": "en name \"Covered motorcycle parking behind buildi\" → that place first",
+   "pass": true,
+   "got": "pkBehind98"
+  },
+  {
+   "name": "th name \"ที่จอดรถยนต์ริมถนนหน้าอาคาร 11 (TGGS)\" → that place first",
+   "pass": true,
+   "got": "pkTggs"
+  },
+  {
+   "name": "en name \"Kerbside car parking in front of buildin\" → that place first",
+   "pass": true,
+   "got": "pkTggs"
+  },
+  {
+   "name": "th name \"ที่จอดรถยนต์ริมถนนข้างอาคาร 63\" → that place first",
+   "pass": true,
+   "got": "pkRoad63"
+  },
+  {
+   "name": "en name \"Kerbside car parking beside building 63\" → that place first",
+   "pass": true,
+   "got": "pkRoad63"
+  },
+  {
+   "name": "th name \"ช่องจอดรถชั้นล่างอาคาร 68\" → that place first",
+   "pass": true,
+   "got": "pkB68"
+  },
+  {
+   "name": "en name \"Ground-floor parking bays, building 68\" → that place first",
+   "pass": true,
+   "got": "pkB68"
+  },
+  {
    "name": "th name \"ที่จอดมอเตอร์ไซค์บนคลอง (ข้างลานเฉลิมพระ\" → that place first",
    "pass": true,
    "got": "canalBikes"
@@ -998,7 +1128,7 @@
   {
    "name": "result list has no duplicate place ids",
    "pass": true,
-   "got": "[40,40]"
+   "got": "[41,41]"
   },
   {
    "name": "no page errors during the tests",

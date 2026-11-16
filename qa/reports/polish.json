@@ -1,0 +1,97 @@
+{
+ "base": "http://127.0.0.1:18941/",
+ "date": "2026-11-16T18:35:45.248Z",
+ "total": 14,
+ "passed": 14,
+ "results": [
+  {
+   "name": "loading screen is gone after the map draws",
+   "pass": true,
+   "got": false
+  },
+  {
+   "name": "\"อาหาร\" chip shows only food places",
+   "pass": true,
+   "got": [
+    213,
+    213
+   ]
+  },
+  {
+   "name": "the active chip stays highlighted",
+   "pass": true,
+   "got": "true"
+  },
+  {
+   "name": "a parking button brings every category back",
+   "pass": true,
+   "got": [
+    716,
+    "จอดรถยนต์"
+   ]
+  },
+  {
+   "name": "tapping a chip twice shows everything again",
+   "pass": true,
+   "got": 716
+  },
+  {
+   "name": "card: action buttons come before the notes",
+   "pass": true,
+   "got": true
+  },
+  {
+   "name": "card: only today's hours first, the week on demand",
+   "pass": true,
+   "got": [
+    1,
+    7
+   ]
+  },
+  {
+   "name": "card: empty photo section is hidden",
+   "pass": true,
+   "got": true
+  },
+  {
+   "name": "dorm card has no hours toggle",
+   "pass": true,
+   "got": true
+  },
+  {
+   "name": "share link opens the same place",
+   "pass": true,
+   "got": [
+    "http://127.0.0.1:18941/back.html#place=ChIJ2U0fX5yb4jARkqhFiK7oA5M",
+    "ร้านแซ่บซี๊ด หลังมอ มจพ."
+   ]
+  },
+  {
+   "name": "no page errors (back.html)",
+   "pass": true,
+   "got": []
+  },
+  {
+   "name": "index.html#b=81 opens building 81 without the help dialog",
+   "pass": true,
+   "got": {
+    "sel": "81",
+    "name": "คณะวิศวกรรมศาสตร์ (อาคาร 81)",
+    "help": true,
+    "share": true,
+    "link": "http://127.0.0.1:18941/index.html#b=81",
+    "errs": []
+   }
+  },
+  {
+   "name": "building card has a share button with a #b= link",
+   "pass": true,
+   "got": "http://127.0.0.1:18941/index.html#b=81"
+  },
+  {
+   "name": "no page errors (index.html)",
+   "pass": true,
+   "got": []
+  }
+ ]
+}

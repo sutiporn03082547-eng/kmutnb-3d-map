@@ -13023,5 +13023,20 @@ window.PK_DATA={"page":"campus","accessCampus":"อยู่ในรั้ว�
   if(key!==sig||now-input<400||(now-last>1500&&window.__pl&&window.__pl.moving)){sm.needsUpdate=true;sig=key;last=now;}}return render.apply(this,arguments);};
  window.__shadowOnDemand=true;})();
 </script>
+<script id="polish-v1">/* polish 2026-11-17: share button on the card; a link with #b=<id> opens that building or place. */
+(function(){if(typeof select!=='function'||typeof ALL==='undefined')return;
+ const card=document.getElementById('card'),nav=card.querySelector('.navbtns');if(!nav)return;
+ const share=document.createElement('button');share.type='button';share.className='btn';share.id='cShare';share.textContent='แชร์';nav.append(share);
+ const linkOf=b=>location.origin+location.pathname+'#b='+encodeURIComponent(b.id);
+ share.onclick=async()=>{const b=ALL.find(x=>x.id===selId);if(!b)return;const url=linkOf(b),name=document.getElementById('cName').textContent||'';
+  try{if(navigator.share){await navigator.share({title:name,text:name+' · มจพ.',url});return;}}catch(e){if(e&&e.name==='AbortError')return;}
+  try{await navigator.clipboard.writeText(url);toast('คัดลอกลิงก์ของ "'+name+'" แล้ว',2500);}catch(e){prompt('คัดลอกลิงก์นี้',url);}};
+ const sel=select;select=function(id){const r=sel.apply(this,arguments);share.hidden=!ALL.some(x=>x.id===id);return r;};
+ const openHash=()=>{const m=/(?:^#|&)b=([^&]+)/.exec(location.hash);if(!m)return;let k;try{k=decodeURIComponent(m[1]);}catch(e){return;}
+  const b=ALL.find(x=>String(x.id)===k);if(!b)return;const help=document.getElementById('help');if(help)help.hidden=true;select(b.id,true);};
+ addEventListener('hashchange',openHash);openHash();
+ window.__polish={linkOf,openHash};
+})();
+</script>
 </body>
 </html>
